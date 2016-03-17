@@ -696,7 +696,7 @@ int main(void)
             case stopLog:
                 //Always make sure to close the file so that the data gets
                 //  written to the drive.
-                myFile = FSfopen(nameString,FS_APPEND);
+               // myFile = FSfopen(nameString,FS_APPEND);
                 FSfwrite("endFile", 1, 7, myFile);
                 FSfclose(myFile);
                 state = wait;
@@ -755,7 +755,7 @@ int main(void)
 //            }
 //        }
         // Update LED 1 to show program is running
-        if(PORTG & 0x40){  // check BTN1
+        if(PORTD & 0x8000){  // check Switch (JE4)
             LATGSET = 1 << 12; // LED1 on
         }
         else{
