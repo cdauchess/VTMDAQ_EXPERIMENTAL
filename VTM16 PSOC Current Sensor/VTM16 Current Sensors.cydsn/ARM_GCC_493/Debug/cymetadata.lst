@@ -1,0 +1,2736 @@
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"cymetadata.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	cy_meta_configecc
+  19              		.section	.cyconfigecc,"a",%progbits
+  20              		.align	2
+  21              		.type	cy_meta_configecc, %object
+  22              		.size	cy_meta_configecc, 2108
+  23              	cy_meta_configecc:
+  24 0000 01       		.byte	1
+  25 0001 49       		.byte	73
+  26 0002 00       		.byte	0
+  27 0003 40       		.byte	64
+  28 0004 02       		.byte	2
+  29 0005 52       		.byte	82
+  30 0006 00       		.byte	0
+  31 0007 40       		.byte	64
+  32 0008 01       		.byte	1
+  33 0009 5B       		.byte	91
+  34 000a 00       		.byte	0
+  35 000b 40       		.byte	64
+  36 000c 02       		.byte	2
+  37 000d 64       		.byte	100
+  38 000e 00       		.byte	0
+  39 000f 40       		.byte	64
+  40 0010 02       		.byte	2
+  41 0011 65       		.byte	101
+  42 0012 00       		.byte	0
+  43 0013 40       		.byte	64
+  44 0014 18       		.byte	24
+  45 0015 00       		.byte	0
+  46 0016 01       		.byte	1
+  47 0017 40       		.byte	64
+  48 0018 29       		.byte	41
+  49 0019 01       		.byte	1
+  50 001a 01       		.byte	1
+  51 001b 40       		.byte	64
+  52 001c 2B       		.byte	43
+  53 001d 02       		.byte	2
+  54 001e 01       		.byte	1
+  55 001f 40       		.byte	64
+  56 0020 37       		.byte	55
+  57 0021 03       		.byte	3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 2
+
+
+  58 0022 01       		.byte	1
+  59 0023 40       		.byte	64
+  60 0024 3C       		.byte	60
+  61 0025 04       		.byte	4
+  62 0026 01       		.byte	1
+  63 0027 40       		.byte	64
+  64 0028 4D       		.byte	77
+  65 0029 05       		.byte	5
+  66 002a 01       		.byte	1
+  67 002b 40       		.byte	64
+  68 002c 36       		.byte	54
+  69 002d 06       		.byte	6
+  70 002e 01       		.byte	1
+  71 002f 40       		.byte	64
+  72 0030 4A       		.byte	74
+  73 0031 07       		.byte	7
+  74 0032 01       		.byte	1
+  75 0033 40       		.byte	64
+  76 0034 04       		.byte	4
+  77 0035 08       		.byte	8
+  78 0036 01       		.byte	1
+  79 0037 40       		.byte	64
+  80 0038 05       		.byte	5
+  81 0039 09       		.byte	9
+  82 003a 01       		.byte	1
+  83 003b 40       		.byte	64
+  84 003c 01       		.byte	1
+  85 003d 0B       		.byte	11
+  86 003e 01       		.byte	1
+  87 003f 40       		.byte	64
+  88 0040 01       		.byte	1
+  89 0041 0D       		.byte	13
+  90 0042 01       		.byte	1
+  91 0043 40       		.byte	64
+  92 0044 01       		.byte	1
+  93 0045 0F       		.byte	15
+  94 0046 01       		.byte	1
+  95 0047 40       		.byte	64
+  96 0048 3D       		.byte	61
+  97 0049 14       		.byte	20
+  98 004a 01       		.byte	1
+  99 004b 40       		.byte	64
+ 100 004c 53       		.byte	83
+ 101 004d 15       		.byte	21
+ 102 004e 01       		.byte	1
+ 103 004f 40       		.byte	64
+ 104 0050 2E       		.byte	46
+ 105 0051 16       		.byte	22
+ 106 0052 01       		.byte	1
+ 107 0053 40       		.byte	64
+ 108 0054 4D       		.byte	77
+ 109 0055 17       		.byte	23
+ 110 0056 01       		.byte	1
+ 111 0057 40       		.byte	64
+ 112 0058 0E       		.byte	14
+ 113 0059 19       		.byte	25
+ 114 005a 01       		.byte	1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 3
+
+
+ 115 005b 40       		.byte	64
+ 116 005c 2C       		.byte	44
+ 117 005d 1A       		.byte	26
+ 118 005e 01       		.byte	1
+ 119 005f 40       		.byte	64
+ 120 0060 4A       		.byte	74
+ 121 0061 1B       		.byte	27
+ 122 0062 01       		.byte	1
+ 123 0063 40       		.byte	64
+ 124 0064 08       		.byte	8
+ 125 0065 40       		.byte	64
+ 126 0066 01       		.byte	1
+ 127 0067 40       		.byte	64
+ 128 0068 0D       		.byte	13
+ 129 0069 41       		.byte	65
+ 130 006a 01       		.byte	1
+ 131 006b 40       		.byte	64
+ 132 006c 0C       		.byte	12
+ 133 006d 42       		.byte	66
+ 134 006e 01       		.byte	1
+ 135 006f 40       		.byte	64
+ 136 0070 04       		.byte	4
+ 137 0071 43       		.byte	67
+ 138 0072 01       		.byte	1
+ 139 0073 40       		.byte	64
+ 140 0074 05       		.byte	5
+ 141 0075 44       		.byte	68
+ 142 0076 01       		.byte	1
+ 143 0077 40       		.byte	64
+ 144 0078 04       		.byte	4
+ 145 0079 45       		.byte	69
+ 146 007a 01       		.byte	1
+ 147 007b 40       		.byte	64
+ 148 007c 07       		.byte	7
+ 149 007d 46       		.byte	70
+ 150 007e 01       		.byte	1
+ 151 007f 40       		.byte	64
+ 152 0080 09       		.byte	9
+ 153 0081 47       		.byte	71
+ 154 0082 01       		.byte	1
+ 155 0083 40       		.byte	64
+ 156 0084 04       		.byte	4
+ 157 0085 48       		.byte	72
+ 158 0086 01       		.byte	1
+ 159 0087 40       		.byte	64
+ 160 0088 06       		.byte	6
+ 161 0089 49       		.byte	73
+ 162 008a 01       		.byte	1
+ 163 008b 40       		.byte	64
+ 164 008c 0D       		.byte	13
+ 165 008d 4C       		.byte	76
+ 166 008e 01       		.byte	1
+ 167 008f 40       		.byte	64
+ 168 0090 0C       		.byte	12
+ 169 0091 4D       		.byte	77
+ 170 0092 01       		.byte	1
+ 171 0093 40       		.byte	64
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 4
+
+
+ 172 0094 08       		.byte	8
+ 173 0095 50       		.byte	80
+ 174 0096 01       		.byte	1
+ 175 0097 40       		.byte	64
+ 176 0098 03       		.byte	3
+ 177 0099 51       		.byte	81
+ 178 009a 01       		.byte	1
+ 179 009b 40       		.byte	64
+ 180 009c D6       		.byte	-42
+ 181 009d 40       		.byte	64
+ 182 009e 00       		.byte	0
+ 183 009f 26       		.byte	38
+ 184 00a0 01       		.byte	1
+ 185 00a1 25       		.byte	37
+ 186 00a2 27       		.byte	39
+ 187 00a3 84       		.byte	-124
+ 188 00a4 84       		.byte	-124
+ 189 00a5 0F       		.byte	15
+ 190 00a6 86       		.byte	-122
+ 191 00a7 38       		.byte	56
+ 192 00a8 87       		.byte	-121
+ 193 00a9 05       		.byte	5
+ 194 00aa 8B       		.byte	-117
+ 195 00ab 72       		.byte	114
+ 196 00ac 06       		.byte	6
+ 197 00ad 04       		.byte	4
+ 198 00ae 07       		.byte	7
+ 199 00af 01       		.byte	1
+ 200 00b0 09       		.byte	9
+ 201 00b1 04       		.byte	4
+ 202 00b2 0F       		.byte	15
+ 203 00b3 10       		.byte	16
+ 204 00b4 1B       		.byte	27
+ 205 00b5 08       		.byte	8
+ 206 00b6 1F       		.byte	31
+ 207 00b7 04       		.byte	4
+ 208 00b8 21       		.byte	33
+ 209 00b9 02       		.byte	2
+ 210 00ba 22       		.byte	34
+ 211 00bb 01       		.byte	1
+ 212 00bc 25       		.byte	37
+ 213 00bd 01       		.byte	1
+ 214 00be 26       		.byte	38
+ 215 00bf 02       		.byte	2
+ 216 00c0 29       		.byte	41
+ 217 00c1 08       		.byte	8
+ 218 00c2 2F       		.byte	47
+ 219 00c3 02       		.byte	2
+ 220 00c4 30       		.byte	48
+ 221 00c5 01       		.byte	1
+ 222 00c6 31       		.byte	49
+ 223 00c7 1F       		.byte	31
+ 224 00c8 32       		.byte	50
+ 225 00c9 02       		.byte	2
+ 226 00ca 36       		.byte	54
+ 227 00cb 04       		.byte	4
+ 228 00cc 39       		.byte	57
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 5
+
+
+ 229 00cd 02       		.byte	2
+ 230 00ce 3F       		.byte	63
+ 231 00cf 01       		.byte	1
+ 232 00d0 58       		.byte	88
+ 233 00d1 04       		.byte	4
+ 234 00d2 59       		.byte	89
+ 235 00d3 04       		.byte	4
+ 236 00d4 5F       		.byte	95
+ 237 00d5 01       		.byte	1
+ 238 00d6 D8       		.byte	-40
+ 239 00d7 04       		.byte	4
+ 240 00d8 D9       		.byte	-39
+ 241 00d9 04       		.byte	4
+ 242 00da DF       		.byte	-33
+ 243 00db 01       		.byte	1
+ 244 00dc 01       		.byte	1
+ 245 00dd 40       		.byte	64
+ 246 00de 02       		.byte	2
+ 247 00df 24       		.byte	36
+ 248 00e0 04       		.byte	4
+ 249 00e1 80       		.byte	-128
+ 250 00e2 05       		.byte	5
+ 251 00e3 24       		.byte	36
+ 252 00e4 07       		.byte	7
+ 253 00e5 04       		.byte	4
+ 254 00e6 08       		.byte	8
+ 255 00e7 51       		.byte	81
+ 256 00e8 0A       		.byte	10
+ 257 00e9 40       		.byte	64
+ 258 00ea 0B       		.byte	11
+ 259 00eb 80       		.byte	-128
+ 260 00ec 0E       		.byte	14
+ 261 00ed 40       		.byte	64
+ 262 00ee 0F       		.byte	15
+ 263 00ef 08       		.byte	8
+ 264 00f0 11       		.byte	17
+ 265 00f1 14       		.byte	20
+ 266 00f2 12       		.byte	18
+ 267 00f3 42       		.byte	66
+ 268 00f4 15       		.byte	21
+ 269 00f5 12       		.byte	18
+ 270 00f6 18       		.byte	24
+ 271 00f7 82       		.byte	-126
+ 272 00f8 19       		.byte	25
+ 273 00f9 05       		.byte	5
+ 274 00fa 21       		.byte	33
+ 275 00fb 01       		.byte	1
+ 276 00fc 22       		.byte	34
+ 277 00fd 02       		.byte	2
+ 278 00fe 28       		.byte	40
+ 279 00ff 40       		.byte	64
+ 280 0100 29       		.byte	41
+ 281 0101 45       		.byte	69
+ 282 0102 2A       		.byte	42
+ 283 0103 44       		.byte	68
+ 284 0104 2B       		.byte	43
+ 285 0105 04       		.byte	4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 6
+
+
+ 286 0106 2D       		.byte	45
+ 287 0107 10       		.byte	16
+ 288 0108 2F       		.byte	47
+ 289 0109 40       		.byte	64
+ 290 010a 30       		.byte	48
+ 291 010b A1       		.byte	-95
+ 292 010c 32       		.byte	50
+ 293 010d 20       		.byte	32
+ 294 010e 33       		.byte	51
+ 295 010f 04       		.byte	4
+ 296 0110 34       		.byte	52
+ 297 0111 50       		.byte	80
+ 298 0112 35       		.byte	53
+ 299 0113 24       		.byte	36
+ 300 0114 36       		.byte	54
+ 301 0115 02       		.byte	2
+ 302 0116 38       		.byte	56
+ 303 0117 60       		.byte	96
+ 304 0118 39       		.byte	57
+ 305 0119 16       		.byte	22
+ 306 011a 3A       		.byte	58
+ 307 011b 08       		.byte	8
+ 308 011c 3F       		.byte	63
+ 309 011d 08       		.byte	8
+ 310 011e 82       		.byte	-126
+ 311 011f 02       		.byte	2
+ 312 0120 C0       		.byte	-64
+ 313 0121 E7       		.byte	-25
+ 314 0122 C2       		.byte	-62
+ 315 0123 5B       		.byte	91
+ 316 0124 C4       		.byte	-60
+ 317 0125 5F       		.byte	95
+ 318 0126 CA       		.byte	-54
+ 319 0127 AF       		.byte	-81
+ 320 0128 CC       		.byte	-52
+ 321 0129 FF       		.byte	-1
+ 322 012a CE       		.byte	-50
+ 323 012b 4F       		.byte	79
+ 324 012c E0       		.byte	-32
+ 325 012d 01       		.byte	1
+ 326 012e 00       		.byte	0
+ 327 012f 02       		.byte	2
+ 328 0130 02       		.byte	2
+ 329 0131 01       		.byte	1
+ 330 0132 04       		.byte	4
+ 331 0133 03       		.byte	3
+ 332 0134 08       		.byte	8
+ 333 0135 03       		.byte	3
+ 334 0136 0C       		.byte	12
+ 335 0137 03       		.byte	3
+ 336 0138 0D       		.byte	13
+ 337 0139 0B       		.byte	11
+ 338 013a 0F       		.byte	15
+ 339 013b 04       		.byte	4
+ 340 013c 10       		.byte	16
+ 341 013d 01       		.byte	1
+ 342 013e 12       		.byte	18
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 7
+
+
+ 343 013f 02       		.byte	2
+ 344 0140 13       		.byte	19
+ 345 0141 0F       		.byte	15
+ 346 0142 15       		.byte	21
+ 347 0143 0F       		.byte	15
+ 348 0144 18       		.byte	24
+ 349 0145 01       		.byte	1
+ 350 0146 19       		.byte	25
+ 351 0147 09       		.byte	9
+ 352 0148 1A       		.byte	26
+ 353 0149 02       		.byte	2
+ 354 014a 1B       		.byte	27
+ 355 014b 06       		.byte	6
+ 356 014c 21       		.byte	33
+ 357 014d 0F       		.byte	15
+ 358 014e 22       		.byte	34
+ 359 014f 03       		.byte	3
+ 360 0150 25       		.byte	37
+ 361 0151 0F       		.byte	15
+ 362 0152 2D       		.byte	45
+ 363 0153 07       		.byte	7
+ 364 0154 2F       		.byte	47
+ 365 0155 08       		.byte	8
+ 366 0156 31       		.byte	49
+ 367 0157 01       		.byte	1
+ 368 0158 33       		.byte	51
+ 369 0159 04       		.byte	4
+ 370 015a 34       		.byte	52
+ 371 015b 02       		.byte	2
+ 372 015c 35       		.byte	53
+ 373 015d 02       		.byte	2
+ 374 015e 36       		.byte	54
+ 375 015f 01       		.byte	1
+ 376 0160 37       		.byte	55
+ 377 0161 08       		.byte	8
+ 378 0162 58       		.byte	88
+ 379 0163 04       		.byte	4
+ 380 0164 59       		.byte	89
+ 381 0165 04       		.byte	4
+ 382 0166 5F       		.byte	95
+ 383 0167 01       		.byte	1
+ 384 0168 85       		.byte	-123
+ 385 0169 03       		.byte	3
+ 386 016a 86       		.byte	-122
+ 387 016b 02       		.byte	2
+ 388 016c 8B       		.byte	-117
+ 389 016d 01       		.byte	1
+ 390 016e 95       		.byte	-107
+ 391 016f 03       		.byte	3
+ 392 0170 A1       		.byte	-95
+ 393 0171 02       		.byte	2
+ 394 0172 A2       		.byte	-94
+ 395 0173 01       		.byte	1
+ 396 0174 B0       		.byte	-80
+ 397 0175 02       		.byte	2
+ 398 0176 B2       		.byte	-78
+ 399 0177 01       		.byte	1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 8
+
+
+ 400 0178 B7       		.byte	-73
+ 401 0179 03       		.byte	3
+ 402 017a B9       		.byte	-71
+ 403 017b 80       		.byte	-128
+ 404 017c BF       		.byte	-65
+ 405 017d 40       		.byte	64
+ 406 017e D8       		.byte	-40
+ 407 017f 04       		.byte	4
+ 408 0180 D9       		.byte	-39
+ 409 0181 04       		.byte	4
+ 410 0182 DF       		.byte	-33
+ 411 0183 01       		.byte	1
+ 412 0184 00       		.byte	0
+ 413 0185 08       		.byte	8
+ 414 0186 02       		.byte	2
+ 415 0187 02       		.byte	2
+ 416 0188 03       		.byte	3
+ 417 0189 01       		.byte	1
+ 418 018a 04       		.byte	4
+ 419 018b A2       		.byte	-94
+ 420 018c 05       		.byte	5
+ 421 018d 04       		.byte	4
+ 422 018e 08       		.byte	8
+ 423 018f 50       		.byte	80
+ 424 0190 0A       		.byte	10
+ 425 0191 60       		.byte	96
+ 426 0192 0E       		.byte	14
+ 427 0193 48       		.byte	72
+ 428 0194 10       		.byte	16
+ 429 0195 82       		.byte	-126
+ 430 0196 11       		.byte	17
+ 431 0197 40       		.byte	64
+ 432 0198 12       		.byte	18
+ 433 0199 04       		.byte	4
+ 434 019a 17       		.byte	23
+ 435 019b 01       		.byte	1
+ 436 019c 18       		.byte	24
+ 437 019d 20       		.byte	32
+ 438 019e 19       		.byte	25
+ 439 019f 08       		.byte	8
+ 440 01a0 1A       		.byte	26
+ 441 01a1 60       		.byte	96
+ 442 01a2 1B       		.byte	27
+ 443 01a3 05       		.byte	5
+ 444 01a4 1F       		.byte	31
+ 445 01a5 A0       		.byte	-96
+ 446 01a6 21       		.byte	33
+ 447 01a7 40       		.byte	64
+ 448 01a8 25       		.byte	37
+ 449 01a9 04       		.byte	4
+ 450 01aa 27       		.byte	39
+ 451 01ab 8A       		.byte	-118
+ 452 01ac 29       		.byte	41
+ 453 01ad 24       		.byte	36
+ 454 01ae 2B       		.byte	43
+ 455 01af 41       		.byte	65
+ 456 01b0 2C       		.byte	44
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 9
+
+
+ 457 01b1 40       		.byte	64
+ 458 01b2 2D       		.byte	45
+ 459 01b3 08       		.byte	8
+ 460 01b4 2E       		.byte	46
+ 461 01b5 40       		.byte	64
+ 462 01b6 30       		.byte	48
+ 463 01b7 40       		.byte	64
+ 464 01b8 31       		.byte	49
+ 465 01b9 08       		.byte	8
+ 466 01ba 32       		.byte	50
+ 467 01bb 12       		.byte	18
+ 468 01bc 34       		.byte	52
+ 469 01bd 10       		.byte	16
+ 470 01be 35       		.byte	53
+ 471 01bf 24       		.byte	36
+ 472 01c0 36       		.byte	54
+ 473 01c1 02       		.byte	2
+ 474 01c2 38       		.byte	56
+ 475 01c3 04       		.byte	4
+ 476 01c4 39       		.byte	57
+ 477 01c5 60       		.byte	96
+ 478 01c6 3D       		.byte	61
+ 479 01c7 40       		.byte	64
+ 480 01c8 8B       		.byte	-117
+ 481 01c9 80       		.byte	-128
+ 482 01ca 90       		.byte	-112
+ 483 01cb 82       		.byte	-126
+ 484 01cc 94       		.byte	-108
+ 485 01cd 60       		.byte	96
+ 486 01ce 96       		.byte	-106
+ 487 01cf 40       		.byte	64
+ 488 01d0 98       		.byte	-104
+ 489 01d1 40       		.byte	64
+ 490 01d2 99       		.byte	-103
+ 491 01d3 04       		.byte	4
+ 492 01d4 9A       		.byte	-102
+ 493 01d5 04       		.byte	4
+ 494 01d6 9D       		.byte	-99
+ 495 01d7 60       		.byte	96
+ 496 01d8 9E       		.byte	-98
+ 497 01d9 08       		.byte	8
+ 498 01da A2       		.byte	-94
+ 499 01db 02       		.byte	2
+ 500 01dc A4       		.byte	-92
+ 501 01dd A0       		.byte	-96
+ 502 01de A8       		.byte	-88
+ 503 01df 01       		.byte	1
+ 504 01e0 A9       		.byte	-87
+ 505 01e1 40       		.byte	64
+ 506 01e2 AB       		.byte	-85
+ 507 01e3 04       		.byte	4
+ 508 01e4 C0       		.byte	-64
+ 509 01e5 F5       		.byte	-11
+ 510 01e6 C2       		.byte	-62
+ 511 01e7 5F       		.byte	95
+ 512 01e8 C4       		.byte	-60
+ 513 01e9 1B       		.byte	27
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 10
+
+
+ 514 01ea CA       		.byte	-54
+ 515 01eb DF       		.byte	-33
+ 516 01ec CC       		.byte	-52
+ 517 01ed EF       		.byte	-17
+ 518 01ee CE       		.byte	-50
+ 519 01ef 1E       		.byte	30
+ 520 01f0 E6       		.byte	-26
+ 521 01f1 20       		.byte	32
+ 522 01f2 04       		.byte	4
+ 523 01f3 01       		.byte	1
+ 524 01f4 05       		.byte	5
+ 525 01f5 03       		.byte	3
+ 526 01f6 06       		.byte	6
+ 527 01f7 06       		.byte	6
+ 528 01f8 07       		.byte	7
+ 529 01f9 1C       		.byte	28
+ 530 01fa 0B       		.byte	11
+ 531 01fb 15       		.byte	21
+ 532 01fc 0D       		.byte	13
+ 533 01fd 03       		.byte	3
+ 534 01fe 0F       		.byte	15
+ 535 01ff 04       		.byte	4
+ 536 0200 10       		.byte	16
+ 537 0201 0C       		.byte	12
+ 538 0202 12       		.byte	18
+ 539 0203 03       		.byte	3
+ 540 0204 15       		.byte	21
+ 541 0205 03       		.byte	3
+ 542 0206 16       		.byte	22
+ 543 0207 03       		.byte	3
+ 544 0208 17       		.byte	23
+ 545 0209 34       		.byte	52
+ 546 020a 18       		.byte	24
+ 547 020b 10       		.byte	16
+ 548 020c 1B       		.byte	27
+ 549 020d 28       		.byte	40
+ 550 020e 1F       		.byte	31
+ 551 020f 20       		.byte	32
+ 552 0210 21       		.byte	33
+ 553 0211 2A       		.byte	42
+ 554 0212 22       		.byte	34
+ 555 0213 08       		.byte	8
+ 556 0214 23       		.byte	35
+ 557 0215 14       		.byte	20
+ 558 0216 26       		.byte	38
+ 559 0217 0C       		.byte	12
+ 560 0218 28       		.byte	40
+ 561 0219 01       		.byte	1
+ 562 021a 2A       		.byte	42
+ 563 021b 0E       		.byte	14
+ 564 021c 33       		.byte	51
+ 565 021d 38       		.byte	56
+ 566 021e 34       		.byte	52
+ 567 021f 10       		.byte	16
+ 568 0220 35       		.byte	53
+ 569 0221 0F       		.byte	15
+ 570 0222 36       		.byte	54
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 11
+
+
+ 571 0223 0F       		.byte	15
+ 572 0224 3A       		.byte	58
+ 573 0225 88       		.byte	-120
+ 574 0226 3B       		.byte	59
+ 575 0227 28       		.byte	40
+ 576 0228 3E       		.byte	62
+ 577 0229 10       		.byte	16
+ 578 022a 40       		.byte	64
+ 579 022b 01       		.byte	1
+ 580 022c 46       		.byte	70
+ 581 022d 04       		.byte	4
+ 582 022e 49       		.byte	73
+ 583 022f FF       		.byte	-1
+ 584 0230 4A       		.byte	74
+ 585 0231 07       		.byte	7
+ 586 0232 4B       		.byte	75
+ 587 0233 FF       		.byte	-1
+ 588 0234 4C       		.byte	76
+ 589 0235 40       		.byte	64
+ 590 0236 4D       		.byte	77
+ 591 0237 20       		.byte	32
+ 592 0238 4E       		.byte	78
+ 593 0239 F0       		.byte	-16
+ 594 023a 4F       		.byte	79
+ 595 023b 05       		.byte	5
+ 596 023c 50       		.byte	80
+ 597 023d 08       		.byte	8
+ 598 023e 54       		.byte	84
+ 599 023f 01       		.byte	1
+ 600 0240 58       		.byte	88
+ 601 0241 04       		.byte	4
+ 602 0242 59       		.byte	89
+ 603 0243 04       		.byte	4
+ 604 0244 5A       		.byte	90
+ 605 0245 04       		.byte	4
+ 606 0246 5B       		.byte	91
+ 607 0247 04       		.byte	4
+ 608 0248 5C       		.byte	92
+ 609 0249 11       		.byte	17
+ 610 024a 5D       		.byte	93
+ 611 024b 11       		.byte	17
+ 612 024c 5F       		.byte	95
+ 613 024d 01       		.byte	1
+ 614 024e 60       		.byte	96
+ 615 024f 40       		.byte	64
+ 616 0250 61       		.byte	97
+ 617 0251 A8       		.byte	-88
+ 618 0252 62       		.byte	98
+ 619 0253 40       		.byte	64
+ 620 0254 63       		.byte	99
+ 621 0255 20       		.byte	32
+ 622 0256 82       		.byte	-126
+ 623 0257 01       		.byte	1
+ 624 0258 8A       		.byte	-118
+ 625 0259 01       		.byte	1
+ 626 025a 94       		.byte	-108
+ 627 025b 01       		.byte	1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 12
+
+
+ 628 025c A4       		.byte	-92
+ 629 025d 01       		.byte	1
+ 630 025e AE       		.byte	-82
+ 631 025f 01       		.byte	1
+ 632 0260 B0       		.byte	-80
+ 633 0261 01       		.byte	1
+ 634 0262 BE       		.byte	-66
+ 635 0263 01       		.byte	1
+ 636 0264 D8       		.byte	-40
+ 637 0265 04       		.byte	4
+ 638 0266 D9       		.byte	-39
+ 639 0267 04       		.byte	4
+ 640 0268 DF       		.byte	-33
+ 641 0269 01       		.byte	1
+ 642 026a 00       		.byte	0
+ 643 026b 24       		.byte	36
+ 644 026c 03       		.byte	3
+ 645 026d 08       		.byte	8
+ 646 026e 04       		.byte	4
+ 647 026f A0       		.byte	-96
+ 648 0270 05       		.byte	5
+ 649 0271 04       		.byte	4
+ 650 0272 06       		.byte	6
+ 651 0273 40       		.byte	64
+ 652 0274 08       		.byte	8
+ 653 0275 01       		.byte	1
+ 654 0276 09       		.byte	9
+ 655 0277 20       		.byte	32
+ 656 0278 0B       		.byte	11
+ 657 0279 28       		.byte	40
+ 658 027a 0C       		.byte	12
+ 659 027b 02       		.byte	2
+ 660 027c 0D       		.byte	13
+ 661 027d 08       		.byte	8
+ 662 027e 0E       		.byte	14
+ 663 027f 0A       		.byte	10
+ 664 0280 12       		.byte	18
+ 665 0281 A8       		.byte	-88
+ 666 0282 14       		.byte	20
+ 667 0283 89       		.byte	-119
+ 668 0284 16       		.byte	22
+ 669 0285 02       		.byte	2
+ 670 0286 17       		.byte	23
+ 671 0287 08       		.byte	8
+ 672 0288 1A       		.byte	26
+ 673 0289 04       		.byte	4
+ 674 028a 1B       		.byte	27
+ 675 028b 48       		.byte	72
+ 676 028c 1E       		.byte	30
+ 677 028d 40       		.byte	64
+ 678 028e 20       		.byte	32
+ 679 028f 04       		.byte	4
+ 680 0290 21       		.byte	33
+ 681 0291 08       		.byte	8
+ 682 0292 22       		.byte	34
+ 683 0293 08       		.byte	8
+ 684 0294 23       		.byte	35
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 13
+
+
+ 685 0295 08       		.byte	8
+ 686 0296 2A       		.byte	42
+ 687 0297 02       		.byte	2
+ 688 0298 2B       		.byte	43
+ 689 0299 40       		.byte	64
+ 690 029a 2C       		.byte	44
+ 691 029b 08       		.byte	8
+ 692 029c 2D       		.byte	45
+ 693 029d 80       		.byte	-128
+ 694 029e 31       		.byte	49
+ 695 029f 08       		.byte	8
+ 696 02a0 32       		.byte	50
+ 697 02a1 A0       		.byte	-96
+ 698 02a2 33       		.byte	51
+ 699 02a3 20       		.byte	32
+ 700 02a4 34       		.byte	52
+ 701 02a5 80       		.byte	-128
+ 702 02a6 35       		.byte	53
+ 703 02a7 24       		.byte	36
+ 704 02a8 36       		.byte	54
+ 705 02a9 01       		.byte	1
+ 706 02aa 38       		.byte	56
+ 707 02ab 24       		.byte	36
+ 708 02ac 3A       		.byte	58
+ 709 02ad 40       		.byte	64
+ 710 02ae 3B       		.byte	59
+ 711 02af 40       		.byte	64
+ 712 02b0 3F       		.byte	63
+ 713 02b1 08       		.byte	8
+ 714 02b2 41       		.byte	65
+ 715 02b3 40       		.byte	64
+ 716 02b4 49       		.byte	73
+ 717 02b5 20       		.byte	32
+ 718 02b6 4A       		.byte	74
+ 719 02b7 04       		.byte	4
+ 720 02b8 4C       		.byte	76
+ 721 02b9 03       		.byte	3
+ 722 02ba 4D       		.byte	77
+ 723 02bb 80       		.byte	-128
+ 724 02bc 50       		.byte	80
+ 725 02bd 10       		.byte	16
+ 726 02be 51       		.byte	81
+ 727 02bf 10       		.byte	16
+ 728 02c0 52       		.byte	82
+ 729 02c1 80       		.byte	-128
+ 730 02c2 53       		.byte	83
+ 731 02c3 10       		.byte	16
+ 732 02c4 58       		.byte	88
+ 733 02c5 10       		.byte	16
+ 734 02c6 59       		.byte	89
+ 735 02c7 01       		.byte	1
+ 736 02c8 5A       		.byte	90
+ 737 02c9 44       		.byte	68
+ 738 02ca 7C       		.byte	124
+ 739 02cb 08       		.byte	8
+ 740 02cc 7E       		.byte	126
+ 741 02cd 10       		.byte	16
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 14
+
+
+ 742 02ce 83       		.byte	-125
+ 743 02cf 80       		.byte	-128
+ 744 02d0 90       		.byte	-112
+ 745 02d1 82       		.byte	-126
+ 746 02d2 91       		.byte	-111
+ 747 02d3 80       		.byte	-128
+ 748 02d4 92       		.byte	-110
+ 749 02d5 20       		.byte	32
+ 750 02d6 94       		.byte	-108
+ 751 02d7 44       		.byte	68
+ 752 02d8 95       		.byte	-107
+ 753 02d9 20       		.byte	32
+ 754 02da 99       		.byte	-103
+ 755 02db 04       		.byte	4
+ 756 02dc 9D       		.byte	-99
+ 757 02dd 60       		.byte	96
+ 758 02de 9E       		.byte	-98
+ 759 02df 08       		.byte	8
+ 760 02e0 A3       		.byte	-93
+ 761 02e1 05       		.byte	5
+ 762 02e2 A4       		.byte	-92
+ 763 02e3 A6       		.byte	-90
+ 764 02e4 A5       		.byte	-91
+ 765 02e5 08       		.byte	8
+ 766 02e6 A6       		.byte	-90
+ 767 02e7 04       		.byte	4
+ 768 02e8 A7       		.byte	-89
+ 769 02e9 40       		.byte	64
+ 770 02ea AF       		.byte	-81
+ 771 02eb 20       		.byte	32
+ 772 02ec B3       		.byte	-77
+ 773 02ed 8A       		.byte	-118
+ 774 02ee B5       		.byte	-75
+ 775 02ef 04       		.byte	4
+ 776 02f0 C0       		.byte	-64
+ 777 02f1 F4       		.byte	-12
+ 778 02f2 C2       		.byte	-62
+ 779 02f3 FE       		.byte	-2
+ 780 02f4 C4       		.byte	-60
+ 781 02f5 FE       		.byte	-2
+ 782 02f6 CA       		.byte	-54
+ 783 02f7 31       		.byte	49
+ 784 02f8 CC       		.byte	-52
+ 785 02f9 FE       		.byte	-2
+ 786 02fa CE       		.byte	-50
+ 787 02fb 4E       		.byte	78
+ 788 02fc D0       		.byte	-48
+ 789 02fd 08       		.byte	8
+ 790 02fe D6       		.byte	-42
+ 791 02ff 0F       		.byte	15
+ 792 0300 EA       		.byte	-22
+ 793 0301 A0       		.byte	-96
+ 794 0302 EE       		.byte	-18
+ 795 0303 C0       		.byte	-64
+ 796 0304 54       		.byte	84
+ 797 0305 18       		.byte	24
+ 798 0306 58       		.byte	88
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 15
+
+
+ 799 0307 04       		.byte	4
+ 800 0308 59       		.byte	89
+ 801 0309 04       		.byte	4
+ 802 030a 5B       		.byte	91
+ 803 030b 04       		.byte	4
+ 804 030c 5D       		.byte	93
+ 805 030d 10       		.byte	16
+ 806 030e 5F       		.byte	95
+ 807 030f 01       		.byte	1
+ 808 0310 82       		.byte	-126
+ 809 0311 20       		.byte	32
+ 810 0312 84       		.byte	-124
+ 811 0313 50       		.byte	80
+ 812 0314 86       		.byte	-122
+ 813 0315 0C       		.byte	12
+ 814 0316 89       		.byte	-119
+ 815 0317 01       		.byte	1
+ 816 0318 8A       		.byte	-118
+ 817 0319 03       		.byte	3
+ 818 031a 8E       		.byte	-114
+ 819 031b 20       		.byte	32
+ 820 031c 90       		.byte	-112
+ 821 031d 1C       		.byte	28
+ 822 031e 92       		.byte	-110
+ 823 031f 42       		.byte	66
+ 824 0320 94       		.byte	-108
+ 825 0321 80       		.byte	-128
+ 826 0322 98       		.byte	-104
+ 827 0323 4C       		.byte	76
+ 828 0324 9A       		.byte	-102
+ 829 0325 11       		.byte	17
+ 830 0326 A0       		.byte	-96
+ 831 0327 10       		.byte	16
+ 832 0328 A1       		.byte	-95
+ 833 0329 01       		.byte	1
+ 834 032a A4       		.byte	-92
+ 835 032b 09       		.byte	9
+ 836 032c A6       		.byte	-90
+ 837 032d 10       		.byte	16
+ 838 032e A8       		.byte	-88
+ 839 032f 14       		.byte	20
+ 840 0330 B1       		.byte	-79
+ 841 0331 01       		.byte	1
+ 842 0332 B2       		.byte	-78
+ 843 0333 1F       		.byte	31
+ 844 0334 B4       		.byte	-76
+ 845 0335 C0       		.byte	-64
+ 846 0336 B6       		.byte	-74
+ 847 0337 20       		.byte	32
+ 848 0338 B8       		.byte	-72
+ 849 0339 20       		.byte	32
+ 850 033a B9       		.byte	-71
+ 851 033b 02       		.byte	2
+ 852 033c BE       		.byte	-66
+ 853 033d 40       		.byte	64
+ 854 033e BF       		.byte	-65
+ 855 033f 01       		.byte	1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 16
+
+
+ 856 0340 C0       		.byte	-64
+ 857 0341 26       		.byte	38
+ 858 0342 C1       		.byte	-63
+ 859 0343 03       		.byte	3
+ 860 0344 C5       		.byte	-59
+ 861 0345 0E       		.byte	14
+ 862 0346 C6       		.byte	-58
+ 863 0347 0C       		.byte	12
+ 864 0348 C7       		.byte	-57
+ 865 0349 0B       		.byte	11
+ 866 034a C8       		.byte	-56
+ 867 034b 15       		.byte	21
+ 868 034c C9       		.byte	-55
+ 869 034d FF       		.byte	-1
+ 870 034e CA       		.byte	-54
+ 871 034f FF       		.byte	-1
+ 872 0350 CB       		.byte	-53
+ 873 0351 FF       		.byte	-1
+ 874 0352 CE       		.byte	-50
+ 875 0353 F0       		.byte	-16
+ 876 0354 CF       		.byte	-49
+ 877 0355 44       		.byte	68
+ 878 0356 D0       		.byte	-48
+ 879 0357 0C       		.byte	12
+ 880 0358 D2       		.byte	-46
+ 881 0359 03       		.byte	3
+ 882 035a D3       		.byte	-45
+ 883 035b 02       		.byte	2
+ 884 035c D8       		.byte	-40
+ 885 035d 04       		.byte	4
+ 886 035e D9       		.byte	-39
+ 887 035f 04       		.byte	4
+ 888 0360 DA       		.byte	-38
+ 889 0361 04       		.byte	4
+ 890 0362 DB       		.byte	-37
+ 891 0363 04       		.byte	4
+ 892 0364 DC       		.byte	-36
+ 893 0365 01       		.byte	1
+ 894 0366 DD       		.byte	-35
+ 895 0367 01       		.byte	1
+ 896 0368 DF       		.byte	-33
+ 897 0369 01       		.byte	1
+ 898 036a E6       		.byte	-26
+ 899 036b C0       		.byte	-64
+ 900 036c EA       		.byte	-22
+ 901 036d 40       		.byte	64
+ 902 036e EB       		.byte	-21
+ 903 036f 02       		.byte	2
+ 904 0370 00       		.byte	0
+ 905 0371 84       		.byte	-124
+ 906 0372 03       		.byte	3
+ 907 0373 88       		.byte	-120
+ 908 0374 04       		.byte	4
+ 909 0375 02       		.byte	2
+ 910 0376 05       		.byte	5
+ 911 0377 24       		.byte	36
+ 912 0378 07       		.byte	7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 17
+
+
+ 913 0379 06       		.byte	6
+ 914 037a 08       		.byte	8
+ 915 037b 21       		.byte	33
+ 916 037c 0B       		.byte	11
+ 917 037d 20       		.byte	32
+ 918 037e 0F       		.byte	15
+ 919 037f 48       		.byte	72
+ 920 0380 10       		.byte	16
+ 921 0381 08       		.byte	8
+ 922 0382 12       		.byte	18
+ 923 0383 A0       		.byte	-96
+ 924 0384 15       		.byte	21
+ 925 0385 80       		.byte	-128
+ 926 0386 19       		.byte	25
+ 927 0387 80       		.byte	-128
+ 928 0388 1B       		.byte	27
+ 929 0389 28       		.byte	40
+ 930 038a 21       		.byte	33
+ 931 038b 02       		.byte	2
+ 932 038c 28       		.byte	40
+ 933 038d 08       		.byte	8
+ 934 038e 29       		.byte	41
+ 935 038f 09       		.byte	9
+ 936 0390 2B       		.byte	43
+ 937 0391 01       		.byte	1
+ 938 0392 2E       		.byte	46
+ 939 0393 02       		.byte	2
+ 940 0394 32       		.byte	50
+ 941 0395 12       		.byte	18
+ 942 0396 33       		.byte	51
+ 943 0397 04       		.byte	4
+ 944 0398 34       		.byte	52
+ 945 0399 88       		.byte	-120
+ 946 039a 35       		.byte	53
+ 947 039b 24       		.byte	36
+ 948 039c 36       		.byte	54
+ 949 039d 03       		.byte	3
+ 950 039e 38       		.byte	56
+ 951 039f 80       		.byte	-128
+ 952 03a0 39       		.byte	57
+ 953 03a1 10       		.byte	16
+ 954 03a2 3F       		.byte	63
+ 955 03a3 48       		.byte	72
+ 956 03a4 40       		.byte	64
+ 957 03a5 24       		.byte	36
+ 958 03a6 41       		.byte	65
+ 959 03a7 08       		.byte	8
+ 960 03a8 4B       		.byte	75
+ 961 03a9 28       		.byte	40
+ 962 03aa 50       		.byte	80
+ 963 03ab 08       		.byte	8
+ 964 03ac 52       		.byte	82
+ 965 03ad 40       		.byte	64
+ 966 03ae 5F       		.byte	95
+ 967 03af 01       		.byte	1
+ 968 03b0 65       		.byte	101
+ 969 03b1 90       		.byte	-112
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 18
+
+
+ 970 03b2 69       		.byte	105
+ 971 03b3 50       		.byte	80
+ 972 03b4 6A       		.byte	106
+ 973 03b5 10       		.byte	16
+ 974 03b6 78       		.byte	120
+ 975 03b7 80       		.byte	-128
+ 976 03b8 79       		.byte	121
+ 977 03b9 80       		.byte	-128
+ 978 03ba 7B       		.byte	123
+ 979 03bb 01       		.byte	1
+ 980 03bc 83       		.byte	-125
+ 981 03bd 01       		.byte	1
+ 982 03be 8D       		.byte	-115
+ 983 03bf 01       		.byte	1
+ 984 03c0 90       		.byte	-112
+ 985 03c1 86       		.byte	-122
+ 986 03c2 92       		.byte	-110
+ 987 03c3 20       		.byte	32
+ 988 03c4 93       		.byte	-109
+ 989 03c5 20       		.byte	32
+ 990 03c6 94       		.byte	-108
+ 991 03c7 40       		.byte	64
+ 992 03c8 97       		.byte	-105
+ 993 03c9 08       		.byte	8
+ 994 03ca 98       		.byte	-104
+ 995 03cb 01       		.byte	1
+ 996 03cc 99       		.byte	-103
+ 997 03cd 04       		.byte	4
+ 998 03ce 9B       		.byte	-101
+ 999 03cf 80       		.byte	-128
+ 1000 03d0 9C       		.byte	-100
+ 1001 03d1 80       		.byte	-128
+ 1002 03d2 9D       		.byte	-99
+ 1003 03d3 60       		.byte	96
+ 1004 03d4 9E       		.byte	-98
+ 1005 03d5 48       		.byte	72
+ 1006 03d6 A0       		.byte	-96
+ 1007 03d7 10       		.byte	16
+ 1008 03d8 A1       		.byte	-95
+ 1009 03d9 08       		.byte	8
+ 1010 03da A2       		.byte	-94
+ 1011 03db A0       		.byte	-96
+ 1012 03dc A3       		.byte	-93
+ 1013 03dd 05       		.byte	5
+ 1014 03de A4       		.byte	-92
+ 1015 03df A4       		.byte	-92
+ 1016 03e0 A6       		.byte	-90
+ 1017 03e1 01       		.byte	1
+ 1018 03e2 A7       		.byte	-89
+ 1019 03e3 20       		.byte	32
+ 1020 03e4 A8       		.byte	-88
+ 1021 03e5 48       		.byte	72
+ 1022 03e6 B0       		.byte	-80
+ 1023 03e7 10       		.byte	16
+ 1024 03e8 B3       		.byte	-77
+ 1025 03e9 40       		.byte	64
+ 1026 03ea B5       		.byte	-75
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 19
+
+
+ 1027 03eb 21       		.byte	33
+ 1028 03ec C0       		.byte	-64
+ 1029 03ed FF       		.byte	-1
+ 1030 03ee C2       		.byte	-62
+ 1031 03ef 5E       		.byte	94
+ 1032 03f0 C4       		.byte	-60
+ 1033 03f1 8E       		.byte	-114
+ 1034 03f2 CA       		.byte	-54
+ 1035 03f3 8F       		.byte	-113
+ 1036 03f4 CC       		.byte	-52
+ 1037 03f5 F7       		.byte	-9
+ 1038 03f6 CE       		.byte	-50
+ 1039 03f7 5C       		.byte	92
+ 1040 03f8 D0       		.byte	-48
+ 1041 03f9 06       		.byte	6
+ 1042 03fa D2       		.byte	-46
+ 1043 03fb 04       		.byte	4
+ 1044 03fc D6       		.byte	-42
+ 1045 03fd 80       		.byte	-128
+ 1046 03fe D8       		.byte	-40
+ 1047 03ff 30       		.byte	48
+ 1048 0400 E2       		.byte	-30
+ 1049 0401 01       		.byte	1
+ 1050 0402 EE       		.byte	-18
+ 1051 0403 04       		.byte	4
+ 1052 0404 39       		.byte	57
+ 1053 0405 20       		.byte	32
+ 1054 0406 3F       		.byte	63
+ 1055 0407 10       		.byte	16
+ 1056 0408 59       		.byte	89
+ 1057 0409 04       		.byte	4
+ 1058 040a 5F       		.byte	95
+ 1059 040b 01       		.byte	1
+ 1060 040c 24       		.byte	36
+ 1061 040d 04       		.byte	4
+ 1062 040e 80       		.byte	-128
+ 1063 040f 01       		.byte	1
+ 1064 0410 A1       		.byte	-95
+ 1065 0411 10       		.byte	16
+ 1066 0412 E6       		.byte	-26
+ 1067 0413 40       		.byte	64
+ 1068 0414 EE       		.byte	-18
+ 1069 0415 04       		.byte	4
+ 1070 0416 A1       		.byte	-95
+ 1071 0417 10       		.byte	16
+ 1072 0418 A1       		.byte	-95
+ 1073 0419 10       		.byte	16
+ 1074 041a 81       		.byte	-127
+ 1075 041b 10       		.byte	16
+ 1076 041c 02       		.byte	2
+ 1077 041d 02       		.byte	2
+ 1078 041e 04       		.byte	4
+ 1079 041f 20       		.byte	32
+ 1080 0420 08       		.byte	8
+ 1081 0421 20       		.byte	32
+ 1082 0422 0E       		.byte	14
+ 1083 0423 01       		.byte	1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 20
+
+
+ 1084 0424 12       		.byte	18
+ 1085 0425 10       		.byte	16
+ 1086 0426 15       		.byte	21
+ 1087 0427 01       		.byte	1
+ 1088 0428 16       		.byte	22
+ 1089 0429 04       		.byte	4
+ 1090 042a 18       		.byte	24
+ 1091 042b 01       		.byte	1
+ 1092 042c 1C       		.byte	28
+ 1093 042d 20       		.byte	32
+ 1094 042e 20       		.byte	32
+ 1095 042f 20       		.byte	32
+ 1096 0430 23       		.byte	35
+ 1097 0431 03       		.byte	3
+ 1098 0432 26       		.byte	38
+ 1099 0433 08       		.byte	8
+ 1100 0434 29       		.byte	41
+ 1101 0435 04       		.byte	4
+ 1102 0436 2A       		.byte	42
+ 1103 0437 08       		.byte	8
+ 1104 0438 2E       		.byte	46
+ 1105 0439 10       		.byte	16
+ 1106 043a 30       		.byte	48
+ 1107 043b 03       		.byte	3
+ 1108 043c 32       		.byte	50
+ 1109 043d 20       		.byte	32
+ 1110 043e 33       		.byte	51
+ 1111 043f 02       		.byte	2
+ 1112 0440 34       		.byte	52
+ 1113 0441 10       		.byte	16
+ 1114 0442 35       		.byte	53
+ 1115 0443 01       		.byte	1
+ 1116 0444 36       		.byte	54
+ 1117 0445 0C       		.byte	12
+ 1118 0446 37       		.byte	55
+ 1119 0447 04       		.byte	4
+ 1120 0448 3E       		.byte	62
+ 1121 0449 54       		.byte	84
+ 1122 044a 3F       		.byte	63
+ 1123 044b 40       		.byte	64
+ 1124 044c 40       		.byte	64
+ 1125 044d 46       		.byte	70
+ 1126 044e 41       		.byte	65
+ 1127 044f 05       		.byte	5
+ 1128 0450 42       		.byte	66
+ 1129 0451 03       		.byte	3
+ 1130 0452 44       		.byte	68
+ 1131 0453 01       		.byte	1
+ 1132 0454 45       		.byte	69
+ 1133 0455 C0       		.byte	-64
+ 1134 0456 47       		.byte	71
+ 1135 0457 E0       		.byte	-32
+ 1136 0458 48       		.byte	72
+ 1137 0459 22       		.byte	34
+ 1138 045a 49       		.byte	73
+ 1139 045b FF       		.byte	-1
+ 1140 045c 4A       		.byte	74
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 21
+
+
+ 1141 045d FF       		.byte	-1
+ 1142 045e 4B       		.byte	75
+ 1143 045f FF       		.byte	-1
+ 1144 0460 4C       		.byte	76
+ 1145 0461 62       		.byte	98
+ 1146 0462 4D       		.byte	77
+ 1147 0463 A0       		.byte	-96
+ 1148 0464 4E       		.byte	78
+ 1149 0465 F0       		.byte	-16
+ 1150 0466 4F       		.byte	79
+ 1151 0467 41       		.byte	65
+ 1152 0468 50       		.byte	80
+ 1153 0469 0C       		.byte	12
+ 1154 046a 54       		.byte	84
+ 1155 046b 01       		.byte	1
+ 1156 046c 58       		.byte	88
+ 1157 046d 04       		.byte	4
+ 1158 046e 59       		.byte	89
+ 1159 046f 0C       		.byte	12
+ 1160 0470 5A       		.byte	90
+ 1161 0471 04       		.byte	4
+ 1162 0472 5B       		.byte	91
+ 1163 0473 0C       		.byte	12
+ 1164 0474 5C       		.byte	92
+ 1165 0475 09       		.byte	9
+ 1166 0476 5D       		.byte	93
+ 1167 0477 01       		.byte	1
+ 1168 0478 5F       		.byte	95
+ 1169 0479 01       		.byte	1
+ 1170 047a 66       		.byte	102
+ 1171 047b 40       		.byte	64
+ 1172 047c 67       		.byte	103
+ 1173 047d 02       		.byte	2
+ 1174 047e 69       		.byte	105
+ 1175 047f 10       		.byte	16
+ 1176 0480 6A       		.byte	106
+ 1177 0481 30       		.byte	48
+ 1178 0482 6B       		.byte	107
+ 1179 0483 10       		.byte	16
+ 1180 0484 6D       		.byte	109
+ 1181 0485 10       		.byte	16
+ 1182 0486 6E       		.byte	110
+ 1183 0487 10       		.byte	16
+ 1184 0488 6F       		.byte	111
+ 1185 0489 12       		.byte	18
+ 1186 048a D6       		.byte	-42
+ 1187 048b 08       		.byte	8
+ 1188 048c D8       		.byte	-40
+ 1189 048d 04       		.byte	4
+ 1190 048e D9       		.byte	-39
+ 1191 048f 04       		.byte	4
+ 1192 0490 DB       		.byte	-37
+ 1193 0491 04       		.byte	4
+ 1194 0492 DD       		.byte	-35
+ 1195 0493 90       		.byte	-112
+ 1196 0494 DF       		.byte	-33
+ 1197 0495 01       		.byte	1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 22
+
+
+ 1198 0496 00       		.byte	0
+ 1199 0497 20       		.byte	32
+ 1200 0498 02       		.byte	2
+ 1201 0499 40       		.byte	64
+ 1202 049a 03       		.byte	3
+ 1203 049b 22       		.byte	34
+ 1204 049c 04       		.byte	4
+ 1205 049d 80       		.byte	-128
+ 1206 049e 05       		.byte	5
+ 1207 049f 24       		.byte	36
+ 1208 04a0 08       		.byte	8
+ 1209 04a1 80       		.byte	-128
+ 1210 04a2 09       		.byte	9
+ 1211 04a3 20       		.byte	32
+ 1212 04a4 0A       		.byte	10
+ 1213 04a5 60       		.byte	96
+ 1214 04a6 0C       		.byte	12
+ 1215 04a7 01       		.byte	1
+ 1216 04a8 0F       		.byte	15
+ 1217 04a9 08       		.byte	8
+ 1218 04aa 10       		.byte	16
+ 1219 04ab 26       		.byte	38
+ 1220 04ac 11       		.byte	17
+ 1221 04ad 02       		.byte	2
+ 1222 04ae 15       		.byte	21
+ 1223 04af 84       		.byte	-124
+ 1224 04b0 17       		.byte	23
+ 1225 04b1 44       		.byte	68
+ 1226 04b2 18       		.byte	24
+ 1227 04b3 21       		.byte	33
+ 1228 04b4 19       		.byte	25
+ 1229 04b5 11       		.byte	17
+ 1230 04b6 1B       		.byte	27
+ 1231 04b7 02       		.byte	2
+ 1232 04b8 21       		.byte	33
+ 1233 04b9 28       		.byte	40
+ 1234 04ba 22       		.byte	34
+ 1235 04bb 80       		.byte	-128
+ 1236 04bc 23       		.byte	35
+ 1237 04bd 08       		.byte	8
+ 1238 04be 29       		.byte	41
+ 1239 04bf 01       		.byte	1
+ 1240 04c0 2B       		.byte	43
+ 1241 04c1 08       		.byte	8
+ 1242 04c2 2C       		.byte	44
+ 1243 04c3 01       		.byte	1
+ 1244 04c4 2D       		.byte	45
+ 1245 04c5 04       		.byte	4
+ 1246 04c6 2F       		.byte	47
+ 1247 04c7 01       		.byte	1
+ 1248 04c8 31       		.byte	49
+ 1249 04c9 08       		.byte	8
+ 1250 04ca 35       		.byte	53
+ 1251 04cb 24       		.byte	36
+ 1252 04cc 37       		.byte	55
+ 1253 04cd 40       		.byte	64
+ 1254 04ce 3F       		.byte	63
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 23
+
+
+ 1255 04cf 48       		.byte	72
+ 1256 04d0 40       		.byte	64
+ 1257 04d1 A1       		.byte	-95
+ 1258 04d2 48       		.byte	72
+ 1259 04d3 48       		.byte	72
+ 1260 04d4 4B       		.byte	75
+ 1261 04d5 A0       		.byte	-96
+ 1262 04d6 50       		.byte	80
+ 1263 04d7 02       		.byte	2
+ 1264 04d8 59       		.byte	89
+ 1265 04d9 80       		.byte	-128
+ 1266 04da 5F       		.byte	95
+ 1267 04db 80       		.byte	-128
+ 1268 04dc 66       		.byte	102
+ 1269 04dd 40       		.byte	64
+ 1270 04de 79       		.byte	121
+ 1271 04df 40       		.byte	64
+ 1272 04e0 80       		.byte	-128
+ 1273 04e1 18       		.byte	24
+ 1274 04e2 81       		.byte	-127
+ 1275 04e3 01       		.byte	1
+ 1276 04e4 82       		.byte	-126
+ 1277 04e5 10       		.byte	16
+ 1278 04e6 84       		.byte	-124
+ 1279 04e7 80       		.byte	-128
+ 1280 04e8 85       		.byte	-123
+ 1281 04e9 80       		.byte	-128
+ 1282 04ea 87       		.byte	-121
+ 1283 04eb 09       		.byte	9
+ 1284 04ec 88       		.byte	-120
+ 1285 04ed 24       		.byte	36
+ 1286 04ee 8E       		.byte	-114
+ 1287 04ef 20       		.byte	32
+ 1288 04f0 90       		.byte	-112
+ 1289 04f1 80       		.byte	-128
+ 1290 04f2 91       		.byte	-111
+ 1291 04f3 C0       		.byte	-64
+ 1292 04f4 92       		.byte	-110
+ 1293 04f5 40       		.byte	64
+ 1294 04f6 93       		.byte	-109
+ 1295 04f7 C2       		.byte	-62
+ 1296 04f8 97       		.byte	-105
+ 1297 04f9 20       		.byte	32
+ 1298 04fa 98       		.byte	-104
+ 1299 04fb 20       		.byte	32
+ 1300 04fc 99       		.byte	-103
+ 1301 04fd 24       		.byte	36
+ 1302 04fe 9B       		.byte	-101
+ 1303 04ff 84       		.byte	-124
+ 1304 0500 9C       		.byte	-100
+ 1305 0501 84       		.byte	-124
+ 1306 0502 9D       		.byte	-99
+ 1307 0503 10       		.byte	16
+ 1308 0504 9F       		.byte	-97
+ 1309 0505 01       		.byte	1
+ 1310 0506 A0       		.byte	-96
+ 1311 0507 10       		.byte	16
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 24
+
+
+ 1312 0508 A3       		.byte	-93
+ 1313 0509 2C       		.byte	44
+ 1314 050a A4       		.byte	-92
+ 1315 050b 40       		.byte	64
+ 1316 050c A5       		.byte	-91
+ 1317 050d 01       		.byte	1
+ 1318 050e A6       		.byte	-90
+ 1319 050f A0       		.byte	-96
+ 1320 0510 A8       		.byte	-88
+ 1321 0511 20       		.byte	32
+ 1322 0512 AB       		.byte	-85
+ 1323 0513 80       		.byte	-128
+ 1324 0514 AD       		.byte	-83
+ 1325 0515 20       		.byte	32
+ 1326 0516 B3       		.byte	-77
+ 1327 0517 01       		.byte	1
+ 1328 0518 B7       		.byte	-73
+ 1329 0519 20       		.byte	32
+ 1330 051a C0       		.byte	-64
+ 1331 051b EF       		.byte	-17
+ 1332 051c C2       		.byte	-62
+ 1333 051d 5F       		.byte	95
+ 1334 051e C4       		.byte	-60
+ 1335 051f AF       		.byte	-81
+ 1336 0520 CA       		.byte	-54
+ 1337 0521 55       		.byte	85
+ 1338 0522 CC       		.byte	-52
+ 1339 0523 72       		.byte	114
+ 1340 0524 CE       		.byte	-50
+ 1341 0525 50       		.byte	80
+ 1342 0526 D0       		.byte	-48
+ 1343 0527 0B       		.byte	11
+ 1344 0528 D2       		.byte	-46
+ 1345 0529 0C       		.byte	12
+ 1346 052a D6       		.byte	-42
+ 1347 052b 18       		.byte	24
+ 1348 052c D8       		.byte	-40
+ 1349 052d 10       		.byte	16
+ 1350 052e DE       		.byte	-34
+ 1351 052f 08       		.byte	8
+ 1352 0530 E0       		.byte	-32
+ 1353 0531 04       		.byte	4
+ 1354 0532 E2       		.byte	-30
+ 1355 0533 03       		.byte	3
+ 1356 0534 E6       		.byte	-26
+ 1357 0535 07       		.byte	7
+ 1358 0536 E8       		.byte	-24
+ 1359 0537 10       		.byte	16
+ 1360 0538 EA       		.byte	-22
+ 1361 0539 01       		.byte	1
+ 1362 053a EE       		.byte	-18
+ 1363 053b 02       		.byte	2
+ 1364 053c 58       		.byte	88
+ 1365 053d 04       		.byte	4
+ 1366 053e 59       		.byte	89
+ 1367 053f 04       		.byte	4
+ 1368 0540 5F       		.byte	95
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 25
+
+
+ 1369 0541 01       		.byte	1
+ 1370 0542 83       		.byte	-125
+ 1371 0543 08       		.byte	8
+ 1372 0544 84       		.byte	-124
+ 1373 0545 08       		.byte	8
+ 1374 0546 85       		.byte	-123
+ 1375 0547 08       		.byte	8
+ 1376 0548 89       		.byte	-119
+ 1377 0549 20       		.byte	32
+ 1378 054a 8A       		.byte	-118
+ 1379 054b 04       		.byte	4
+ 1380 054c 8B       		.byte	-117
+ 1381 054d 10       		.byte	16
+ 1382 054e 8C       		.byte	-116
+ 1383 054f 18       		.byte	24
+ 1384 0550 8F       		.byte	-113
+ 1385 0551 02       		.byte	2
+ 1386 0552 90       		.byte	-112
+ 1387 0553 1C       		.byte	28
+ 1388 0554 91       		.byte	-111
+ 1389 0555 04       		.byte	4
+ 1390 0556 92       		.byte	-110
+ 1391 0557 61       		.byte	97
+ 1392 0558 96       		.byte	-106
+ 1393 0559 23       		.byte	35
+ 1394 055a 97       		.byte	-105
+ 1395 055b 01       		.byte	1
+ 1396 055c 98       		.byte	-104
+ 1397 055d 3C       		.byte	60
+ 1398 055e 9A       		.byte	-102
+ 1399 055f 42       		.byte	66
+ 1400 0560 9B       		.byte	-101
+ 1401 0561 04       		.byte	4
+ 1402 0562 9C       		.byte	-100
+ 1403 0563 67       		.byte	103
+ 1404 0564 9D       		.byte	-99
+ 1405 0565 80       		.byte	-128
+ 1406 0566 9E       		.byte	-98
+ 1407 0567 18       		.byte	24
+ 1408 0568 9F       		.byte	-97
+ 1409 0569 40       		.byte	64
+ 1410 056a A1       		.byte	-95
+ 1411 056b 02       		.byte	2
+ 1412 056c A4       		.byte	-92
+ 1413 056d 7F       		.byte	127
+ 1414 056e A5       		.byte	-91
+ 1415 056f 01       		.byte	1
+ 1416 0570 A8       		.byte	-88
+ 1417 0571 04       		.byte	4
+ 1418 0572 A9       		.byte	-87
+ 1419 0573 40       		.byte	64
+ 1420 0574 AB       		.byte	-85
+ 1421 0575 80       		.byte	-128
+ 1422 0576 AC       		.byte	-84
+ 1423 0577 10       		.byte	16
+ 1424 0578 AD       		.byte	-83
+ 1425 0579 10       		.byte	16
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 26
+
+
+ 1426 057a AF       		.byte	-81
+ 1427 057b 20       		.byte	32
+ 1428 057c B0       		.byte	-80
+ 1429 057d 40       		.byte	64
+ 1430 057e B1       		.byte	-79
+ 1431 057f FF       		.byte	-1
+ 1432 0580 B4       		.byte	-76
+ 1433 0581 1F       		.byte	31
+ 1434 0582 B6       		.byte	-74
+ 1435 0583 38       		.byte	56
+ 1436 0584 B8       		.byte	-72
+ 1437 0585 02       		.byte	2
+ 1438 0586 BA       		.byte	-70
+ 1439 0587 20       		.byte	32
+ 1440 0588 BF       		.byte	-65
+ 1441 0589 01       		.byte	1
+ 1442 058a D6       		.byte	-42
+ 1443 058b 02       		.byte	2
+ 1444 058c D7       		.byte	-41
+ 1445 058d 3D       		.byte	61
+ 1446 058e D8       		.byte	-40
+ 1447 058f 04       		.byte	4
+ 1448 0590 D9       		.byte	-39
+ 1449 0591 04       		.byte	4
+ 1450 0592 DB       		.byte	-37
+ 1451 0593 0C       		.byte	12
+ 1452 0594 DC       		.byte	-36
+ 1453 0595 01       		.byte	1
+ 1454 0596 DF       		.byte	-33
+ 1455 0597 01       		.byte	1
+ 1456 0598 02       		.byte	2
+ 1457 0599 28       		.byte	40
+ 1458 059a 03       		.byte	3
+ 1459 059b 01       		.byte	1
+ 1460 059c 04       		.byte	4
+ 1461 059d 82       		.byte	-126
+ 1462 059e 05       		.byte	5
+ 1463 059f 24       		.byte	36
+ 1464 05a0 07       		.byte	7
+ 1465 05a1 40       		.byte	64
+ 1466 05a2 08       		.byte	8
+ 1467 05a3 80       		.byte	-128
+ 1468 05a4 09       		.byte	9
+ 1469 05a5 01       		.byte	1
+ 1470 05a6 0A       		.byte	10
+ 1471 05a7 04       		.byte	4
+ 1472 05a8 0B       		.byte	11
+ 1473 05a9 20       		.byte	32
+ 1474 05aa 0F       		.byte	15
+ 1475 05ab 08       		.byte	8
+ 1476 05ac 10       		.byte	16
+ 1477 05ad 05       		.byte	5
+ 1478 05ae 13       		.byte	19
+ 1479 05af 08       		.byte	8
+ 1480 05b0 15       		.byte	21
+ 1481 05b1 80       		.byte	-128
+ 1482 05b2 17       		.byte	23
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 27
+
+
+ 1483 05b3 04       		.byte	4
+ 1484 05b4 1A       		.byte	26
+ 1485 05b5 44       		.byte	68
+ 1486 05b6 1B       		.byte	27
+ 1487 05b7 A0       		.byte	-96
+ 1488 05b8 20       		.byte	32
+ 1489 05b9 40       		.byte	64
+ 1490 05ba 29       		.byte	41
+ 1491 05bb 20       		.byte	32
+ 1492 05bc 2A       		.byte	42
+ 1493 05bd 0A       		.byte	10
+ 1494 05be 2B       		.byte	43
+ 1495 05bf 03       		.byte	3
+ 1496 05c0 2F       		.byte	47
+ 1497 05c1 02       		.byte	2
+ 1498 05c2 31       		.byte	49
+ 1499 05c3 04       		.byte	4
+ 1500 05c4 32       		.byte	50
+ 1501 05c5 51       		.byte	81
+ 1502 05c6 35       		.byte	53
+ 1503 05c7 24       		.byte	36
+ 1504 05c8 36       		.byte	54
+ 1505 05c9 02       		.byte	2
+ 1506 05ca 37       		.byte	55
+ 1507 05cb 42       		.byte	66
+ 1508 05cc 38       		.byte	56
+ 1509 05cd 82       		.byte	-126
+ 1510 05ce 39       		.byte	57
+ 1511 05cf 14       		.byte	20
+ 1512 05d0 3B       		.byte	59
+ 1513 05d1 42       		.byte	66
+ 1514 05d2 3F       		.byte	63
+ 1515 05d3 48       		.byte	72
+ 1516 05d4 5A       		.byte	90
+ 1517 05d5 10       		.byte	16
+ 1518 05d6 61       		.byte	97
+ 1519 05d7 02       		.byte	2
+ 1520 05d8 68       		.byte	104
+ 1521 05d9 A4       		.byte	-92
+ 1522 05da 69       		.byte	105
+ 1523 05db 14       		.byte	20
+ 1524 05dc 6A       		.byte	106
+ 1525 05dd 82       		.byte	-126
+ 1526 05de 71       		.byte	113
+ 1527 05df 40       		.byte	64
+ 1528 05e0 72       		.byte	114
+ 1529 05e1 0A       		.byte	10
+ 1530 05e2 79       		.byte	121
+ 1531 05e3 40       		.byte	64
+ 1532 05e4 81       		.byte	-127
+ 1533 05e5 04       		.byte	4
+ 1534 05e6 82       		.byte	-126
+ 1535 05e7 82       		.byte	-126
+ 1536 05e8 83       		.byte	-125
+ 1537 05e9 04       		.byte	4
+ 1538 05ea 84       		.byte	-124
+ 1539 05eb 01       		.byte	1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 28
+
+
+ 1540 05ec 86       		.byte	-122
+ 1541 05ed 08       		.byte	8
+ 1542 05ee 88       		.byte	-120
+ 1543 05ef 10       		.byte	16
+ 1544 05f0 8B       		.byte	-117
+ 1545 05f1 48       		.byte	72
+ 1546 05f2 8C       		.byte	-116
+ 1547 05f3 40       		.byte	64
+ 1548 05f4 8E       		.byte	-114
+ 1549 05f5 50       		.byte	80
+ 1550 05f6 90       		.byte	-112
+ 1551 05f7 82       		.byte	-126
+ 1552 05f8 91       		.byte	-111
+ 1553 05f9 C0       		.byte	-64
+ 1554 05fa 92       		.byte	-110
+ 1555 05fb 30       		.byte	48
+ 1556 05fc 94       		.byte	-108
+ 1557 05fd 40       		.byte	64
+ 1558 05fe 97       		.byte	-105
+ 1559 05ff 40       		.byte	64
+ 1560 0600 99       		.byte	-103
+ 1561 0601 04       		.byte	4
+ 1562 0602 9B       		.byte	-101
+ 1563 0603 80       		.byte	-128
+ 1564 0604 9D       		.byte	-99
+ 1565 0605 70       		.byte	112
+ 1566 0606 9E       		.byte	-98
+ 1567 0607 08       		.byte	8
+ 1568 0608 9F       		.byte	-97
+ 1569 0609 02       		.byte	2
+ 1570 060a A0       		.byte	-96
+ 1571 060b 10       		.byte	16
+ 1572 060c A1       		.byte	-95
+ 1573 060d 02       		.byte	2
+ 1574 060e A3       		.byte	-93
+ 1575 060f 0D       		.byte	13
+ 1576 0610 A4       		.byte	-92
+ 1577 0611 E4       		.byte	-28
+ 1578 0612 A6       		.byte	-90
+ 1579 0613 02       		.byte	2
+ 1580 0614 A7       		.byte	-89
+ 1581 0615 80       		.byte	-128
+ 1582 0616 B4       		.byte	-76
+ 1583 0617 01       		.byte	1
+ 1584 0618 B5       		.byte	-75
+ 1585 0619 08       		.byte	8
+ 1586 061a B6       		.byte	-74
+ 1587 061b 02       		.byte	2
+ 1588 061c C0       		.byte	-64
+ 1589 061d F7       		.byte	-9
+ 1590 061e C2       		.byte	-62
+ 1591 061f 4F       		.byte	79
+ 1592 0620 C4       		.byte	-60
+ 1593 0621 A7       		.byte	-89
+ 1594 0622 CA       		.byte	-54
+ 1595 0623 1F       		.byte	31
+ 1596 0624 CC       		.byte	-52
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 29
+
+
+ 1597 0625 FF       		.byte	-1
+ 1598 0626 CE       		.byte	-50
+ 1599 0627 5F       		.byte	95
+ 1600 0628 D6       		.byte	-42
+ 1601 0629 04       		.byte	4
+ 1602 062a D8       		.byte	-40
+ 1603 062b 01       		.byte	1
+ 1604 062c DE       		.byte	-34
+ 1605 062d 08       		.byte	8
+ 1606 062e E2       		.byte	-30
+ 1607 062f 0B       		.byte	11
+ 1608 0630 E4       		.byte	-28
+ 1609 0631 05       		.byte	5
+ 1610 0632 81       		.byte	-127
+ 1611 0633 30       		.byte	48
+ 1612 0634 87       		.byte	-121
+ 1613 0635 41       		.byte	65
+ 1614 0636 89       		.byte	-119
+ 1615 0637 01       		.byte	1
+ 1616 0638 8C       		.byte	-116
+ 1617 0639 20       		.byte	32
+ 1618 063a 8E       		.byte	-114
+ 1619 063b 80       		.byte	-128
+ 1620 063c 8F       		.byte	-113
+ 1621 063d 08       		.byte	8
+ 1622 063e 94       		.byte	-108
+ 1623 063f 01       		.byte	1
+ 1624 0640 99       		.byte	-103
+ 1625 0641 02       		.byte	2
+ 1626 0642 A1       		.byte	-95
+ 1627 0643 10       		.byte	16
+ 1628 0644 B4       		.byte	-76
+ 1629 0645 04       		.byte	4
+ 1630 0646 B5       		.byte	-75
+ 1631 0647 02       		.byte	2
+ 1632 0648 E0       		.byte	-32
+ 1633 0649 50       		.byte	80
+ 1634 064a E4       		.byte	-28
+ 1635 064b 94       		.byte	-108
+ 1636 064c E8       		.byte	-24
+ 1637 064d 40       		.byte	64
+ 1638 064e 2B       		.byte	43
+ 1639 064f 01       		.byte	1
+ 1640 0650 31       		.byte	49
+ 1641 0651 01       		.byte	1
+ 1642 0652 58       		.byte	88
+ 1643 0653 04       		.byte	4
+ 1644 0654 59       		.byte	89
+ 1645 0655 04       		.byte	4
+ 1646 0656 5F       		.byte	95
+ 1647 0657 01       		.byte	1
+ 1648 0658 80       		.byte	-128
+ 1649 0659 10       		.byte	16
+ 1650 065a 82       		.byte	-126
+ 1651 065b 60       		.byte	96
+ 1652 065c 85       		.byte	-123
+ 1653 065d 04       		.byte	4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 30
+
+
+ 1654 065e 88       		.byte	-120
+ 1655 065f 7E       		.byte	126
+ 1656 0660 8B       		.byte	-117
+ 1657 0661 73       		.byte	115
+ 1658 0662 8D       		.byte	-115
+ 1659 0663 08       		.byte	8
+ 1660 0664 91       		.byte	-111
+ 1661 0665 63       		.byte	99
+ 1662 0666 95       		.byte	-107
+ 1663 0667 21       		.byte	33
+ 1664 0668 98       		.byte	-104
+ 1665 0669 7E       		.byte	126
+ 1666 066a 99       		.byte	-103
+ 1667 066b 0C       		.byte	12
+ 1668 066c 9D       		.byte	-99
+ 1669 066d 0F       		.byte	15
+ 1670 066e 9F       		.byte	-97
+ 1671 066f 70       		.byte	112
+ 1672 0670 A0       		.byte	-96
+ 1673 0671 48       		.byte	72
+ 1674 0672 A1       		.byte	-95
+ 1675 0673 7F       		.byte	127
+ 1676 0674 A2       		.byte	-94
+ 1677 0675 14       		.byte	20
+ 1678 0676 A4       		.byte	-92
+ 1679 0677 24       		.byte	36
+ 1680 0678 A5       		.byte	-91
+ 1681 0679 0C       		.byte	12
+ 1682 067a A6       		.byte	-90
+ 1683 067b 19       		.byte	25
+ 1684 067c A7       		.byte	-89
+ 1685 067d 73       		.byte	115
+ 1686 067e A9       		.byte	-87
+ 1687 067f 42       		.byte	66
+ 1688 0680 AC       		.byte	-84
+ 1689 0681 02       		.byte	2
+ 1690 0682 AD       		.byte	-83
+ 1691 0683 73       		.byte	115
+ 1692 0684 AF       		.byte	-81
+ 1693 0685 0C       		.byte	12
+ 1694 0686 B0       		.byte	-80
+ 1695 0687 70       		.byte	112
+ 1696 0688 B1       		.byte	-79
+ 1697 0689 1C       		.byte	28
+ 1698 068a B2       		.byte	-78
+ 1699 068b 02       		.byte	2
+ 1700 068c B4       		.byte	-76
+ 1701 068d 0C       		.byte	12
+ 1702 068e B5       		.byte	-75
+ 1703 068f 0F       		.byte	15
+ 1704 0690 B6       		.byte	-74
+ 1705 0691 01       		.byte	1
+ 1706 0692 B7       		.byte	-73
+ 1707 0693 60       		.byte	96
+ 1708 0694 BB       		.byte	-69
+ 1709 0695 22       		.byte	34
+ 1710 0696 D6       		.byte	-42
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 31
+
+
+ 1711 0697 02       		.byte	2
+ 1712 0698 D7       		.byte	-41
+ 1713 0699 10       		.byte	16
+ 1714 069a D8       		.byte	-40
+ 1715 069b 04       		.byte	4
+ 1716 069c D9       		.byte	-39
+ 1717 069d 04       		.byte	4
+ 1718 069e DB       		.byte	-37
+ 1719 069f 04       		.byte	4
+ 1720 06a0 DC       		.byte	-36
+ 1721 06a1 11       		.byte	17
+ 1722 06a2 DD       		.byte	-35
+ 1723 06a3 10       		.byte	16
+ 1724 06a4 DF       		.byte	-33
+ 1725 06a5 01       		.byte	1
+ 1726 06a6 00       		.byte	0
+ 1727 06a7 10       		.byte	16
+ 1728 06a8 01       		.byte	1
+ 1729 06a9 22       		.byte	34
+ 1730 06aa 05       		.byte	5
+ 1731 06ab 01       		.byte	1
+ 1732 06ac 07       		.byte	7
+ 1733 06ad 04       		.byte	4
+ 1734 06ae 08       		.byte	8
+ 1735 06af 11       		.byte	17
+ 1736 06b0 09       		.byte	9
+ 1737 06b1 10       		.byte	16
+ 1738 06b2 0E       		.byte	14
+ 1739 06b3 08       		.byte	8
+ 1740 06b4 10       		.byte	16
+ 1741 06b5 20       		.byte	32
+ 1742 06b6 12       		.byte	18
+ 1743 06b7 80       		.byte	-128
+ 1744 06b8 13       		.byte	19
+ 1745 06b9 40       		.byte	64
+ 1746 06ba 15       		.byte	21
+ 1747 06bb 48       		.byte	72
+ 1748 06bc 16       		.byte	22
+ 1749 06bd 80       		.byte	-128
+ 1750 06be 1D       		.byte	29
+ 1751 06bf 01       		.byte	1
+ 1752 06c0 1E       		.byte	30
+ 1753 06c1 14       		.byte	20
+ 1754 06c2 1F       		.byte	31
+ 1755 06c3 41       		.byte	65
+ 1756 06c4 23       		.byte	35
+ 1757 06c5 40       		.byte	64
+ 1758 06c6 24       		.byte	36
+ 1759 06c7 01       		.byte	1
+ 1760 06c8 25       		.byte	37
+ 1761 06c9 20       		.byte	32
+ 1762 06ca 26       		.byte	38
+ 1763 06cb 20       		.byte	32
+ 1764 06cc 27       		.byte	39
+ 1765 06cd 40       		.byte	64
+ 1766 06ce 28       		.byte	40
+ 1767 06cf 11       		.byte	17
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 32
+
+
+ 1768 06d0 29       		.byte	41
+ 1769 06d1 42       		.byte	66
+ 1770 06d2 2B       		.byte	43
+ 1771 06d3 08       		.byte	8
+ 1772 06d4 2C       		.byte	44
+ 1773 06d5 08       		.byte	8
+ 1774 06d6 2D       		.byte	45
+ 1775 06d7 09       		.byte	9
+ 1776 06d8 2F       		.byte	47
+ 1777 06d9 02       		.byte	2
+ 1778 06da 30       		.byte	48
+ 1779 06db 20       		.byte	32
+ 1780 06dc 32       		.byte	50
+ 1781 06dd 80       		.byte	-128
+ 1782 06de 35       		.byte	53
+ 1783 06df 01       		.byte	1
+ 1784 06e0 37       		.byte	55
+ 1785 06e1 58       		.byte	88
+ 1786 06e2 38       		.byte	56
+ 1787 06e3 10       		.byte	16
+ 1788 06e4 3B       		.byte	59
+ 1789 06e5 40       		.byte	64
+ 1790 06e6 3C       		.byte	60
+ 1791 06e7 80       		.byte	-128
+ 1792 06e8 3E       		.byte	62
+ 1793 06e9 18       		.byte	24
+ 1794 06ea 5E       		.byte	94
+ 1795 06eb 40       		.byte	64
+ 1796 06ec 6D       		.byte	109
+ 1797 06ed 40       		.byte	64
+ 1798 06ee 6E       		.byte	110
+ 1799 06ef 08       		.byte	8
+ 1800 06f0 6F       		.byte	111
+ 1801 06f1 04       		.byte	4
+ 1802 06f2 74       		.byte	116
+ 1803 06f3 40       		.byte	64
+ 1804 06f4 76       		.byte	118
+ 1805 06f5 18       		.byte	24
+ 1806 06f6 77       		.byte	119
+ 1807 06f7 11       		.byte	17
+ 1808 06f8 82       		.byte	-126
+ 1809 06f9 50       		.byte	80
+ 1810 06fa 83       		.byte	-125
+ 1811 06fb 41       		.byte	65
+ 1812 06fc 85       		.byte	-123
+ 1813 06fd 20       		.byte	32
+ 1814 06fe 86       		.byte	-122
+ 1815 06ff 30       		.byte	48
+ 1816 0700 87       		.byte	-121
+ 1817 0701 02       		.byte	2
+ 1818 0702 88       		.byte	-120
+ 1819 0703 08       		.byte	8
+ 1820 0704 89       		.byte	-119
+ 1821 0705 04       		.byte	4
+ 1822 0706 8A       		.byte	-118
+ 1823 0707 84       		.byte	-124
+ 1824 0708 8B       		.byte	-117
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 33
+
+
+ 1825 0709 08       		.byte	8
+ 1826 070a 8E       		.byte	-114
+ 1827 070b 08       		.byte	8
+ 1828 070c 91       		.byte	-111
+ 1829 070d 01       		.byte	1
+ 1830 070e 94       		.byte	-108
+ 1831 070f 01       		.byte	1
+ 1832 0710 97       		.byte	-105
+ 1833 0711 C0       		.byte	-64
+ 1834 0712 99       		.byte	-103
+ 1835 0713 6A       		.byte	106
+ 1836 0714 9F       		.byte	-97
+ 1837 0715 01       		.byte	1
+ 1838 0716 A0       		.byte	-96
+ 1839 0717 20       		.byte	32
+ 1840 0718 A1       		.byte	-95
+ 1841 0719 10       		.byte	16
+ 1842 071a A2       		.byte	-94
+ 1843 071b 80       		.byte	-128
+ 1844 071c A3       		.byte	-93
+ 1845 071d 08       		.byte	8
+ 1846 071e AF       		.byte	-81
+ 1847 071f 40       		.byte	64
+ 1848 0720 B1       		.byte	-79
+ 1849 0721 40       		.byte	64
+ 1850 0722 B5       		.byte	-75
+ 1851 0723 08       		.byte	8
+ 1852 0724 C0       		.byte	-64
+ 1853 0725 5A       		.byte	90
+ 1854 0726 C2       		.byte	-62
+ 1855 0727 4A       		.byte	74
+ 1856 0728 C4       		.byte	-60
+ 1857 0729 BD       		.byte	-67
+ 1858 072a CA       		.byte	-54
+ 1859 072b FF       		.byte	-1
+ 1860 072c CC       		.byte	-52
+ 1861 072d FC       		.byte	-4
+ 1862 072e CE       		.byte	-50
+ 1863 072f 7C       		.byte	124
+ 1864 0730 D6       		.byte	-42
+ 1865 0731 10       		.byte	16
+ 1866 0732 E2       		.byte	-30
+ 1867 0733 10       		.byte	16
+ 1868 0734 E6       		.byte	-26
+ 1869 0735 A0       		.byte	-96
+ 1870 0736 E8       		.byte	-24
+ 1871 0737 D0       		.byte	-48
+ 1872 0738 EA       		.byte	-22
+ 1873 0739 01       		.byte	1
+ 1874 073a 13       		.byte	19
+ 1875 073b 01       		.byte	1
+ 1876 073c 16       		.byte	22
+ 1877 073d 80       		.byte	-128
+ 1878 073e 30       		.byte	48
+ 1879 073f 80       		.byte	-128
+ 1880 0740 3B       		.byte	59
+ 1881 0741 02       		.byte	2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 34
+
+
+ 1882 0742 3E       		.byte	62
+ 1883 0743 80       		.byte	-128
+ 1884 0744 C4       		.byte	-60
+ 1885 0745 30       		.byte	48
+ 1886 0746 CC       		.byte	-52
+ 1887 0747 10       		.byte	16
+ 1888 0748 CE       		.byte	-50
+ 1889 0749 60       		.byte	96
+ 1890 074a 53       		.byte	83
+ 1891 074b 80       		.byte	-128
+ 1892 074c 56       		.byte	86
+ 1893 074d 40       		.byte	64
+ 1894 074e 5B       		.byte	91
+ 1895 074f 20       		.byte	32
+ 1896 0750 5F       		.byte	95
+ 1897 0751 40       		.byte	64
+ 1898 0752 63       		.byte	99
+ 1899 0753 02       		.byte	2
+ 1900 0754 65       		.byte	101
+ 1901 0755 01       		.byte	1
+ 1902 0756 8B       		.byte	-117
+ 1903 0757 20       		.byte	32
+ 1904 0758 93       		.byte	-109
+ 1905 0759 01       		.byte	1
+ 1906 075a 97       		.byte	-105
+ 1907 075b 02       		.byte	2
+ 1908 075c A4       		.byte	-92
+ 1909 075d 80       		.byte	-128
+ 1910 075e D4       		.byte	-44
+ 1911 075f E0       		.byte	-32
+ 1912 0760 D6       		.byte	-42
+ 1913 0761 60       		.byte	96
+ 1914 0762 D8       		.byte	-40
+ 1915 0763 80       		.byte	-128
+ 1916 0764 3E       		.byte	62
+ 1917 0765 10       		.byte	16
+ 1918 0766 83       		.byte	-125
+ 1919 0767 01       		.byte	1
+ 1920 0768 93       		.byte	-109
+ 1921 0769 01       		.byte	1
+ 1922 076a 97       		.byte	-105
+ 1923 076b 02       		.byte	2
+ 1924 076c A4       		.byte	-92
+ 1925 076d 80       		.byte	-128
+ 1926 076e AF       		.byte	-81
+ 1927 076f 80       		.byte	-128
+ 1928 0770 B2       		.byte	-78
+ 1929 0771 40       		.byte	64
+ 1930 0772 B3       		.byte	-77
+ 1931 0773 41       		.byte	65
+ 1932 0774 B5       		.byte	-75
+ 1933 0775 01       		.byte	1
+ 1934 0776 CE       		.byte	-50
+ 1935 0777 20       		.byte	32
+ 1936 0778 E0       		.byte	-32
+ 1937 0779 80       		.byte	-128
+ 1938 077a EE       		.byte	-18
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 35
+
+
+ 1939 077b 10       		.byte	16
+ 1940 077c 96       		.byte	-106
+ 1941 077d 10       		.byte	16
+ 1942 077e A4       		.byte	-92
+ 1943 077f 80       		.byte	-128
+ 1944 0780 AB       		.byte	-85
+ 1945 0781 01       		.byte	1
+ 1946 0782 EE       		.byte	-18
+ 1947 0783 20       		.byte	32
+ 1948 0784 10       		.byte	16
+ 1949 0785 10       		.byte	16
+ 1950 0786 14       		.byte	20
+ 1951 0787 20       		.byte	32
+ 1952 0788 75       		.byte	117
+ 1953 0789 02       		.byte	2
+ 1954 078a C4       		.byte	-60
+ 1955 078b 0C       		.byte	12
+ 1956 078c DE       		.byte	-34
+ 1957 078d 04       		.byte	4
+ 1958 078e 50       		.byte	80
+ 1959 078f 10       		.byte	16
+ 1960 0790 98       		.byte	-104
+ 1961 0791 30       		.byte	48
+ 1962 0792 9D       		.byte	-99
+ 1963 0793 02       		.byte	2
+ 1964 0794 D4       		.byte	-44
+ 1965 0795 04       		.byte	4
+ 1966 0796 1B       		.byte	27
+ 1967 0797 04       		.byte	4
+ 1968 0798 26       		.byte	38
+ 1969 0799 08       		.byte	8
+ 1970 079a 94       		.byte	-108
+ 1971 079b 20       		.byte	32
+ 1972 079c 98       		.byte	-104
+ 1973 079d 30       		.byte	48
+ 1974 079e 9D       		.byte	-99
+ 1975 079f 02       		.byte	2
+ 1976 07a0 C6       		.byte	-58
+ 1977 07a1 08       		.byte	8
+ 1978 07a2 C8       		.byte	-56
+ 1979 07a3 01       		.byte	1
+ 1980 07a4 44       		.byte	68
+ 1981 07a5 02       		.byte	2
+ 1982 07a6 8E       		.byte	-114
+ 1983 07a7 08       		.byte	8
+ 1984 07a8 94       		.byte	-108
+ 1985 07a9 20       		.byte	32
+ 1986 07aa 98       		.byte	-104
+ 1987 07ab 30       		.byte	48
+ 1988 07ac 9D       		.byte	-99
+ 1989 07ad 02       		.byte	2
+ 1990 07ae A2       		.byte	-94
+ 1991 07af 08       		.byte	8
+ 1992 07b0 AB       		.byte	-85
+ 1993 07b1 04       		.byte	4
+ 1994 07b2 D0       		.byte	-48
+ 1995 07b3 04       		.byte	4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 36
+
+
+ 1996 07b4 E6       		.byte	-26
+ 1997 07b5 02       		.byte	2
+ 1998 07b6 24       		.byte	36
+ 1999 07b7 08       		.byte	8
+ 2000 07b8 96       		.byte	-106
+ 2001 07b9 10       		.byte	16
+ 2002 07ba A4       		.byte	-92
+ 2003 07bb 80       		.byte	-128
+ 2004 07bc C8       		.byte	-56
+ 2005 07bd 20       		.byte	32
+ 2006 07be 84       		.byte	-124
+ 2007 07bf 80       		.byte	-128
+ 2008 07c0 A4       		.byte	-92
+ 2009 07c1 80       		.byte	-128
+ 2010 07c2 AA       		.byte	-86
+ 2011 07c3 10       		.byte	16
+ 2012 07c4 B4       		.byte	-76
+ 2013 07c5 04       		.byte	4
+ 2014 07c6 E2       		.byte	-30
+ 2015 07c7 10       		.byte	16
+ 2016 07c8 EA       		.byte	-22
+ 2017 07c9 80       		.byte	-128
+ 2018 07ca 12       		.byte	18
+ 2019 07cb 10       		.byte	16
+ 2020 07cc 13       		.byte	19
+ 2021 07cd 20       		.byte	32
+ 2022 07ce 16       		.byte	22
+ 2023 07cf 20       		.byte	32
+ 2024 07d0 78       		.byte	120
+ 2025 07d1 10       		.byte	16
+ 2026 07d2 7C       		.byte	124
+ 2027 07d3 20       		.byte	32
+ 2028 07d4 81       		.byte	-127
+ 2029 07d5 02       		.byte	2
+ 2030 07d6 98       		.byte	-104
+ 2031 07d7 30       		.byte	48
+ 2032 07d8 9C       		.byte	-100
+ 2033 07d9 02       		.byte	2
+ 2034 07da 9D       		.byte	-99
+ 2035 07db 02       		.byte	2
+ 2036 07dc B4       		.byte	-76
+ 2037 07dd 10       		.byte	16
+ 2038 07de C4       		.byte	-60
+ 2039 07df 0E       		.byte	14
+ 2040 07e0 DE       		.byte	-34
+ 2041 07e1 03       		.byte	3
+ 2042 07e2 EC       		.byte	-20
+ 2043 07e3 02       		.byte	2
+ 2044 07e4 10       		.byte	16
+ 2045 07e5 80       		.byte	-128
+ 2046 07e6 72       		.byte	114
+ 2047 07e7 20       		.byte	32
+ 2048 07e8 76       		.byte	118
+ 2049 07e9 10       		.byte	16
+ 2050 07ea 88       		.byte	-120
+ 2051 07eb 80       		.byte	-128
+ 2052 07ec 9A       		.byte	-102
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 37
+
+
+ 2053 07ed 30       		.byte	48
+ 2054 07ee AB       		.byte	-85
+ 2055 07ef 20       		.byte	32
+ 2056 07f0 B4       		.byte	-76
+ 2057 07f1 02       		.byte	2
+ 2058 07f2 C4       		.byte	-60
+ 2059 07f3 08       		.byte	8
+ 2060 07f4 DC       		.byte	-36
+ 2061 07f5 01       		.byte	1
+ 2062 07f6 DE       		.byte	-34
+ 2063 07f7 04       		.byte	4
+ 2064 07f8 E6       		.byte	-26
+ 2065 07f9 01       		.byte	1
+ 2066 07fa E8       		.byte	-24
+ 2067 07fb 08       		.byte	8
+ 2068 07fc 00       		.byte	0
+ 2069 07fd 03       		.byte	3
+ 2070 07fe 08       		.byte	8
+ 2071 07ff 01       		.byte	1
+ 2072 0800 0A       		.byte	10
+ 2073 0801 03       		.byte	3
+ 2074 0802 10       		.byte	16
+ 2075 0803 03       		.byte	3
+ 2076 0804 11       		.byte	17
+ 2077 0805 01       		.byte	1
+ 2078 0806 1A       		.byte	26
+ 2079 0807 03       		.byte	3
+ 2080 0808 1B       		.byte	27
+ 2081 0809 01       		.byte	1
+ 2082 080a 1C       		.byte	28
+ 2083 080b 03       		.byte	3
+ 2084 080c 00       		.byte	0
+ 2085 080d 03       		.byte	3
+ 2086 080e 03       		.byte	3
+ 2087 080f C0       		.byte	-64
+ 2088 0810 10       		.byte	16
+ 2089 0811 0A       		.byte	10
+ 2090 0812 00       		.byte	0
+ 2091 0813 00       		.byte	0
+ 2092 0814 90       		.byte	-112
+ 2093 0815 30       		.byte	48
+ 2094 0816 00       		.byte	0
+ 2095 0817 00       		.byte	0
+ 2096 0818 70       		.byte	112
+ 2097 0819 00       		.byte	0
+ 2098 081a 00       		.byte	0
+ 2099 081b 00       		.byte	0
+ 2100 081c 00       		.byte	0
+ 2101 081d 00       		.byte	0
+ 2102 081e 00       		.byte	0
+ 2103 081f 00       		.byte	0
+ 2104 0820 00       		.byte	0
+ 2105 0821 3F       		.byte	63
+ 2106 0822 3F       		.byte	63
+ 2107 0823 00       		.byte	0
+ 2108 0824 B0       		.byte	-80
+ 2109 0825 00       		.byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 38
+
+
+ 2110 0826 40       		.byte	64
+ 2111 0827 80       		.byte	-128
+ 2112 0828 B0       		.byte	-80
+ 2113 0829 00       		.byte	0
+ 2114 082a B0       		.byte	-80
+ 2115 082b 00       		.byte	0
+ 2116 082c 00       		.byte	0
+ 2117 082d 30       		.byte	48
+ 2118 082e 00       		.byte	0
+ 2119 082f 00       		.byte	0
+ 2120 0830 00       		.byte	0
+ 2121 0831 02       		.byte	2
+ 2122 0832 02       		.byte	2
+ 2123 0833 00       		.byte	0
+ 2124 0834 02       		.byte	2
+ 2125 0835 00       		.byte	0
+ 2126 0836 00       		.byte	0
+ 2127 0837 00       		.byte	0
+ 2128 0838 00       		.byte	0
+ 2129 0839 01       		.byte	1
+ 2130 083a 00       		.byte	0
+ 2131 083b 00       		.byte	0
+ 2132              		.global	cy_meta_custnvl
+ 2133              		.section	.cycustnvl,"a",%progbits
+ 2134              		.align	2
+ 2135              		.type	cy_meta_custnvl, %object
+ 2136              		.size	cy_meta_custnvl, 4
+ 2137              	cy_meta_custnvl:
+ 2138 0000 00       		.byte	0
+ 2139 0001 00       		.byte	0
+ 2140 0002 40       		.byte	64
+ 2141 0003 05       		.byte	5
+ 2142              		.global	cy_meta_wonvl
+ 2143              		.section	.cywolatch,"a",%progbits
+ 2144              		.align	2
+ 2145              		.type	cy_meta_wonvl, %object
+ 2146              		.size	cy_meta_wonvl, 4
+ 2147              	cy_meta_wonvl:
+ 2148 0000 BC       		.byte	-68
+ 2149 0001 90       		.byte	-112
+ 2150 0002 AC       		.byte	-84
+ 2151 0003 AF       		.byte	-81
+ 2152              		.global	cy_meta_flashprotect
+ 2153              		.section	.cyflashprotect,"a",%progbits
+ 2154              		.align	2
+ 2155              		.type	cy_meta_flashprotect, %object
+ 2156              		.size	cy_meta_flashprotect, 256
+ 2157              	cy_meta_flashprotect:
+ 2158 0000 00000000 		.space	256
+ 2158      00000000 
+ 2158      00000000 
+ 2158      00000000 
+ 2158      00000000 
+ 2159              		.global	cy_metadata
+ 2160              		.section	.cymeta,"a",%progbits
+ 2161              		.align	2
+ 2162              		.type	cy_metadata, %object
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 39
+
+
+ 2163              		.size	cy_metadata, 12
+ 2164              	cy_metadata:
+ 2165 0000 00       		.byte	0
+ 2166 0001 01       		.byte	1
+ 2167 0002 2E       		.byte	46
+ 2168 0003 16       		.byte	22
+ 2169 0004 10       		.byte	16
+ 2170 0005 69       		.byte	105
+ 2171 0006 00       		.byte	0
+ 2172 0007 01       		.byte	1
+ 2173 0008 00       		.byte	0
+ 2174 0009 00       		.byte	0
+ 2175 000a 00       		.byte	0
+ 2176 000b 00       		.byte	0
+ 2177              		.text
+ 2178              	.Letext0:
+ 2179              		.file 1 ".\\Generated_Source\\PSoC5\\cymetadata.c"
+ 2180              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 2181              		.section	.debug_info,"",%progbits
+ 2182              	.Ldebug_info0:
+ 2183 0000 3A010000 		.4byte	0x13a
+ 2184 0004 0400     		.2byte	0x4
+ 2185 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 2186 000a 04       		.byte	0x4
+ 2187 000b 01       		.uleb128 0x1
+ 2188 000c 00000000 		.4byte	.LASF18
+ 2189 0010 01       		.byte	0x1
+ 2190 0011 8E000000 		.4byte	.LASF19
+ 2191 0015 AA010000 		.4byte	.LASF20
+ 2192 0019 00000000 		.4byte	.Ldebug_line0
+ 2193 001d 02       		.uleb128 0x2
+ 2194 001e 01       		.byte	0x1
+ 2195 001f 06       		.byte	0x6
+ 2196 0020 9E010000 		.4byte	.LASF0
+ 2197 0024 02       		.uleb128 0x2
+ 2198 0025 01       		.byte	0x1
+ 2199 0026 08       		.byte	0x8
+ 2200 0027 C6000000 		.4byte	.LASF1
+ 2201 002b 02       		.uleb128 0x2
+ 2202 002c 02       		.byte	0x2
+ 2203 002d 05       		.byte	0x5
+ 2204 002e 85010000 		.4byte	.LASF2
+ 2205 0032 02       		.uleb128 0x2
+ 2206 0033 02       		.byte	0x2
+ 2207 0034 07       		.byte	0x7
+ 2208 0035 E6000000 		.4byte	.LASF3
+ 2209 0039 02       		.uleb128 0x2
+ 2210 003a 04       		.byte	0x4
+ 2211 003b 05       		.byte	0x5
+ 2212 003c 95010000 		.4byte	.LASF4
+ 2213 0040 02       		.uleb128 0x2
+ 2214 0041 04       		.byte	0x4
+ 2215 0042 07       		.byte	0x7
+ 2216 0043 D4000000 		.4byte	.LASF5
+ 2217 0047 02       		.uleb128 0x2
+ 2218 0048 08       		.byte	0x8
+ 2219 0049 05       		.byte	0x5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 40
+
+
+ 2220 004a 72010000 		.4byte	.LASF6
+ 2221 004e 02       		.uleb128 0x2
+ 2222 004f 08       		.byte	0x8
+ 2223 0050 07       		.byte	0x7
+ 2224 0051 2F010000 		.4byte	.LASF7
+ 2225 0055 03       		.uleb128 0x3
+ 2226 0056 04       		.byte	0x4
+ 2227 0057 05       		.byte	0x5
+ 2228 0058 696E7400 		.ascii	"int\000"
+ 2229 005c 02       		.uleb128 0x2
+ 2230 005d 04       		.byte	0x4
+ 2231 005e 07       		.byte	0x7
+ 2232 005f 22010000 		.4byte	.LASF8
+ 2233 0063 04       		.uleb128 0x4
+ 2234 0064 8F010000 		.4byte	.LASF21
+ 2235 0068 02       		.byte	0x2
+ 2236 0069 C2       		.byte	0xc2
+ 2237 006a 24000000 		.4byte	0x24
+ 2238 006e 02       		.uleb128 0x2
+ 2239 006f 04       		.byte	0x4
+ 2240 0070 04       		.byte	0x4
+ 2241 0071 C0000000 		.4byte	.LASF9
+ 2242 0075 02       		.uleb128 0x2
+ 2243 0076 08       		.byte	0x8
+ 2244 0077 04       		.byte	0x4
+ 2245 0078 F9000000 		.4byte	.LASF10
+ 2246 007c 02       		.uleb128 0x2
+ 2247 007d 01       		.byte	0x1
+ 2248 007e 08       		.byte	0x8
+ 2249 007f 80010000 		.4byte	.LASF11
+ 2250 0083 05       		.uleb128 0x5
+ 2251 0084 63000000 		.4byte	0x63
+ 2252 0088 94000000 		.4byte	0x94
+ 2253 008c 06       		.uleb128 0x6
+ 2254 008d 94000000 		.4byte	0x94
+ 2255 0091 3B08     		.2byte	0x83b
+ 2256 0093 00       		.byte	0
+ 2257 0094 02       		.uleb128 0x2
+ 2258 0095 04       		.byte	0x4
+ 2259 0096 07       		.byte	0x7
+ 2260 0097 69010000 		.4byte	.LASF12
+ 2261 009b 07       		.uleb128 0x7
+ 2262 009c 10010000 		.4byte	.LASF13
+ 2263 00a0 01       		.byte	0x1
+ 2264 00a1 1C       		.byte	0x1c
+ 2265 00a2 AC000000 		.4byte	0xac
+ 2266 00a6 05       		.uleb128 0x5
+ 2267 00a7 03       		.byte	0x3
+ 2268 00a8 00000000 		.4byte	cy_meta_configecc
+ 2269 00ac 08       		.uleb128 0x8
+ 2270 00ad 83000000 		.4byte	0x83
+ 2271 00b1 05       		.uleb128 0x5
+ 2272 00b2 63000000 		.4byte	0x63
+ 2273 00b6 C1000000 		.4byte	0xc1
+ 2274 00ba 09       		.uleb128 0x9
+ 2275 00bb 94000000 		.4byte	0x94
+ 2276 00bf 03       		.byte	0x3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 41
+
+
+ 2277 00c0 00       		.byte	0
+ 2278 00c1 0A       		.uleb128 0xa
+ 2279 00c2 00010000 		.4byte	.LASF14
+ 2280 00c6 01       		.byte	0x1
+ 2281 00c7 2E01     		.2byte	0x12e
+ 2282 00c9 D3000000 		.4byte	0xd3
+ 2283 00cd 05       		.uleb128 0x5
+ 2284 00ce 03       		.byte	0x3
+ 2285 00cf 00000000 		.4byte	cy_meta_custnvl
+ 2286 00d3 08       		.uleb128 0x8
+ 2287 00d4 B1000000 		.4byte	0xb1
+ 2288 00d8 0A       		.uleb128 0xa
+ 2289 00d9 5B010000 		.4byte	.LASF15
+ 2290 00dd 01       		.byte	0x1
+ 2291 00de 3901     		.2byte	0x139
+ 2292 00e0 EA000000 		.4byte	0xea
+ 2293 00e4 05       		.uleb128 0x5
+ 2294 00e5 03       		.byte	0x3
+ 2295 00e6 00000000 		.4byte	cy_meta_wonvl
+ 2296 00ea 08       		.uleb128 0x8
+ 2297 00eb B1000000 		.4byte	0xb1
+ 2298 00ef 05       		.uleb128 0x5
+ 2299 00f0 63000000 		.4byte	0x63
+ 2300 00f4 FF000000 		.4byte	0xff
+ 2301 00f8 09       		.uleb128 0x9
+ 2302 00f9 94000000 		.4byte	0x94
+ 2303 00fd FF       		.byte	0xff
+ 2304 00fe 00       		.byte	0
+ 2305 00ff 0A       		.uleb128 0xa
+ 2306 0100 46010000 		.4byte	.LASF16
+ 2307 0104 01       		.byte	0x1
+ 2308 0105 4401     		.2byte	0x144
+ 2309 0107 11010000 		.4byte	0x111
+ 2310 010b 05       		.uleb128 0x5
+ 2311 010c 03       		.byte	0x3
+ 2312 010d 00000000 		.4byte	cy_meta_flashprotect
+ 2313 0111 08       		.uleb128 0x8
+ 2314 0112 EF000000 		.4byte	0xef
+ 2315 0116 05       		.uleb128 0x5
+ 2316 0117 63000000 		.4byte	0x63
+ 2317 011b 26010000 		.4byte	0x126
+ 2318 011f 09       		.uleb128 0x9
+ 2319 0120 94000000 		.4byte	0x94
+ 2320 0124 0B       		.byte	0xb
+ 2321 0125 00       		.byte	0
+ 2322 0126 0A       		.uleb128 0xa
+ 2323 0127 B4000000 		.4byte	.LASF17
+ 2324 012b 01       		.byte	0x1
+ 2325 012c 6E01     		.2byte	0x16e
+ 2326 012e 38010000 		.4byte	0x138
+ 2327 0132 05       		.uleb128 0x5
+ 2328 0133 03       		.byte	0x3
+ 2329 0134 00000000 		.4byte	cy_metadata
+ 2330 0138 08       		.uleb128 0x8
+ 2331 0139 16010000 		.4byte	0x116
+ 2332 013d 00       		.byte	0
+ 2333              		.section	.debug_abbrev,"",%progbits
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 42
+
+
+ 2334              	.Ldebug_abbrev0:
+ 2335 0000 01       		.uleb128 0x1
+ 2336 0001 11       		.uleb128 0x11
+ 2337 0002 01       		.byte	0x1
+ 2338 0003 25       		.uleb128 0x25
+ 2339 0004 0E       		.uleb128 0xe
+ 2340 0005 13       		.uleb128 0x13
+ 2341 0006 0B       		.uleb128 0xb
+ 2342 0007 03       		.uleb128 0x3
+ 2343 0008 0E       		.uleb128 0xe
+ 2344 0009 1B       		.uleb128 0x1b
+ 2345 000a 0E       		.uleb128 0xe
+ 2346 000b 10       		.uleb128 0x10
+ 2347 000c 17       		.uleb128 0x17
+ 2348 000d 00       		.byte	0
+ 2349 000e 00       		.byte	0
+ 2350 000f 02       		.uleb128 0x2
+ 2351 0010 24       		.uleb128 0x24
+ 2352 0011 00       		.byte	0
+ 2353 0012 0B       		.uleb128 0xb
+ 2354 0013 0B       		.uleb128 0xb
+ 2355 0014 3E       		.uleb128 0x3e
+ 2356 0015 0B       		.uleb128 0xb
+ 2357 0016 03       		.uleb128 0x3
+ 2358 0017 0E       		.uleb128 0xe
+ 2359 0018 00       		.byte	0
+ 2360 0019 00       		.byte	0
+ 2361 001a 03       		.uleb128 0x3
+ 2362 001b 24       		.uleb128 0x24
+ 2363 001c 00       		.byte	0
+ 2364 001d 0B       		.uleb128 0xb
+ 2365 001e 0B       		.uleb128 0xb
+ 2366 001f 3E       		.uleb128 0x3e
+ 2367 0020 0B       		.uleb128 0xb
+ 2368 0021 03       		.uleb128 0x3
+ 2369 0022 08       		.uleb128 0x8
+ 2370 0023 00       		.byte	0
+ 2371 0024 00       		.byte	0
+ 2372 0025 04       		.uleb128 0x4
+ 2373 0026 16       		.uleb128 0x16
+ 2374 0027 00       		.byte	0
+ 2375 0028 03       		.uleb128 0x3
+ 2376 0029 0E       		.uleb128 0xe
+ 2377 002a 3A       		.uleb128 0x3a
+ 2378 002b 0B       		.uleb128 0xb
+ 2379 002c 3B       		.uleb128 0x3b
+ 2380 002d 0B       		.uleb128 0xb
+ 2381 002e 49       		.uleb128 0x49
+ 2382 002f 13       		.uleb128 0x13
+ 2383 0030 00       		.byte	0
+ 2384 0031 00       		.byte	0
+ 2385 0032 05       		.uleb128 0x5
+ 2386 0033 01       		.uleb128 0x1
+ 2387 0034 01       		.byte	0x1
+ 2388 0035 49       		.uleb128 0x49
+ 2389 0036 13       		.uleb128 0x13
+ 2390 0037 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 43
+
+
+ 2391 0038 13       		.uleb128 0x13
+ 2392 0039 00       		.byte	0
+ 2393 003a 00       		.byte	0
+ 2394 003b 06       		.uleb128 0x6
+ 2395 003c 21       		.uleb128 0x21
+ 2396 003d 00       		.byte	0
+ 2397 003e 49       		.uleb128 0x49
+ 2398 003f 13       		.uleb128 0x13
+ 2399 0040 2F       		.uleb128 0x2f
+ 2400 0041 05       		.uleb128 0x5
+ 2401 0042 00       		.byte	0
+ 2402 0043 00       		.byte	0
+ 2403 0044 07       		.uleb128 0x7
+ 2404 0045 34       		.uleb128 0x34
+ 2405 0046 00       		.byte	0
+ 2406 0047 03       		.uleb128 0x3
+ 2407 0048 0E       		.uleb128 0xe
+ 2408 0049 3A       		.uleb128 0x3a
+ 2409 004a 0B       		.uleb128 0xb
+ 2410 004b 3B       		.uleb128 0x3b
+ 2411 004c 0B       		.uleb128 0xb
+ 2412 004d 49       		.uleb128 0x49
+ 2413 004e 13       		.uleb128 0x13
+ 2414 004f 3F       		.uleb128 0x3f
+ 2415 0050 19       		.uleb128 0x19
+ 2416 0051 02       		.uleb128 0x2
+ 2417 0052 18       		.uleb128 0x18
+ 2418 0053 00       		.byte	0
+ 2419 0054 00       		.byte	0
+ 2420 0055 08       		.uleb128 0x8
+ 2421 0056 26       		.uleb128 0x26
+ 2422 0057 00       		.byte	0
+ 2423 0058 49       		.uleb128 0x49
+ 2424 0059 13       		.uleb128 0x13
+ 2425 005a 00       		.byte	0
+ 2426 005b 00       		.byte	0
+ 2427 005c 09       		.uleb128 0x9
+ 2428 005d 21       		.uleb128 0x21
+ 2429 005e 00       		.byte	0
+ 2430 005f 49       		.uleb128 0x49
+ 2431 0060 13       		.uleb128 0x13
+ 2432 0061 2F       		.uleb128 0x2f
+ 2433 0062 0B       		.uleb128 0xb
+ 2434 0063 00       		.byte	0
+ 2435 0064 00       		.byte	0
+ 2436 0065 0A       		.uleb128 0xa
+ 2437 0066 34       		.uleb128 0x34
+ 2438 0067 00       		.byte	0
+ 2439 0068 03       		.uleb128 0x3
+ 2440 0069 0E       		.uleb128 0xe
+ 2441 006a 3A       		.uleb128 0x3a
+ 2442 006b 0B       		.uleb128 0xb
+ 2443 006c 3B       		.uleb128 0x3b
+ 2444 006d 05       		.uleb128 0x5
+ 2445 006e 49       		.uleb128 0x49
+ 2446 006f 13       		.uleb128 0x13
+ 2447 0070 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 44
+
+
+ 2448 0071 19       		.uleb128 0x19
+ 2449 0072 02       		.uleb128 0x2
+ 2450 0073 18       		.uleb128 0x18
+ 2451 0074 00       		.byte	0
+ 2452 0075 00       		.byte	0
+ 2453 0076 00       		.byte	0
+ 2454              		.section	.debug_aranges,"",%progbits
+ 2455 0000 14000000 		.4byte	0x14
+ 2456 0004 0200     		.2byte	0x2
+ 2457 0006 00000000 		.4byte	.Ldebug_info0
+ 2458 000a 04       		.byte	0x4
+ 2459 000b 00       		.byte	0
+ 2460 000c 0000     		.2byte	0
+ 2461 000e 0000     		.2byte	0
+ 2462 0010 00000000 		.4byte	0
+ 2463 0014 00000000 		.4byte	0
+ 2464              		.section	.debug_line,"",%progbits
+ 2465              	.Ldebug_line0:
+ 2466 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
+ 2466      02004900 
+ 2466      00000201 
+ 2466      FB0E0D00 
+ 2466      01010101 
+ 2467              	.LASF18:
+ 2468 0000 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2468      4320342E 
+ 2468      392E3320 
+ 2468      32303135 
+ 2468      30333033 
+ 2469 0033 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2469      20726576 
+ 2469      6973696F 
+ 2469      6E203232 
+ 2469      31323230 
+ 2470 0066 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2470      66756E63 
+ 2470      74696F6E 
+ 2470      2D736563 
+ 2470      74696F6E 
+ 2471              	.LASF19:
+ 2472 008e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cymetadata.c\000"
+ 2472      6E657261 
+ 2472      7465645F 
+ 2472      536F7572 
+ 2472      63655C50 
+ 2473              	.LASF17:
+ 2474 00b4 63795F6D 		.ascii	"cy_metadata\000"
+ 2474      65746164 
+ 2474      61746100 
+ 2475              	.LASF9:
+ 2476 00c0 666C6F61 		.ascii	"float\000"
+ 2476      7400
+ 2477              	.LASF1:
+ 2478 00c6 756E7369 		.ascii	"unsigned char\000"
+ 2478      676E6564 
+ 2478      20636861 
+ 2478      7200
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 45
+
+
+ 2479              	.LASF5:
+ 2480 00d4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2480      20756E73 
+ 2480      69676E65 
+ 2480      6420696E 
+ 2480      7400
+ 2481              	.LASF3:
+ 2482 00e6 73686F72 		.ascii	"short unsigned int\000"
+ 2482      7420756E 
+ 2482      7369676E 
+ 2482      65642069 
+ 2482      6E7400
+ 2483              	.LASF10:
+ 2484 00f9 646F7562 		.ascii	"double\000"
+ 2484      6C6500
+ 2485              	.LASF14:
+ 2486 0100 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 2486      6574615F 
+ 2486      63757374 
+ 2486      6E766C00 
+ 2487              	.LASF13:
+ 2488 0110 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 2488      6574615F 
+ 2488      636F6E66 
+ 2488      69676563 
+ 2488      6300
+ 2489              	.LASF8:
+ 2490 0122 756E7369 		.ascii	"unsigned int\000"
+ 2490      676E6564 
+ 2490      20696E74 
+ 2490      00
+ 2491              	.LASF7:
+ 2492 012f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2492      206C6F6E 
+ 2492      6720756E 
+ 2492      7369676E 
+ 2492      65642069 
+ 2493              	.LASF16:
+ 2494 0146 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 2494      6574615F 
+ 2494      666C6173 
+ 2494      6870726F 
+ 2494      74656374 
+ 2495              	.LASF15:
+ 2496 015b 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 2496      6574615F 
+ 2496      776F6E76 
+ 2496      6C00
+ 2497              	.LASF12:
+ 2498 0169 73697A65 		.ascii	"sizetype\000"
+ 2498      74797065 
+ 2498      00
+ 2499              	.LASF6:
+ 2500 0172 6C6F6E67 		.ascii	"long long int\000"
+ 2500      206C6F6E 
+ 2500      6720696E 
+ 2500      7400
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cceNSrzn.s 			page 46
+
+
+ 2501              	.LASF11:
+ 2502 0180 63686172 		.ascii	"char\000"
+ 2502      00
+ 2503              	.LASF2:
+ 2504 0185 73686F72 		.ascii	"short int\000"
+ 2504      7420696E 
+ 2504      7400
+ 2505              	.LASF21:
+ 2506 018f 75696E74 		.ascii	"uint8\000"
+ 2506      3800
+ 2507              	.LASF4:
+ 2508 0195 6C6F6E67 		.ascii	"long int\000"
+ 2508      20696E74 
+ 2508      00
+ 2509              	.LASF0:
+ 2510 019e 7369676E 		.ascii	"signed char\000"
+ 2510      65642063 
+ 2510      68617200 
+ 2511              	.LASF20:
+ 2512 01aa 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\Virginia_Tech\\FSAE\\V"
+ 2512      73657273 
+ 2512      5C636861 
+ 2512      726C5C44 
+ 2512      6F63756D 
+ 2513 01d7 544D2D44 		.ascii	"TM-DAQ\\VTM16 PSOC Current Sensor\\VTM16 Current Se"
+ 2513      41515C56 
+ 2513      544D3136 
+ 2513      2050534F 
+ 2513      43204375 
+ 2514 0208 6E736F72 		.ascii	"nsors.cydsn\000"
+ 2514      732E6379 
+ 2514      64736E00 
+ 2515              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
