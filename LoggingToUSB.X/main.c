@@ -309,22 +309,22 @@ void initI2CEEPROM(){
 void initI2CPSoC(){
     initI2CBus(I2C1, 80000000, 100000); //100kbs
      //Send data pointer
-    i2cStart(I2C1);
-    i2cSendByte(I2C1, (0x08 << 1) + 0) ;//send addresss and write
-    i2cSendByte(I2C1, 0x00);//send data pointer
-    i2cStop(I2C1);
+//    i2cStart(I2C1);
+//    i2cSendByte(I2C1, (0x08 << 1) + 0) ;//send addresss and write
+//    i2cSendByte(I2C1, 0x00);//send data pointer
+//    i2cStop(I2C1);
 }
 //Need to implement a check here so that it doesn't get stuck if the PSOC isn't attached
 void PSOC_Read(){
     //First 12 bytes are current sensor data, next 8 bytes are shock pots
     BYTE PSOC_Data[20];
     int i;
-//    i2cStart(I2C1);
-//    i2cSendByte(I2C1, (0x08 << 1) + 0) ;//send addresss and write
-//    i2cSendByte(I2C1, 0x00);//send data pointer
-//    i2cRepeatedStart(I2C1); //Repeat start to change data direction
-
     i2cStart(I2C1);
+    i2cSendByte(I2C1, (0x08 << 1) + 0) ;//send addresss and write
+    i2cSendByte(I2C1, 0x00);//send data pointer
+    i2cRepeatedStart(I2C1); //Repeat start to change data direction
+
+  //  i2cStart(I2C1);
     i2cSendByte(I2C1, (0x08 << 1) + 1) ;//send addresss and read
     for(i = 0 ; i < 19; i++){
         PSOC_Data[i] = i2cRecieveByte(I2C1, TRUE);
@@ -438,7 +438,7 @@ if (state == log){
             if(PSOCConnected){ //This allows for the program to be tested without the PSOC connected.  PSOC read is a global variable defined at the top of the file
             PSOC_Read();
             sprintf(PSOCstring0,"%d,%d,%d,%d,%d,%d,",PSOC_volts[0],PSOC_volts[1],PSOC_volts[2],PSOC_volts[3],PSOC_volts[4],PSOC_volts[5]); //Current Sensors
-            sprintf(PSOCstring0,"%d,%d,%d,%d\n",PSOC_volts[6],PSOC_volts[7],PSOC_volts[8],PSOC_volts[9]); //Shock Pots
+            sprintf(PSOCstring1,"%d,%d,%d,%d\n",PSOC_volts[6],PSOC_volts[7],PSOC_volts[8],PSOC_volts[9]); //Shock Pots
             }
             else{
                 sprintf(PSOCstring0," , , , , , , ");
@@ -637,8 +637,8 @@ int main(void)
                         logNum = readEEPROM(addy);
                         sprintf(nameString, "test%d.csv", logNum);
                         myFile = FSfopen(nameString,"w");
-                        char string[450];
-                        sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),ect(degF),lambda,fuel pres,egt(?),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed, lg speed,rd speed,rg speed,run time(second),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV)\n");
+                        char string[500];
+                        sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),ect(degF),lambda,fuel pres,egt(?),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed, lg speed,rd speed,rg speed,run time(second),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV)\n");
                         FSfwrite(string,1, strlen(string),myFile);
                         state = log;
                     }
