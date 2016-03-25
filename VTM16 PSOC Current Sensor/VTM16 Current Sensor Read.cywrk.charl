@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="VTM16 Current Sensor Read\VTM16 Current Sensors\VTM16 Current Sensors.cydwr">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="VTM16 Current Sensor Read\VTM16 Current Sensors\Source Files\main.c">
 <ExpandedNodeIds>
 <v>VTM16 Current Sensor Read</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors</v>
@@ -26,6 +26,44 @@
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CE95277 ADC and UART.pdf</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2\ADC_SAR_Seq_2.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2\ADC_SAR_Seq_2.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2\ADC_SAR_Seq_2_INT.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2\ADC_SAR_Seq_2_PM.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_FinalBuf</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_FinalBuf\ADC_SAR_Seq_2_FinalBuf_dma.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_FinalBuf\ADC_SAR_Seq_2_FinalBuf_dma.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_IntClock</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_IntClock\ADC_SAR_Seq_2_IntClock.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_IntClock\ADC_SAR_Seq_2_IntClock.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_IRQ</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_IRQ\ADC_SAR_Seq_2_IRQ.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_IRQ\ADC_SAR_Seq_2_IRQ.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_SAR</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_SAR\ADC_SAR_Seq_2_SAR.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_SAR\ADC_SAR_Seq_2_SAR.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_SAR\ADC_SAR_Seq_2_SAR_INT.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_SAR\ADC_SAR_Seq_2_SAR_PM.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_TempBuf</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_TempBuf\ADC_SAR_Seq_2_TempBuf_dma.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_2_TempBuf\ADC_SAR_Seq_2_TempBuf_dma.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Back_Left</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Back_Left\Back_Left.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Back_Left\Back_Left.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Back_Left\Back_Left_aliases.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Back_Right</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Back_Right\Back_Right.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Back_Right\Back_Right.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Back_Right\Back_Right_aliases.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Left</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Left\Front_Left.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Left\Front_Left.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Left\Front_Left_aliases.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Right</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Right\Front_Right.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Right\Front_Right.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Right\Front_Right_aliases.h</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\I2C_pins\I2C_pins.c</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\I2C_pins\I2C_pins.h</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\I2C_pins\I2C_pins_aliases.h</v>
@@ -36,25 +74,7 @@
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cycodeshareimport.scat</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>VTM16 Current Sensor Read</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\TopDesign</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\VTM16 Current Sensors.cydwr</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Header Files</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Header Files\device.h</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Source Files</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Source Files\main.c</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CE95277 ADC and UART.pdf</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_1</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_1_FinalBuf</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_1_IntClock</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_1_IRQ</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_1_SAR</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\ADC_SAR_Seq_1_TempBuf</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cy_boot</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\EZI2C_1</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Right\Front_Right_aliases.h</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Fuel_Injector</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Fuel_Pump</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\I2C_pins</v>
@@ -66,6 +86,24 @@
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\UART_1_IntClock</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Vref</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cydevice.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cyfitter.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cymetadata.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\project.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="VTM16 Current Sensor Read">
@@ -100,6 +138,18 @@
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_1_SAR_INT.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_1_SAR_PM.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_1_TempBuf_dma.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_FinalBuf_dma.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_INT.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_IntClock.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_IRQ.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_PM.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_SAR.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_SAR_INT.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_SAR_PM.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_TempBuf_dma.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\Back_Left.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\Back_Right.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
@@ -113,6 +163,8 @@
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\EZI2C_1.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\EZI2C_1_INT.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\EZI2C_1_PM.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\Front_Left.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\Front_Right.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\Fuel_Injector.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\Fuel_Pump.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\I2C_pins.lst</v>
@@ -151,20 +203,20 @@
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_1_SAR_INT.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_1_SAR_PM.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_1_TempBuf_dma.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_FinalBuf_dma.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_INT.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_IntClock.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_IRQ.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_PM.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_SAR.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_SAR_INT.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_SAR_PM.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_Seq_2_TempBuf_dma.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\Back_Left.lst</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\Back_Right.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\EZI2C_1.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\EZI2C_1_INT.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\EZI2C_1_PM.lst</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\CortexM3\ARM_GCC_493\Debug\Listing Files\Fuel_Injector.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -218,6 +270,7 @@
 <OpenDocs>
 <name v=".\VTM16 Current Sensors.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\VTM16 Current Sensors.cydsn\VTM16 Current Sensors.cydwr" />
+<name v=".\VTM16 Current Sensors.cydsn\main.c" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

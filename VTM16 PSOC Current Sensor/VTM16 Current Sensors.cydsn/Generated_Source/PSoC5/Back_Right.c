@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: GND.c  
+* File Name: Back_Right.c  
 * Version 2.10
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "GND.h"
+#include "Back_Right.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 GND__PORT == 15 && ((GND__MASK & 0xC0) != 0))
+	 Back_Right__PORT == 15 && ((Back_Right__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: GND_Write
+* Function Name: Back_Right_Write
 ********************************************************************************
 *
 * Summary:
@@ -36,15 +36,15 @@
 *  None
 *  
 *******************************************************************************/
-void GND_Write(uint8 value) 
+void Back_Right_Write(uint8 value) 
 {
-    uint8 staticBits = (GND_DR & (uint8)(~GND_MASK));
-    GND_DR = staticBits | ((uint8)(value << GND_SHIFT) & GND_MASK);
+    uint8 staticBits = (Back_Right_DR & (uint8)(~Back_Right_MASK));
+    Back_Right_DR = staticBits | ((uint8)(value << Back_Right_SHIFT) & Back_Right_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: GND_SetDriveMode
+* Function Name: Back_Right_SetDriveMode
 ********************************************************************************
 *
 * Summary:
@@ -53,31 +53,27 @@ void GND_Write(uint8 value)
 * Parameters:  
 *  mode:  Change the pins to one of the following drive modes.
 *
-*  GND_DM_STRONG     Strong Drive 
-*  GND_DM_OD_HI      Open Drain, Drives High 
-*  GND_DM_OD_LO      Open Drain, Drives Low 
-*  GND_DM_RES_UP     Resistive Pull Up 
-*  GND_DM_RES_DWN    Resistive Pull Down 
-*  GND_DM_RES_UPDWN  Resistive Pull Up/Down 
-*  GND_DM_DIG_HIZ    High Impedance Digital 
-*  GND_DM_ALG_HIZ    High Impedance Analog 
+*  Back_Right_DM_STRONG     Strong Drive 
+*  Back_Right_DM_OD_HI      Open Drain, Drives High 
+*  Back_Right_DM_OD_LO      Open Drain, Drives Low 
+*  Back_Right_DM_RES_UP     Resistive Pull Up 
+*  Back_Right_DM_RES_DWN    Resistive Pull Down 
+*  Back_Right_DM_RES_UPDWN  Resistive Pull Up/Down 
+*  Back_Right_DM_DIG_HIZ    High Impedance Digital 
+*  Back_Right_DM_ALG_HIZ    High Impedance Analog 
 *
 * Return: 
 *  None
 *
 *******************************************************************************/
-void GND_SetDriveMode(uint8 mode) 
+void Back_Right_SetDriveMode(uint8 mode) 
 {
-	CyPins_SetPinDriveMode(GND_0, mode);
-	CyPins_SetPinDriveMode(GND_1, mode);
-	CyPins_SetPinDriveMode(GND_2, mode);
-	CyPins_SetPinDriveMode(GND_3, mode);
-	CyPins_SetPinDriveMode(GND_4, mode);
+	CyPins_SetPinDriveMode(Back_Right_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: GND_Read
+* Function Name: Back_Right_Read
 ********************************************************************************
 *
 * Summary:
@@ -91,17 +87,17 @@ void GND_SetDriveMode(uint8 mode)
 *  Returns the current value of the Digital Port as a right justified number
 *  
 * Note:
-*  Macro GND_ReadPS calls this function. 
+*  Macro Back_Right_ReadPS calls this function. 
 *  
 *******************************************************************************/
-uint8 GND_Read(void) 
+uint8 Back_Right_Read(void) 
 {
-    return (GND_PS & GND_MASK) >> GND_SHIFT;
+    return (Back_Right_PS & Back_Right_MASK) >> Back_Right_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: GND_ReadDataReg
+* Function Name: Back_Right_ReadDataReg
 ********************************************************************************
 *
 * Summary:
@@ -114,17 +110,17 @@ uint8 GND_Read(void)
 *  Returns the current value assigned to the Digital Port's data output register
 *  
 *******************************************************************************/
-uint8 GND_ReadDataReg(void) 
+uint8 Back_Right_ReadDataReg(void) 
 {
-    return (GND_DR & GND_MASK) >> GND_SHIFT;
+    return (Back_Right_DR & Back_Right_MASK) >> Back_Right_SHIFT;
 }
 
 
 /* If Interrupts Are Enabled for this Pins component */ 
-#if defined(GND_INTSTAT) 
+#if defined(Back_Right_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: GND_ClearInterrupt
+    * Function Name: Back_Right_ClearInterrupt
     ********************************************************************************
     * Summary:
     *  Clears any active interrupts attached to port and returns the value of the 
@@ -137,9 +133,9 @@ uint8 GND_ReadDataReg(void)
     *  Returns the value of the interrupt status register
     *  
     *******************************************************************************/
-    uint8 GND_ClearInterrupt(void) 
+    uint8 Back_Right_ClearInterrupt(void) 
     {
-        return (GND_INTSTAT & GND_MASK) >> GND_SHIFT;
+        return (Back_Right_INTSTAT & Back_Right_MASK) >> Back_Right_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

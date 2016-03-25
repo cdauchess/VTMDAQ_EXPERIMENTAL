@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: GND.h  
+* File Name: Back_Right.h  
 * Version 2.10
 *
 * Description:
@@ -14,8 +14,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_GND_ALIASES_H) /* Pins GND_ALIASES_H */
-#define CY_PINS_GND_ALIASES_H
+#if !defined(CY_PINS_Back_Right_ALIASES_H) /* Pins Back_Right_ALIASES_H */
+#define CY_PINS_Back_Right_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,8 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define GND_0		(GND__0__PC)
-#define GND_1		(GND__1__PC)
-#define GND_2		(GND__2__PC)
-#define GND_3		(GND__3__PC)
-#define GND_4		(GND__4__PC)
+#define Back_Right_0		(Back_Right__0__PC)
 
-#endif /* End Pins GND_ALIASES_H */
+#endif /* End Pins Back_Right_ALIASES_H */
 
 /* [] END OF FILE */

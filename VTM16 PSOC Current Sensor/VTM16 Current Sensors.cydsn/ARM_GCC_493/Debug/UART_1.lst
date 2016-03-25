@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
   23:.\Generated_Source\PSoC5/UART_1.c **** /***************************************
   24:.\Generated_Source\PSoC5/UART_1.c **** * Global data allocation
   25:.\Generated_Source\PSoC5/UART_1.c **** ***************************************/
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 2
 
 
   26:.\Generated_Source\PSoC5/UART_1.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
   35              		@ args = 0, pretend = 0, frame = 0
   36              		@ frame_needed = 1, uses_anonymous_args = 0
   37 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 3
 
 
   38              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
   96:.\Generated_Source\PSoC5/UART_1.c **** *  the UART_1_Start() API calls this function and is the preferred
   97:.\Generated_Source\PSoC5/UART_1.c **** *  method to begin component operation.
   98:.\Generated_Source\PSoC5/UART_1.c **** *
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 4
 
 
   99:.\Generated_Source\PSoC5/UART_1.c **** * Parameters:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  135:.\Generated_Source\PSoC5/UART_1.c **** 
  136:.\Generated_Source\PSoC5/UART_1.c ****         /* Write Counter Value for TX Bit Clk Generator*/
  137:.\Generated_Source\PSoC5/UART_1.c ****         #if (UART_1_TXCLKGEN_DP)
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 5
 
 
  138:.\Generated_Source\PSoC5/UART_1.c ****             UART_1_TXBITCLKGEN_CTR_REG = UART_1_BIT_CENTER;
@@ -287,18 +287,18 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  112              	.L7:
  113 002a 00BF     		.align	2
  114              	.L6:
- 115 002c 8B650040 		.word	1073767819
- 116 0030 86640040 		.word	1073767558
- 117 0034 24640040 		.word	1073767460
- 118 0038 34640040 		.word	1073767476
- 119 003c 84640040 		.word	1073767556
+ 115 002c 8A650040 		.word	1073767818
+ 116 0030 89640040 		.word	1073767561
+ 117 0034 2D640040 		.word	1073767469
+ 118 0038 3D640040 		.word	1073767485
+ 119 003c 8A640040 		.word	1073767562
  120              		.cfi_endproc
  121              	.LFE1:
  122              		.size	UART_1_Init, .-UART_1_Init
  123              		.section	.text.UART_1_Enable,"ax",%progbits
  124              		.align	2
  125              		.global	UART_1_Enable
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 6
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 6
 
 
  126              		.thumb
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  150 0012 1B78     		ldrb	r3, [r3]
  151 0014 DBB2     		uxtb	r3, r3
  152 0016 43F02003 		orr	r3, r3, #32
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 7
 
 
  153 001a DBB2     		uxtb	r3, r3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  175 0044 1846     		mov	r0, r3
  176 0046 FFF7FEFF 		bl	CyExitCriticalSection
  223:.\Generated_Source\PSoC5/UART_1.c **** }
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 8
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 8
 
 
  177              		.loc 1 223 0
@@ -431,9 +431,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  184              	.L10:
  185              		.align	2
  186              	.L9:
- 187 0050 9B650040 		.word	1073767835
- 188 0054 96640040 		.word	1073767574
- 189 0058 94640040 		.word	1073767572
+ 187 0050 9A650040 		.word	1073767834
+ 188 0054 99640040 		.word	1073767577
+ 189 0058 9A640040 		.word	1073767578
  190              		.cfi_endproc
  191              	.LFE2:
  192              		.size	UART_1_Enable, .-UART_1_Enable
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  242:.\Generated_Source\PSoC5/UART_1.c ****     uint8 enableInterrupts;
  243:.\Generated_Source\PSoC5/UART_1.c ****     enableInterrupts = CyEnterCriticalSection();
  213              		.loc 1 243 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 9
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 9
 
 
  214 0006 FFF7FEFF 		bl	CyEnterCriticalSection
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  241 003e DBB2     		uxtb	r3, r3
  242 0040 1370     		strb	r3, [r2]
  271:.\Generated_Source\PSoC5/UART_1.c **** 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 10
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 10
 
 
  272:.\Generated_Source\PSoC5/UART_1.c ****         #if (UART_1_TX_INTERRUPT_ENABLED)
@@ -562,9 +562,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  254              	.L13:
  255              		.align	2
  256              	.L12:
- 257 0050 9B650040 		.word	1073767835
- 258 0054 96640040 		.word	1073767574
- 259 0058 94640040 		.word	1073767572
+ 257 0050 9A650040 		.word	1073767834
+ 258 0054 99640040 		.word	1073767577
+ 259 0058 9A640040 		.word	1073767578
  260              		.cfi_endproc
  261              	.LFE3:
  262              		.size	UART_1_Stop, .-UART_1_Stop
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  272              		.cfi_startproc
  273              		@ args = 0, pretend = 0, frame = 0
  274              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 11
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 11
 
 
  275              		@ link register save eliminated.
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  305              		@ args = 0, pretend = 0, frame = 8
  306              		@ frame_needed = 1, uses_anonymous_args = 0
  307              		@ link register save eliminated.
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 12
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 12
 
 
  308 0000 80B4     		push	{r7}
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  345:.\Generated_Source\PSoC5/UART_1.c ****     *      UART_1_RX_STS_PAR_ERROR        Interrupt on parity error.
  346:.\Generated_Source\PSoC5/UART_1.c ****     *      UART_1_RX_STS_STOP_ERROR       Interrupt on stop error.
  347:.\Generated_Source\PSoC5/UART_1.c ****     *      UART_1_RX_STS_BREAK            Interrupt on break.
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 13
 
 
  348:.\Generated_Source\PSoC5/UART_1.c ****     *      UART_1_RX_STS_OVERRUN          Interrupt on overrun error.
@@ -767,7 +767,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  366              	.L19:
  367 001a 00BF     		.align	2
  368              	.L18:
- 369 001c 86640040 		.word	1073767558
+ 369 001c 89640040 		.word	1073767561
  370              		.cfi_endproc
  371              	.LFE6:
  372              		.size	UART_1_SetRxInterruptMode, .-UART_1_SetRxInterruptMode
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  377              		.thumb_func
  378              		.type	UART_1_ReadRxData, %function
  379              	UART_1_ReadRxData:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 14
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 14
 
 
  380              	.LFB7:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  404:.\Generated_Source\PSoC5/UART_1.c ****         locRxBufferRead  = UART_1_rxBufferRead;
  405:.\Generated_Source\PSoC5/UART_1.c ****         locRxBufferWrite = UART_1_rxBufferWrite;
  406:.\Generated_Source\PSoC5/UART_1.c **** 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 15
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 15
 
 
  407:.\Generated_Source\PSoC5/UART_1.c ****         if( (UART_1_rxBufferLoopDetect != 0u) || (locRxBufferRead != locRxBufferWrite) )
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  400 000e 1846     		mov	r0, r3
  401 0010 0C37     		adds	r7, r7, #12
  402              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 16
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 16
 
 
  403 0012 BD46     		mov	sp, r7
@@ -911,7 +911,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  410              	.L23:
  411 001a 00BF     		.align	2
  412              	.L22:
- 413 001c 44650040 		.word	1073767748
+ 413 001c 49650040 		.word	1073767753
  414              		.cfi_endproc
  415              	.LFE7:
  416              		.size	UART_1_ReadRxData, .-UART_1_ReadRxData
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  486:.\Generated_Source\PSoC5/UART_1.c ****     {
  425              		.loc 1 486 0
  426              		.cfi_startproc
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 17
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 17
 
 
  427              		@ args = 0, pretend = 0, frame = 8
@@ -1007,7 +1007,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  456              	.L27:
  457              		.align	2
  458              	.L26:
- 459 0020 66640040 		.word	1073767526
+ 459 0020 69640040 		.word	1073767529
  460              		.cfi_endproc
  461              	.LFE8:
  462              		.size	UART_1_ReadRxStatus, .-UART_1_ReadRxStatus
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  467              		.thumb_func
  468              		.type	UART_1_GetChar, %function
  469              	UART_1_GetChar:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 18
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 18
 
 
  470              	.LFB9:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  539:.\Generated_Source\PSoC5/UART_1.c ****         uint8 locRxBufferWrite;
  540:.\Generated_Source\PSoC5/UART_1.c **** 
  541:.\Generated_Source\PSoC5/UART_1.c ****         /* Protect variables that could change on interrupt */
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 19
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 19
 
 
  542:.\Generated_Source\PSoC5/UART_1.c ****         UART_1_DisableRxInt();
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  596:.\Generated_Source\PSoC5/UART_1.c ****         rxStatus =UART_1_RXSTATUS_REG;
  486              		.loc 1 596 0
  487 000a 0C4B     		ldr	r3, .L31
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 20
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 20
 
 
  488 000c 1B78     		ldrb	r3, [r3]
@@ -1195,10 +1195,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  522              	.L32:
  523              		.align	2
  524              	.L31:
- 525 003c 66640040 		.word	1073767526
- 526 0040 44650040 		.word	1073767748
+ 525 003c 69640040 		.word	1073767529
+ 526 0040 49650040 		.word	1073767753
  527              		.cfi_endproc
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 21
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 21
 
 
  528              	.LFE9:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  645:.\Generated_Source\PSoC5/UART_1.c ****     #else
  646:.\Generated_Source\PSoC5/UART_1.c ****         return ( ((uint16)UART_1_ReadRxStatus() << 8u) | UART_1_ReadRxData() );
  550              		.loc 1 646 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 22
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 22
 
 
  551 0004 FFF7FEFF 		bl	UART_1_ReadRxStatus
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  676:.\Generated_Source\PSoC5/UART_1.c ****     * Reentrant:
  677:.\Generated_Source\PSoC5/UART_1.c ****     *  No.
  678:.\Generated_Source\PSoC5/UART_1.c ****     *
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 23
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 23
 
 
  679:.\Generated_Source\PSoC5/UART_1.c ****     * Theory:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  590 0008 1B78     		ldrb	r3, [r3]
  591 000a DBB2     		uxtb	r3, r3
  592 000c 03F02003 		and	r3, r3, #32
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 24
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 24
 
 
  593 0010 002B     		cmp	r3, #0
@@ -1413,7 +1413,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  617              	.L40:
  618 002a 00BF     		.align	2
  619              	.L39:
- 620 002c 66640040 		.word	1073767526
+ 620 002c 69640040 		.word	1073767529
  621              		.cfi_endproc
  622              	.LFE11:
  623              		.size	UART_1_GetRxBufferSize, .-UART_1_GetRxBufferSize
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  734:.\Generated_Source\PSoC5/UART_1.c ****     *  None.
  735:.\Generated_Source\PSoC5/UART_1.c ****     *
  736:.\Generated_Source\PSoC5/UART_1.c ****     * Return:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 25
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 25
 
 
  737:.\Generated_Source\PSoC5/UART_1.c ****     *  None.
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  658 0020 064B     		ldr	r3, .L42
  659 0022 1B78     		ldrb	r3, [r3]
  660 0024 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 26
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 26
 
 
  661 0026 23F00103 		bic	r3, r3, #1
@@ -1535,7 +1535,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  675              	.L43:
  676              		.align	2
  677              	.L42:
- 678 003c 94650040 		.word	1073767828
+ 678 003c 99650040 		.word	1073767833
  679              		.cfi_endproc
  680              	.LFE12:
  681              		.size	UART_1_ClearRxBuffer, .-UART_1_ClearRxBuffer
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  790:.\Generated_Source\PSoC5/UART_1.c ****     *  UART.
  791:.\Generated_Source\PSoC5/UART_1.c ****     *
  792:.\Generated_Source\PSoC5/UART_1.c ****     * Parameters:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 27
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 27
 
 
  793:.\Generated_Source\PSoC5/UART_1.c ****     *  addressMode: Enumerated value indicating the mode of RX addressing
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  833:.\Generated_Source\PSoC5/UART_1.c ****             #endif /* End UART_1_CONTROL_REG_REMOVED */
  834:.\Generated_Source\PSoC5/UART_1.c ****         #else /* UART_1_RXHW_ADDRESS_ENABLED */
  835:.\Generated_Source\PSoC5/UART_1.c ****             if(0u != addressMode)
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 28
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 28
 
 
  836:.\Generated_Source\PSoC5/UART_1.c ****             {
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  735 0004 00AF     		add	r7, sp, #0
  736              		.cfi_def_cfa_register 7
  737 0006 0346     		mov	r3, r0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 29
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 29
 
 
  738 0008 FB71     		strb	r3, [r7, #7]
@@ -1701,7 +1701,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  753              	.L47:
  754 001a 00BF     		.align	2
  755              	.L46:
- 756 001c 24650040 		.word	1073767716
+ 756 001c 29650040 		.word	1073767721
  757              		.cfi_endproc
  758              	.LFE14:
  759              		.size	UART_1_SetRxAddress1, .-UART_1_SetRxAddress1
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  772              		@ link register save eliminated.
  773 0000 80B4     		push	{r7}
  774              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 30
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 30
 
 
  775              		.cfi_offset 7, -4
@@ -1767,7 +1767,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  796              	.L50:
  797 001a 00BF     		.align	2
  798              	.L49:
- 799 001c 34650040 		.word	1073767732
+ 799 001c 39650040 		.word	1073767737
  800              		.cfi_endproc
  801              	.LFE15:
  802              		.size	UART_1_SetRxAddress2, .-UART_1_SetRxAddress2
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  897:.\Generated_Source\PSoC5/UART_1.c ****     *   UART_1_TX_STS_FIFO_EMPTY      Interrupt when TX FIFO is empty
  898:.\Generated_Source\PSoC5/UART_1.c ****     *   UART_1_TX_STS_FIFO_FULL       Interrupt when TX FIFO is full
  899:.\Generated_Source\PSoC5/UART_1.c ****     *   UART_1_TX_STS_FIFO_NOT_FULL   Interrupt when TX FIFO is not full
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 31
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 31
 
 
  900:.\Generated_Source\PSoC5/UART_1.c ****     *
@@ -1844,7 +1844,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  839              	.L53:
  840 001a 00BF     		.align	2
  841              	.L52:
- 842 001c 84640040 		.word	1073767556
+ 842 001c 8A640040 		.word	1073767562
  843              		.cfi_endproc
  844              	.LFE16:
  845              		.size	UART_1_SetTxInterruptMode, .-UART_1_SetTxInterruptMode
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  853              	.LFB17:
  912:.\Generated_Source\PSoC5/UART_1.c **** 
  913:.\Generated_Source\PSoC5/UART_1.c **** 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 32
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 32
 
 
  914:.\Generated_Source\PSoC5/UART_1.c ****     /*******************************************************************************
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  949:.\Generated_Source\PSoC5/UART_1.c ****             /* Protect variables that could change on interrupt. */
  950:.\Generated_Source\PSoC5/UART_1.c ****             UART_1_DisableTxInt();
  951:.\Generated_Source\PSoC5/UART_1.c **** 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 33
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 33
 
 
  952:.\Generated_Source\PSoC5/UART_1.c ****             if( (UART_1_txBufferRead == UART_1_txBufferWrite) &&
@@ -1969,7 +1969,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  889 0022 00BF     		.align	2
  890              	.L56:
  891 0024 00000000 		.word	UART_1_initVar
- 892 0028 47640040 		.word	1073767495
+ 892 0028 4A640040 		.word	1073767498
  893              		.cfi_endproc
  894              	.LFE17:
  895              		.size	UART_1_WriteTxData, .-UART_1_WriteTxData
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  898              		.global	UART_1_ReadTxStatus
  899              		.thumb
  900              		.thumb_func
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 34
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 34
 
 
  901              		.type	UART_1_ReadTxStatus, %function
@@ -2036,9 +2036,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  927              	.L61:
  928              		.align	2
  929              	.L60:
- 930 0014 64640040 		.word	1073767524
+ 930 0014 6A640040 		.word	1073767530
  931              		.cfi_endproc
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 35
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 35
 
 
  932              	.LFE18:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  950 0002 83B0     		sub	sp, sp, #12
  951              		.cfi_def_cfa_offset 16
  952 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 36
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 36
 
 
  953              		.cfi_def_cfa_register 7
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
 1094:.\Generated_Source\PSoC5/UART_1.c ****         #if ((UART_1_TX_BUFFER_SIZE > UART_1_MAX_BYTE_VALUE) && (CY_PSOC3))
 1095:.\Generated_Source\PSoC5/UART_1.c ****             UART_1_EnableTxInt();
 1096:.\Generated_Source\PSoC5/UART_1.c ****         #endif /* (UART_1_TX_BUFFER_SIZE > UART_1_MAX_BYTE_VALUE) && (CY_PSOC3) */
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 37
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 37
 
 
 1097:.\Generated_Source\PSoC5/UART_1.c **** 
@@ -2208,8 +2208,8 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  980              	.L65:
  981 002a 00BF     		.align	2
  982              	.L64:
- 983 002c 64640040 		.word	1073767524
- 984 0030 47640040 		.word	1073767495
+ 983 002c 6A640040 		.word	1073767530
+ 984 0030 4A640040 		.word	1073767498
  985              		.cfi_endproc
  986              	.LFE19:
  987              		.size	UART_1_PutChar, .-UART_1_PutChar
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  990              		.global	UART_1_PutString
  991              		.thumb
  992              		.thumb_func
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 38
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 38
 
 
  993              		.type	UART_1_PutString, %function
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1013 000c 0B4B     		ldr	r3, .L70
  1014 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1015 0010 002B     		cmp	r3, #0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 39
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 39
 
 
  1016 0012 10D0     		beq	.L66
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1060              	UART_1_PutArray:
  1061              	.LFB21:
 1160:.\Generated_Source\PSoC5/UART_1.c **** 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 40
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 40
 
 
 1161:.\Generated_Source\PSoC5/UART_1.c **** 
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
 1197:.\Generated_Source\PSoC5/UART_1.c ****         if(UART_1_initVar != 0u)
  1080              		.loc 1 1197 0
  1081 0010 0A4B     		ldr	r3, .L76
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 41
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 41
 
 
  1082 0012 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1127              	.LFB22:
 1206:.\Generated_Source\PSoC5/UART_1.c **** 
 1207:.\Generated_Source\PSoC5/UART_1.c **** 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 42
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 42
 
 
 1208:.\Generated_Source\PSoC5/UART_1.c ****     /*******************************************************************************
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1153 001c FFF7FEFF 		bl	UART_1_PutChar
 1237:.\Generated_Source\PSoC5/UART_1.c ****             UART_1_PutChar(0x0Au);
  1154              		.loc 1 1237 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 43
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 43
 
 
  1155 0020 0A20     		movs	r0, #10
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
 1267:.\Generated_Source\PSoC5/UART_1.c ****     *  No.
 1268:.\Generated_Source\PSoC5/UART_1.c ****     *
 1269:.\Generated_Source\PSoC5/UART_1.c ****     * Theory:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 44
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 44
 
 
 1270:.\Generated_Source\PSoC5/UART_1.c ****     *  Allows the user to find out how full the TX Buffer is.
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1199 0012 002B     		cmp	r3, #0
  1200 0014 02D0     		beq	.L83
 1305:.\Generated_Source\PSoC5/UART_1.c ****         {
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 45
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 45
 
 
 1306:.\Generated_Source\PSoC5/UART_1.c ****             size = UART_1_FIFO_LENGTH;
@@ -2692,13 +2692,13 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1233              	.L88:
  1234 003e 00BF     		.align	2
  1235              	.L87:
- 1236 0040 64640040 		.word	1073767524
+ 1236 0040 6A640040 		.word	1073767530
  1237              		.cfi_endproc
  1238              	.LFE23:
  1239              		.size	UART_1_GetTxBufferSize, .-UART_1_GetTxBufferSize
  1240              		.section	.text.UART_1_ClearTxBuffer,"ax",%progbits
  1241              		.align	2
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 46
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 46
 
 
  1242              		.global	UART_1_ClearTxBuffer
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
 1358:.\Generated_Source\PSoC5/UART_1.c ****         enableInterrupts = CyEnterCriticalSection();
  1260              		.loc 1 1358 0
  1261 0006 FFF7FEFF 		bl	CyEnterCriticalSection
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 47
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 47
 
 
  1262 000a 0346     		mov	r3, r0
@@ -2811,14 +2811,14 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1291              	.L91:
  1292              		.align	2
  1293              	.L90:
- 1294 003c 97640040 		.word	1073767575
+ 1294 003c 9A640040 		.word	1073767578
  1295              		.cfi_endproc
  1296              	.LFE24:
  1297              		.size	UART_1_ClearTxBuffer, .-UART_1_ClearTxBuffer
  1298              		.section	.text.UART_1_SendBreak,"ax",%progbits
  1299              		.align	2
  1300              		.global	UART_1_SendBreak
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 48
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 48
 
 
  1301              		.thumb
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
 1426:.\Generated_Source\PSoC5/UART_1.c ****     *     Initialize TX interrupt with "TX - On TX Complete" parameter
 1427:.\Generated_Source\PSoC5/UART_1.c ****     *     SendBreak(0);     - initialize Break signal transmission
 1428:.\Generated_Source\PSoC5/UART_1.c ****     *         Add your code here to use CPU time
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 49
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 49
 
 
 1429:.\Generated_Source\PSoC5/UART_1.c ****     *     When interrupt appear with UART_1_TX_STS_COMPLETE status:
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
 1463:.\Generated_Source\PSoC5/UART_1.c ****                     tmpStat = UART_1_TXSTATUS_REG;
 1464:.\Generated_Source\PSoC5/UART_1.c ****                 }
 1465:.\Generated_Source\PSoC5/UART_1.c ****                 while((tmpStat & UART_1_TX_STS_FIFO_EMPTY) != 0u);
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 50
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 50
 
 
 1466:.\Generated_Source\PSoC5/UART_1.c ****             }
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1343 002a 6722     		movs	r2, #103
  1344 002c 1A70     		strb	r2, [r3]
 1503:.\Generated_Source\PSoC5/UART_1.c ****                 #else
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 51
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 51
 
 
 1504:.\Generated_Source\PSoC5/UART_1.c ****                     txPeriod = UART_1_TXBITCTR_PERIOD_REG;
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1377 005c 03F00103 		and	r3, r3, #1
  1378 0060 002B     		cmp	r3, #0
  1379 0062 F5D1     		bne	.L97
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 52
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 52
 
 
  1380              	.L98:
@@ -3118,13 +3118,13 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1412              		.align	2
  1413              	.L100:
  1414 0088 00000000 		.word	UART_1_initVar
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 53
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 53
 
 
- 1415 008c 34640040 		.word	1073767476
+ 1415 008c 3D640040 		.word	1073767485
  1416 0090 01000000 		.word	txPeriod.4989
- 1417 0094 47640040 		.word	1073767495
- 1418 0098 64640040 		.word	1073767524
+ 1417 0094 4A640040 		.word	1073767498
+ 1418 0098 6A640040 		.word	1073767530
  1419              		.cfi_endproc
  1420              	.LFE25:
  1421              		.size	UART_1_SendBreak, .-UART_1_SendBreak
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1443 0008 FB71     		strb	r3, [r7, #7]
 1574:.\Generated_Source\PSoC5/UART_1.c ****         /* Mark/Space sending enable */
 1575:.\Generated_Source\PSoC5/UART_1.c ****         if(addressMode != 0u)
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 54
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 54
 
 
 1576:.\Generated_Source\PSoC5/UART_1.c ****         {
@@ -3221,44 +3221,44 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1467 0006 00000000 		.4byte	.Ldebug_abbrev0
  1468 000a 04       		.byte	0x4
  1469 000b 01       		.uleb128 0x1
- 1470 000c B2020000 		.4byte	.LASF60
+ 1470 000c BE020000 		.4byte	.LASF60
  1471 0010 01       		.byte	0x1
- 1472 0011 EF000000 		.4byte	.LASF61
- 1473 0015 33010000 		.4byte	.LASF62
+ 1472 0011 65010000 		.4byte	.LASF61
+ 1473 0015 77000000 		.4byte	.LASF62
  1474 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1475 001d 00000000 		.4byte	0
  1476 0021 00000000 		.4byte	.Ldebug_line0
  1477 0025 02       		.uleb128 0x2
  1478 0026 01       		.byte	0x1
  1479 0027 06       		.byte	0x6
- 1480 0028 9C000000 		.4byte	.LASF0
+ 1480 0028 12010000 		.4byte	.LASF0
  1481 002c 02       		.uleb128 0x2
  1482 002d 01       		.byte	0x1
  1483 002e 08       		.byte	0x8
- 1484 002f AC030000 		.4byte	.LASF1
+ 1484 002f B8030000 		.4byte	.LASF1
  1485 0033 02       		.uleb128 0x2
  1486 0034 02       		.byte	0x2
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 55
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 55
 
 
  1487 0035 05       		.byte	0x5
- 1488 0036 BA030000 		.4byte	.LASF2
+ 1488 0036 C6030000 		.4byte	.LASF2
  1489 003a 02       		.uleb128 0x2
  1490 003b 02       		.byte	0x2
  1491 003c 07       		.byte	0x7
- 1492 003d DD010000 		.4byte	.LASF3
+ 1492 003d E9010000 		.4byte	.LASF3
  1493 0041 02       		.uleb128 0x2
  1494 0042 04       		.byte	0x4
  1495 0043 05       		.byte	0x5
- 1496 0044 C0000000 		.4byte	.LASF4
+ 1496 0044 36010000 		.4byte	.LASF4
  1497 0048 02       		.uleb128 0x2
  1498 0049 04       		.byte	0x4
  1499 004a 07       		.byte	0x7
- 1500 004b C6010000 		.4byte	.LASF5
+ 1500 004b D2010000 		.4byte	.LASF5
  1501 004f 02       		.uleb128 0x2
  1502 0050 08       		.byte	0x8
  1503 0051 05       		.byte	0x5
- 1504 0052 8E000000 		.4byte	.LASF6
+ 1504 0052 04010000 		.4byte	.LASF6
  1505 0056 02       		.uleb128 0x2
  1506 0057 08       		.byte	0x8
  1507 0058 07       		.byte	0x7
@@ -3270,9 +3270,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1513 0064 02       		.uleb128 0x2
  1514 0065 04       		.byte	0x4
  1515 0066 07       		.byte	0x7
- 1516 0067 A5010000 		.4byte	.LASF8
+ 1516 0067 B1010000 		.4byte	.LASF8
  1517 006b 04       		.uleb128 0x4
- 1518 006c D6000000 		.4byte	.LASF9
+ 1518 006c 4C010000 		.4byte	.LASF9
  1519 0070 02       		.byte	0x2
  1520 0071 C2       		.byte	0xc2
  1521 0072 2C000000 		.4byte	0x2c
@@ -3284,25 +3284,25 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1527 0081 02       		.uleb128 0x2
  1528 0082 04       		.byte	0x4
  1529 0083 04       		.byte	0x4
- 1530 0084 63030000 		.4byte	.LASF11
+ 1530 0084 6F030000 		.4byte	.LASF11
  1531 0088 02       		.uleb128 0x2
  1532 0089 08       		.byte	0x8
  1533 008a 04       		.byte	0x4
- 1534 008b DC000000 		.4byte	.LASF12
+ 1534 008b 52010000 		.4byte	.LASF12
  1535 008f 04       		.uleb128 0x4
- 1536 0090 1C040000 		.4byte	.LASF13
+ 1536 0090 28040000 		.4byte	.LASF13
  1537 0094 02       		.byte	0x2
  1538 0095 D3       		.byte	0xd3
  1539 0096 9A000000 		.4byte	0x9a
  1540 009a 02       		.uleb128 0x2
  1541 009b 01       		.byte	0x1
  1542 009c 08       		.byte	0x8
- 1543 009d 17040000 		.4byte	.LASF14
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 56
+ 1543 009d 23040000 		.4byte	.LASF14
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 56
 
 
  1544 00a1 05       		.uleb128 0x5
- 1545 00a2 A7030000 		.4byte	.LASF15
+ 1545 00a2 B3030000 		.4byte	.LASF15
  1546 00a6 02       		.byte	0x2
  1547 00a7 6C01     		.2byte	0x16c
  1548 00a9 AD000000 		.4byte	0xad
@@ -3311,9 +3311,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1551 00b2 02       		.uleb128 0x2
  1552 00b3 04       		.byte	0x4
  1553 00b4 07       		.byte	0x7
- 1554 00b5 77020000 		.4byte	.LASF16
+ 1554 00b5 83020000 		.4byte	.LASF16
  1555 00b9 07       		.uleb128 0x7
- 1556 00ba C9000000 		.4byte	.LASF17
+ 1556 00ba 3F010000 		.4byte	.LASF17
  1557 00be 01       		.byte	0x1
  1558 00bf 4C       		.byte	0x4c
  1559 00c0 00000000 		.4byte	.LFB0
@@ -3321,7 +3321,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1561 00c8 01       		.uleb128 0x1
  1562 00c9 9C       		.byte	0x9c
  1563 00ca 08       		.uleb128 0x8
- 1564 00cb 22040000 		.4byte	.LASF18
+ 1564 00cb 2E040000 		.4byte	.LASF18
  1565 00cf 01       		.byte	0x1
  1566 00d0 6A       		.byte	0x6a
  1567 00d1 00000000 		.4byte	.LFB1
@@ -3329,7 +3329,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1569 00d9 01       		.uleb128 0x1
  1570 00da 9C       		.byte	0x9c
  1571 00db 09       		.uleb128 0x9
- 1572 00dc F0010000 		.4byte	.LASF19
+ 1572 00dc FC010000 		.4byte	.LASF19
  1573 00e0 01       		.byte	0x1
  1574 00e1 B7       		.byte	0xb7
  1575 00e2 00000000 		.4byte	.LFB2
@@ -3338,7 +3338,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1578 00eb 9C       		.byte	0x9c
  1579 00ec FF000000 		.4byte	0xff
  1580 00f0 0A       		.uleb128 0xa
- 1581 00f1 2E040000 		.4byte	.LASF21
+ 1581 00f1 3A040000 		.4byte	.LASF21
  1582 00f5 01       		.byte	0x1
  1583 00f6 B9       		.byte	0xb9
  1584 00f7 6B000000 		.4byte	0x6b
@@ -3347,7 +3347,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1587 00fd 77       		.sleb128 -9
  1588 00fe 00       		.byte	0
  1589 00ff 09       		.uleb128 0x9
- 1590 0100 41020000 		.4byte	.LASF20
+ 1590 0100 4D020000 		.4byte	.LASF20
  1591 0104 01       		.byte	0x1
  1592 0105 F0       		.byte	0xf0
  1593 0106 00000000 		.4byte	.LFB3
@@ -3356,9 +3356,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1596 010f 9C       		.byte	0x9c
  1597 0110 23010000 		.4byte	0x123
  1598 0114 0A       		.uleb128 0xa
- 1599 0115 2E040000 		.4byte	.LASF21
+ 1599 0115 3A040000 		.4byte	.LASF21
  1600 0119 01       		.byte	0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 57
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 57
 
 
  1601 011a F2       		.byte	0xf2
@@ -3368,7 +3368,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1605 0121 77       		.sleb128 -9
  1606 0122 00       		.byte	0
  1607 0123 0B       		.uleb128 0xb
- 1608 0124 26020000 		.4byte	.LASF32
+ 1608 0124 32020000 		.4byte	.LASF32
  1609 0128 01       		.byte	0x1
  1610 0129 2701     		.2byte	0x127
  1611 012b 6B000000 		.4byte	0x6b
@@ -3377,7 +3377,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1614 0137 01       		.uleb128 0x1
  1615 0138 9C       		.byte	0x9c
  1616 0139 0C       		.uleb128 0xc
- 1617 013a C4030000 		.4byte	.LASF22
+ 1617 013a D0030000 		.4byte	.LASF22
  1618 013e 01       		.byte	0x1
  1619 013f 3F01     		.2byte	0x13f
  1620 0141 00000000 		.4byte	.LFB5
@@ -3386,7 +3386,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1623 014a 9C       		.byte	0x9c
  1624 014b 5F010000 		.4byte	0x15f
  1625 014f 0D       		.uleb128 0xd
- 1626 0150 11010000 		.4byte	.LASF24
+ 1626 0150 87010000 		.4byte	.LASF24
  1627 0154 01       		.byte	0x1
  1628 0155 3F01     		.2byte	0x13f
  1629 0157 6B000000 		.4byte	0x6b
@@ -3395,7 +3395,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1632 015d 77       		.sleb128 -9
  1633 015e 00       		.byte	0
  1634 015f 0C       		.uleb128 0xc
- 1635 0160 19010000 		.4byte	.LASF23
+ 1635 0160 8F010000 		.4byte	.LASF23
  1636 0164 01       		.byte	0x1
  1637 0165 6701     		.2byte	0x167
  1638 0167 00000000 		.4byte	.LFB6
@@ -3404,7 +3404,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1641 0170 9C       		.byte	0x9c
  1642 0171 85010000 		.4byte	0x185
  1643 0175 0D       		.uleb128 0xd
- 1644 0176 1F020000 		.4byte	.LASF25
+ 1644 0176 2B020000 		.4byte	.LASF25
  1645 017a 01       		.byte	0x1
  1646 017b 6701     		.2byte	0x167
  1647 017d 6B000000 		.4byte	0x6b
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1655 018b 8801     		.2byte	0x188
  1656 018d 6B000000 		.4byte	0x6b
  1657 0191 00000000 		.4byte	.LFB7
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 58
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 58
 
 
  1658 0195 20000000 		.4byte	.LFE7-.LFB7
@@ -3426,7 +3426,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1660 019a 9C       		.byte	0x9c
  1661 019b AF010000 		.4byte	0x1af
  1662 019f 0F       		.uleb128 0xf
- 1663 01a0 10040000 		.4byte	.LASF26
+ 1663 01a0 1C040000 		.4byte	.LASF26
  1664 01a4 01       		.byte	0x1
  1665 01a5 8A01     		.2byte	0x18a
  1666 01a7 6B000000 		.4byte	0x6b
@@ -3435,7 +3435,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1669 01ad 77       		.sleb128 -9
  1670 01ae 00       		.byte	0
  1671 01af 0E       		.uleb128 0xe
- 1672 01b0 46040000 		.4byte	.LASF28
+ 1672 01b0 52040000 		.4byte	.LASF28
  1673 01b4 01       		.byte	0x1
  1674 01b5 E501     		.2byte	0x1e5
  1675 01b7 6B000000 		.4byte	0x6b
@@ -3445,7 +3445,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1679 01c4 9C       		.byte	0x9c
  1680 01c5 D9010000 		.4byte	0x1d9
  1681 01c9 0F       		.uleb128 0xf
- 1682 01ca 3F040000 		.4byte	.LASF29
+ 1682 01ca 4B040000 		.4byte	.LASF29
  1683 01ce 01       		.byte	0x1
  1684 01cf E701     		.2byte	0x1e7
  1685 01d1 6B000000 		.4byte	0x6b
@@ -3454,7 +3454,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1688 01d7 77       		.sleb128 -9
  1689 01d8 00       		.byte	0
  1690 01d9 0E       		.uleb128 0xe
- 1691 01da 5A040000 		.4byte	.LASF30
+ 1691 01da 66040000 		.4byte	.LASF30
  1692 01de 01       		.byte	0x1
  1693 01df 1402     		.2byte	0x214
  1694 01e1 6B000000 		.4byte	0x6b
@@ -3464,7 +3464,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1698 01ee 9C       		.byte	0x9c
  1699 01ef 12020000 		.4byte	0x212
  1700 01f3 0F       		.uleb128 0xf
- 1701 01f4 10040000 		.4byte	.LASF26
+ 1701 01f4 1C040000 		.4byte	.LASF26
  1702 01f8 01       		.byte	0x1
  1703 01f9 1602     		.2byte	0x216
  1704 01fb 6B000000 		.4byte	0x6b
@@ -3472,19 +3472,19 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1706 0200 91       		.byte	0x91
  1707 0201 77       		.sleb128 -9
  1708 0202 0F       		.uleb128 0xf
- 1709 0203 40030000 		.4byte	.LASF31
+ 1709 0203 4C030000 		.4byte	.LASF31
  1710 0207 01       		.byte	0x1
  1711 0208 1702     		.2byte	0x217
  1712 020a 6B000000 		.4byte	0x6b
  1713 020e 02       		.uleb128 0x2
  1714 020f 91       		.byte	0x91
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 59
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 59
 
 
  1715 0210 76       		.sleb128 -10
  1716 0211 00       		.byte	0
  1717 0212 10       		.uleb128 0x10
- 1718 0213 4D020000 		.4byte	.LASF33
+ 1718 0213 59020000 		.4byte	.LASF33
  1719 0217 01       		.byte	0x1
  1720 0218 7A02     		.2byte	0x27a
  1721 021a 76000000 		.4byte	0x76
@@ -3493,7 +3493,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1724 0226 01       		.uleb128 0x1
  1725 0227 9C       		.byte	0x9c
  1726 0228 0E       		.uleb128 0xe
- 1727 0229 F9030000 		.4byte	.LASF34
+ 1727 0229 05040000 		.4byte	.LASF34
  1728 022d 01       		.byte	0x1
  1729 022e AB02     		.2byte	0x2ab
  1730 0230 6B000000 		.4byte	0x6b
@@ -3503,7 +3503,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1734 023d 9C       		.byte	0x9c
  1735 023e 52020000 		.4byte	0x252
  1736 0242 0F       		.uleb128 0xf
- 1737 0243 D8010000 		.4byte	.LASF35
+ 1737 0243 E4010000 		.4byte	.LASF35
  1738 0247 01       		.byte	0x1
  1739 0248 AE02     		.2byte	0x2ae
  1740 024a 6B000000 		.4byte	0x6b
@@ -3512,7 +3512,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1743 0250 77       		.sleb128 -9
  1744 0251 00       		.byte	0
  1745 0252 11       		.uleb128 0x11
- 1746 0253 7A030000 		.4byte	.LASF36
+ 1746 0253 86030000 		.4byte	.LASF36
  1747 0257 01       		.byte	0x1
  1748 0258 F502     		.2byte	0x2f5
  1749 025a 00000000 		.4byte	.LFB12
@@ -3521,7 +3521,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1752 0263 9C       		.byte	0x9c
  1753 0264 78020000 		.4byte	0x278
  1754 0268 0F       		.uleb128 0xf
- 1755 0269 2E040000 		.4byte	.LASF21
+ 1755 0269 3A040000 		.4byte	.LASF21
  1756 026d 01       		.byte	0x1
  1757 026e F702     		.2byte	0x2f7
  1758 0270 6B000000 		.4byte	0x6b
@@ -3530,7 +3530,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1761 0276 77       		.sleb128 -9
  1762 0277 00       		.byte	0
  1763 0278 0C       		.uleb128 0xc
- 1764 0279 8F030000 		.4byte	.LASF37
+ 1764 0279 9B030000 		.4byte	.LASF37
  1765 027d 01       		.byte	0x1
  1766 027e 2D03     		.2byte	0x32d
  1767 0280 00000000 		.4byte	.LFB13
@@ -3538,11 +3538,11 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1769 0288 01       		.uleb128 0x1
  1770 0289 9C       		.byte	0x9c
  1771 028a 9E020000 		.4byte	0x29e
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 60
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 60
 
 
  1772 028e 0D       		.uleb128 0xd
- 1773 028f E3000000 		.4byte	.LASF38
+ 1773 028f 59010000 		.4byte	.LASF38
  1774 0293 01       		.byte	0x1
  1775 0294 2D03     		.2byte	0x32d
  1776 0296 6B000000 		.4byte	0x6b
@@ -3551,7 +3551,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1779 029c 77       		.sleb128 -9
  1780 029d 00       		.byte	0
  1781 029e 0C       		.uleb128 0xc
- 1782 029f 80020000 		.4byte	.LASF39
+ 1782 029f 8C020000 		.4byte	.LASF39
  1783 02a3 01       		.byte	0x1
  1784 02a4 5903     		.2byte	0x359
  1785 02a6 00000000 		.4byte	.LFB14
@@ -3560,7 +3560,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1788 02af 9C       		.byte	0x9c
  1789 02b0 C4020000 		.4byte	0x2c4
  1790 02b4 0D       		.uleb128 0xd
- 1791 02b5 AA020000 		.4byte	.LASF40
+ 1791 02b5 B6020000 		.4byte	.LASF40
  1792 02b9 01       		.byte	0x1
  1793 02ba 5903     		.2byte	0x359
  1794 02bc 6B000000 		.4byte	0x6b
@@ -3569,7 +3569,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1797 02c2 77       		.sleb128 -9
  1798 02c3 00       		.byte	0
  1799 02c4 0C       		.uleb128 0xc
- 1800 02c5 95020000 		.4byte	.LASF41
+ 1800 02c5 A1020000 		.4byte	.LASF41
  1801 02c9 01       		.byte	0x1
  1802 02ca 6D03     		.2byte	0x36d
  1803 02cc 00000000 		.4byte	.LFB15
@@ -3578,7 +3578,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1806 02d5 9C       		.byte	0x9c
  1807 02d6 EA020000 		.4byte	0x2ea
  1808 02da 0D       		.uleb128 0xd
- 1809 02db AA020000 		.4byte	.LASF40
+ 1809 02db B6020000 		.4byte	.LASF40
  1810 02df 01       		.byte	0x1
  1811 02e0 6D03     		.2byte	0x36d
  1812 02e2 6B000000 		.4byte	0x6b
@@ -3587,7 +3587,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1815 02e8 77       		.sleb128 -9
  1816 02e9 00       		.byte	0
  1817 02ea 0C       		.uleb128 0xc
- 1818 02eb 49030000 		.4byte	.LASF42
+ 1818 02eb 55030000 		.4byte	.LASF42
  1819 02ef 01       		.byte	0x1
  1820 02f0 8C03     		.2byte	0x38c
  1821 02f2 00000000 		.4byte	.LFB16
@@ -3596,9 +3596,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1824 02fb 9C       		.byte	0x9c
  1825 02fc 10030000 		.4byte	0x310
  1826 0300 0D       		.uleb128 0xd
- 1827 0301 1F020000 		.4byte	.LASF25
+ 1827 0301 2B020000 		.4byte	.LASF25
  1828 0305 01       		.byte	0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 61
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 61
 
 
  1829 0306 8C03     		.2byte	0x38c
@@ -3608,7 +3608,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1833 030e 77       		.sleb128 -9
  1834 030f 00       		.byte	0
  1835 0310 0C       		.uleb128 0xc
- 1836 0311 5C020000 		.4byte	.LASF43
+ 1836 0311 68020000 		.4byte	.LASF43
  1837 0315 01       		.byte	0x1
  1838 0316 AE03     		.2byte	0x3ae
  1839 0318 00000000 		.4byte	.LFB17
@@ -3626,7 +3626,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1851 0334 77       		.sleb128 -9
  1852 0335 00       		.byte	0
  1853 0336 0B       		.uleb128 0xb
- 1854 0337 B2010000 		.4byte	.LASF45
+ 1854 0337 BE010000 		.4byte	.LASF45
  1855 033b 01       		.byte	0x1
  1856 033c EB03     		.2byte	0x3eb
  1857 033e 6B000000 		.4byte	0x6b
@@ -3653,12 +3653,12 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1878 0370 77       		.sleb128 -9
  1879 0371 00       		.byte	0
  1880 0372 11       		.uleb128 0x11
- 1881 0373 69030000 		.4byte	.LASF47
+ 1881 0373 75030000 		.4byte	.LASF47
  1882 0377 01       		.byte	0x1
  1883 0378 7904     		.2byte	0x479
  1884 037a 00000000 		.4byte	.LFB20
  1885 037e 40000000 		.4byte	.LFE20-.LFB20
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 62
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 62
 
 
  1886 0382 01       		.uleb128 0x1
@@ -3673,7 +3673,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1895 0395 91       		.byte	0x91
  1896 0396 6C       		.sleb128 -20
  1897 0397 0F       		.uleb128 0xf
- 1898 0398 FE010000 		.4byte	.LASF49
+ 1898 0398 0A020000 		.4byte	.LASF49
  1899 039c 01       		.byte	0x1
  1900 039d 7B04     		.2byte	0x47b
  1901 039f 76000000 		.4byte	0x76
@@ -3687,7 +3687,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1909 03ad 13       		.uleb128 0x13
  1910 03ae 8F000000 		.4byte	0x8f
  1911 03b2 11       		.uleb128 0x11
- 1912 03b3 69040000 		.4byte	.LASF50
+ 1912 03b3 75040000 		.4byte	.LASF50
  1913 03b7 01       		.byte	0x1
  1914 03b8 A704     		.2byte	0x4a7
  1915 03ba 00000000 		.4byte	.LFB21
@@ -3704,7 +3704,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1926 03d5 91       		.byte	0x91
  1927 03d6 6C       		.sleb128 -20
  1928 03d7 0D       		.uleb128 0xd
- 1929 03d8 EF030000 		.4byte	.LASF51
+ 1929 03d8 FB030000 		.4byte	.LASF51
  1930 03dc 01       		.byte	0x1
  1931 03dd A704     		.2byte	0x4a7
  1932 03df 6B000000 		.4byte	0x6b
@@ -3712,13 +3712,13 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1934 03e4 91       		.byte	0x91
  1935 03e5 6B       		.sleb128 -21
  1936 03e6 0F       		.uleb128 0xf
- 1937 03e7 FE010000 		.4byte	.LASF49
+ 1937 03e7 0A020000 		.4byte	.LASF49
  1938 03eb 01       		.byte	0x1
  1939 03ec AA04     		.2byte	0x4aa
  1940 03ee 6B000000 		.4byte	0x6b
  1941 03f2 02       		.uleb128 0x2
  1942 03f3 91       		.byte	0x91
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 63
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 63
 
 
  1943 03f4 77       		.sleb128 -9
@@ -3729,7 +3729,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1948 03fc 13       		.uleb128 0x13
  1949 03fd 6B000000 		.4byte	0x6b
  1950 0401 11       		.uleb128 0x11
- 1951 0402 B1000000 		.4byte	.LASF52
+ 1951 0402 27010000 		.4byte	.LASF52
  1952 0406 01       		.byte	0x1
  1953 0407 CE04     		.2byte	0x4ce
  1954 0409 00000000 		.4byte	.LFB22
@@ -3747,7 +3747,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1966 0425 77       		.sleb128 -9
  1967 0426 00       		.byte	0
  1968 0427 0E       		.uleb128 0xe
- 1969 0428 77000000 		.4byte	.LASF53
+ 1969 0428 ED000000 		.4byte	.LASF53
  1970 042c 01       		.byte	0x1
  1971 042d F904     		.2byte	0x4f9
  1972 042f 6B000000 		.4byte	0x6b
@@ -3757,7 +3757,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1976 043c 9C       		.byte	0x9c
  1977 043d 51040000 		.4byte	0x451
  1978 0441 0F       		.uleb128 0xf
- 1979 0442 D8010000 		.4byte	.LASF35
+ 1979 0442 E4010000 		.4byte	.LASF35
  1980 0446 01       		.byte	0x1
  1981 0447 FC04     		.2byte	0x4fc
  1982 0449 6B000000 		.4byte	0x6b
@@ -3775,10 +3775,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  1994 0462 9C       		.byte	0x9c
  1995 0463 77040000 		.4byte	0x477
  1996 0467 0F       		.uleb128 0xf
- 1997 0468 2E040000 		.4byte	.LASF21
+ 1997 0468 3A040000 		.4byte	.LASF21
  1998 046c 01       		.byte	0x1
  1999 046d 4C05     		.2byte	0x54c
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 64
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 64
 
 
  2000 046f 6B000000 		.4byte	0x6b
@@ -3796,7 +3796,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2012 0488 9C       		.byte	0x9c
  2013 0489 C8040000 		.4byte	0x4c8
  2014 048d 0D       		.uleb128 0xd
- 2015 048e 9D010000 		.4byte	.LASF56
+ 2015 048e A9010000 		.4byte	.LASF56
  2016 0492 01       		.byte	0x1
  2017 0493 A005     		.2byte	0x5a0
  2018 0495 6B000000 		.4byte	0x6b
@@ -3807,7 +3807,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2023 049d 12000000 		.4byte	.LBB2
  2024 04a1 6C000000 		.4byte	.LBE2-.LBB2
  2025 04a5 0F       		.uleb128 0xf
- 2026 04a6 6F020000 		.4byte	.LASF57
+ 2026 04a6 7B020000 		.4byte	.LASF57
  2027 04aa 01       		.byte	0x1
  2028 04ab A805     		.2byte	0x5a8
  2029 04ad 6B000000 		.4byte	0x6b
@@ -3815,7 +3815,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2031 04b2 91       		.byte	0x91
  2032 04b3 77       		.sleb128 -9
  2033 04b4 0F       		.uleb128 0xf
- 2034 04b5 A8000000 		.4byte	.LASF58
+ 2034 04b5 1E010000 		.4byte	.LASF58
  2035 04b9 01       		.byte	0x1
  2036 04ba D005     		.2byte	0x5d0
  2037 04bc 6B000000 		.4byte	0x6b
@@ -3825,7 +3825,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2041 04c6 00       		.byte	0
  2042 04c7 00       		.byte	0
  2043 04c8 0C       		.uleb128 0xc
- 2044 04c9 07020000 		.4byte	.LASF59
+ 2044 04c9 13020000 		.4byte	.LASF59
  2045 04cd 01       		.byte	0x1
  2046 04ce 2406     		.2byte	0x624
  2047 04d0 00000000 		.4byte	.LFB26
@@ -3834,11 +3834,11 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2050 04d9 9C       		.byte	0x9c
  2051 04da EE040000 		.4byte	0x4ee
  2052 04de 0D       		.uleb128 0xd
- 2053 04df E3000000 		.4byte	.LASF38
+ 2053 04df 59010000 		.4byte	.LASF38
  2054 04e3 01       		.byte	0x1
  2055 04e4 2406     		.2byte	0x624
  2056 04e6 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 65
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 65
 
 
  2057 04ea 02       		.uleb128 0x2
@@ -3846,7 +3846,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2059 04ec 77       		.sleb128 -9
  2060 04ed 00       		.byte	0
  2061 04ee 15       		.uleb128 0x15
- 2062 04ef E0030000 		.4byte	.LASF63
+ 2062 04ef EC030000 		.4byte	.LASF63
  2063 04f3 01       		.byte	0x1
  2064 04f4 1B       		.byte	0x1b
  2065 04f5 6B000000 		.4byte	0x6b
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2111 0027 00       		.byte	0
  2112 0028 00       		.byte	0
  2113 0029 04       		.uleb128 0x4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 66
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 66
 
 
  2114 002a 16       		.uleb128 0x16
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2168 0061 00       		.byte	0
  2169 0062 08       		.uleb128 0x8
  2170 0063 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 67
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 67
 
 
  2171 0064 00       		.byte	0
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2225 009c 0B       		.uleb128 0xb
  2226 009d 49       		.uleb128 0x49
  2227 009e 13       		.uleb128 0x13
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 68
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 68
 
 
  2228 009f 02       		.uleb128 0x2
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2282 00d7 0D       		.uleb128 0xd
  2283 00d8 05       		.uleb128 0x5
  2284 00d9 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 69
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 69
 
 
  2285 00da 03       		.uleb128 0x3
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2339 0111 10       		.uleb128 0x10
  2340 0112 2E       		.uleb128 0x2e
  2341 0113 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 70
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 70
 
 
  2342 0114 3F       		.uleb128 0x3f
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2396 014c 00       		.byte	0
  2397 014d 00       		.byte	0
  2398 014e 13       		.uleb128 0x13
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 71
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 71
 
 
  2399 014f 26       		.uleb128 0x26
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2453 0044 20000000 		.4byte	.LFE6-.LFB6
  2454 0048 00000000 		.4byte	.LFB7
  2455 004c 20000000 		.4byte	.LFE7-.LFB7
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 72
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 72
 
 
  2456 0050 00000000 		.4byte	.LFB8
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2510 0030 00000000 		.4byte	.LFB6
  2511 0034 20000000 		.4byte	.LFE6
  2512 0038 00000000 		.4byte	.LFB7
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 73
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 73
 
 
  2513 003c 20000000 		.4byte	.LFE7
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2560      6C656172 
  2560      54784275 
  2560      66666572 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 74
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 74
 
 
  2561              	.LASF44:
@@ -4411,298 +4411,300 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 1
  2572      6720756E 
  2572      7369676E 
  2572      65642069 
- 2573              	.LASF53:
- 2574 0077 55415254 		.ascii	"UART_1_GetTxBufferSize\000"
- 2574      5F315F47 
- 2574      65745478 
- 2574      42756666 
- 2574      65725369 
- 2575              	.LASF6:
- 2576 008e 6C6F6E67 		.ascii	"long long int\000"
- 2576      206C6F6E 
- 2576      6720696E 
- 2576      7400
- 2577              	.LASF0:
- 2578 009c 7369676E 		.ascii	"signed char\000"
- 2578      65642063 
- 2578      68617200 
- 2579              	.LASF58:
- 2580 00a8 74785065 		.ascii	"txPeriod\000"
- 2580      72696F64 
- 2580      00
- 2581              	.LASF52:
- 2582 00b1 55415254 		.ascii	"UART_1_PutCRLF\000"
- 2582      5F315F50 
- 2582      75744352 
- 2582      4C4600
- 2583              	.LASF4:
- 2584 00c0 6C6F6E67 		.ascii	"long int\000"
- 2584      20696E74 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 75
+ 2573              	.LASF62:
+ 2574 0077 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\Virginia_Tech\\FSAE\\V"
+ 2574      73657273 
+ 2574      5C636861 
+ 2574      726C5C44 
+ 2574      6F63756D 
+ 2575 00a4 544D4441 		.ascii	"TMDAQ_EXPERIMENTAL\\VTM16 PSOC Current Sensor\\VTM1"
+ 2575      515F4558 
+ 2575      50455249 
+ 2575      4D454E54 
+ 2575      414C5C56 
+ 2576 00d5 36204375 		.ascii	"6 Current Sensors.cydsn\000"
+ 2576      7272656E 
+ 2576      74205365 
+ 2576      6E736F72 
+ 2576      732E6379 
+ 2577              	.LASF53:
+ 2578 00ed 55415254 		.ascii	"UART_1_GetTxBufferSize\000"
+ 2578      5F315F47 
+ 2578      65745478 
+ 2578      42756666 
+ 2578      65725369 
+ 2579              	.LASF6:
+ 2580 0104 6C6F6E67 		.ascii	"long long int\000"
+ 2580      206C6F6E 
+ 2580      6720696E 
+ 2580      7400
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 75
 
 
+ 2581              	.LASF0:
+ 2582 0112 7369676E 		.ascii	"signed char\000"
+ 2582      65642063 
+ 2582      68617200 
+ 2583              	.LASF58:
+ 2584 011e 74785065 		.ascii	"txPeriod\000"
+ 2584      72696F64 
  2584      00
- 2585              	.LASF17:
- 2586 00c9 55415254 		.ascii	"UART_1_Start\000"
- 2586      5F315F53 
- 2586      74617274 
- 2586      00
- 2587              	.LASF9:
- 2588 00d6 75696E74 		.ascii	"uint8\000"
- 2588      3800
- 2589              	.LASF12:
- 2590 00dc 646F7562 		.ascii	"double\000"
- 2590      6C6500
- 2591              	.LASF38:
- 2592 00e3 61646472 		.ascii	"addressMode\000"
- 2592      6573734D 
- 2592      6F646500 
- 2593              	.LASF61:
- 2594 00ef 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\UART_1.c\000"
- 2594      6E657261 
- 2594      7465645F 
- 2594      536F7572 
- 2594      63655C50 
- 2595              	.LASF24:
- 2596 0111 636F6E74 		.ascii	"control\000"
- 2596      726F6C00 
- 2597              	.LASF23:
- 2598 0119 55415254 		.ascii	"UART_1_SetRxInterruptMode\000"
- 2598      5F315F53 
- 2598      65745278 
- 2598      496E7465 
- 2598      72727570 
- 2599              	.LASF62:
- 2600 0133 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\Virginia_Tech\\FSAE\\V"
- 2600      73657273 
- 2600      5C636861 
- 2600      726C5C44 
- 2600      6F63756D 
- 2601 0160 544D2D44 		.ascii	"TM-DAQ\\VTM16 PSOC Current Sensor\\VTM16 Current Se"
- 2601      41515C56 
- 2601      544D3136 
- 2601      2050534F 
- 2601      43204375 
- 2602 0191 6E736F72 		.ascii	"nsors.cydsn\000"
- 2602      732E6379 
- 2602      64736E00 
+ 2585              	.LASF52:
+ 2586 0127 55415254 		.ascii	"UART_1_PutCRLF\000"
+ 2586      5F315F50 
+ 2586      75744352 
+ 2586      4C4600
+ 2587              	.LASF4:
+ 2588 0136 6C6F6E67 		.ascii	"long int\000"
+ 2588      20696E74 
+ 2588      00
+ 2589              	.LASF17:
+ 2590 013f 55415254 		.ascii	"UART_1_Start\000"
+ 2590      5F315F53 
+ 2590      74617274 
+ 2590      00
+ 2591              	.LASF9:
+ 2592 014c 75696E74 		.ascii	"uint8\000"
+ 2592      3800
+ 2593              	.LASF12:
+ 2594 0152 646F7562 		.ascii	"double\000"
+ 2594      6C6500
+ 2595              	.LASF38:
+ 2596 0159 61646472 		.ascii	"addressMode\000"
+ 2596      6573734D 
+ 2596      6F646500 
+ 2597              	.LASF61:
+ 2598 0165 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\UART_1.c\000"
+ 2598      6E657261 
+ 2598      7465645F 
+ 2598      536F7572 
+ 2598      63655C50 
+ 2599              	.LASF24:
+ 2600 0187 636F6E74 		.ascii	"control\000"
+ 2600      726F6C00 
+ 2601              	.LASF23:
+ 2602 018f 55415254 		.ascii	"UART_1_SetRxInterruptMode\000"
+ 2602      5F315F53 
+ 2602      65745278 
+ 2602      496E7465 
+ 2602      72727570 
  2603              	.LASF56:
- 2604 019d 7265744D 		.ascii	"retMode\000"
+ 2604 01a9 7265744D 		.ascii	"retMode\000"
  2604      6F646500 
  2605              	.LASF8:
- 2606 01a5 756E7369 		.ascii	"unsigned int\000"
+ 2606 01b1 756E7369 		.ascii	"unsigned int\000"
  2606      676E6564 
  2606      20696E74 
  2606      00
  2607              	.LASF45:
- 2608 01b2 55415254 		.ascii	"UART_1_ReadTxStatus\000"
+ 2608 01be 55415254 		.ascii	"UART_1_ReadTxStatus\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 76
+
+
  2608      5F315F52 
  2608      65616454 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 76
-
-
  2608      78537461 
  2608      74757300 
  2609              	.LASF5:
- 2610 01c6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2610 01d2 6C6F6E67 		.ascii	"long unsigned int\000"
  2610      20756E73 
  2610      69676E65 
  2610      6420696E 
  2610      7400
  2611              	.LASF35:
- 2612 01d8 73697A65 		.ascii	"size\000"
+ 2612 01e4 73697A65 		.ascii	"size\000"
  2612      00
  2613              	.LASF3:
- 2614 01dd 73686F72 		.ascii	"short unsigned int\000"
+ 2614 01e9 73686F72 		.ascii	"short unsigned int\000"
  2614      7420756E 
  2614      7369676E 
  2614      65642069 
  2614      6E7400
  2615              	.LASF19:
- 2616 01f0 55415254 		.ascii	"UART_1_Enable\000"
+ 2616 01fc 55415254 		.ascii	"UART_1_Enable\000"
  2616      5F315F45 
  2616      6E61626C 
  2616      6500
  2617              	.LASF49:
- 2618 01fe 62756649 		.ascii	"bufIndex\000"
+ 2618 020a 62756649 		.ascii	"bufIndex\000"
  2618      6E646578 
  2618      00
  2619              	.LASF59:
- 2620 0207 55415254 		.ascii	"UART_1_SetTxAddressMode\000"
+ 2620 0213 55415254 		.ascii	"UART_1_SetTxAddressMode\000"
  2620      5F315F53 
  2620      65745478 
  2620      41646472 
  2620      6573734D 
  2621              	.LASF25:
- 2622 021f 696E7453 		.ascii	"intSrc\000"
+ 2622 022b 696E7453 		.ascii	"intSrc\000"
  2622      726300
  2623              	.LASF32:
- 2624 0226 55415254 		.ascii	"UART_1_ReadControlRegister\000"
+ 2624 0232 55415254 		.ascii	"UART_1_ReadControlRegister\000"
  2624      5F315F52 
  2624      65616443 
  2624      6F6E7472 
  2624      6F6C5265 
  2625              	.LASF20:
- 2626 0241 55415254 		.ascii	"UART_1_Stop\000"
+ 2626 024d 55415254 		.ascii	"UART_1_Stop\000"
  2626      5F315F53 
  2626      746F7000 
  2627              	.LASF33:
- 2628 024d 55415254 		.ascii	"UART_1_GetByte\000"
+ 2628 0259 55415254 		.ascii	"UART_1_GetByte\000"
  2628      5F315F47 
  2628      65744279 
  2628      746500
  2629              	.LASF43:
- 2630 025c 55415254 		.ascii	"UART_1_WriteTxData\000"
+ 2630 0268 55415254 		.ascii	"UART_1_WriteTxData\000"
  2630      5F315F57 
  2630      72697465 
  2630      54784461 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 77
+
+
  2630      746100
  2631              	.LASF57:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 77
-
-
- 2632 026f 746D7053 		.ascii	"tmpStat\000"
+ 2632 027b 746D7053 		.ascii	"tmpStat\000"
  2632      74617400 
  2633              	.LASF16:
- 2634 0277 73697A65 		.ascii	"sizetype\000"
+ 2634 0283 73697A65 		.ascii	"sizetype\000"
  2634      74797065 
  2634      00
  2635              	.LASF39:
- 2636 0280 55415254 		.ascii	"UART_1_SetRxAddress1\000"
+ 2636 028c 55415254 		.ascii	"UART_1_SetRxAddress1\000"
  2636      5F315F53 
  2636      65745278 
  2636      41646472 
  2636      65737331 
  2637              	.LASF41:
- 2638 0295 55415254 		.ascii	"UART_1_SetRxAddress2\000"
+ 2638 02a1 55415254 		.ascii	"UART_1_SetRxAddress2\000"
  2638      5F315F53 
  2638      65745278 
  2638      41646472 
  2638      65737332 
  2639              	.LASF40:
- 2640 02aa 61646472 		.ascii	"address\000"
+ 2640 02b6 61646472 		.ascii	"address\000"
  2640      65737300 
  2641              	.LASF60:
- 2642 02b2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2642 02be 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  2642      4320342E 
  2642      392E3320 
  2642      32303135 
  2642      30333033 
- 2643 02e5 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2643 02f1 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
  2643      20726576 
  2643      6973696F 
  2643      6E203232 
  2643      31323230 
- 2644 0318 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2644 0324 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
  2644      66756E63 
  2644      74696F6E 
  2644      2D736563 
  2644      74696F6E 
  2645              	.LASF31:
- 2646 0340 72785374 		.ascii	"rxStatus\000"
+ 2646 034c 72785374 		.ascii	"rxStatus\000"
  2646      61747573 
  2646      00
  2647              	.LASF42:
- 2648 0349 55415254 		.ascii	"UART_1_SetTxInterruptMode\000"
+ 2648 0355 55415254 		.ascii	"UART_1_SetTxInterruptMode\000"
  2648      5F315F53 
  2648      65745478 
  2648      496E7465 
  2648      72727570 
  2649              	.LASF11:
- 2650 0363 666C6F61 		.ascii	"float\000"
+ 2650 036f 666C6F61 		.ascii	"float\000"
  2650      7400
  2651              	.LASF47:
- 2652 0369 55415254 		.ascii	"UART_1_PutString\000"
+ 2652 0375 55415254 		.ascii	"UART_1_PutString\000"
  2652      5F315F50 
  2652      75745374 
  2652      72696E67 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 78
+
+
  2652      00
  2653              	.LASF36:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 78
-
-
- 2654 037a 55415254 		.ascii	"UART_1_ClearRxBuffer\000"
+ 2654 0386 55415254 		.ascii	"UART_1_ClearRxBuffer\000"
  2654      5F315F43 
  2654      6C656172 
  2654      52784275 
  2654      66666572 
  2655              	.LASF37:
- 2656 038f 55415254 		.ascii	"UART_1_SetRxAddressMode\000"
+ 2656 039b 55415254 		.ascii	"UART_1_SetRxAddressMode\000"
  2656      5F315F53 
  2656      65745278 
  2656      41646472 
  2656      6573734D 
  2657              	.LASF15:
- 2658 03a7 72656738 		.ascii	"reg8\000"
+ 2658 03b3 72656738 		.ascii	"reg8\000"
  2658      00
  2659              	.LASF1:
- 2660 03ac 756E7369 		.ascii	"unsigned char\000"
+ 2660 03b8 756E7369 		.ascii	"unsigned char\000"
  2660      676E6564 
  2660      20636861 
  2660      7200
  2661              	.LASF2:
- 2662 03ba 73686F72 		.ascii	"short int\000"
+ 2662 03c6 73686F72 		.ascii	"short int\000"
  2662      7420696E 
  2662      7400
  2663              	.LASF22:
- 2664 03c4 55415254 		.ascii	"UART_1_WriteControlRegister\000"
+ 2664 03d0 55415254 		.ascii	"UART_1_WriteControlRegister\000"
  2664      5F315F57 
  2664      72697465 
  2664      436F6E74 
  2664      726F6C52 
  2665              	.LASF63:
- 2666 03e0 55415254 		.ascii	"UART_1_initVar\000"
+ 2666 03ec 55415254 		.ascii	"UART_1_initVar\000"
  2666      5F315F69 
  2666      6E697456 
  2666      617200
  2667              	.LASF51:
- 2668 03ef 62797465 		.ascii	"byteCount\000"
+ 2668 03fb 62797465 		.ascii	"byteCount\000"
  2668      436F756E 
  2668      7400
  2669              	.LASF34:
- 2670 03f9 55415254 		.ascii	"UART_1_GetRxBufferSize\000"
+ 2670 0405 55415254 		.ascii	"UART_1_GetRxBufferSize\000"
  2670      5F315F47 
  2670      65745278 
  2670      42756666 
  2670      65725369 
  2671              	.LASF26:
- 2672 0410 72784461 		.ascii	"rxData\000"
+ 2672 041c 72784461 		.ascii	"rxData\000"
  2672      746100
  2673              	.LASF14:
- 2674 0417 63686172 		.ascii	"char\000"
+ 2674 0423 63686172 		.ascii	"char\000"
  2674      00
  2675              	.LASF13:
- 2676 041c 63686172 		.ascii	"char8\000"
+ 2676 0428 63686172 		.ascii	"char8\000"
  2676      3800
  2677              	.LASF18:
- 2678 0422 55415254 		.ascii	"UART_1_Init\000"
+ 2678 042e 55415254 		.ascii	"UART_1_Init\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8JfprM.s 			page 79
+
+
  2678      5F315F49 
  2678      6E697400 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccQi0Gnt.s 			page 79
-
-
  2679              	.LASF21:
- 2680 042e 656E6162 		.ascii	"enableInterrupts\000"
+ 2680 043a 656E6162 		.ascii	"enableInterrupts\000"
  2680      6C65496E 
  2680      74657272 
  2680      75707473 
  2680      00
  2681              	.LASF29:
- 2682 043f 73746174 		.ascii	"status\000"
+ 2682 044b 73746174 		.ascii	"status\000"
  2682      757300
  2683              	.LASF28:
- 2684 0446 55415254 		.ascii	"UART_1_ReadRxStatus\000"
+ 2684 0452 55415254 		.ascii	"UART_1_ReadRxStatus\000"
  2684      5F315F52 
  2684      65616452 
  2684      78537461 
  2684      74757300 
  2685              	.LASF30:
- 2686 045a 55415254 		.ascii	"UART_1_GetChar\000"
+ 2686 0466 55415254 		.ascii	"UART_1_GetChar\000"
  2686      5F315F47 
  2686      65744368 
  2686      617200
  2687              	.LASF50:
- 2688 0469 55415254 		.ascii	"UART_1_PutArray\000"
+ 2688 0475 55415254 		.ascii	"UART_1_PutArray\000"
  2688      5F315F50 
  2688      75744172 
  2688      72617900 

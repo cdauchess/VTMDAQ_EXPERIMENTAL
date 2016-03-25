@@ -8,6 +8,7 @@
 * Related Hardware	: CY8CKIT059 PSoC 5 LP Prototyping Kit 
 *******************************************************************************/
 //This started as the UART-ADC sample program for the PSOC 5lP.  Much of the code from the example can still be seen in here.
+//This program is setup to use the PSOC as an ADC for the VTM DAQ.  It transmits the ADC data over I2C to the cerebot mx7ck where it is written to a USB drive
 
 #include <device.h>
 #include "stdio.h"
@@ -17,7 +18,7 @@
 #define TRUE   1
 #define TRANSMIT_BUFFER_SIZE  16 //UART 
 /*I2C*/
-#define I2C_BUFFER_SIZE 0x0C
+#define I2C_BUFFER_SIZE 0x14   
 #define I2C_RW_AREA_SIZE 0x01 //needs to be 0x01 to have a place for the offset data pointer?
 
 
@@ -27,9 +28,9 @@ void main()
 {
     /* Variable to store ADC result */
     int16 Output;
-    int32 data[6];
-    uint8 lowByte[6];
-    uint8 highByte[6];
+    int32 data[10];
+    uint8 lowByte[10];
+    uint8 highByte[10];
     /* Variable to store UART received character */
     uint8 Ch;
     /* Variable used to send emulated data */
@@ -47,7 +48,8 @@ void main()
     
     int i;
     /* Start the components */
-    ADC_SAR_Seq_1_Start();
+    ADC_SAR_Seq_1_Start(); //Current Sensors
+    ADC_SAR_Seq_2_Start(); //Shock Pots
     UART_1_Start();
     EZI2C_1_Start();
     EZI2C_1_SetBuffer1(I2C_BUFFER_SIZE, I2C_RW_AREA_SIZE, i2cBuffer); 
@@ -60,6 +62,7 @@ void main()
     
     /* Start the ADC conversion */
     ADC_SAR_Seq_1_StartConvert();
+    ADC_SAR_Seq_2_StartConvert();    
     
     /* Send message to verify COM port is connected properly */
     UART_1_PutString("COM Port Open");
@@ -101,13 +104,21 @@ void main()
         if(ADC_SAR_Seq_1_IsEndConversion(ADC_SAR_Seq_1_RETURN_STATUS))
         {
             i = 0;
-            for(i = 0;i<6;i++)
+            for(i = 0;i<6;i++)  //Current Sensor Read
             {
             Output = ADC_SAR_Seq_1_GetResult16(i);
             data[i] = ADC_SAR_Seq_1_CountsTo_mVolts(Output);
             //Split the data so that each data point is two bytes so that it can be easily loaded into the transmit buffer            
             lowByte[i] = (data[i] & 0xFF);
             highByte[i] = (0xFF & (data[i] >> 8));            
+            }
+            for(i = 6; i<10; i++)  //Shock Pots Read
+            {
+            Output = ADC_SAR_Seq_2_GetResult16(i-6);
+            data[i] = ADC_SAR_Seq_2_CountsTo_mVolts(Output);
+            //Split the data so that each data point is two bytes so that it can be easily loaded into the transmit buffer            
+            lowByte[i] = (data[i] & 0xFF);
+            highByte[i] = (0xFF & (data[i] >> 8));              
             }
 
  
@@ -116,43 +127,43 @@ void main()
             {
             //set data into i2c transmit buffer
             //Results in 12 bytes in the transmit buffer
-                for(i = 0;i<6;i++)
+                for(i = 0;i<10;i++)
                 {
                 i2cBuffer[2*i] = lowByte[i];  //First byte
                 i2cBuffer[2*i+1] = highByte[i]; //Second Byte
                 }
             }
             /* Send data based on last UART command */
-            if(SendSingleByte || ContinuouslySendData)
-            {
-                /* Format ADC result for transmition */
-                sprintf(TransmitBuffer, "Overall: %ld mV\r\n", data[0]);
-                /* Send out the data */
-                UART_1_PutString(TransmitBuffer);
-                
-                sprintf(TransmitBuffer, "Production: %ld mV\r\n", data[1]);
-                UART_1_PutString(TransmitBuffer);      
-                sprintf(TransmitBuffer, "Fpump: %ld mV\r\n", data[2]);
-                UART_1_PutString(TransmitBuffer);                  
-                sprintf(TransmitBuffer, "Finj: %ld mV\r\n", data[3]);
-                UART_1_PutString(TransmitBuffer);                 
-                sprintf(TransmitBuffer, "Ignition: %ld mV\r\n", data[4]);
-                UART_1_PutString(TransmitBuffer);                   
-                sprintf(TransmitBuffer, "RefV: %ld mV\r\n\n\n\n\n\n\r", data[5]);
-                UART_1_PutString(TransmitBuffer);                   
-                /* Reset the send once flag */
-                SendSingleByte = FALSE;
-            }
-            else if(SendEmulatedData)
-            {
-                /* Format ADC result for transmition */
-                sprintf(TransmitBuffer, "Emulated Data: %x \r\n", EmulatedData);
-                /* Send out the data */
-                UART_1_PutString(TransmitBuffer);
-                EmulatedData++;
-                /* Reset the send once flag */
-                SendEmulatedData = FALSE;   
-            }
+//            if(SendSingleByte || ContinuouslySendData)
+//            {
+//                /* Format ADC result for transmition */
+//                sprintf(TransmitBuffer, "Overall: %ld mV\r\n", data[0]);
+//                /* Send out the data */
+//                UART_1_PutString(TransmitBuffer);
+//                
+//                sprintf(TransmitBuffer, "Production: %ld mV\r\n", data[1]);
+//                UART_1_PutString(TransmitBuffer);      
+//                sprintf(TransmitBuffer, "Fpump: %ld mV\r\n", data[2]);
+//                UART_1_PutString(TransmitBuffer);                  
+//                sprintf(TransmitBuffer, "Finj: %ld mV\r\n", data[3]);
+//                UART_1_PutString(TransmitBuffer);                 
+//                sprintf(TransmitBuffer, "Ignition: %ld mV\r\n", data[4]);
+//                UART_1_PutString(TransmitBuffer);                   
+//                sprintf(TransmitBuffer, "RefV: %ld mV\r\n\n\n\n\n\n\r", data[5]);
+//                UART_1_PutString(TransmitBuffer);                   
+//                /* Reset the send once flag */
+//                SendSingleByte = FALSE;
+//            }
+//            else if(SendEmulatedData)
+//            {
+//                /* Format ADC result for transmition */
+//                sprintf(TransmitBuffer, "Emulated Data: %x \r\n", EmulatedData);
+//                /* Send out the data */
+//                UART_1_PutString(TransmitBuffer);
+//                EmulatedData++;
+//                /* Reset the send once flag */
+//                SendEmulatedData = FALSE;   
+//            }
         }
     }
 }

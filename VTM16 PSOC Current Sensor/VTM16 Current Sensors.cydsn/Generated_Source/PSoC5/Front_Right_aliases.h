@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Pin_1.h  
+* File Name: Front_Right.h  
 * Version 2.10
 *
 * Description:
@@ -14,8 +14,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_Pin_1_ALIASES_H) /* Pins Pin_1_ALIASES_H */
-#define CY_PINS_Pin_1_ALIASES_H
+#if !defined(CY_PINS_Front_Right_ALIASES_H) /* Pins Front_Right_ALIASES_H */
+#define CY_PINS_Front_Right_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,8 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define Pin_1_0		(Pin_1__0__PC)
-#define Pin_1_1		(Pin_1__1__PC)
+#define Front_Right_0		(Front_Right__0__PC)
 
-#define Pin_1_scl		(Pin_1__scl__PC)
-#define Pin_1_sda		(Pin_1__sda__PC)
-
-#endif /* End Pins Pin_1_ALIASES_H */
+#endif /* End Pins Front_Right_ALIASES_H */
 
 /* [] END OF FILE */

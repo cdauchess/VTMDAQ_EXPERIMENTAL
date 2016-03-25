@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
   19:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** #include "ADC_SAR_Seq_1_SAR.h"
   20:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** 
   21:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** #if(ADC_SAR_Seq_1_SAR_DEFAULT_INTERNAL_CLK)
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 2
 
 
   22:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     #include "ADC_SAR_Seq_1_SAR_theACLK.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
   37              		.loc 1 75 0
   38              		.cfi_startproc
   39              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 3
 
 
   40              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
   92:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** *  Initialize component's parameters to the parameters set by user in the
   93:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** *  customizer of the component placed onto schematic. Usually called in
   94:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** *  ADC_SAR_Seq_1_SAR_Start().
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 4
 
 
   95:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  101 001c 0022     		movs	r2, #0
  102 001e 1A80     		strh	r2, [r3]	@ movhi
  126:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** }
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 5
 
 
  103              		.loc 1 126 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  136 000c FB71     		strb	r3, [r7, #7]
  148:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** 
  149:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     /* Enable the SAR ADC block in Active Power Mode */
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 6
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 6
 
 
  150:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     ADC_SAR_Seq_1_SAR_PWRMGR_SAR_REG |= ADC_SAR_Seq_1_SAR_ACT_PWR_SAR_EN;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  172:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** 
  173:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     /* Set reference for ADC */
  174:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     #if(ADC_SAR_Seq_1_SAR_DEFAULT_RANGE == ADC_SAR_Seq_1_SAR__VNEG_VDDA_DIFF)
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 7
 
 
  175:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****         #if(ADC_SAR_Seq_1_SAR_DEFAULT_REFERENCE == ADC_SAR_Seq_1_SAR__EXT_REF)
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  191 0072 C822     		movs	r2, #200
  192 0074 1A70     		strb	r2, [r3]
  207:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     /* SAR_HIZ_CLEAR:   Should not be used for LP */
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 8
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 8
 
 
  208:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     #if ((CY_PSOC5LP) || (ADC_SAR_Seq_1_SAR_DEFAULT_REFERENCE != ADC_SAR_Seq_1_SAR__EXT_REF))
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  223 00a4 BB430040 		.word	1073759163
  224 00a8 03590040 		.word	1073764611
  225 00ac 06590040 		.word	1073764614
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 9
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 9
 
 
  226 00b0 05590040 		.word	1073764613
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  257              		.loc 1 254 0
  258 000e 0F4A     		ldr	r2, .L12
  259 0010 0E4B     		ldr	r3, .L12
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 10
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 10
 
 
  260 0012 1B78     		ldrb	r3, [r3]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  300              		.size	ADC_SAR_Seq_1_SAR_Stop, .-ADC_SAR_Seq_1_SAR_Stop
  301              		.section	.text.ADC_SAR_Seq_1_SAR_SetPower,"ax",%progbits
  302              		.align	2
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 11
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 11
 
 
  303              		.global	ADC_SAR_Seq_1_SAR_SetPower
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  327              		.loc 1 298 0
  328 0012 0A4B     		ldr	r3, .L15
  329 0014 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 12
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 12
 
 
  330 0016 DBB2     		uxtb	r3, r3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  314:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** *  10 ->    RES10
  315:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** *  8  ->    RES8
  316:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** *
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 13
 
 
  317:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** * Return:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  347:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****         case (uint8)ADC_SAR_Seq_1_SAR__BITS_12:
  348:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****             tmpReg = ADC_SAR_Seq_1_SAR_SAR_RESOLUTION_12BIT | ADC_SAR_Seq_1_SAR_SAR_SAMPLE_WIDTH;
  393              		.loc 1 348 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 14
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 14
 
 
  394 001a C223     		movs	r3, #194
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  430              		.cfi_def_cfa_offset 8
  431 0048 BD46     		mov	sp, r7
  432              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 15
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 15
 
 
  433              		@ sp needed
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  451              		.cfi_startproc
  452              		@ args = 0, pretend = 0, frame = 0
  453              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 16
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 16
 
 
  454              		@ link register save eliminated.
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  420:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     *
  421:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     * Parameters:
  422:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     *  None.
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 17
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 17
 
 
  423:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     *
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  522              	.LFE7:
  523              		.size	ADC_SAR_Seq_1_SAR_StopConvert, .-ADC_SAR_Seq_1_SAR_StopConvert
  524              		.section	.text.ADC_SAR_Seq_1_SAR_IsEndConversion,"ax",%progbits
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 18
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 18
 
 
  525              		.align	2
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  478:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** 
  479:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     do
  480:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     {
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 19
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 19
 
 
  481:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****         status = ADC_SAR_Seq_1_SAR_SAR_CSR1_REG & ADC_SAR_Seq_1_SAR_SAR_EOF_1;
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  588              	.LFE8:
  589              		.size	ADC_SAR_Seq_1_SAR_IsEndConversion, .-ADC_SAR_Seq_1_SAR_IsEndConversion
  590              		.section	.text.ADC_SAR_Seq_1_SAR_GetResult8,"ax",%progbits
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 20
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 20
 
 
  591              		.align	2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  616 0012 D31A     		subs	r3, r2, r3
  617 0014 DBB2     		uxtb	r3, r3
  618 0016 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 21
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 21
 
 
  619 0018 5BB2     		sxtb	r3, r3
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  551:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** {
  645              		.loc 1 551 0
  646              		.cfi_startproc
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 22
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 22
 
 
  647              		@ args = 0, pretend = 0, frame = 8
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  695              		.type	ADC_SAR_Seq_1_SAR_SetOffset, %function
  696              	ADC_SAR_Seq_1_SAR_SetOffset:
  697              	.LFB11:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 23
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 23
 
 
  558:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** 
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  721              		@ sp needed
  722 0014 5DF8047B 		ldr	r7, [sp], #4
  723              		.cfi_restore 7
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 24
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 24
 
 
  724              		.cfi_def_cfa_offset 0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  613:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     int32 counts;
  614:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     #if(!((ADC_SAR_Seq_1_SAR_DEFAULT_RANGE == ADC_SAR_Seq_1_SAR__VSS_TO_VREF) || \
  615:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****          (ADC_SAR_Seq_1_SAR_DEFAULT_RANGE == ADC_SAR_Seq_1_SAR__VSSA_TO_VDDA) || \
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 25
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 25
 
 
  616:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****          (ADC_SAR_Seq_1_SAR_DEFAULT_RANGE == ADC_SAR_Seq_1_SAR__VSSA_TO_VDAC)) )
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  645:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****             break;
  779              		.loc 1 645 0
  780 0030 05E0     		b	.L55
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 26
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 26
 
 
  781              	.L56:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  667:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     #endif /* End ADC_SAR_Seq_1_SAR_DEFAULT_RANGE */
  668:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** }
  813              		.loc 1 668 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 27
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 27
 
 
  814 0068 1037     		adds	r7, r7, #16
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  843 0000 80B4     		push	{r7}
  844              		.cfi_def_cfa_offset 4
  845              		.cfi_offset 7, -4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 28
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 28
 
 
  846 0002 83B0     		sub	sp, sp, #12
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  708:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** * Parameters:
  709:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** *  int32 adcGain  counts per 10 volt
  710:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** *
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 29
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 29
 
 
  711:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** * Return:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  723:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** 
  724:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** 
  725:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** /*******************************************************************************
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 30
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 30
 
 
  726:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** * Function Name: ADC_SAR_Seq_1_SAR_CountsTo_mVolts
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  957 0024 FB60     		str	r3, [r7, #12]
  958 0026 02E0     		b	.L67
  959              	.L66:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 31
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 31
 
 
  751:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     }
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1001              		.loc 1 760 0
  1002 006e 7B81     		strh	r3, [r7, #10]	@ movhi
  762:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 32
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 32
 
 
  763:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     return( mVolts );
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  785:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** int32 ADC_SAR_Seq_1_SAR_CountsTo_uVolts(int16 adcCounts)
  786:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** {
  1035              		.loc 1 786 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 33
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 33
 
 
  1036              		.cfi_startproc
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1075 002e 174B     		ldr	r3, .L77+8
  1076 0030 1B88     		ldrh	r3, [r3]	@ movhi
  1077 0032 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 34
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 34
 
 
  1078 0034 FA88     		ldrh	r2, [r7, #6]
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1125              		.size	ADC_SAR_Seq_1_SAR_CountsTo_uVolts, .-ADC_SAR_Seq_1_SAR_CountsTo_uVolts
  1126              		.global	__aeabi_i2f
  1127              		.global	__aeabi_fmul
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 35
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 35
 
 
  1128              		.global	__aeabi_fdiv
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1156 0010 002B     		cmp	r3, #0
  1157 0012 09D0     		beq	.L80
  835:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     {   /* Support obsolete method */
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 36
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 36
 
 
  836:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****         countsPer10Volt = (int32)ADC_SAR_Seq_1_SAR_countsPerVolt * 10;
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1201 0068 BB60     		str	r3, [r7, #8]	@ float
  847:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c **** 
  848:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_SAR.c ****     return( volts );
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 37
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 37
 
 
  1202              		.loc 1 848 0
@@ -2192,10 +2192,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1229 0006 00000000 		.4byte	.Ldebug_abbrev0
  1230 000a 04       		.byte	0x4
  1231 000b 01       		.uleb128 0x1
- 1232 000c C1020000 		.4byte	.LASF57
+ 1232 000c CD020000 		.4byte	.LASF57
  1233 0010 01       		.byte	0x1
- 1234 0011 CD000000 		.4byte	.LASF58
- 1235 0015 87010000 		.4byte	.LASF59
+ 1234 0011 43010000 		.4byte	.LASF58
+ 1235 0015 84000000 		.4byte	.LASF59
  1236 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1237 001d 00000000 		.4byte	0
  1238 0021 00000000 		.4byte	.Ldebug_line0
@@ -2206,38 +2206,38 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1243 002c 03       		.uleb128 0x3
  1244 002d 04       		.byte	0x4
  1245 002e 07       		.byte	0x7
- 1246 002f F9010000 		.4byte	.LASF0
+ 1246 002f 05020000 		.4byte	.LASF0
  1247 0033 03       		.uleb128 0x3
  1248 0034 01       		.byte	0x1
  1249 0035 06       		.byte	0x6
- 1250 0036 92000000 		.4byte	.LASF1
+ 1250 0036 08010000 		.4byte	.LASF1
  1251 003a 03       		.uleb128 0x3
  1252 003b 01       		.byte	0x1
  1253 003c 08       		.byte	0x8
- 1254 003d B5030000 		.4byte	.LASF2
+ 1254 003d C1030000 		.4byte	.LASF2
  1255 0041 03       		.uleb128 0x3
  1256 0042 02       		.byte	0x2
  1257 0043 05       		.byte	0x5
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 38
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 38
 
 
- 1258 0044 E3030000 		.4byte	.LASF3
+ 1258 0044 EF030000 		.4byte	.LASF3
  1259 0048 03       		.uleb128 0x3
  1260 0049 02       		.byte	0x2
  1261 004a 07       		.byte	0x7
- 1262 004b 3F020000 		.4byte	.LASF4
+ 1262 004b 4B020000 		.4byte	.LASF4
  1263 004f 03       		.uleb128 0x3
  1264 0050 04       		.byte	0x4
  1265 0051 05       		.byte	0x5
- 1266 0052 C4000000 		.4byte	.LASF5
+ 1266 0052 3A010000 		.4byte	.LASF5
  1267 0056 03       		.uleb128 0x3
  1268 0057 04       		.byte	0x4
  1269 0058 07       		.byte	0x7
- 1270 0059 27020000 		.4byte	.LASF6
+ 1270 0059 33020000 		.4byte	.LASF6
  1271 005d 03       		.uleb128 0x3
  1272 005e 08       		.byte	0x8
  1273 005f 05       		.byte	0x5
- 1274 0060 84000000 		.4byte	.LASF7
+ 1274 0060 FA000000 		.4byte	.LASF7
  1275 0064 03       		.uleb128 0x3
  1276 0065 08       		.byte	0x8
  1277 0066 07       		.byte	0x7
@@ -2245,13 +2245,13 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1279 006b 03       		.uleb128 0x3
  1280 006c 04       		.byte	0x4
  1281 006d 07       		.byte	0x7
- 1282 006e 9F020000 		.4byte	.LASF9
+ 1282 006e AB020000 		.4byte	.LASF9
  1283 0072 03       		.uleb128 0x3
  1284 0073 01       		.byte	0x1
  1285 0074 08       		.byte	0x8
- 1286 0075 4D040000 		.4byte	.LASF10
+ 1286 0075 59040000 		.4byte	.LASF10
  1287 0079 04       		.uleb128 0x4
- 1288 007a 1F010000 		.4byte	.LASF11
+ 1288 007a 95010000 		.4byte	.LASF11
  1289 007e 02       		.byte	0x2
  1290 007f C2       		.byte	0xc2
  1291 0080 3A000000 		.4byte	0x3a
@@ -2261,24 +2261,24 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1295 008a C3       		.byte	0xc3
  1296 008b 48000000 		.4byte	0x48
  1297 008f 04       		.uleb128 0x4
- 1298 0090 52020000 		.4byte	.LASF13
+ 1298 0090 5E020000 		.4byte	.LASF13
  1299 0094 02       		.byte	0x2
  1300 0095 C5       		.byte	0xc5
  1301 0096 33000000 		.4byte	0x33
  1302 009a 04       		.uleb128 0x4
- 1303 009b A7040000 		.4byte	.LASF14
+ 1303 009b B3040000 		.4byte	.LASF14
  1304 009f 02       		.byte	0x2
  1305 00a0 C6       		.byte	0xc6
  1306 00a1 41000000 		.4byte	0x41
  1307 00a5 04       		.uleb128 0x4
- 1308 00a6 9E000000 		.4byte	.LASF15
+ 1308 00a6 14010000 		.4byte	.LASF15
  1309 00aa 02       		.byte	0x2
  1310 00ab C7       		.byte	0xc7
  1311 00ac 4F000000 		.4byte	0x4f
  1312 00b0 04       		.uleb128 0x4
- 1313 00b1 97020000 		.4byte	.LASF16
+ 1313 00b1 A3020000 		.4byte	.LASF16
  1314 00b5 02       		.byte	0x2
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 39
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 39
 
 
  1315 00b6 C8       		.byte	0xc8
@@ -2286,32 +2286,32 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1317 00bb 03       		.uleb128 0x3
  1318 00bc 04       		.byte	0x4
  1319 00bd 04       		.byte	0x4
- 1320 00be 55030000 		.4byte	.LASF17
+ 1320 00be 61030000 		.4byte	.LASF17
  1321 00c2 03       		.uleb128 0x3
  1322 00c3 08       		.byte	0x8
  1323 00c4 04       		.byte	0x4
- 1324 00c5 25010000 		.4byte	.LASF18
+ 1324 00c5 9B010000 		.4byte	.LASF18
  1325 00c9 04       		.uleb128 0x4
- 1326 00ca 4F030000 		.4byte	.LASF19
+ 1326 00ca 5B030000 		.4byte	.LASF19
  1327 00ce 02       		.byte	0x2
  1328 00cf CD       		.byte	0xcd
  1329 00d0 5D000000 		.4byte	0x5d
  1330 00d4 05       		.uleb128 0x5
- 1331 00d5 96030000 		.4byte	.LASF20
+ 1331 00d5 A2030000 		.4byte	.LASF20
  1332 00d9 02       		.byte	0x2
  1333 00da 6C01     		.2byte	0x16c
  1334 00dc E0000000 		.4byte	0xe0
  1335 00e0 06       		.uleb128 0x6
  1336 00e1 79000000 		.4byte	0x79
  1337 00e5 05       		.uleb128 0x5
- 1338 00e6 19010000 		.4byte	.LASF21
+ 1338 00e6 8F010000 		.4byte	.LASF21
  1339 00ea 02       		.byte	0x2
  1340 00eb 6D01     		.2byte	0x16d
  1341 00ed F1000000 		.4byte	0xf1
  1342 00f1 06       		.uleb128 0x6
  1343 00f2 84000000 		.4byte	0x84
  1344 00f6 07       		.uleb128 0x7
- 1345 00f7 5E020000 		.4byte	.LASF22
+ 1345 00f7 6A020000 		.4byte	.LASF22
  1346 00fb 01       		.byte	0x1
  1347 00fc 4A       		.byte	0x4a
  1348 00fd 00000000 		.4byte	.LFB0
@@ -2327,7 +2327,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1358 0116 01       		.uleb128 0x1
  1359 0117 9C       		.byte	0x9c
  1360 0118 08       		.uleb128 0x8
- 1361 0119 0D040000 		.4byte	.LASF26
+ 1361 0119 19040000 		.4byte	.LASF26
  1362 011d 01       		.byte	0x1
  1363 011e 8F       		.byte	0x8f
  1364 011f 00000000 		.4byte	.LFB2
@@ -2336,9 +2336,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1367 0128 9C       		.byte	0x9c
  1368 0129 4A010000 		.4byte	0x14a
  1369 012d 09       		.uleb128 0x9
- 1370 012e 07050000 		.4byte	.LASF24
+ 1370 012e 13050000 		.4byte	.LASF24
  1371 0132 01       		.byte	0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 40
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 40
 
 
  1372 0133 91       		.byte	0x91
@@ -2347,7 +2347,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1375 0139 91       		.byte	0x91
  1376 013a 76       		.sleb128 -10
  1377 013b 09       		.uleb128 0x9
- 1378 013c 77040000 		.4byte	.LASF25
+ 1378 013c 83040000 		.4byte	.LASF25
  1379 0140 01       		.byte	0x1
  1380 0141 92       		.byte	0x92
  1381 0142 79000000 		.4byte	0x79
@@ -2356,7 +2356,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1384 0148 77       		.sleb128 -9
  1385 0149 00       		.byte	0
  1386 014a 08       		.uleb128 0x8
- 1387 014b 5B030000 		.4byte	.LASF27
+ 1387 014b 67030000 		.4byte	.LASF27
  1388 014f 01       		.byte	0x1
  1389 0150 F8       		.byte	0xf8
  1390 0151 00000000 		.4byte	.LFB3
@@ -2365,7 +2365,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1393 015a 9C       		.byte	0x9c
  1394 015b 6E010000 		.4byte	0x16e
  1395 015f 09       		.uleb128 0x9
- 1396 0160 77040000 		.4byte	.LASF25
+ 1396 0160 83040000 		.4byte	.LASF25
  1397 0164 01       		.byte	0x1
  1398 0165 FA       		.byte	0xfa
  1399 0166 79000000 		.4byte	0x79
@@ -2374,7 +2374,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1402 016c 77       		.sleb128 -9
  1403 016d 00       		.byte	0
  1404 016e 0A       		.uleb128 0xa
- 1405 016f 52040000 		.4byte	.LASF28
+ 1405 016f 5E040000 		.4byte	.LASF28
  1406 0173 01       		.byte	0x1
  1407 0174 2201     		.2byte	0x122
  1408 0176 00000000 		.4byte	.LFB4
@@ -2383,7 +2383,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1411 017f 9C       		.byte	0x9c
  1412 0180 A3010000 		.4byte	0x1a3
  1413 0184 0B       		.uleb128 0xb
- 1414 0185 72030000 		.4byte	.LASF30
+ 1414 0185 7E030000 		.4byte	.LASF30
  1415 0189 01       		.byte	0x1
  1416 018a 2201     		.2byte	0x122
  1417 018c 79000000 		.4byte	0x79
@@ -2391,19 +2391,19 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1419 0191 91       		.byte	0x91
  1420 0192 6F       		.sleb128 -17
  1421 0193 0C       		.uleb128 0xc
- 1422 0194 07050000 		.4byte	.LASF24
+ 1422 0194 13050000 		.4byte	.LASF24
  1423 0198 01       		.byte	0x1
  1424 0199 2401     		.2byte	0x124
  1425 019b 79000000 		.4byte	0x79
  1426 019f 02       		.uleb128 0x2
  1427 01a0 91       		.byte	0x91
  1428 01a1 77       		.sleb128 -9
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 41
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 41
 
 
  1429 01a2 00       		.byte	0
  1430 01a3 0D       		.uleb128 0xd
- 1431 01a4 ED030000 		.4byte	.LASF29
+ 1431 01a4 F9030000 		.4byte	.LASF29
  1432 01a8 01       		.byte	0x1
  1433 01a9 5401     		.2byte	0x154
  1434 01ab 00000000 		.4byte	.LFB5
@@ -2412,7 +2412,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1437 01b4 9C       		.byte	0x9c
  1438 01b5 D8010000 		.4byte	0x1d8
  1439 01b9 0B       		.uleb128 0xb
- 1440 01ba 26040000 		.4byte	.LASF31
+ 1440 01ba 32040000 		.4byte	.LASF31
  1441 01be 01       		.byte	0x1
  1442 01bf 5401     		.2byte	0x154
  1443 01c1 79000000 		.4byte	0x79
@@ -2420,7 +2420,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1445 01c6 91       		.byte	0x91
  1446 01c7 6F       		.sleb128 -17
  1447 01c8 0C       		.uleb128 0xc
- 1448 01c9 07050000 		.4byte	.LASF24
+ 1448 01c9 13050000 		.4byte	.LASF24
  1449 01cd 01       		.byte	0x1
  1450 01ce 5601     		.2byte	0x156
  1451 01d0 79000000 		.4byte	0x79
@@ -2429,7 +2429,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1454 01d6 77       		.sleb128 -9
  1455 01d7 00       		.byte	0
  1456 01d8 0E       		.uleb128 0xe
- 1457 01d9 FA000000 		.4byte	.LASF32
+ 1457 01d9 70010000 		.4byte	.LASF32
  1458 01dd 01       		.byte	0x1
  1459 01de 9101     		.2byte	0x191
  1460 01e0 00000000 		.4byte	.LFB6
@@ -2445,7 +2445,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1470 01fa 01       		.uleb128 0x1
  1471 01fb 9C       		.byte	0x9c
  1472 01fc 0F       		.uleb128 0xf
- 1473 01fd 2C010000 		.4byte	.LASF36
+ 1473 01fd A2010000 		.4byte	.LASF36
  1474 0201 01       		.byte	0x1
  1475 0202 DB01     		.2byte	0x1db
  1476 0204 79000000 		.4byte	0x79
@@ -2455,10 +2455,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1480 0211 9C       		.byte	0x9c
  1481 0212 35020000 		.4byte	0x235
  1482 0216 0B       		.uleb128 0xb
- 1483 0217 F1010000 		.4byte	.LASF34
+ 1483 0217 FD010000 		.4byte	.LASF34
  1484 021b 01       		.byte	0x1
  1485 021c DB01     		.2byte	0x1db
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 42
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 42
 
 
  1486 021e 79000000 		.4byte	0x79
@@ -2466,7 +2466,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1488 0223 91       		.byte	0x91
  1489 0224 6F       		.sleb128 -17
  1490 0225 0C       		.uleb128 0xc
- 1491 0226 88040000 		.4byte	.LASF35
+ 1491 0226 94040000 		.4byte	.LASF35
  1492 022a 01       		.byte	0x1
  1493 022b DD01     		.2byte	0x1dd
  1494 022d 79000000 		.4byte	0x79
@@ -2475,7 +2475,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1497 0233 77       		.sleb128 -9
  1498 0234 00       		.byte	0
  1499 0235 10       		.uleb128 0x10
- 1500 0236 CF040000 		.4byte	.LASF60
+ 1500 0236 DB040000 		.4byte	.LASF60
  1501 023a 01       		.byte	0x1
  1502 023b 0802     		.2byte	0x208
  1503 023d 8F000000 		.4byte	0x8f
@@ -2484,7 +2484,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1506 0249 01       		.uleb128 0x1
  1507 024a 9C       		.byte	0x9c
  1508 024b 11       		.uleb128 0x11
- 1509 024c 78030000 		.4byte	.LASF37
+ 1509 024c 84030000 		.4byte	.LASF37
  1510 0250 01       		.byte	0x1
  1511 0251 2602     		.2byte	0x226
  1512 0253 9A000000 		.4byte	0x9a
@@ -2503,7 +2503,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1525 0273 76       		.sleb128 -10
  1526 0274 00       		.byte	0
  1527 0275 0A       		.uleb128 0xa
- 1528 0276 31040000 		.4byte	.LASF38
+ 1528 0276 3D040000 		.4byte	.LASF38
  1529 027a 01       		.byte	0x1
  1530 027b 4902     		.2byte	0x249
  1531 027d 00000000 		.4byte	.LFB11
@@ -2512,19 +2512,19 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1534 0286 9C       		.byte	0x9c
  1535 0287 9B020000 		.4byte	0x29b
  1536 028b 0B       		.uleb128 0xb
- 1537 028c 5E010000 		.4byte	.LASF39
+ 1537 028c D4010000 		.4byte	.LASF39
  1538 0290 01       		.byte	0x1
  1539 0291 4902     		.2byte	0x249
  1540 0293 9A000000 		.4byte	0x9a
  1541 0297 02       		.uleb128 0x2
  1542 0298 91       		.byte	0x91
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 43
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 43
 
 
  1543 0299 76       		.sleb128 -10
  1544 029a 00       		.byte	0
  1545 029b 13       		.uleb128 0x13
- 1546 029c EC040000 		.4byte	.LASF61
+ 1546 029c F8040000 		.4byte	.LASF61
  1547 02a0 01       		.byte	0x1
  1548 02a1 6302     		.2byte	0x263
  1549 02a3 00000000 		.4byte	.LFB12
@@ -2533,7 +2533,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1552 02ac 9C       		.byte	0x9c
  1553 02ad D0020000 		.4byte	0x2d0
  1554 02b1 0B       		.uleb128 0xb
- 1555 02b2 26040000 		.4byte	.LASF31
+ 1555 02b2 32040000 		.4byte	.LASF31
  1556 02b6 01       		.byte	0x1
  1557 02b7 6302     		.2byte	0x263
  1558 02b9 79000000 		.4byte	0x79
@@ -2550,7 +2550,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1569 02ce 74       		.sleb128 -12
  1570 02cf 00       		.byte	0
  1571 02d0 0A       		.uleb128 0xa
- 1572 02d1 9B030000 		.4byte	.LASF41
+ 1572 02d1 A7030000 		.4byte	.LASF41
  1573 02d5 01       		.byte	0x1
  1574 02d6 B402     		.2byte	0x2b4
  1575 02d8 00000000 		.4byte	.LFB13
@@ -2568,7 +2568,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1587 02f4 76       		.sleb128 -10
  1588 02f5 00       		.byte	0
  1589 02f6 0A       		.uleb128 0xa
- 1590 02f7 A4000000 		.4byte	.LASF43
+ 1590 02f7 1A010000 		.4byte	.LASF43
  1591 02fb 01       		.byte	0x1
  1592 02fc CF02     		.2byte	0x2cf
  1593 02fe 00000000 		.4byte	.LFB14
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1597 0308 1C030000 		.4byte	0x31c
  1598 030c 0B       		.uleb128 0xb
  1599 030d 07000000 		.4byte	.LASF42
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 44
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 44
 
 
  1600 0311 01       		.byte	0x1
@@ -2599,7 +2599,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1615 0331 9C       		.byte	0x9c
  1616 0332 64030000 		.4byte	0x364
  1617 0336 0B       		.uleb128 0xb
- 1618 0337 6D040000 		.4byte	.LASF45
+ 1618 0337 79040000 		.4byte	.LASF45
  1619 033b 01       		.byte	0x1
  1620 033c E702     		.2byte	0x2e7
  1621 033e 9A000000 		.4byte	0x9a
@@ -2607,7 +2607,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1623 0343 91       		.byte	0x91
  1624 0344 6E       		.sleb128 -18
  1625 0345 0C       		.uleb128 0xc
- 1626 0346 57020000 		.4byte	.LASF46
+ 1626 0346 63020000 		.4byte	.LASF46
  1627 034a 01       		.byte	0x1
  1628 034b E902     		.2byte	0x2e9
  1629 034d 9A000000 		.4byte	0x9a
@@ -2615,7 +2615,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1631 0352 91       		.byte	0x91
  1632 0353 72       		.sleb128 -14
  1633 0354 0C       		.uleb128 0xc
- 1634 0355 4E010000 		.4byte	.LASF47
+ 1634 0355 C4010000 		.4byte	.LASF47
  1635 0359 01       		.byte	0x1
  1636 035a EA02     		.2byte	0x2ea
  1637 035c A5000000 		.4byte	0xa5
@@ -2624,7 +2624,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1640 0362 74       		.sleb128 -12
  1641 0363 00       		.byte	0
  1642 0364 0F       		.uleb128 0xf
- 1643 0365 AD040000 		.4byte	.LASF48
+ 1643 0365 B9040000 		.4byte	.LASF48
  1644 0369 01       		.byte	0x1
  1645 036a 1103     		.2byte	0x311
  1646 036c A5000000 		.4byte	0xa5
@@ -2634,18 +2634,18 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1650 0379 9C       		.byte	0x9c
  1651 037a AC030000 		.4byte	0x3ac
  1652 037e 0B       		.uleb128 0xb
- 1653 037f 6D040000 		.4byte	.LASF45
+ 1653 037f 79040000 		.4byte	.LASF45
  1654 0383 01       		.byte	0x1
  1655 0384 1103     		.2byte	0x311
  1656 0386 9A000000 		.4byte	0x9a
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 45
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 45
 
 
  1657 038a 02       		.uleb128 0x2
  1658 038b 91       		.byte	0x91
  1659 038c 5E       		.sleb128 -34
  1660 038d 0C       		.uleb128 0xc
- 1661 038e 06020000 		.4byte	.LASF49
+ 1661 038e 12020000 		.4byte	.LASF49
  1662 0392 01       		.byte	0x1
  1663 0393 1403     		.2byte	0x314
  1664 0395 C9000000 		.4byte	0xc9
@@ -2653,7 +2653,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1666 039a 91       		.byte	0x91
  1667 039b 60       		.sleb128 -32
  1668 039c 0C       		.uleb128 0xc
- 1669 039d 4E010000 		.4byte	.LASF47
+ 1669 039d C4010000 		.4byte	.LASF47
  1670 03a1 01       		.byte	0x1
  1671 03a2 1503     		.2byte	0x315
  1672 03a4 A5000000 		.4byte	0xa5
@@ -2662,7 +2662,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1675 03aa 6C       		.sleb128 -20
  1676 03ab 00       		.byte	0
  1677 03ac 0F       		.uleb128 0xf
- 1678 03ad 76020000 		.4byte	.LASF50
+ 1678 03ad 82020000 		.4byte	.LASF50
  1679 03b1 01       		.byte	0x1
  1680 03b2 3D03     		.2byte	0x33d
  1681 03b4 B0000000 		.4byte	0xb0
@@ -2672,7 +2672,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1685 03c1 9C       		.byte	0x9c
  1686 03c2 F4030000 		.4byte	0x3f4
  1687 03c6 0B       		.uleb128 0xb
- 1688 03c7 6D040000 		.4byte	.LASF45
+ 1688 03c7 79040000 		.4byte	.LASF45
  1689 03cb 01       		.byte	0x1
  1690 03cc 3D03     		.2byte	0x33d
  1691 03ce 9A000000 		.4byte	0x9a
@@ -2680,7 +2680,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1693 03d3 91       		.byte	0x91
  1694 03d4 66       		.sleb128 -26
  1695 03d5 0C       		.uleb128 0xc
- 1696 03d6 39020000 		.4byte	.LASF51
+ 1696 03d6 45020000 		.4byte	.LASF51
  1697 03da 01       		.byte	0x1
  1698 03db 3F03     		.2byte	0x33f
  1699 03dd B0000000 		.4byte	0xb0
@@ -2688,7 +2688,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1701 03e2 91       		.byte	0x91
  1702 03e3 68       		.sleb128 -24
  1703 03e4 0C       		.uleb128 0xc
- 1704 03e5 4E010000 		.4byte	.LASF47
+ 1704 03e5 C4010000 		.4byte	.LASF47
  1705 03e9 01       		.byte	0x1
  1706 03ea 4003     		.2byte	0x340
  1707 03ec A5000000 		.4byte	0xa5
@@ -2697,8 +2697,8 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1710 03f2 6C       		.sleb128 -20
  1711 03f3 00       		.byte	0
  1712 03f4 14       		.uleb128 0x14
- 1713 03f5 0D020000 		.4byte	.LASF52
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 46
+ 1713 03f5 19020000 		.4byte	.LASF52
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 46
 
 
  1714 03f9 01       		.byte	0x1
@@ -2708,7 +2708,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1718 0400 03       		.byte	0x3
  1719 0401 00000000 		.4byte	ADC_SAR_Seq_1_SAR_initVar
  1720 0405 14       		.uleb128 0x14
- 1721 0406 A8020000 		.4byte	.LASF53
+ 1721 0406 B4020000 		.4byte	.LASF53
  1722 040a 01       		.byte	0x1
  1723 040b 24       		.byte	0x24
  1724 040c 16040000 		.4byte	0x416
@@ -2718,7 +2718,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1728 0416 06       		.uleb128 0x6
  1729 0417 9A000000 		.4byte	0x9a
  1730 041b 14       		.uleb128 0x14
- 1731 041c C3030000 		.4byte	.LASF54
+ 1731 041c CF030000 		.4byte	.LASF54
  1732 0420 01       		.byte	0x1
  1733 0421 25       		.byte	0x25
  1734 0422 16040000 		.4byte	0x416
@@ -2726,7 +2726,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1736 0427 03       		.byte	0x3
  1737 0428 00000000 		.4byte	ADC_SAR_Seq_1_SAR_countsPerVolt
  1738 042c 14       		.uleb128 0x14
- 1739 042d 65010000 		.4byte	.LASF55
+ 1739 042d DB010000 		.4byte	.LASF55
  1740 0431 01       		.byte	0x1
  1741 0432 26       		.byte	0x26
  1742 0433 3D040000 		.4byte	0x43d
@@ -2736,7 +2736,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1746 043d 06       		.uleb128 0x6
  1747 043e A5000000 		.4byte	0xa5
  1748 0442 14       		.uleb128 0x14
- 1749 0443 8F040000 		.4byte	.LASF56
+ 1749 0443 9B040000 		.4byte	.LASF56
  1750 0447 01       		.byte	0x1
  1751 0448 27       		.byte	0x27
  1752 0449 16040000 		.4byte	0x416
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1768 0009 1B       		.uleb128 0x1b
  1769 000a 0E       		.uleb128 0xe
  1770 000b 55       		.uleb128 0x55
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 47
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 47
 
 
  1771 000c 17       		.uleb128 0x17
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1825 0042 00       		.byte	0
  1826 0043 06       		.uleb128 0x6
  1827 0044 35       		.uleb128 0x35
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 48
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 48
 
 
  1828 0045 00       		.byte	0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1882 007d 34       		.uleb128 0x34
  1883 007e 00       		.byte	0
  1884 007f 03       		.uleb128 0x3
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 49
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 49
 
 
  1885 0080 0E       		.uleb128 0xe
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1939 00b7 03       		.uleb128 0x3
  1940 00b8 0E       		.uleb128 0xe
  1941 00b9 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 50
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 50
 
 
  1942 00ba 0B       		.uleb128 0xb
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  1996 00f2 19       		.uleb128 0x19
  1997 00f3 00       		.byte	0
  1998 00f4 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 51
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 51
 
 
  1999 00f5 0F       		.uleb128 0xf
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  2053 012d 01       		.byte	0x1
  2054 012e 3F       		.uleb128 0x3f
  2055 012f 19       		.uleb128 0x19
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 52
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 52
 
 
  2056 0130 03       		.uleb128 0x3
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  2110 0167 9642     		.uleb128 0x2116
  2111 0169 19       		.uleb128 0x19
  2112 016a 01       		.uleb128 0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 53
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 53
 
 
  2113 016b 13       		.uleb128 0x13
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  2167 0074 80000000 		.4byte	.LFE12-.LFB12
  2168 0078 00000000 		.4byte	.LFB13
  2169 007c 2C000000 		.4byte	.LFE13-.LFB13
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 54
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 54
 
 
  2170 0080 00000000 		.4byte	.LFB14
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  2222      00000201 
  2222      FB0E0D00 
  2222      01010101 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 55
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 55
 
 
  2223              	.LASF12:
@@ -3274,294 +3274,296 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 1
  2236      6720756E 
  2236      7369676E 
  2236      65642069 
- 2237              	.LASF7:
- 2238 0084 6C6F6E67 		.ascii	"long long int\000"
- 2238      206C6F6E 
- 2238      6720696E 
- 2238      7400
- 2239              	.LASF1:
- 2240 0092 7369676E 		.ascii	"signed char\000"
- 2240      65642063 
- 2240      68617200 
- 2241              	.LASF15:
- 2242 009e 696E7433 		.ascii	"int32\000"
- 2242      3200
- 2243              	.LASF43:
- 2244 00a4 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_SetScaledGain\000"
- 2244      5341525F 
- 2244      5365715F 
- 2244      315F5341 
- 2244      525F5365 
- 2245              	.LASF5:
- 2246 00c4 6C6F6E67 		.ascii	"long int\000"
- 2246      20696E74 
- 2246      00
- 2247              	.LASF58:
- 2248 00cd 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_SAR_Seq_1_SAR.c\000"
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 56
+ 2237              	.LASF59:
+ 2238 0084 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\Virginia_Tech\\FSAE\\V"
+ 2238      73657273 
+ 2238      5C636861 
+ 2238      726C5C44 
+ 2238      6F63756D 
+ 2239 00b1 544D4441 		.ascii	"TMDAQ_EXPERIMENTAL\\VTM16 PSOC Current Sensor\\VTM1"
+ 2239      515F4558 
+ 2239      50455249 
+ 2239      4D454E54 
+ 2239      414C5C56 
+ 2240 00e2 36204375 		.ascii	"6 Current Sensors.cydsn\000"
+ 2240      7272656E 
+ 2240      74205365 
+ 2240      6E736F72 
+ 2240      732E6379 
+ 2241              	.LASF7:
+ 2242 00fa 6C6F6E67 		.ascii	"long long int\000"
+ 2242      206C6F6E 
+ 2242      6720696E 
+ 2242      7400
+ 2243              	.LASF1:
+ 2244 0108 7369676E 		.ascii	"signed char\000"
+ 2244      65642063 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 56
 
 
- 2248      6E657261 
- 2248      7465645F 
- 2248      536F7572 
- 2248      63655C50 
- 2249              	.LASF32:
- 2250 00fa 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_StartConvert\000"
- 2250      5341525F 
- 2250      5365715F 
- 2250      315F5341 
- 2250      525F5374 
- 2251              	.LASF21:
- 2252 0119 72656731 		.ascii	"reg16\000"
- 2252      3600
- 2253              	.LASF11:
- 2254 011f 75696E74 		.ascii	"uint8\000"
- 2254      3800
- 2255              	.LASF18:
- 2256 0125 646F7562 		.ascii	"double\000"
- 2256      6C6500
- 2257              	.LASF36:
- 2258 012c 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_IsEndConversion\000"
- 2258      5341525F 
- 2258      5365715F 
- 2258      315F5341 
- 2258      525F4973 
- 2259              	.LASF47:
- 2260 014e 636F756E 		.ascii	"countsPer10Volt\000"
- 2260      74735065 
- 2260      72313056 
- 2260      6F6C7400 
- 2261              	.LASF39:
- 2262 015e 6F666673 		.ascii	"offset\000"
- 2262      657400
- 2263              	.LASF55:
- 2264 0165 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_countsPer10Volt\000"
- 2264      5341525F 
- 2264      5365715F 
- 2264      315F5341 
- 2264      525F636F 
- 2265              	.LASF59:
- 2266 0187 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\Virginia_Tech\\FSAE\\V"
- 2266      73657273 
- 2266      5C636861 
- 2266      726C5C44 
- 2266      6F63756D 
- 2267 01b4 544D2D44 		.ascii	"TM-DAQ\\VTM16 PSOC Current Sensor\\VTM16 Current Se"
- 2267      41515C56 
- 2267      544D3136 
- 2267      2050534F 
- 2267      43204375 
- 2268 01e5 6E736F72 		.ascii	"nsors.cydsn\000"
- 2268      732E6379 
- 2268      64736E00 
+ 2244      68617200 
+ 2245              	.LASF15:
+ 2246 0114 696E7433 		.ascii	"int32\000"
+ 2246      3200
+ 2247              	.LASF43:
+ 2248 011a 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_SetScaledGain\000"
+ 2248      5341525F 
+ 2248      5365715F 
+ 2248      315F5341 
+ 2248      525F5365 
+ 2249              	.LASF5:
+ 2250 013a 6C6F6E67 		.ascii	"long int\000"
+ 2250      20696E74 
+ 2250      00
+ 2251              	.LASF58:
+ 2252 0143 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_SAR_Seq_1_SAR.c\000"
+ 2252      6E657261 
+ 2252      7465645F 
+ 2252      536F7572 
+ 2252      63655C50 
+ 2253              	.LASF32:
+ 2254 0170 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_StartConvert\000"
+ 2254      5341525F 
+ 2254      5365715F 
+ 2254      315F5341 
+ 2254      525F5374 
+ 2255              	.LASF21:
+ 2256 018f 72656731 		.ascii	"reg16\000"
+ 2256      3600
+ 2257              	.LASF11:
+ 2258 0195 75696E74 		.ascii	"uint8\000"
+ 2258      3800
+ 2259              	.LASF18:
+ 2260 019b 646F7562 		.ascii	"double\000"
+ 2260      6C6500
+ 2261              	.LASF36:
+ 2262 01a2 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_IsEndConversion\000"
+ 2262      5341525F 
+ 2262      5365715F 
+ 2262      315F5341 
+ 2262      525F4973 
+ 2263              	.LASF47:
+ 2264 01c4 636F756E 		.ascii	"countsPer10Volt\000"
+ 2264      74735065 
+ 2264      72313056 
+ 2264      6F6C7400 
+ 2265              	.LASF39:
+ 2266 01d4 6F666673 		.ascii	"offset\000"
+ 2266      657400
+ 2267              	.LASF55:
+ 2268 01db 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_countsPer10Volt\000"
+ 2268      5341525F 
+ 2268      5365715F 
+ 2268      315F5341 
+ 2268      525F636F 
  2269              	.LASF34:
- 2270 01f1 7265744D 		.ascii	"retMode\000"
+ 2270 01fd 7265744D 		.ascii	"retMode\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 57
+
+
  2270      6F646500 
  2271              	.LASF0:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 57
-
-
- 2272 01f9 756E7369 		.ascii	"unsigned int\000"
+ 2272 0205 756E7369 		.ascii	"unsigned int\000"
  2272      676E6564 
  2272      20696E74 
  2272      00
  2273              	.LASF49:
- 2274 0206 75566F6C 		.ascii	"uVolts\000"
+ 2274 0212 75566F6C 		.ascii	"uVolts\000"
  2274      747300
  2275              	.LASF52:
- 2276 020d 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_initVar\000"
+ 2276 0219 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_initVar\000"
  2276      5341525F 
  2276      5365715F 
  2276      315F5341 
  2276      525F696E 
  2277              	.LASF6:
- 2278 0227 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2278 0233 6C6F6E67 		.ascii	"long unsigned int\000"
  2278      20756E73 
  2278      69676E65 
  2278      6420696E 
  2278      7400
  2279              	.LASF51:
- 2280 0239 766F6C74 		.ascii	"volts\000"
+ 2280 0245 766F6C74 		.ascii	"volts\000"
  2280      7300
  2281              	.LASF4:
- 2282 023f 73686F72 		.ascii	"short unsigned int\000"
+ 2282 024b 73686F72 		.ascii	"short unsigned int\000"
  2282      7420756E 
  2282      7369676E 
  2282      65642069 
  2282      6E7400
  2283              	.LASF13:
- 2284 0252 696E7438 		.ascii	"int8\000"
+ 2284 025e 696E7438 		.ascii	"int8\000"
  2284      00
  2285              	.LASF46:
- 2286 0257 6D566F6C 		.ascii	"mVolts\000"
+ 2286 0263 6D566F6C 		.ascii	"mVolts\000"
  2286      747300
  2287              	.LASF22:
- 2288 025e 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_Start\000"
+ 2288 026a 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_Start\000"
  2288      5341525F 
  2288      5365715F 
  2288      315F5341 
  2288      525F5374 
  2289              	.LASF50:
- 2290 0276 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_CountsTo_Volts\000"
+ 2290 0282 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_CountsTo_Volts\000"
  2290      5341525F 
  2290      5365715F 
  2290      315F5341 
  2290      525F436F 
  2291              	.LASF16:
- 2292 0297 666C6F61 		.ascii	"float32\000"
+ 2292 02a3 666C6F61 		.ascii	"float32\000"
  2292      74333200 
  2293              	.LASF9:
- 2294 029f 73697A65 		.ascii	"sizetype\000"
+ 2294 02ab 73697A65 		.ascii	"sizetype\000"
  2294      74797065 
  2294      00
  2295              	.LASF53:
- 2296 02a8 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_offset\000"
+ 2296 02b4 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_offset\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 58
+
+
  2296      5341525F 
  2296      5365715F 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 58
-
-
  2296      315F5341 
  2296      525F6F66 
  2297              	.LASF57:
- 2298 02c1 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2298 02cd 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  2298      4320342E 
  2298      392E3320 
  2298      32303135 
  2298      30333033 
- 2299 02f4 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2299 0300 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
  2299      20726576 
  2299      6973696F 
  2299      6E203232 
  2299      31323230 
- 2300 0327 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2300 0333 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
  2300      66756E63 
  2300      74696F6E 
  2300      2D736563 
  2300      74696F6E 
  2301              	.LASF19:
- 2302 034f 696E7436 		.ascii	"int64\000"
+ 2302 035b 696E7436 		.ascii	"int64\000"
  2302      3400
  2303              	.LASF17:
- 2304 0355 666C6F61 		.ascii	"float\000"
+ 2304 0361 666C6F61 		.ascii	"float\000"
  2304      7400
  2305              	.LASF27:
- 2306 035b 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_Stop\000"
+ 2306 0367 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_Stop\000"
  2306      5341525F 
  2306      5365715F 
  2306      315F5341 
  2306      525F5374 
  2307              	.LASF30:
- 2308 0372 706F7765 		.ascii	"power\000"
+ 2308 037e 706F7765 		.ascii	"power\000"
  2308      7200
  2309              	.LASF37:
- 2310 0378 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_GetResult16\000"
+ 2310 0384 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_GetResult16\000"
  2310      5341525F 
  2310      5365715F 
  2310      315F5341 
  2310      525F4765 
  2311              	.LASF20:
- 2312 0396 72656738 		.ascii	"reg8\000"
+ 2312 03a2 72656738 		.ascii	"reg8\000"
  2312      00
  2313              	.LASF41:
- 2314 039b 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_SetGain\000"
+ 2314 03a7 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_SetGain\000"
  2314      5341525F 
  2314      5365715F 
  2314      315F5341 
  2314      525F5365 
  2315              	.LASF2:
- 2316 03b5 756E7369 		.ascii	"unsigned char\000"
+ 2316 03c1 756E7369 		.ascii	"unsigned char\000"
  2316      676E6564 
  2316      20636861 
  2316      7200
  2317              	.LASF54:
- 2318 03c3 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_countsPerVolt\000"
+ 2318 03cf 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_countsPerVolt\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 59
+
+
  2318      5341525F 
  2318      5365715F 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 59
-
-
  2318      315F5341 
  2318      525F636F 
  2319              	.LASF3:
- 2320 03e3 73686F72 		.ascii	"short int\000"
+ 2320 03ef 73686F72 		.ascii	"short int\000"
  2320      7420696E 
  2320      7400
  2321              	.LASF29:
- 2322 03ed 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_SetResolution\000"
+ 2322 03f9 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_SetResolution\000"
  2322      5341525F 
  2322      5365715F 
  2322      315F5341 
  2322      525F5365 
  2323              	.LASF26:
- 2324 040d 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_Enable\000"
+ 2324 0419 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_Enable\000"
  2324      5341525F 
  2324      5365715F 
  2324      315F5341 
  2324      525F456E 
  2325              	.LASF31:
- 2326 0426 7265736F 		.ascii	"resolution\000"
+ 2326 0432 7265736F 		.ascii	"resolution\000"
  2326      6C757469 
  2326      6F6E00
  2327              	.LASF38:
- 2328 0431 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_SetOffset\000"
+ 2328 043d 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_SetOffset\000"
  2328      5341525F 
  2328      5365715F 
  2328      315F5341 
  2328      525F5365 
  2329              	.LASF10:
- 2330 044d 63686172 		.ascii	"char\000"
+ 2330 0459 63686172 		.ascii	"char\000"
  2330      00
  2331              	.LASF28:
- 2332 0452 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_SetPower\000"
+ 2332 045e 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_SetPower\000"
  2332      5341525F 
  2332      5365715F 
  2332      315F5341 
  2332      525F5365 
  2333              	.LASF45:
- 2334 046d 61646343 		.ascii	"adcCounts\000"
+ 2334 0479 61646343 		.ascii	"adcCounts\000"
  2334      6F756E74 
  2334      7300
  2335              	.LASF25:
- 2336 0477 656E6162 		.ascii	"enableInterrupts\000"
+ 2336 0483 656E6162 		.ascii	"enableInterrupts\000"
  2336      6C65496E 
  2336      74657272 
  2336      75707473 
  2336      00
  2337              	.LASF35:
- 2338 0488 73746174 		.ascii	"status\000"
+ 2338 0494 73746174 		.ascii	"status\000"
  2338      757300
  2339              	.LASF56:
- 2340 048f 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_shift\000"
+ 2340 049b 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_shift\000"
  2340      5341525F 
  2340      5365715F 
  2340      315F5341 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccXcHnak.s 			page 60
+
+
  2340      525F7368 
  2341              	.LASF14:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSKNuyW.s 			page 60
-
-
- 2342 04a7 696E7431 		.ascii	"int16\000"
+ 2342 04b3 696E7431 		.ascii	"int16\000"
  2342      3600
  2343              	.LASF48:
- 2344 04ad 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_CountsTo_uVolts\000"
+ 2344 04b9 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_CountsTo_uVolts\000"
  2344      5341525F 
  2344      5365715F 
  2344      315F5341 
  2344      525F436F 
  2345              	.LASF60:
- 2346 04cf 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_GetResult8\000"
+ 2346 04db 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_GetResult8\000"
  2346      5341525F 
  2346      5365715F 
  2346      315F5341 
  2346      525F4765 
  2347              	.LASF61:
- 2348 04ec 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_CalcGain\000"
+ 2348 04f8 4144435F 		.ascii	"ADC_SAR_Seq_1_SAR_CalcGain\000"
  2348      5341525F 
  2348      5365715F 
  2348      315F5341 
  2348      525F4361 
  2349              	.LASF24:
- 2350 0507 746D7052 		.ascii	"tmpReg\000"
+ 2350 0513 746D7052 		.ascii	"tmpReg\000"
  2350      656700
  2351              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

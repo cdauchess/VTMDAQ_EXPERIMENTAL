@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Pin_1.c  
+* File Name: Front_Right.c  
 * Version 2.10
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "Pin_1.h"
+#include "Front_Right.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 Pin_1__PORT == 15 && ((Pin_1__MASK & 0xC0) != 0))
+	 Front_Right__PORT == 15 && ((Front_Right__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: Pin_1_Write
+* Function Name: Front_Right_Write
 ********************************************************************************
 *
 * Summary:
@@ -36,15 +36,15 @@
 *  None
 *  
 *******************************************************************************/
-void Pin_1_Write(uint8 value) 
+void Front_Right_Write(uint8 value) 
 {
-    uint8 staticBits = (Pin_1_DR & (uint8)(~Pin_1_MASK));
-    Pin_1_DR = staticBits | ((uint8)(value << Pin_1_SHIFT) & Pin_1_MASK);
+    uint8 staticBits = (Front_Right_DR & (uint8)(~Front_Right_MASK));
+    Front_Right_DR = staticBits | ((uint8)(value << Front_Right_SHIFT) & Front_Right_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: Pin_1_SetDriveMode
+* Function Name: Front_Right_SetDriveMode
 ********************************************************************************
 *
 * Summary:
@@ -53,28 +53,27 @@ void Pin_1_Write(uint8 value)
 * Parameters:  
 *  mode:  Change the pins to one of the following drive modes.
 *
-*  Pin_1_DM_STRONG     Strong Drive 
-*  Pin_1_DM_OD_HI      Open Drain, Drives High 
-*  Pin_1_DM_OD_LO      Open Drain, Drives Low 
-*  Pin_1_DM_RES_UP     Resistive Pull Up 
-*  Pin_1_DM_RES_DWN    Resistive Pull Down 
-*  Pin_1_DM_RES_UPDWN  Resistive Pull Up/Down 
-*  Pin_1_DM_DIG_HIZ    High Impedance Digital 
-*  Pin_1_DM_ALG_HIZ    High Impedance Analog 
+*  Front_Right_DM_STRONG     Strong Drive 
+*  Front_Right_DM_OD_HI      Open Drain, Drives High 
+*  Front_Right_DM_OD_LO      Open Drain, Drives Low 
+*  Front_Right_DM_RES_UP     Resistive Pull Up 
+*  Front_Right_DM_RES_DWN    Resistive Pull Down 
+*  Front_Right_DM_RES_UPDWN  Resistive Pull Up/Down 
+*  Front_Right_DM_DIG_HIZ    High Impedance Digital 
+*  Front_Right_DM_ALG_HIZ    High Impedance Analog 
 *
 * Return: 
 *  None
 *
 *******************************************************************************/
-void Pin_1_SetDriveMode(uint8 mode) 
+void Front_Right_SetDriveMode(uint8 mode) 
 {
-	CyPins_SetPinDriveMode(Pin_1_0, mode);
-	CyPins_SetPinDriveMode(Pin_1_1, mode);
+	CyPins_SetPinDriveMode(Front_Right_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: Pin_1_Read
+* Function Name: Front_Right_Read
 ********************************************************************************
 *
 * Summary:
@@ -88,17 +87,17 @@ void Pin_1_SetDriveMode(uint8 mode)
 *  Returns the current value of the Digital Port as a right justified number
 *  
 * Note:
-*  Macro Pin_1_ReadPS calls this function. 
+*  Macro Front_Right_ReadPS calls this function. 
 *  
 *******************************************************************************/
-uint8 Pin_1_Read(void) 
+uint8 Front_Right_Read(void) 
 {
-    return (Pin_1_PS & Pin_1_MASK) >> Pin_1_SHIFT;
+    return (Front_Right_PS & Front_Right_MASK) >> Front_Right_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: Pin_1_ReadDataReg
+* Function Name: Front_Right_ReadDataReg
 ********************************************************************************
 *
 * Summary:
@@ -111,17 +110,17 @@ uint8 Pin_1_Read(void)
 *  Returns the current value assigned to the Digital Port's data output register
 *  
 *******************************************************************************/
-uint8 Pin_1_ReadDataReg(void) 
+uint8 Front_Right_ReadDataReg(void) 
 {
-    return (Pin_1_DR & Pin_1_MASK) >> Pin_1_SHIFT;
+    return (Front_Right_DR & Front_Right_MASK) >> Front_Right_SHIFT;
 }
 
 
 /* If Interrupts Are Enabled for this Pins component */ 
-#if defined(Pin_1_INTSTAT) 
+#if defined(Front_Right_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: Pin_1_ClearInterrupt
+    * Function Name: Front_Right_ClearInterrupt
     ********************************************************************************
     * Summary:
     *  Clears any active interrupts attached to port and returns the value of the 
@@ -134,9 +133,9 @@ uint8 Pin_1_ReadDataReg(void)
     *  Returns the value of the interrupt status register
     *  
     *******************************************************************************/
-    uint8 Pin_1_ClearInterrupt(void) 
+    uint8 Front_Right_ClearInterrupt(void) 
     {
-        return (Pin_1_INTSTAT & Pin_1_MASK) >> Pin_1_SHIFT;
+        return (Front_Right_INTSTAT & Front_Right_MASK) >> Front_Right_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

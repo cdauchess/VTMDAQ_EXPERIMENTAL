@@ -1,4 +1,4 @@
---------------- Rebuild Started: 02/22/2016 08:36:50 Project: VTM16 Current Sensors, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Rebuild Started: 03/20/2016 14:42:50 Project: VTM16 Current Sensors, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 Deleting file ".\ARM_GCC_493\Debug\main.o"
 Deleting file ".\ARM_GCC_493\Debug\cyfitter_cfg.o"
 Deleting file ".\ARM_GCC_493\Debug\cymetadata.o"
@@ -46,7 +46,7 @@ Deleting file ".\VTM16 Current Sensors_timing.html"
 Deleting file ".\ARM_GCC_493\Debug\.deps\C_FILE.P"
 Deleting file ".\ARM_GCC_493\Debug\.deps\ARM_C_FILE.P"
 Deleting file ".\ARM_GCC_493\Debug\.deps\GNU_ARM_ASM_FILE.P"
-cydsfit.exe -.appdatapath "C:\Users\charl\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "C:\Users\charl\Documents\Virginia_Tech\FSAE\VTM-DAQ\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\VTM16 Current Sensors.cyprj" -d CY8C5888LTI-LP097 -s "C:\Users\charl\Documents\Virginia_Tech\FSAE\VTM-DAQ\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\Generated_Source\PSoC5" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit.exe -.appdatapath "C:\Users\charl\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p "C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\VTM16 Current Sensors.cyprj" -d CY8C5888LTI-LP097 -s "C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\Generated_Source\PSoC5" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
 ADD: sdb.M0065: information: Analog terminal "vdac_ref" on ADC_SAR_SEQ_v2_0 is unconnected.
  * C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\ADC_SAR_SEQ_v2_0\PSoC5\ADC_SAR_SEQ_v2_0.cysch (Signal: vdac_ref)
@@ -115,7 +115,67 @@ Info: apr.M0002: Analog signal "Net_635" is connected to one terminal only. (App
 Info: apr.M0002: Analog signal "Net_636" is connected to one terminal only. (App=cydsfit)
 Info: apr.M0002: Analog signal "Net_637" is connected to one terminal only. (App=cydsfit)
 Info: apr.M0002: Analog signal "Net_638" is connected to one terminal only. (App=cydsfit)
-Log: apr.M0058: The analog placement iterative improvement is 49% done. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1038" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1040" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1041" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1043" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1045" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1046" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1048" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1050" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1051" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1053" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1055" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1056" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1058" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1060" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1061" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1063" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1065" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1066" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1068" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1070" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1071" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1073" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1075" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1076" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1078" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1080" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1081" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1083" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1085" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1086" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1088" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1090" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1091" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1093" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1095" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1096" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1098" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1100" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1101" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1103" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1105" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1106" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1108" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1110" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1111" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1112" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1113" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1114" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1115" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1116" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1117" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1118" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1119" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1120" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1121" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1122" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1123" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1124" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1125" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_1126" is connected to one terminal only. (App=cydsfit)
+Log: apr.M0058: The analog placement iterative improvement is 54% done. (App=cydsfit)
 Analog Routing ...
 Analog Code Generation ...
 Digital Placement ...
@@ -162,11 +222,25 @@ arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\P
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/EZI2C_1_INT.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\EZI2C_1_INT.c -o .\ARM_GCC_493\Debug\EZI2C_1_INT.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/I2C_pins.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\I2C_pins.c -o .\ARM_GCC_493\Debug\I2C_pins.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/LED.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\LED.c -o .\ARM_GCC_493\Debug\LED.o
-arm-none-eabi-ar.exe -rs ".\ARM_GCC_493\Debug\VTM16 Current Sensors.a" .\ARM_GCC_493\Debug\cyfitter_cfg.o .\ARM_GCC_493\Debug\UART_1.o .\ARM_GCC_493\Debug\UART_1_PM.o .\ARM_GCC_493\Debug\UART_1_INT.o .\ARM_GCC_493\Debug\UART_1_BOOT.o .\ARM_GCC_493\Debug\UART_1_IntClock.o .\ARM_GCC_493\Debug\CyBootAsmGnu.o .\ARM_GCC_493\Debug\CyDmac.o .\ARM_GCC_493\Debug\CyFlash.o .\ARM_GCC_493\Debug\CyLib.o .\ARM_GCC_493\Debug\cyPm.o .\ARM_GCC_493\Debug\CySpc.o .\ARM_GCC_493\Debug\cyutils.o .\ARM_GCC_493\Debug\Overall_Production.o .\ARM_GCC_493\Debug\Overall_Consumption.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_PM.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_INT.o .\ARM_GCC_493\Debug\Fuel_Pump.o .\ARM_GCC_493\Debug\Fuel_Injector.o .\ARM_GCC_493\Debug\Ignition.o .\ARM_GCC_493\Debug\Vref.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_SAR.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_SAR_INT.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_SAR_PM.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_IntClock.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_TempBuf_dma.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_FinalBuf_dma.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_IRQ.o .\ARM_GCC_493\Debug\EZI2C_1.o .\ARM_GCC_493\Debug\EZI2C_1_PM.o .\ARM_GCC_493\Debug\EZI2C_1_INT.o .\ARM_GCC_493\Debug\I2C_pins.o .\ARM_GCC_493\Debug\LED.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/ADC_SAR_Seq_2.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\ADC_SAR_Seq_2.c -o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/ADC_SAR_Seq_2_PM.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\ADC_SAR_Seq_2_PM.c -o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/ADC_SAR_Seq_2_INT.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\ADC_SAR_Seq_2_INT.c -o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/Front_Left.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\Front_Left.c -o .\ARM_GCC_493\Debug\Front_Left.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/Front_Right.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\Front_Right.c -o .\ARM_GCC_493\Debug\Front_Right.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/Back_Left.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\Back_Left.c -o .\ARM_GCC_493\Debug\Back_Left.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/Back_Right.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\Back_Right.c -o .\ARM_GCC_493\Debug\Back_Right.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/ADC_SAR_Seq_2_SAR.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\ADC_SAR_Seq_2_SAR.c -o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_SAR.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/ADC_SAR_Seq_2_SAR_INT.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\ADC_SAR_Seq_2_SAR_INT.c -o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_SAR_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/ADC_SAR_Seq_2_SAR_PM.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\ADC_SAR_Seq_2_SAR_PM.c -o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_SAR_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/ADC_SAR_Seq_2_IntClock.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\ADC_SAR_Seq_2_IntClock.c -o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_IntClock.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/ADC_SAR_Seq_2_TempBuf_dma.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\ADC_SAR_Seq_2_TempBuf_dma.c -o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_TempBuf_dma.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/ADC_SAR_Seq_2_FinalBuf_dma.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\ADC_SAR_Seq_2_FinalBuf_dma.c -o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_FinalBuf_dma.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/ADC_SAR_Seq_2_IRQ.lst -g -ffunction-sections -O0 -ffat-lto-objects -c .\Generated_Source\PSoC5\ADC_SAR_Seq_2_IRQ.c -o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_IRQ.o
+arm-none-eabi-ar.exe -rs ".\ARM_GCC_493\Debug\VTM16 Current Sensors.a" .\ARM_GCC_493\Debug\cyfitter_cfg.o .\ARM_GCC_493\Debug\UART_1.o .\ARM_GCC_493\Debug\UART_1_PM.o .\ARM_GCC_493\Debug\UART_1_INT.o .\ARM_GCC_493\Debug\UART_1_BOOT.o .\ARM_GCC_493\Debug\UART_1_IntClock.o .\ARM_GCC_493\Debug\CyBootAsmGnu.o .\ARM_GCC_493\Debug\CyDmac.o .\ARM_GCC_493\Debug\CyFlash.o .\ARM_GCC_493\Debug\CyLib.o .\ARM_GCC_493\Debug\cyPm.o .\ARM_GCC_493\Debug\CySpc.o .\ARM_GCC_493\Debug\cyutils.o .\ARM_GCC_493\Debug\Overall_Production.o .\ARM_GCC_493\Debug\Overall_Consumption.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_PM.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_INT.o .\ARM_GCC_493\Debug\Fuel_Pump.o .\ARM_GCC_493\Debug\Fuel_Injector.o .\ARM_GCC_493\Debug\Ignition.o .\ARM_GCC_493\Debug\Vref.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_SAR.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_SAR_INT.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_SAR_PM.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_IntClock.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_TempBuf_dma.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_FinalBuf_dma.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_1_IRQ.o .\ARM_GCC_493\Debug\EZI2C_1.o .\ARM_GCC_493\Debug\EZI2C_1_PM.o .\ARM_GCC_493\Debug\EZI2C_1_INT.o .\ARM_GCC_493\Debug\I2C_pins.o .\ARM_GCC_493\Debug\LED.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_PM.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_INT.o .\ARM_GCC_493\Debug\Front_Left.o .\ARM_GCC_493\Debug\Front_Right.o .\ARM_GCC_493\Debug\Back_Left.o .\ARM_GCC_493\Debug\Back_Right.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_SAR.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_SAR_INT.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_SAR_PM.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_IntClock.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_TempBuf_dma.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_FinalBuf_dma.o .\ARM_GCC_493\Debug\ADC_SAR_Seq_2_IRQ.o
 arm-none-eabi-ar.exe: creating .\ARM_GCC_493\Debug\VTM16 Current Sensors.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o ".\ARM_GCC_493\Debug\VTM16 Current Sensors.elf" .\ARM_GCC_493\Debug\main.o .\ARM_GCC_493\Debug\cymetadata.o .\ARM_GCC_493\Debug\Cm3Start.o ".\ARM_GCC_493\Debug\VTM16 Current Sensors.a" "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -O0 -L Generated_Source\PSoC5 "-Wl,-Map,.\ARM_GCC_493\Debug/VTM16 Current Sensors.map" -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
-cyelftool.exe -C "C:\Users\charl\Documents\Virginia_Tech\FSAE\VTM-DAQ\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\ARM_GCC_493\Debug\VTM16 Current Sensors.elf" --flash_row_size 256 --flash_size 262144
-cyelftool.exe -S "C:\Users\charl\Documents\Virginia_Tech\FSAE\VTM-DAQ\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\ARM_GCC_493\Debug\VTM16 Current Sensors.elf"
-Flash used: 9216 of 262144 bytes (3.5 %).
-SRAM used: 2685 of 65536 bytes (4.1 %). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Rebuild Succeeded: 02/22/2016 08:37:18 ---------------
+cyelftool.exe -C "C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\ARM_GCC_493\Debug\VTM16 Current Sensors.elf" --flash_row_size 256 --flash_size 262144
+cyelftool.exe -S "C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\ARM_GCC_493\Debug\VTM16 Current Sensors.elf"
+Flash used: 10496 of 262144 bytes (4.0 %).
+SRAM used: 2733 of 65536 bytes (4.2 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Rebuild Succeeded: 03/20/2016 14:43:28 ---------------

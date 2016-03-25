@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
   29:.\Generated_Source\PSoC5/Ignition.c **** * Summary:
   30:.\Generated_Source\PSoC5/Ignition.c **** *  Assign a new value to the digital port's data output register.  
   31:.\Generated_Source\PSoC5/Ignition.c **** *
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/Ignition.c **** * Parameters:  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
   69 0036 00BF     		.align	2
   70              	.L2:
   71 0038 00510040 		.word	1073762560
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 3
 
 
   72              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
   98 000a 0A4B     		ldr	r3, .L5
   99 000c 094A     		ldr	r2, .L5
  100 000e 1278     		ldrb	r2, [r2]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 4
 
 
  101 0010 D2B2     		uxtb	r2, r2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
   90:.\Generated_Source\PSoC5/Ignition.c **** *  Macro Ignition_ReadPS calls this function. 
   91:.\Generated_Source\PSoC5/Ignition.c **** *  
   92:.\Generated_Source\PSoC5/Ignition.c **** *******************************************************************************/
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 5
 
 
   93:.\Generated_Source\PSoC5/Ignition.c **** uint8 Ignition_Read(void) 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  106:.\Generated_Source\PSoC5/Ignition.c **** * Parameters:  
  107:.\Generated_Source\PSoC5/Ignition.c **** *  None 
  108:.\Generated_Source\PSoC5/Ignition.c **** *
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 6
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 6
 
 
  109:.\Generated_Source\PSoC5/Ignition.c **** * Return: 
@@ -354,18 +354,18 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  220 000b 01       		.uleb128 0x1
  221 000c 11000000 		.4byte	.LASF20
  222 0010 01       		.byte	0x1
- 223 0011 6C010000 		.4byte	.LASF21
- 224 0015 9C010000 		.4byte	.LASF22
+ 223 0011 81010000 		.4byte	.LASF21
+ 224 0015 B1010000 		.4byte	.LASF22
  225 0019 00000000 		.4byte	.Ldebug_ranges0+0
  226 001d 00000000 		.4byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 7
 
 
  227 0021 00000000 		.4byte	.Ldebug_line0
  228 0025 02       		.uleb128 0x2
  229 0026 01       		.byte	0x1
  230 0027 06       		.byte	0x6
- 231 0028 90010000 		.4byte	.LASF0
+ 231 0028 A5010000 		.4byte	.LASF0
  232 002c 02       		.uleb128 0x2
  233 002d 01       		.byte	0x1
  234 002e 08       		.byte	0x8
@@ -373,7 +373,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  236 0033 02       		.uleb128 0x2
  237 0034 02       		.byte	0x2
  238 0035 05       		.byte	0x5
- 239 0036 3D010000 		.4byte	.LASF2
+ 239 0036 52010000 		.4byte	.LASF2
  240 003a 02       		.uleb128 0x2
  241 003b 02       		.byte	0x2
  242 003c 07       		.byte	0x7
@@ -381,7 +381,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  244 0041 02       		.uleb128 0x2
  245 0042 04       		.byte	0x4
  246 0043 05       		.byte	0x5
- 247 0044 63010000 		.4byte	.LASF4
+ 247 0044 78010000 		.4byte	.LASF4
  248 0048 02       		.uleb128 0x2
  249 0049 04       		.byte	0x4
  250 004a 07       		.byte	0x7
@@ -389,7 +389,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  252 004f 02       		.uleb128 0x2
  253 0050 08       		.byte	0x8
  254 0051 05       		.byte	0x5
- 255 0052 2A010000 		.4byte	.LASF6
+ 255 0052 3F010000 		.4byte	.LASF6
  256 0056 02       		.uleb128 0x2
  257 0057 08       		.byte	0x8
  258 0058 07       		.byte	0x7
@@ -403,7 +403,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  266 0066 07       		.byte	0x7
  267 0067 01010000 		.4byte	.LASF8
  268 006b 04       		.uleb128 0x4
- 269 006c 47010000 		.4byte	.LASF12
+ 269 006c 5C010000 		.4byte	.LASF12
  270 0070 02       		.byte	0x2
  271 0071 C2       		.byte	0xc2
  272 0072 2C000000 		.4byte	0x2c
@@ -418,10 +418,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  281 0084 02       		.uleb128 0x2
  282 0085 01       		.byte	0x1
  283 0086 08       		.byte	0x8
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 8
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 8
 
 
- 284 0087 38010000 		.4byte	.LASF11
+ 284 0087 4D010000 		.4byte	.LASF11
  285 008b 05       		.uleb128 0x5
  286 008c B3000000 		.4byte	.LASF13
  287 0090 02       		.byte	0x2
@@ -456,7 +456,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  316 00cc 77       		.sleb128 -9
  317 00cd 00       		.byte	0
  318 00ce 07       		.uleb128 0x7
- 319 00cf 4D010000 		.4byte	.LASF15
+ 319 00cf 62010000 		.4byte	.LASF15
  320 00d3 01       		.byte	0x1
  321 00d4 45       		.byte	0x45
  322 00d5 00000000 		.4byte	.LFB1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  338 00f7 01       		.byte	0x1
  339 00f8 5D       		.byte	0x5d
  340 00f9 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 9
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 9
 
 
  341 00fd 00000000 		.4byte	.LFB2
@@ -486,7 +486,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  343 0105 01       		.uleb128 0x1
  344 0106 9C       		.byte	0x9c
  345 0107 0A       		.uleb128 0xa
- 346 0108 06020000 		.4byte	.LASF19
+ 346 0108 2A010000 		.4byte	.LASF19
  347 010c 01       		.byte	0x1
  348 010d 71       		.byte	0x71
  349 010e 6B000000 		.4byte	0x6b
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  395 0026 08       		.uleb128 0x8
  396 0027 00       		.byte	0
  397 0028 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 10
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 10
 
 
  398 0029 04       		.uleb128 0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  452 0060 01       		.uleb128 0x1
  453 0061 13       		.uleb128 0x13
  454 0062 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 11
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 11
 
 
  455 0063 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  509 009a 00       		.byte	0
  510 009b 00       		.byte	0
  511 009c 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 12
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 12
 
 
  512              		.section	.debug_aranges,"",%progbits
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  551      31323230 
  552 0077 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
  552      66756E63 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 13
 
 
  552      74696F6E 
@@ -774,62 +774,64 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 1
  573              	.LASF17:
  574 0125 6D6F6465 		.ascii	"mode\000"
  574      00
- 575              	.LASF6:
- 576 012a 6C6F6E67 		.ascii	"long long int\000"
- 576      206C6F6E 
- 576      6720696E 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccuISZFH.s 			page 14
+ 575              	.LASF19:
+ 576 012a 49676E69 		.ascii	"Ignition_ReadDataReg\000"
+ 576      74696F6E 
+ 576      5F526561 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccKmHKsk.s 			page 14
 
 
- 576      7400
- 577              	.LASF11:
- 578 0138 63686172 		.ascii	"char\000"
- 578      00
- 579              	.LASF2:
- 580 013d 73686F72 		.ascii	"short int\000"
- 580      7420696E 
- 580      7400
- 581              	.LASF12:
- 582 0147 75696E74 		.ascii	"uint8\000"
- 582      3800
- 583              	.LASF15:
- 584 014d 49676E69 		.ascii	"Ignition_SetDriveMode\000"
- 584      74696F6E 
- 584      5F536574 
- 584      44726976 
- 584      654D6F64 
- 585              	.LASF4:
- 586 0163 6C6F6E67 		.ascii	"long int\000"
- 586      20696E74 
- 586      00
- 587              	.LASF21:
- 588 016c 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Ignition.c\000"
- 588      6E657261 
- 588      7465645F 
- 588      536F7572 
- 588      63655C50 
- 589              	.LASF0:
- 590 0190 7369676E 		.ascii	"signed char\000"
- 590      65642063 
- 590      68617200 
- 591              	.LASF22:
- 592 019c 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\Virginia_Tech\\FSAE\\V"
- 592      73657273 
- 592      5C636861 
- 592      726C5C44 
- 592      6F63756D 
- 593 01c9 544D2D44 		.ascii	"TM-DAQ\\VTM16 PSOC Current Sensor\\VTM16 Current Se"
- 593      41515C56 
- 593      544D3136 
- 593      2050534F 
- 593      43204375 
- 594 01fa 6E736F72 		.ascii	"nsors.cydsn\000"
- 594      732E6379 
- 594      64736E00 
- 595              	.LASF19:
- 596 0206 49676E69 		.ascii	"Ignition_ReadDataReg\000"
- 596      74696F6E 
- 596      5F526561 
- 596      64446174 
- 596      61526567 
+ 576      64446174 
+ 576      61526567 
+ 577              	.LASF6:
+ 578 013f 6C6F6E67 		.ascii	"long long int\000"
+ 578      206C6F6E 
+ 578      6720696E 
+ 578      7400
+ 579              	.LASF11:
+ 580 014d 63686172 		.ascii	"char\000"
+ 580      00
+ 581              	.LASF2:
+ 582 0152 73686F72 		.ascii	"short int\000"
+ 582      7420696E 
+ 582      7400
+ 583              	.LASF12:
+ 584 015c 75696E74 		.ascii	"uint8\000"
+ 584      3800
+ 585              	.LASF15:
+ 586 0162 49676E69 		.ascii	"Ignition_SetDriveMode\000"
+ 586      74696F6E 
+ 586      5F536574 
+ 586      44726976 
+ 586      654D6F64 
+ 587              	.LASF4:
+ 588 0178 6C6F6E67 		.ascii	"long int\000"
+ 588      20696E74 
+ 588      00
+ 589              	.LASF21:
+ 590 0181 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Ignition.c\000"
+ 590      6E657261 
+ 590      7465645F 
+ 590      536F7572 
+ 590      63655C50 
+ 591              	.LASF0:
+ 592 01a5 7369676E 		.ascii	"signed char\000"
+ 592      65642063 
+ 592      68617200 
+ 593              	.LASF22:
+ 594 01b1 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\Virginia_Tech\\FSAE\\V"
+ 594      73657273 
+ 594      5C636861 
+ 594      726C5C44 
+ 594      6F63756D 
+ 595 01de 544D4441 		.ascii	"TMDAQ_EXPERIMENTAL\\VTM16 PSOC Current Sensor\\VTM1"
+ 595      515F4558 
+ 595      50455249 
+ 595      4D454E54 
+ 595      414C5C56 
+ 596 020f 36204375 		.ascii	"6 Current Sensors.cydsn\000"
+ 596      7272656E 
+ 596      74205365 
+ 596      6E736F72 
+ 596      732E6379 
  597              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

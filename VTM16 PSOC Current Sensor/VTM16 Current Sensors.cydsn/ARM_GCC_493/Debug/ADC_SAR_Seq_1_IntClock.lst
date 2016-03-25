@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
   29:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** 
   30:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** /*******************************************************************************
   31:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** * Function Name: ADC_SAR_Seq_1_IntClock_Start
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** ********************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
   62              		.align	2
   63              	.L2:
   64 002c A2430040 		.word	1073759138
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 3
 
 
   65 0030 B2430040 		.word	1073759154
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
   75:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** 	ADC_SAR_Seq_1_IntClock_CLKSTBY &= (uint8)(~ADC_SAR_Seq_1_IntClock_CLKSTBY_MASK);
   95              		.loc 1 75 0
   96 0014 064A     		ldr	r2, .L5+4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 4
 
 
   97 0016 064B     		ldr	r3, .L5+4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  100:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** void ADC_SAR_Seq_1_IntClock_StopBlock(void) 
  101:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** {
  127              		.loc 1 101 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 5
 
 
  128              		.cfi_startproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  164 002e 03F07F03 		and	r3, r3, #127
  165 0032 DBB2     		uxtb	r3, r3
  166 0034 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 6
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 6
 
 
  120:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  205              		.loc 1 135 0
  206 0078 064B     		ldr	r3, .L10+4
  207 007a 0022     		movs	r2, #0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 7
 
 
  208 007c 1A70     		strb	r2, [r3]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  151:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** *  state:  0 to disable clock during standby, nonzero to enable.
  152:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** *
  153:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** * Returns:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 8
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 8
 
 
  154:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** *  None
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  287 0034 BD46     		mov	sp, r7
  288              		.cfi_def_cfa_register 13
  289              		@ sp needed
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 9
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 9
 
 
  290 0036 5DF8047B 		ldr	r7, [sp], #4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  316              		.cfi_offset 14, -4
  317 0002 84B0     		sub	sp, sp, #16
  318              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 10
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 10
 
 
  319 0004 00AF     		add	r7, sp, #0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  360 004a 002B     		cmp	r3, #0
  361 004c 0BD1     		bne	.L21
  209:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c ****             {
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 11
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 11
 
 
  210:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c ****                 /* Moving away from SSS, set the divider first so when SSS is cleared we    */
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  228:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c ****             {
  229:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c ****                 CLK_DIST_LD = 0x00u;
  396              		.loc 1 229 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 12
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 12
 
 
  397 0084 314B     		ldr	r3, .L30+12
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  433 00c0 224B     		ldr	r3, .L30+12
  434 00c2 0722     		movs	r2, #7
  435 00c4 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 13
 
 
  248:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  268:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c ****                 CLK_DIST_LD = (CYCLK_LD_LOAD | ((restart != 0u) ? CYCLK_LD_SYNC_EN : 0x00u));
  470              		.loc 1 268 0
  471 0100 124A     		ldr	r2, .L30+12
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 14
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 14
 
 
  472 0102 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  515              		@ sp needed
  516 013c 80BD     		pop	{r7, pc}
  517              	.L31:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 15
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 15
 
 
  518 013e 00BF     		.align	2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  552 0008 9BB2     		uxth	r3, r3
  300:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** }
  553              		.loc 1 300 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 16
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 16
 
 
  554 000a 1846     		mov	r0, r3
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  332:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** void ADC_SAR_Seq_1_IntClock_SetModeRegister(uint8 modeBitMask) 
  333:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** {
  577              		.loc 1 333 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 17
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 17
 
 
  578              		.cfi_startproc
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  337:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** 
  338:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** /*******************************************************************************
  339:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** * Function Name: ADC_SAR_Seq_1_IntClock_ClearModeRegister
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 18
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 18
 
 
  340:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** ********************************************************************************
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  653 001e 1340     		ands	r3, r3, r2
  654 0020 DBB2     		uxtb	r3, r3
  655 0022 0B70     		strb	r3, [r1]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 19
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 19
 
 
  370:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** }
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  690              		.cfi_def_cfa_register 7
  390:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c ****     return ADC_SAR_Seq_1_IntClock_MOD_SRC & (uint8)(ADC_SAR_Seq_1_IntClock_MODE_MASK);
  691              		.loc 1 390 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 20
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 20
 
 
  692 0004 054B     		ldr	r3, .L44
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  416:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** *  None
  417:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** *
  418:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** *******************************************************************************/
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 21
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 21
 
 
  419:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** void ADC_SAR_Seq_1_IntClock_SetSourceRegister(uint8 clkSource) 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  763              		.loc 1 430 0
  764 003c 1E4B     		ldr	r3, .L50
  431:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c ****             (ADC_SAR_Seq_1_IntClock_MOD_SRC & (uint8)(~ADC_SAR_Seq_1_IntClock_SRC_SEL_MSK)) | clkSo
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 22
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 22
 
 
  765              		.loc 1 431 0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  808 0084 0C4A     		ldr	r2, .L50
  809 0086 0C4B     		ldr	r3, .L50
  810 0088 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 23
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 23
 
 
  811 008a DBB2     		uxtb	r3, r3
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  450:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** /*******************************************************************************
  451:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** * Function Name: ADC_SAR_Seq_1_IntClock_GetSourceRegister
  452:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** ********************************************************************************
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 24
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 24
 
 
  453:.\Generated_Source\PSoC5/ADC_SAR_Seq_1_IntClock.c **** *
@@ -1438,24 +1438,24 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  894 0006 00000000 		.4byte	.Ldebug_abbrev0
  895 000a 04       		.byte	0x4
  896 000b 01       		.uleb128 0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 25
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 25
 
 
- 897 000c 6F010000 		.4byte	.LASF37
+ 897 000c 05010000 		.4byte	.LASF37
  898 0010 01       		.byte	0x1
- 899 0011 A9020000 		.4byte	.LASF38
- 900 0015 CA000000 		.4byte	.LASF39
+ 899 0011 3F020000 		.4byte	.LASF38
+ 900 0015 62030000 		.4byte	.LASF39
  901 0019 00000000 		.4byte	.Ldebug_ranges0+0
  902 001d 00000000 		.4byte	0
  903 0021 00000000 		.4byte	.Ldebug_line0
  904 0025 02       		.uleb128 0x2
  905 0026 01       		.byte	0x1
  906 0027 06       		.byte	0x6
- 907 0028 25020000 		.4byte	.LASF0
+ 907 0028 BB010000 		.4byte	.LASF0
  908 002c 02       		.uleb128 0x2
  909 002d 01       		.byte	0x1
  910 002e 08       		.byte	0x8
- 911 002f 0B020000 		.4byte	.LASF1
+ 911 002f A1010000 		.4byte	.LASF1
  912 0033 02       		.uleb128 0x2
  913 0034 02       		.byte	0x2
  914 0035 05       		.byte	0x5
@@ -1463,23 +1463,23 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  916 003a 02       		.uleb128 0x2
  917 003b 02       		.byte	0x2
  918 003c 07       		.byte	0x7
- 919 003d 55020000 		.4byte	.LASF3
+ 919 003d EB010000 		.4byte	.LASF3
  920 0041 02       		.uleb128 0x2
  921 0042 04       		.byte	0x4
  922 0043 05       		.byte	0x5
- 923 0044 6D020000 		.4byte	.LASF4
+ 923 0044 03020000 		.4byte	.LASF4
  924 0048 02       		.uleb128 0x2
  925 0049 04       		.byte	0x4
  926 004a 07       		.byte	0x7
- 927 004b 15030000 		.4byte	.LASF5
+ 927 004b AB020000 		.4byte	.LASF5
  928 004f 02       		.uleb128 0x2
  929 0050 08       		.byte	0x8
  930 0051 05       		.byte	0x5
- 931 0052 61010000 		.4byte	.LASF6
+ 931 0052 F7000000 		.4byte	.LASF6
  932 0056 02       		.uleb128 0x2
  933 0057 08       		.byte	0x8
  934 0058 07       		.byte	0x7
- 935 0059 31020000 		.4byte	.LASF7
+ 935 0059 C7010000 		.4byte	.LASF7
  936 005d 03       		.uleb128 0x3
  937 005e 04       		.byte	0x4
  938 005f 05       		.byte	0x5
@@ -1487,7 +1487,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  940 0064 02       		.uleb128 0x2
  941 0065 04       		.byte	0x4
  942 0066 07       		.byte	0x7
- 943 0067 48020000 		.4byte	.LASF8
+ 943 0067 DE010000 		.4byte	.LASF8
  944 006b 04       		.uleb128 0x4
  945 006c B9000000 		.4byte	.LASF9
  946 0070 02       		.byte	0x2
@@ -1498,23 +1498,23 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  951 007b 02       		.byte	0x2
  952 007c C3       		.byte	0xc3
  953 007d 3A000000 		.4byte	0x3a
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 26
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 26
 
 
  954 0081 02       		.uleb128 0x2
  955 0082 04       		.byte	0x4
  956 0083 04       		.byte	0x4
- 957 0084 34010000 		.4byte	.LASF11
+ 957 0084 CA000000 		.4byte	.LASF11
  958 0088 02       		.uleb128 0x2
  959 0089 08       		.byte	0x8
  960 008a 04       		.byte	0x4
- 961 008b 6B030000 		.4byte	.LASF12
+ 961 008b 01030000 		.4byte	.LASF12
  962 008f 02       		.uleb128 0x2
  963 0090 01       		.byte	0x1
  964 0091 08       		.byte	0x8
- 965 0092 68020000 		.4byte	.LASF13
+ 965 0092 FE010000 		.4byte	.LASF13
  966 0096 05       		.uleb128 0x5
- 967 0097 10030000 		.4byte	.LASF14
+ 967 0097 A6020000 		.4byte	.LASF14
  968 009b 02       		.byte	0x2
  969 009c 6C01     		.2byte	0x16c
  970 009e A2000000 		.4byte	0xa2
@@ -1528,7 +1528,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  978 00b3 06       		.uleb128 0x6
  979 00b4 76000000 		.4byte	0x76
  980 00b8 07       		.uleb128 0x7
- 981 00b9 4E030000 		.4byte	.LASF16
+ 981 00b9 E4020000 		.4byte	.LASF16
  982 00bd 01       		.byte	0x1
  983 00be 2D       		.byte	0x2d
  984 00bf 00000000 		.4byte	.LFB0
@@ -1556,9 +1556,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1006 00f0 14000000 		.4byte	.LBB2
  1007 00f4 70000000 		.4byte	.LBE2-.LBB2
  1008 00f8 0A       		.uleb128 0xa
- 1009 00f9 DB020000 		.4byte	.LASF24
+ 1009 00f9 71020000 		.4byte	.LASF24
  1010 00fd 01       		.byte	0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 27
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 27
 
 
  1011 00fe 69       		.byte	0x69
@@ -1578,7 +1578,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1025 0118 9C       		.byte	0x9c
  1026 0119 2C010000 		.4byte	0x12c
  1027 011d 0B       		.uleb128 0xb
- 1028 011e FD010000 		.4byte	.LASF21
+ 1028 011e 93010000 		.4byte	.LASF21
  1029 0122 01       		.byte	0x1
  1030 0123 9D       		.byte	0x9d
  1031 0124 6B000000 		.4byte	0x6b
@@ -1612,18 +1612,18 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1059 015b 91       		.byte	0x91
  1060 015c 6D       		.sleb128 -19
  1061 015d 0A       		.uleb128 0xa
- 1062 015e 72030000 		.4byte	.LASF25
+ 1062 015e 08030000 		.4byte	.LASF25
  1063 0162 01       		.byte	0x1
  1064 0163 C4       		.byte	0xc4
  1065 0164 6B000000 		.4byte	0x6b
  1066 0168 02       		.uleb128 0x2
  1067 0169 91       		.byte	0x91
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 28
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 28
 
 
  1068 016a 73       		.sleb128 -13
  1069 016b 0A       		.uleb128 0xa
- 1070 016c 03020000 		.4byte	.LASF26
+ 1070 016c 99010000 		.4byte	.LASF26
  1071 0170 01       		.byte	0x1
  1072 0171 C6       		.byte	0xc6
  1073 0172 6B000000 		.4byte	0x6b
@@ -1631,7 +1631,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1075 0177 91       		.byte	0x91
  1076 0178 77       		.sleb128 -9
  1077 0179 0A       		.uleb128 0xa
- 1078 017a DB020000 		.4byte	.LASF24
+ 1078 017a 71020000 		.4byte	.LASF24
  1079 017e 01       		.byte	0x1
  1080 017f C7       		.byte	0xc7
  1081 0180 76000000 		.4byte	0x76
@@ -1640,7 +1640,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1084 0186 74       		.sleb128 -12
  1085 0187 00       		.byte	0
  1086 0188 0D       		.uleb128 0xd
- 1087 0189 E6020000 		.4byte	.LASF30
+ 1087 0189 7C020000 		.4byte	.LASF30
  1088 018d 01       		.byte	0x1
  1089 018e 2901     		.2byte	0x129
  1090 0190 76000000 		.4byte	0x76
@@ -1649,7 +1649,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1093 019c 01       		.uleb128 0x1
  1094 019d 9C       		.byte	0x9c
  1095 019e 0E       		.uleb128 0xe
- 1096 019f 3A010000 		.4byte	.LASF27
+ 1096 019f D0000000 		.4byte	.LASF27
  1097 01a3 01       		.byte	0x1
  1098 01a4 4C01     		.2byte	0x14c
  1099 01a6 00000000 		.4byte	.LFB6
@@ -1658,7 +1658,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1102 01af 9C       		.byte	0x9c
  1103 01b0 C4010000 		.4byte	0x1c4
  1104 01b4 0F       		.uleb128 0xf
- 1105 01b5 19020000 		.4byte	.LASF28
+ 1105 01b5 AF010000 		.4byte	.LASF28
  1106 01b9 01       		.byte	0x1
  1107 01ba 4C01     		.2byte	0x14c
  1108 01bc 6B000000 		.4byte	0x6b
@@ -1667,7 +1667,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1111 01c2 77       		.sleb128 -9
  1112 01c3 00       		.byte	0
  1113 01c4 0E       		.uleb128 0xe
- 1114 01c5 76020000 		.4byte	.LASF29
+ 1114 01c5 0C020000 		.4byte	.LASF29
  1115 01c9 01       		.byte	0x1
  1116 01ca 6F01     		.2byte	0x16f
  1117 01cc 00000000 		.4byte	.LFB7
@@ -1676,9 +1676,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1120 01d5 9C       		.byte	0x9c
  1121 01d6 EA010000 		.4byte	0x1ea
  1122 01da 0F       		.uleb128 0xf
- 1123 01db 19020000 		.4byte	.LASF28
+ 1123 01db AF010000 		.4byte	.LASF28
  1124 01df 01       		.byte	0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 29
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 29
 
 
  1125 01e0 6F01     		.2byte	0x16f
@@ -1688,7 +1688,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1129 01e8 77       		.sleb128 -9
  1130 01e9 00       		.byte	0
  1131 01ea 0D       		.uleb128 0xd
- 1132 01eb 27030000 		.4byte	.LASF31
+ 1132 01eb BD020000 		.4byte	.LASF31
  1133 01ef 01       		.byte	0x1
  1134 01f0 8401     		.2byte	0x184
  1135 01f2 6B000000 		.4byte	0x6b
@@ -1697,7 +1697,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1138 01fe 01       		.uleb128 0x1
  1139 01ff 9C       		.byte	0x9c
  1140 0200 10       		.uleb128 0x10
- 1141 0201 A3030000 		.4byte	.LASF32
+ 1141 0201 39030000 		.4byte	.LASF32
  1142 0205 01       		.byte	0x1
  1143 0206 A301     		.2byte	0x1a3
  1144 0208 00000000 		.4byte	.LFB9
@@ -1706,7 +1706,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1147 0211 9C       		.byte	0x9c
  1148 0212 44020000 		.4byte	0x244
  1149 0216 0F       		.uleb128 0xf
- 1150 0217 9F020000 		.4byte	.LASF33
+ 1150 0217 35020000 		.4byte	.LASF33
  1151 021b 01       		.byte	0x1
  1152 021c A301     		.2byte	0x1a3
  1153 021e 6B000000 		.4byte	0x6b
@@ -1731,14 +1731,14 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1172 0242 75       		.sleb128 -11
  1173 0243 00       		.byte	0
  1174 0244 0D       		.uleb128 0xd
- 1175 0245 7A030000 		.4byte	.LASF36
+ 1175 0245 10030000 		.4byte	.LASF36
  1176 0249 01       		.byte	0x1
  1177 024a D001     		.2byte	0x1d0
  1178 024c 6B000000 		.4byte	0x6b
  1179 0250 00000000 		.4byte	.LFB10
  1180 0254 20000000 		.4byte	.LFE10-.LFB10
  1181 0258 01       		.uleb128 0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 30
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 30
 
 
  1182 0259 9C       		.byte	0x9c
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1236 0032 49       		.uleb128 0x49
  1237 0033 13       		.uleb128 0x13
  1238 0034 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 31
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 31
 
 
  1239 0035 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1293 006c 0B       		.uleb128 0xb
  1294 006d 27       		.uleb128 0x27
  1295 006e 19       		.uleb128 0x19
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 32
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 32
 
 
  1296 006f 11       		.uleb128 0x11
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1350 00a6 3F       		.uleb128 0x3f
  1351 00a7 19       		.uleb128 0x19
  1352 00a8 03       		.uleb128 0x3
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 33
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 33
 
 
  1353 00a9 0E       		.uleb128 0xe
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1407 00e1 05       		.uleb128 0x5
  1408 00e2 27       		.uleb128 0x27
  1409 00e3 19       		.uleb128 0x19
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 34
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 34
 
 
  1410 00e4 11       		.uleb128 0x11
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1464 011c 00       		.byte	0
  1465 011d 03       		.uleb128 0x3
  1466 011e 0E       		.uleb128 0xe
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 35
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 35
 
 
  1467 011f 3A       		.uleb128 0x3a
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1521 0024 60010000 		.4byte	.LFE4
  1522 0028 00000000 		.4byte	.LFB5
  1523 002c 18000000 		.4byte	.LFE5
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 36
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 36
 
 
  1524 0030 00000000 		.4byte	.LFB6
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1554 00a3 75696E74 		.ascii	"uint16\000"
  1554      313600
  1555              	.LASF23:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 37
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 37
 
 
  1556 00aa 72657374 		.ascii	"restart\000"
@@ -2173,163 +2173,165 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 1
  1562 00bf 636C6B44 		.ascii	"clkDivider\000"
  1562      69766964 
  1562      657200
- 1563              	.LASF39:
- 1564 00ca 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\Virginia_Tech\\FSAE\\V"
- 1564      73657273 
- 1564      5C636861 
- 1564      726C5C44 
- 1564      6F63756D 
- 1565 00f7 544D2D44 		.ascii	"TM-DAQ\\VTM16 PSOC Current Sensor\\VTM16 Current Se"
- 1565      41515C56 
- 1565      544D3136 
- 1565      2050534F 
- 1565      43204375 
- 1566 0128 6E736F72 		.ascii	"nsors.cydsn\000"
- 1566      732E6379 
- 1566      64736E00 
- 1567              	.LASF11:
- 1568 0134 666C6F61 		.ascii	"float\000"
+ 1563              	.LASF11:
+ 1564 00ca 666C6F61 		.ascii	"float\000"
+ 1564      7400
+ 1565              	.LASF27:
+ 1566 00d0 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_SetModeRegister\000"
+ 1566      5341525F 
+ 1566      5365715F 
+ 1566      315F496E 
+ 1566      74436C6F 
+ 1567              	.LASF6:
+ 1568 00f7 6C6F6E67 		.ascii	"long long int\000"
+ 1568      206C6F6E 
+ 1568      6720696E 
  1568      7400
- 1569              	.LASF27:
- 1570 013a 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_SetModeRegister\000"
- 1570      5341525F 
- 1570      5365715F 
- 1570      315F496E 
- 1570      74436C6F 
- 1571              	.LASF6:
- 1572 0161 6C6F6E67 		.ascii	"long long int\000"
- 1572      206C6F6E 
- 1572      6720696E 
- 1572      7400
- 1573              	.LASF37:
- 1574 016f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1574      4320342E 
- 1574      392E3320 
- 1574      32303135 
- 1574      30333033 
- 1575 01a2 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1575      20726576 
- 1575      6973696F 
- 1575      6E203232 
- 1575      31323230 
- 1576 01d5 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 1576      66756E63 
- 1576      74696F6E 
- 1576      2D736563 
- 1576      74696F6E 
- 1577              	.LASF21:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 38
+ 1569              	.LASF37:
+ 1570 0105 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1570      4320342E 
+ 1570      392E3320 
+ 1570      32303135 
+ 1570      30333033 
+ 1571 0138 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1571      20726576 
+ 1571      6973696F 
+ 1571      6E203232 
+ 1571      31323230 
+ 1572 016b 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1572      66756E63 
+ 1572      74696F6E 
+ 1572      2D736563 
+ 1572      74696F6E 
+ 1573              	.LASF21:
+ 1574 0193 73746174 		.ascii	"state\000"
+ 1574      6500
+ 1575              	.LASF26:
+ 1576 0199 63757272 		.ascii	"currSrc\000"
+ 1576      53726300 
+ 1577              	.LASF1:
+ 1578 01a1 756E7369 		.ascii	"unsigned char\000"
+ 1578      676E6564 
+ 1578      20636861 
+ 1578      7200
+ 1579              	.LASF28:
+ 1580 01af 6D6F6465 		.ascii	"modeBitMask\000"
+ 1580      4269744D 
+ 1580      61736B00 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 38
 
 
- 1578 01fd 73746174 		.ascii	"state\000"
- 1578      6500
- 1579              	.LASF26:
- 1580 0203 63757272 		.ascii	"currSrc\000"
- 1580      53726300 
- 1581              	.LASF1:
- 1582 020b 756E7369 		.ascii	"unsigned char\000"
- 1582      676E6564 
- 1582      20636861 
- 1582      7200
- 1583              	.LASF28:
- 1584 0219 6D6F6465 		.ascii	"modeBitMask\000"
- 1584      4269744D 
- 1584      61736B00 
- 1585              	.LASF0:
- 1586 0225 7369676E 		.ascii	"signed char\000"
- 1586      65642063 
- 1586      68617200 
- 1587              	.LASF7:
- 1588 0231 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1588      206C6F6E 
- 1588      6720756E 
+ 1581              	.LASF0:
+ 1582 01bb 7369676E 		.ascii	"signed char\000"
+ 1582      65642063 
+ 1582      68617200 
+ 1583              	.LASF7:
+ 1584 01c7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1584      206C6F6E 
+ 1584      6720756E 
+ 1584      7369676E 
+ 1584      65642069 
+ 1585              	.LASF8:
+ 1586 01de 756E7369 		.ascii	"unsigned int\000"
+ 1586      676E6564 
+ 1586      20696E74 
+ 1586      00
+ 1587              	.LASF3:
+ 1588 01eb 73686F72 		.ascii	"short unsigned int\000"
+ 1588      7420756E 
  1588      7369676E 
  1588      65642069 
- 1589              	.LASF8:
- 1590 0248 756E7369 		.ascii	"unsigned int\000"
- 1590      676E6564 
- 1590      20696E74 
+ 1588      6E7400
+ 1589              	.LASF13:
+ 1590 01fe 63686172 		.ascii	"char\000"
  1590      00
- 1591              	.LASF3:
- 1592 0255 73686F72 		.ascii	"short unsigned int\000"
- 1592      7420756E 
- 1592      7369676E 
- 1592      65642069 
- 1592      6E7400
- 1593              	.LASF13:
- 1594 0268 63686172 		.ascii	"char\000"
- 1594      00
- 1595              	.LASF4:
- 1596 026d 6C6F6E67 		.ascii	"long int\000"
- 1596      20696E74 
- 1596      00
- 1597              	.LASF29:
- 1598 0276 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_ClearModeRegister\000"
- 1598      5341525F 
- 1598      5365715F 
- 1598      315F496E 
- 1598      74436C6F 
- 1599              	.LASF33:
- 1600 029f 636C6B53 		.ascii	"clkSource\000"
- 1600      6F757263 
- 1600      6500
- 1601              	.LASF38:
- 1602 02a9 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_SAR_Seq_1_IntClock."
- 1602      6E657261 
- 1602      7465645F 
- 1602      536F7572 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccUdazZf.s 			page 39
+ 1591              	.LASF4:
+ 1592 0203 6C6F6E67 		.ascii	"long int\000"
+ 1592      20696E74 
+ 1592      00
+ 1593              	.LASF29:
+ 1594 020c 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_ClearModeRegister\000"
+ 1594      5341525F 
+ 1594      5365715F 
+ 1594      315F496E 
+ 1594      74436C6F 
+ 1595              	.LASF33:
+ 1596 0235 636C6B53 		.ascii	"clkSource\000"
+ 1596      6F757263 
+ 1596      6500
+ 1597              	.LASF38:
+ 1598 023f 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_SAR_Seq_1_IntClock."
+ 1598      6E657261 
+ 1598      7465645F 
+ 1598      536F7572 
+ 1598      63655C50 
+ 1599 026f 6300     		.ascii	"c\000"
+ 1600              	.LASF24:
+ 1601 0271 6F6C6444 		.ascii	"oldDivider\000"
+ 1601      69766964 
+ 1601      657200
+ 1602              	.LASF30:
+ 1603 027c 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_GetDividerRegister\000"
+ 1603      5341525F 
+ 1603      5365715F 
+ 1603      315F496E 
+ 1603      74436C6F 
+ 1604              	.LASF14:
+ 1605 02a6 72656738 		.ascii	"reg8\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccPgPGKE.s 			page 39
 
 
- 1602      63655C50 
- 1603 02d9 6300     		.ascii	"c\000"
- 1604              	.LASF24:
- 1605 02db 6F6C6444 		.ascii	"oldDivider\000"
- 1605      69766964 
- 1605      657200
- 1606              	.LASF30:
- 1607 02e6 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_GetDividerRegister\000"
- 1607      5341525F 
- 1607      5365715F 
- 1607      315F496E 
- 1607      74436C6F 
- 1608              	.LASF14:
- 1609 0310 72656738 		.ascii	"reg8\000"
- 1609      00
- 1610              	.LASF5:
- 1611 0315 6C6F6E67 		.ascii	"long unsigned int\000"
- 1611      20756E73 
- 1611      69676E65 
- 1611      6420696E 
- 1611      7400
- 1612              	.LASF31:
- 1613 0327 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_GetModeRegister\000"
- 1613      5341525F 
- 1613      5365715F 
- 1613      315F496E 
- 1613      74436C6F 
- 1614              	.LASF16:
- 1615 034e 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_Start\000"
- 1615      5341525F 
- 1615      5365715F 
- 1615      315F496E 
- 1615      74436C6F 
- 1616              	.LASF12:
- 1617 036b 646F7562 		.ascii	"double\000"
- 1617      6C6500
- 1618              	.LASF25:
- 1619 0372 656E6162 		.ascii	"enabled\000"
- 1619      6C656400 
- 1620              	.LASF36:
- 1621 037a 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_GetSourceRegister\000"
- 1621      5341525F 
- 1621      5365715F 
- 1621      315F496E 
- 1621      74436C6F 
- 1622              	.LASF32:
- 1623 03a3 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_SetSourceRegister\000"
- 1623      5341525F 
- 1623      5365715F 
- 1623      315F496E 
- 1623      74436C6F 
+ 1605      00
+ 1606              	.LASF5:
+ 1607 02ab 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1607      20756E73 
+ 1607      69676E65 
+ 1607      6420696E 
+ 1607      7400
+ 1608              	.LASF31:
+ 1609 02bd 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_GetModeRegister\000"
+ 1609      5341525F 
+ 1609      5365715F 
+ 1609      315F496E 
+ 1609      74436C6F 
+ 1610              	.LASF16:
+ 1611 02e4 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_Start\000"
+ 1611      5341525F 
+ 1611      5365715F 
+ 1611      315F496E 
+ 1611      74436C6F 
+ 1612              	.LASF12:
+ 1613 0301 646F7562 		.ascii	"double\000"
+ 1613      6C6500
+ 1614              	.LASF25:
+ 1615 0308 656E6162 		.ascii	"enabled\000"
+ 1615      6C656400 
+ 1616              	.LASF36:
+ 1617 0310 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_GetSourceRegister\000"
+ 1617      5341525F 
+ 1617      5365715F 
+ 1617      315F496E 
+ 1617      74436C6F 
+ 1618              	.LASF32:
+ 1619 0339 4144435F 		.ascii	"ADC_SAR_Seq_1_IntClock_SetSourceRegister\000"
+ 1619      5341525F 
+ 1619      5365715F 
+ 1619      315F496E 
+ 1619      74436C6F 
+ 1620              	.LASF39:
+ 1621 0362 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\Virginia_Tech\\FSAE\\V"
+ 1621      73657273 
+ 1621      5C636861 
+ 1621      726C5C44 
+ 1621      6F63756D 
+ 1622 038f 544D4441 		.ascii	"TMDAQ_EXPERIMENTAL\\VTM16 PSOC Current Sensor\\VTM1"
+ 1622      515F4558 
+ 1622      50455249 
+ 1622      4D454E54 
+ 1622      414C5C56 
+ 1623 03c0 36204375 		.ascii	"6 Current Sensors.cydsn\000"
+ 1623      7272656E 
+ 1623      74205365 
+ 1623      6E736F72 
+ 1623      732E6379 
  1624              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

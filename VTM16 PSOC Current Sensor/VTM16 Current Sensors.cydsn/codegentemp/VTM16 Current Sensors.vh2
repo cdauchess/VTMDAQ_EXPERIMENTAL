@@ -2,7 +2,7 @@
 --	Conversion of VTM16 Current Sensors.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Feb 22 08:36:56 2016
+--	Wed Mar 23 13:38:21 2016
 --
 
 USE cypress.cypress.all;
@@ -219,40 +219,26 @@ SIGNAL \UART_1:BUART:rx_poll_bit2\ : bit;
 SIGNAL \UART_1:BUART:pollingrange\ : bit;
 SIGNAL \UART_1:BUART:pollcount_1\ : bit;
 SIGNAL Net_25 : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:add_vv_vv_MODGEN_2_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:add_vv_vv_MODGEN_3_1\ : bit;
 SIGNAL \UART_1:BUART:pollcount_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:add_vv_vv_MODGEN_2_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:cmp_vv_vv_MODGEN_3\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:add_vv_vv_MODGEN_3_0\ : bit;
 SIGNAL \UART_1:BUART:sRX:s23Poll:cmp_vv_vv_MODGEN_4\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_2:g2:a0:a_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODIN3_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_2:g2:a0:a_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODIN3_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_2:g2:a0:b_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_2:g2:a0:b_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_2:g2:a0:s_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_2:g2:a0:s_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:newa_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODIN4_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:newa_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODIN4_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:newb_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:dataa_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:dataa_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:datab_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:datab_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:gta_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:lta_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:gta_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_4:g2:a0:newa_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:cmp_vv_vv_MODGEN_5\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:a_1\ : bit;
 SIGNAL \UART_1:BUART:sRX:s23Poll:MODIN5_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_4:g2:a0:newa_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:a_0\ : bit;
 SIGNAL \UART_1:BUART:sRX:s23Poll:MODIN5_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:b_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:b_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:s_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:s_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_4:g2:a0:newa_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODIN6_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_4:g2:a0:newa_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODIN6_0\ : bit;
 SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_4:g2:a0:newb_1\ : bit;
 SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_4:g2:a0:newb_0\ : bit;
 SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_4:g2:a0:dataa_1\ : bit;
@@ -263,6 +249,20 @@ SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_4:g2:a0:lta_1\ : bit;
 SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_4:g2:a0:gta_1\ : bit;
 SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_4:g2:a0:lta_0\ : bit;
 SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_4:g2:a0:gta_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:newa_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODIN7_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:newa_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODIN7_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:newb_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:newb_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:dataa_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:dataa_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:datab_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:datab_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:lta_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:gta_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:lta_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:s23Poll:MODULE_5:g2:a0:gta_0\ : bit;
 SIGNAL \UART_1:BUART:rx_status_0\ : bit;
 SIGNAL \UART_1:BUART:rx_markspace_status\ : bit;
 SIGNAL \UART_1:BUART:rx_status_1\ : bit;
@@ -278,92 +278,92 @@ SIGNAL Net_33 : bit;
 SIGNAL \UART_1:BUART:rx_markspace_pre\ : bit;
 SIGNAL \UART_1:BUART:rx_parity_error_pre\ : bit;
 SIGNAL \UART_1:BUART:rx_break_status\ : bit;
-SIGNAL \UART_1:BUART:sRX:cmp_vv_vv_MODGEN_5\ : bit;
+SIGNAL \UART_1:BUART:sRX:cmp_vv_vv_MODGEN_6\ : bit;
 SIGNAL \UART_1:BUART:rx_address_detected\ : bit;
 SIGNAL \UART_1:BUART:rx_last\ : bit;
 SIGNAL \UART_1:BUART:rx_parity_bit\ : bit;
-SIGNAL \UART_1:BUART:sRX:cmp_vv_vv_MODGEN_6\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newa_6\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newa_5\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newa_4\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newa_3\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODIN6_6\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newa_2\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODIN6_5\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newa_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODIN6_4\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newa_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODIN6_3\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newb_6\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newb_5\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newb_4\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newb_3\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newb_2\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newb_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:newb_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:dataa_6\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:dataa_5\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:dataa_4\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:dataa_3\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:dataa_2\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:dataa_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:dataa_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:datab_6\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:datab_5\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:datab_4\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:datab_3\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:datab_2\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:datab_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:datab_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:lta_6\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:gta_6\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:lta_5\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:gta_5\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:lta_4\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:gta_4\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:lta_3\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:gta_3\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:lta_2\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:gta_2\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:lta_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:gta_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:lta_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_5:g2:a0:gta_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:newa_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:newb_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:dataa_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:datab_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:a_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:b_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:xnor_array_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:aeqb_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:eq_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:eqi_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:aeqb_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:albi_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:agbi_1\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:lt_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:gt_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:lti_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:gti_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:albi_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:gx:u0:agbi_0\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:xeq\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:xneq\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:xlt\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:xlte\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:xgt\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:g1:a0:xgte\ : bit;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:lt\ : bit;
-ATTRIBUTE port_state_att of \UART_1:BUART:sRX:MODULE_6:lt\:SIGNAL IS 2;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:eq\ : bit;
-ATTRIBUTE port_state_att of \UART_1:BUART:sRX:MODULE_6:eq\:SIGNAL IS 2;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:gt\ : bit;
-ATTRIBUTE port_state_att of \UART_1:BUART:sRX:MODULE_6:gt\:SIGNAL IS 2;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:gte\ : bit;
-ATTRIBUTE port_state_att of \UART_1:BUART:sRX:MODULE_6:gte\:SIGNAL IS 2;
-SIGNAL \UART_1:BUART:sRX:MODULE_6:lte\ : bit;
-ATTRIBUTE port_state_att of \UART_1:BUART:sRX:MODULE_6:lte\:SIGNAL IS 2;
+SIGNAL \UART_1:BUART:sRX:cmp_vv_vv_MODGEN_7\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newa_6\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newa_5\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newa_4\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newa_3\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODIN8_6\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newa_2\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODIN8_5\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newa_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODIN8_4\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newa_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODIN8_3\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newb_6\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newb_5\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newb_4\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newb_3\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newb_2\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newb_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:newb_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:dataa_6\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:dataa_5\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:dataa_4\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:dataa_3\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:dataa_2\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:dataa_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:dataa_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:datab_6\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:datab_5\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:datab_4\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:datab_3\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:datab_2\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:datab_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:datab_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:lta_6\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:gta_6\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:lta_5\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:gta_5\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:lta_4\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:gta_4\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:lta_3\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:gta_3\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:lta_2\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:gta_2\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:lta_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:gta_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:lta_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_6:g2:a0:gta_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:newa_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:newb_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:dataa_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:datab_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:a_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:b_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:xnor_array_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:aeqb_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:eq_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:eqi_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:aeqb_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:albi_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:agbi_1\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:lt_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:gt_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:lti_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:gti_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:albi_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:gx:u0:agbi_0\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:xeq\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:xneq\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:xlt\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:xlte\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:xgt\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:g1:a0:xgte\ : bit;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:lt\ : bit;
+ATTRIBUTE port_state_att of \UART_1:BUART:sRX:MODULE_7:lt\:SIGNAL IS 2;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:eq\ : bit;
+ATTRIBUTE port_state_att of \UART_1:BUART:sRX:MODULE_7:eq\:SIGNAL IS 2;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:gt\ : bit;
+ATTRIBUTE port_state_att of \UART_1:BUART:sRX:MODULE_7:gt\:SIGNAL IS 2;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:gte\ : bit;
+ATTRIBUTE port_state_att of \UART_1:BUART:sRX:MODULE_7:gte\:SIGNAL IS 2;
+SIGNAL \UART_1:BUART:sRX:MODULE_7:lte\ : bit;
+ATTRIBUTE port_state_att of \UART_1:BUART:sRX:MODULE_7:lte\:SIGNAL IS 2;
 SIGNAL tmpOE__Rx_1_net_0 : bit;
 SIGNAL tmpIO_0__Rx_1_net_0 : bit;
 TERMINAL tmpSIOVREF__Rx_1_net_0 : bit;
@@ -743,6 +743,354 @@ SIGNAL tmpFB_0__LED_net_0 : bit;
 SIGNAL tmpIO_0__LED_net_0 : bit;
 TERMINAL tmpSIOVREF__LED_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__LED_net_0 : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_enable\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ : bit;
+ATTRIBUTE soft of \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\:SIGNAL IS '1';
+SIGNAL \ADC_SAR_Seq_2:cmp_vv_vv_MODGEN_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:clock\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:ch_addr_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:ch_addr_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:ch_addr_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:ch_addr_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:ch_addr_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:ch_addr_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_6\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_7\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_8\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_9\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_10\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_11\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_12\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_13\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_14\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_15\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_16\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_17\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_18\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_19\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_20\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_21\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_22\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_23\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_24\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_25\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_26\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_27\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_28\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_29\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_30\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_31\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_32\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_33\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_34\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_35\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_36\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_37\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_38\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_39\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_40\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_41\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_42\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_43\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_44\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_45\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_46\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_47\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_48\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_49\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_50\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_51\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_52\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_53\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_54\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_55\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_56\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_57\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_58\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_59\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_60\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_61\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_62\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_63\ : bit;
+TERMINAL Net_1126 : bit;
+TERMINAL Net_1125 : bit;
+TERMINAL Net_1124 : bit;
+TERMINAL Net_1123 : bit;
+TERMINAL Net_1122 : bit;
+TERMINAL Net_1121 : bit;
+TERMINAL Net_1120 : bit;
+TERMINAL Net_1119 : bit;
+TERMINAL Net_1118 : bit;
+TERMINAL Net_1117 : bit;
+TERMINAL Net_1116 : bit;
+TERMINAL Net_1115 : bit;
+TERMINAL Net_1114 : bit;
+TERMINAL Net_1113 : bit;
+TERMINAL Net_1112 : bit;
+TERMINAL Net_1111 : bit;
+TERMINAL Net_1110 : bit;
+TERMINAL Net_1108 : bit;
+TERMINAL Net_1106 : bit;
+TERMINAL Net_1105 : bit;
+TERMINAL Net_1103 : bit;
+TERMINAL Net_1101 : bit;
+TERMINAL Net_1100 : bit;
+TERMINAL Net_1098 : bit;
+TERMINAL Net_1096 : bit;
+TERMINAL Net_1095 : bit;
+TERMINAL Net_1093 : bit;
+TERMINAL Net_1091 : bit;
+TERMINAL Net_1090 : bit;
+TERMINAL Net_1088 : bit;
+TERMINAL Net_1086 : bit;
+TERMINAL Net_1085 : bit;
+TERMINAL Net_1083 : bit;
+TERMINAL Net_1081 : bit;
+TERMINAL Net_1080 : bit;
+TERMINAL Net_1078 : bit;
+TERMINAL Net_1076 : bit;
+TERMINAL Net_1075 : bit;
+TERMINAL Net_1073 : bit;
+TERMINAL Net_1071 : bit;
+TERMINAL Net_1070 : bit;
+TERMINAL Net_1068 : bit;
+TERMINAL Net_1066 : bit;
+TERMINAL Net_1065 : bit;
+TERMINAL Net_1063 : bit;
+TERMINAL Net_1061 : bit;
+TERMINAL Net_1060 : bit;
+TERMINAL Net_1058 : bit;
+TERMINAL Net_1056 : bit;
+TERMINAL Net_1055 : bit;
+TERMINAL Net_1053 : bit;
+TERMINAL Net_1051 : bit;
+TERMINAL Net_1050 : bit;
+TERMINAL Net_1048 : bit;
+TERMINAL Net_1046 : bit;
+TERMINAL Net_1045 : bit;
+TERMINAL Net_1043 : bit;
+TERMINAL Net_1041 : bit;
+TERMINAL Net_1040 : bit;
+TERMINAL Net_1038 : bit;
+TERMINAL Net_1036 : bit;
+TERMINAL Net_1035 : bit;
+TERMINAL Net_1033 : bit;
+TERMINAL Net_1032 : bit;
+TERMINAL \ADC_SAR_Seq_2:V_single\ : bit;
+TERMINAL \ADC_SAR_Seq_2:SAR:Net_248\ : bit;
+TERMINAL \ADC_SAR_Seq_2:SAR:Net_235\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:vp_ctl_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:vp_ctl_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:vn_ctl_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:vn_ctl_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:vp_ctl_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:vp_ctl_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:vn_ctl_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:vn_ctl_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_188\ : bit;
+TERMINAL \ADC_SAR_Seq_2:Net_2803\ : bit;
+TERMINAL \ADC_SAR_Seq_2:SAR:Net_126\ : bit;
+TERMINAL \ADC_SAR_Seq_2:SAR:Net_215\ : bit;
+TERMINAL \ADC_SAR_Seq_2:SAR:Net_257\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:soc\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_252\ : bit;
+SIGNAL Net_1030 : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_11\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_10\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_9\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_8\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_7\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_6\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_207_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:Net_3830\ : bit;
+TERMINAL \ADC_SAR_Seq_2:SAR:Net_209\ : bit;
+TERMINAL \ADC_SAR_Seq_2:SAR:Net_149\ : bit;
+TERMINAL \ADC_SAR_Seq_2:SAR:Net_255\ : bit;
+TERMINAL \ADC_SAR_Seq_2:SAR:Net_368\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_221\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_376\ : bit;
+SIGNAL \ADC_SAR_Seq_2:SAR:Net_381\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:enable\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:control_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:load_period\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:control_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:sw_soc\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:control_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:clk_fin\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:clk_ctrl\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:count_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:count_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:count_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:count_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:count_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:count_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:status_7\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:status_6\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:status_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:status_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:status_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:status_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:status_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:status_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:nrq_edge_detect_reg\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:cnt_enable\ : bit;
+SIGNAL \ADC_SAR_Seq_2:Net_3710\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:bus_clk_nrq_reg\ : bit;
+SIGNAL \ADC_SAR_Seq_2:Net_3935\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:nrq_reg\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:nrq_edge_detect\ : bit;
+SIGNAL Net_1031 : bit;
+SIGNAL \ADC_SAR_Seq_2:soc_out\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:control_7\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:control_6\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:control_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:control_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:control_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:count_6\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:cnt_tc\ : bit;
+SIGNAL \ADC_SAR_Seq_2:Net_3874\ : bit;
+SIGNAL \ADC_SAR_Seq_2:Net_3698\ : bit;
+SIGNAL \ADC_SAR_Seq_2:nrq\ : bit;
+SIGNAL \ADC_SAR_Seq_2:Net_3905\ : bit;
+SIGNAL \ADC_SAR_Seq_2:Net_3867\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newa_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN3_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newa_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN3_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newa_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN3_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newa_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN3_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newa_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN3_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newa_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN3_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newb_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN4_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newb_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN4_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newb_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN4_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newb_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN4_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newb_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN4_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:newb_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODIN4_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:dataa_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:dataa_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:dataa_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:dataa_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:dataa_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:dataa_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:datab_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:datab_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:datab_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:datab_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:datab_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:datab_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:a_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:a_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:a_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:a_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:a_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:a_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:b_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:b_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:b_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:b_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:b_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:b_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:xnor_array_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:xnor_array_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:xnor_array_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:xnor_array_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:xnor_array_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:xnor_array_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:aeqb_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:eq_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:eq_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:eq_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:eq_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:eq_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:eq_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:eqi_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:aeqb_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:albi_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:agbi_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lt_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gt_3\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lt_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gt_4\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lt_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gt_5\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lti_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gti_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:albi_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:agbi_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lt_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gt_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lt_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gt_1\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lt_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gt_2\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lti_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gti_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:albi_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:agbi_0\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:xeq\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:xneq\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:xlt\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:xlte\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:xgt\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:g1:a0:xgte\ : bit;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:lt\ : bit;
+ATTRIBUTE port_state_att of \ADC_SAR_Seq_2:MODULE_2:lt\:SIGNAL IS 2;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:gt\ : bit;
+ATTRIBUTE port_state_att of \ADC_SAR_Seq_2:MODULE_2:gt\:SIGNAL IS 2;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:gte\ : bit;
+ATTRIBUTE port_state_att of \ADC_SAR_Seq_2:MODULE_2:gte\:SIGNAL IS 2;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:lte\ : bit;
+ATTRIBUTE port_state_att of \ADC_SAR_Seq_2:MODULE_2:lte\:SIGNAL IS 2;
+SIGNAL \ADC_SAR_Seq_2:MODULE_2:neq\ : bit;
+ATTRIBUTE port_state_att of \ADC_SAR_Seq_2:MODULE_2:neq\:SIGNAL IS 2;
+SIGNAL tmpOE__Back_Left_net_0 : bit;
+SIGNAL tmpFB_0__Back_Left_net_0 : bit;
+SIGNAL tmpIO_0__Back_Left_net_0 : bit;
+TERMINAL tmpSIOVREF__Back_Left_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Back_Left_net_0 : bit;
+SIGNAL tmpOE__Back_Right_net_0 : bit;
+SIGNAL tmpFB_0__Back_Right_net_0 : bit;
+SIGNAL tmpIO_0__Back_Right_net_0 : bit;
+TERMINAL tmpSIOVREF__Back_Right_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Back_Right_net_0 : bit;
+SIGNAL tmpOE__Front_Left_net_0 : bit;
+SIGNAL tmpFB_0__Front_Left_net_0 : bit;
+SIGNAL tmpIO_0__Front_Left_net_0 : bit;
+TERMINAL tmpSIOVREF__Front_Left_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Front_Left_net_0 : bit;
+SIGNAL tmpOE__Front_Right_net_0 : bit;
+SIGNAL tmpFB_0__Front_Right_net_0 : bit;
+SIGNAL tmpIO_0__Front_Right_net_0 : bit;
+TERMINAL tmpSIOVREF__Front_Right_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Front_Right_net_0 : bit;
 SIGNAL \UART_1:BUART:reset_reg\\D\ : bit;
 SIGNAL \UART_1:BUART:txn\\D\ : bit;
 SIGNAL \UART_1:BUART:tx_state_1\\D\ : bit;
@@ -845,6 +1193,79 @@ SIGNAL \ADC_SAR_Seq_1:AMuxHw_2_Decoder_one_hot_63\\D\ : bit;
 SIGNAL \ADC_SAR_Seq_1:bSAR_SEQ:nrq_edge_detect_reg\\D\ : bit;
 SIGNAL \ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\\D\ : bit;
 SIGNAL \ADC_SAR_Seq_1:bSAR_SEQ:nrq_reg\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_0\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_1\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_2\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_3\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_4\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_5\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_6\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_7\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_8\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_9\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_10\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_11\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_12\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_13\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_14\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_15\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_16\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_17\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_18\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_19\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_20\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_21\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_22\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_23\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_24\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_25\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_26\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_27\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_28\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_29\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_30\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_31\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_32\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_33\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_34\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_35\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_36\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_37\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_38\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_39\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_40\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_41\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_42\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_43\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_44\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_45\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_46\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_47\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_48\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_49\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_50\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_51\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_52\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_53\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_54\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_55\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_56\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_57\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_58\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_59\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_60\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_61\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_62\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_63\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:nrq_edge_detect_reg\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:bus_clk_nrq_reg\\D\ : bit;
+SIGNAL \ADC_SAR_Seq_2:bSAR_SEQ:nrq_reg\\D\ : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -1191,6 +1612,239 @@ Net_34D <= ((not \UART_1:BUART:reset_reg\ and \UART_1:BUART:tx_state_2\)
 	OR (not \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_1:ch_addr_2\ and \ADC_SAR_Seq_1:ch_addr_1\)
 	OR (not \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_1:ch_addr_1\)
 	OR (not \ADC_SAR_Seq_1:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_1:ch_addr_2\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_0\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_1\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_2\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_3\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_4\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_5\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_6\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_7\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_8\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_9\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_10\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_11\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_12\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_13\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_14\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_15\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_16\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_17\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_18\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_19\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_20\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_21\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_22\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_23\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_24\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_25\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_26\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_27\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_28\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_29\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_30\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_31\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_32\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_33\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_34\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_35\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_36\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_37\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_38\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_39\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_40\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_41\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_42\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_43\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_44\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_45\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_46\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_47\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_48\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_49\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_50\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_51\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_52\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_53\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_54\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_55\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_56\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_57\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_58\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_59\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_60\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_61\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_62\\D\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\));
+
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_63\\D\ <= ((\ADC_SAR_Seq_2:AMuxHw_2_Decoder_is_active\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\));
+
+\ADC_SAR_Seq_2:bSAR_SEQ:cnt_enable\ <= (\ADC_SAR_Seq_2:bSAR_SEQ:load_period\
+	OR Net_1030);
+
+\ADC_SAR_Seq_2:bSAR_SEQ:bus_clk_nrq_reg\\D\ <= ((not Net_1031 and \ADC_SAR_Seq_2:bSAR_SEQ:bus_clk_nrq_reg\)
+	OR \ADC_SAR_Seq_2:Net_3935\);
+
+\ADC_SAR_Seq_2:bSAR_SEQ:nrq_edge_detect\ <= ((not \ADC_SAR_Seq_2:bSAR_SEQ:nrq_reg\ and \ADC_SAR_Seq_2:bSAR_SEQ:bus_clk_nrq_reg\));
+
+\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lt_5\ <= ((not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_4\ and not \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_3\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_5\ and not \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\));
+
+\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gt_5\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:ch_addr_3\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_4\ and \ADC_SAR_Seq_2:ch_addr_3\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:ch_addr_3\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\ and \ADC_SAR_Seq_2:ch_addr_3\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_5\ and \ADC_SAR_Seq_2:ch_addr_4\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\ and \ADC_SAR_Seq_2:ch_addr_4\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\ and \ADC_SAR_Seq_2:ch_addr_5\));
+
+\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lt_2\ <= ((not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_1\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_0\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_2\ and not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\)
+	OR (not \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\));
+
+\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gt_2\ <= ((not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_1\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\ and \ADC_SAR_Seq_2:ch_addr_0\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_2\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\ and \ADC_SAR_Seq_2:ch_addr_1\)
+	OR (not \ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\ and \ADC_SAR_Seq_2:ch_addr_2\));
 
 Overall_Production:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"77715107-f8d5-47e5-a629-0fb83101ac6b",
@@ -2407,6 +3061,474 @@ LED:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__Overall_Production_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__LED_net_0);
+\ADC_SAR_Seq_2:AMuxHw_2\:cy_psoc3_amux_v1_0
+	GENERIC MAP(cy_registers=>"",
+		muxin_width=>64,
+		hw_control=>'1',
+		one_active=>'1',
+		init_mux_sel=>"0000000000000000000000000000000000000000000000000000000000000000",
+		api_type=>2,
+		connect_mode=>1)
+	PORT MAP(muxin=>(Net_1126, Net_1125, Net_1124, Net_1123,
+			Net_1122, Net_1121, Net_1120, Net_1119,
+			Net_1118, Net_1117, Net_1116, Net_1115,
+			Net_1114, Net_1113, Net_1112, Net_1111,
+			Net_1110, Net_1108, Net_1106, Net_1105,
+			Net_1103, Net_1101, Net_1100, Net_1098,
+			Net_1096, Net_1095, Net_1093, Net_1091,
+			Net_1090, Net_1088, Net_1086, Net_1085,
+			Net_1083, Net_1081, Net_1080, Net_1078,
+			Net_1076, Net_1075, Net_1073, Net_1071,
+			Net_1070, Net_1068, Net_1066, Net_1065,
+			Net_1063, Net_1061, Net_1060, Net_1058,
+			Net_1056, Net_1055, Net_1053, Net_1051,
+			Net_1050, Net_1048, Net_1046, Net_1045,
+			Net_1043, Net_1041, Net_1040, Net_1038,
+			Net_1036, Net_1035, Net_1033, Net_1032),
+		hw_ctrl_en=>(\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_63\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_62\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_61\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_60\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_59\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_58\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_57\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_56\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_55\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_54\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_53\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_52\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_51\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_50\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_49\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_48\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_47\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_46\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_45\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_44\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_43\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_42\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_41\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_40\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_39\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_38\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_37\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_36\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_35\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_34\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_33\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_32\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_31\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_30\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_29\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_28\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_27\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_26\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_25\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_24\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_23\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_22\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_21\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_20\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_19\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_18\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_17\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_16\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_15\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_14\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_13\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_12\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_11\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_10\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_9\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_8\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_7\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_6\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_5\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_4\,
+			\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_3\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_2\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_1\, \ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_0\),
+		vout=>\ADC_SAR_Seq_2:V_single\);
+\ADC_SAR_Seq_2:SAR:cy_analog_virtualmux_3_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\ADC_SAR_Seq_2:SAR:Net_248\,
+		signal2=>\ADC_SAR_Seq_2:SAR:Net_235\);
+\ADC_SAR_Seq_2:SAR:ADC_SAR\:cy_psoc5_sar_v2_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(vplus=>\ADC_SAR_Seq_2:Net_2803\,
+		vminus=>\ADC_SAR_Seq_2:SAR:Net_126\,
+		ext_pin=>\ADC_SAR_Seq_2:SAR:Net_215\,
+		vrefhi_out=>\ADC_SAR_Seq_2:SAR:Net_257\,
+		vref=>\ADC_SAR_Seq_2:SAR:Net_248\,
+		clock=>\ADC_SAR_Seq_2:clock\,
+		pump_clock=>\ADC_SAR_Seq_2:clock\,
+		sof_udb=>zero,
+		clk_udb=>zero,
+		vp_ctl_udb=>(zero, zero, zero, zero),
+		vn_ctl_udb=>(zero, zero, zero, zero),
+		irq=>\ADC_SAR_Seq_2:SAR:Net_252\,
+		next_out=>Net_1030,
+		data_out=>(\ADC_SAR_Seq_2:SAR:Net_207_11\, \ADC_SAR_Seq_2:SAR:Net_207_10\, \ADC_SAR_Seq_2:SAR:Net_207_9\, \ADC_SAR_Seq_2:SAR:Net_207_8\,
+			\ADC_SAR_Seq_2:SAR:Net_207_7\, \ADC_SAR_Seq_2:SAR:Net_207_6\, \ADC_SAR_Seq_2:SAR:Net_207_5\, \ADC_SAR_Seq_2:SAR:Net_207_4\,
+			\ADC_SAR_Seq_2:SAR:Net_207_3\, \ADC_SAR_Seq_2:SAR:Net_207_2\, \ADC_SAR_Seq_2:SAR:Net_207_1\, \ADC_SAR_Seq_2:SAR:Net_207_0\),
+		eof_udb=>\ADC_SAR_Seq_2:Net_3830\);
+\ADC_SAR_Seq_2:SAR:cy_analog_virtualmux_2_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\ADC_SAR_Seq_2:SAR:Net_215\,
+		signal2=>\ADC_SAR_Seq_2:SAR:Net_209\);
+\ADC_SAR_Seq_2:SAR:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\ADC_SAR_Seq_2:SAR:Net_126\,
+		signal2=>\ADC_SAR_Seq_2:SAR:Net_149\);
+\ADC_SAR_Seq_2:SAR:noconnect\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\ADC_SAR_Seq_2:SAR:Net_209\);
+\ADC_SAR_Seq_2:SAR:cy_analog_virtualmux_4_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\ADC_SAR_Seq_2:SAR:Net_257\,
+		signal2=>\ADC_SAR_Seq_2:SAR:Net_149\);
+\ADC_SAR_Seq_2:SAR:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\ADC_SAR_Seq_2:SAR:Net_255\);
+\ADC_SAR_Seq_2:SAR:vRef_Vdda_1\:cy_vref_v1_0
+	GENERIC MAP(guid=>"4720866E-BC14-478d-B8A0-3E44F38CADAC",
+		name=>"Vdda/2",
+		autoenable=>'1',
+		ignoresleep=>'0')
+	PORT MAP(vout=>\ADC_SAR_Seq_2:SAR:Net_235\);
+\ADC_SAR_Seq_2:SAR:noconnect_1\:cy_analog_noconnect_v1_0
+	PORT MAP(noconnect=>\ADC_SAR_Seq_2:SAR:Net_368\);
+\ADC_SAR_Seq_2:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
+	GENERIC MAP(sig_width=>1,
+		is_net_join=>'0')
+	PORT MAP(signal1=>\ADC_SAR_Seq_2:Net_2803\,
+		signal2=>\ADC_SAR_Seq_2:V_single\);
+\ADC_SAR_Seq_2:bSAR_SEQ:ClkEn\:cy_psoc3_udb_clock_enable_v1_0
+	GENERIC MAP(sync_mode=>'1')
+	PORT MAP(clock_in=>\ADC_SAR_Seq_2:clock\,
+		enable=>\ADC_SAR_Seq_2:bSAR_SEQ:enable\,
+		clock_out=>\ADC_SAR_Seq_2:bSAR_SEQ:clk_fin\);
+\ADC_SAR_Seq_2:bSAR_SEQ:ClkCtrl\:cy_psoc3_udb_clock_enable_v1_0
+	GENERIC MAP(sync_mode=>'1')
+	PORT MAP(clock_in=>\ADC_SAR_Seq_2:clock\,
+		enable=>tmpOE__Overall_Production_net_0,
+		clock_out=>\ADC_SAR_Seq_2:bSAR_SEQ:clk_ctrl\);
+\ADC_SAR_Seq_2:bSAR_SEQ:CtrlReg\:cy_psoc3_control
+	GENERIC MAP(cy_init_value=>"00000000",
+		cy_force_order=>'1',
+		cy_ctrl_mode_1=>"00000110",
+		cy_ctrl_mode_0=>"00000111",
+		cy_ext_reset=>'0')
+	PORT MAP(reset=>zero,
+		clock=>\ADC_SAR_Seq_2:bSAR_SEQ:clk_ctrl\,
+		control=>(\ADC_SAR_Seq_2:bSAR_SEQ:control_7\, \ADC_SAR_Seq_2:bSAR_SEQ:control_6\, \ADC_SAR_Seq_2:bSAR_SEQ:control_5\, \ADC_SAR_Seq_2:bSAR_SEQ:control_4\,
+			\ADC_SAR_Seq_2:bSAR_SEQ:control_3\, \ADC_SAR_Seq_2:bSAR_SEQ:control_2\, \ADC_SAR_Seq_2:bSAR_SEQ:load_period\, \ADC_SAR_Seq_2:bSAR_SEQ:enable\));
+\ADC_SAR_Seq_2:bSAR_SEQ:ChannelCounter\:cy_psoc3_count7
+	GENERIC MAP(cy_period=>"0000011",
+		cy_init_value=>"0000000",
+		cy_route_ld=>'1',
+		cy_route_en=>'1',
+		cy_alt_mode=>'0')
+	PORT MAP(clock=>\ADC_SAR_Seq_2:bSAR_SEQ:clk_fin\,
+		reset=>zero,
+		load=>\ADC_SAR_Seq_2:bSAR_SEQ:load_period\,
+		enable=>\ADC_SAR_Seq_2:bSAR_SEQ:cnt_enable\,
+		count=>(\ADC_SAR_Seq_2:bSAR_SEQ:count_6\, \ADC_SAR_Seq_2:ch_addr_5\, \ADC_SAR_Seq_2:ch_addr_4\, \ADC_SAR_Seq_2:ch_addr_3\,
+			\ADC_SAR_Seq_2:ch_addr_2\, \ADC_SAR_Seq_2:ch_addr_1\, \ADC_SAR_Seq_2:ch_addr_0\),
+		tc=>\ADC_SAR_Seq_2:bSAR_SEQ:cnt_tc\);
+\ADC_SAR_Seq_2:bSAR_SEQ:EOCSts\:cy_psoc3_status
+	GENERIC MAP(cy_force_order=>'1',
+		cy_md_select=>"00000001")
+	PORT MAP(reset=>zero,
+		clock=>\ADC_SAR_Seq_2:bSAR_SEQ:clk_fin\,
+		status=>(zero, zero, zero, zero,
+			zero, zero, zero, Net_1031));
+\ADC_SAR_Seq_2:IntClock\:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"ab94bb26-fc16-4223-a551-86d937042575/9725d809-97e7-404e-b621-dfdbe78d0ca9",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"781250000",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>\ADC_SAR_Seq_2:clock\,
+		dig_domain_out=>open);
+\ADC_SAR_Seq_2:TempBuf\:cy_dma_v1_0
+	GENERIC MAP(drq_type=>"00",
+		num_tds=>0)
+	PORT MAP(drq=>\ADC_SAR_Seq_2:Net_3830\,
+		trq=>zero,
+		nrq=>\ADC_SAR_Seq_2:Net_3698\);
+\ADC_SAR_Seq_2:FinalBuf\:cy_dma_v1_0
+	GENERIC MAP(drq_type=>"00",
+		num_tds=>0)
+	PORT MAP(drq=>\ADC_SAR_Seq_2:Net_3698\,
+		trq=>zero,
+		nrq=>\ADC_SAR_Seq_2:nrq\);
+\ADC_SAR_Seq_2:BusClock\:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"ab94bb26-fc16-4223-a551-86d937042575/3d23b625-9a71-4c05-baf4-2f904356009b",
+		source_clock_id=>"75C2148C-3656-4d8a-846D-0CAE99AB6FF7",
+		divisor=>0,
+		period=>"0",
+		is_direct=>'1',
+		is_digital=>'1')
+	PORT MAP(clock_out=>\ADC_SAR_Seq_2:Net_3710\,
+		dig_domain_out=>open);
+\ADC_SAR_Seq_2:IRQ\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>Net_1031);
+\ADC_SAR_Seq_2:Sync:genblk1[0]:INST\:cy_psoc3_sync
+	PORT MAP(clock=>\ADC_SAR_Seq_2:Net_3710\,
+		sc_in=>\ADC_SAR_Seq_2:nrq\,
+		sc_out=>\ADC_SAR_Seq_2:Net_3935\);
+\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gne(1):c4:c6:u1\:cy_buf
+	PORT MAP(x=>\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lt_5\,
+		y=>\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lti_1\);
+\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gne(1):c4:c6:u2\:cy_buf
+	PORT MAP(x=>\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gt_5\,
+		y=>\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gti_1\);
+\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gne(0):c3:u1\:cy_buf
+	PORT MAP(x=>\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lt_2\,
+		y=>\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:lti_0\);
+\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gne(0):c3:u2\:cy_buf
+	PORT MAP(x=>\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gt_2\,
+		y=>\ADC_SAR_Seq_2:MODULE_2:g1:a0:gx:u0:gti_0\);
+Back_Left:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"28311975-1677-4e17-bff6-f2176e8270ba",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__Overall_Production_net_0),
+		y=>(zero),
+		fb=>(tmpFB_0__Back_Left_net_0),
+		analog=>Net_1032,
+		io=>(tmpIO_0__Back_Left_net_0),
+		siovref=>(tmpSIOVREF__Back_Left_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__Overall_Production_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__Overall_Production_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Back_Left_net_0);
+Back_Right:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"05c3069d-3b55-42c3-9431-452b02ad5f6b",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__Overall_Production_net_0),
+		y=>(zero),
+		fb=>(tmpFB_0__Back_Right_net_0),
+		analog=>Net_1033,
+		io=>(tmpIO_0__Back_Right_net_0),
+		siovref=>(tmpSIOVREF__Back_Right_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__Overall_Production_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__Overall_Production_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Back_Right_net_0);
+Front_Left:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"d0fcdc53-7e63-4580-b645-f77d25bd5d2c",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__Overall_Production_net_0),
+		y=>(zero),
+		fb=>(tmpFB_0__Front_Left_net_0),
+		analog=>Net_1035,
+		io=>(tmpIO_0__Front_Left_net_0),
+		siovref=>(tmpSIOVREF__Front_Left_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__Overall_Production_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__Overall_Production_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Front_Left_net_0);
+Front_Right:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"0938f5b1-b6e1-43ff-82c4-33b07826befe",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__Overall_Production_net_0),
+		y=>(zero),
+		fb=>(tmpFB_0__Front_Right_net_0),
+		analog=>Net_1036,
+		io=>(tmpIO_0__Front_Right_net_0),
+		siovref=>(tmpSIOVREF__Front_Right_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__Overall_Production_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__Overall_Production_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Front_Right_net_0);
 \UART_1:BUART:reset_reg\:cy_dff
 	PORT MAP(d=>zero,
 		clk=>\UART_1:BUART:clock_op\,
@@ -2815,5 +3937,297 @@ Net_34:cy_dff
 	PORT MAP(d=>\ADC_SAR_Seq_1:bSAR_SEQ:bus_clk_nrq_reg\,
 		clk=>\ADC_SAR_Seq_1:bSAR_SEQ:clk_fin\,
 		q=>\ADC_SAR_Seq_1:bSAR_SEQ:nrq_reg\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:ch_addr_5\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_5\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:ch_addr_4\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_4\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:ch_addr_3\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_3\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:ch_addr_2\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_2\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:ch_addr_1\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_1\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:ch_addr_0\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_old_id_0\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_0\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_0\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_0\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_1\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_1\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_1\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_2\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_2\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_2\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_3\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_3\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_3\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_4\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_4\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_4\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_5\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_5\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_5\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_6\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_6\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_6\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_7\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_7\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_7\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_8\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_8\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_8\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_9\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_9\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_9\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_10\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_10\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_10\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_11\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_11\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_11\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_12\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_12\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_12\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_13\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_13\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_13\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_14\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_14\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_14\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_15\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_15\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_15\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_16\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_16\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_16\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_17\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_17\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_17\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_18\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_18\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_18\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_19\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_19\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_19\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_20\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_20\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_20\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_21\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_21\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_21\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_22\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_22\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_22\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_23\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_23\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_23\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_24\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_24\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_24\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_25\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_25\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_25\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_26\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_26\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_26\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_27\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_27\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_27\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_28\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_28\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_28\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_29\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_29\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_29\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_30\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_30\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_30\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_31\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_31\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_31\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_32\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_32\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_32\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_33\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_33\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_33\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_34\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_34\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_34\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_35\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_35\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_35\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_36\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_36\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_36\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_37\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_37\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_37\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_38\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_38\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_38\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_39\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_39\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_39\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_40\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_40\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_40\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_41\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_41\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_41\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_42\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_42\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_42\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_43\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_43\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_43\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_44\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_44\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_44\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_45\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_45\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_45\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_46\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_46\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_46\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_47\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_47\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_47\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_48\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_48\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_48\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_49\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_49\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_49\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_50\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_50\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_50\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_51\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_51\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_51\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_52\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_52\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_52\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_53\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_53\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_53\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_54\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_54\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_54\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_55\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_55\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_55\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_56\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_56\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_56\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_57\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_57\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_57\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_58\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_58\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_58\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_59\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_59\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_59\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_60\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_60\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_60\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_61\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_61\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_61\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_62\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_62\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_62\);
+\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_63\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_63\\D\,
+		clk=>\ADC_SAR_Seq_2:clock\,
+		q=>\ADC_SAR_Seq_2:AMuxHw_2_Decoder_one_hot_63\);
+\ADC_SAR_Seq_2:bSAR_SEQ:nrq_edge_detect_reg\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:bSAR_SEQ:nrq_edge_detect\,
+		clk=>\ADC_SAR_Seq_2:bSAR_SEQ:clk_fin\,
+		q=>Net_1031);
+\ADC_SAR_Seq_2:bSAR_SEQ:bus_clk_nrq_reg\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:bSAR_SEQ:bus_clk_nrq_reg\\D\,
+		clk=>\ADC_SAR_Seq_2:Net_3710\,
+		q=>\ADC_SAR_Seq_2:bSAR_SEQ:bus_clk_nrq_reg\);
+\ADC_SAR_Seq_2:bSAR_SEQ:nrq_reg\:cy_dff
+	PORT MAP(d=>\ADC_SAR_Seq_2:bSAR_SEQ:bus_clk_nrq_reg\,
+		clk=>\ADC_SAR_Seq_2:bSAR_SEQ:clk_fin\,
+		q=>\ADC_SAR_Seq_2:bSAR_SEQ:nrq_reg\);
 
 END R_T_L;

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
   16:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** #include "EZI2C_1_PVT.h"
   17:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** 
   18:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** EZI2C_1_BACKUP_STRUCT EZI2C_1_backup =
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 2
 
 
   19:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** {
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
   51              		.cfi_def_cfa_register 7
   62:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** #if (EZI2C_1_WAKEUP_ENABLED)
   63:.\Generated_Source\PSoC5/EZI2C_1_PM.c ****     uint8 interruptState;
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 3
 
 
   64:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** #endif /* (EZI2C_1_WAKEUP_ENABLED) */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
   93 004e 1370     		strb	r3, [r2]
   77:.\Generated_Source\PSoC5/EZI2C_1_PM.c ****     CyExitCriticalSection(interruptState);
   94              		.loc 1 77 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 4
 
 
   95 0050 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  132              		.loc 1 94 0
  133 0096 0837     		adds	r7, r7, #8
  134              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 5
 
 
  135 0098 BD46     		mov	sp, r7
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  120:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** *
  121:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** * Reentrant:
  122:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** *  No.
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 6
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 6
 
 
  123:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  201              	.L6:
  140:.\Generated_Source\PSoC5/EZI2C_1_PM.c ****     }
  141:.\Generated_Source\PSoC5/EZI2C_1_PM.c ****     else /* Exit from Hibernate (bit is cleared) or wakeup disabled */
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 7
 
 
  142:.\Generated_Source\PSoC5/EZI2C_1_PM.c ****     {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  240              		.loc 1 157 0
  241 007e 184B     		ldr	r3, .L9+24
  242 0080 144A     		ldr	r2, .L9+12
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 8
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 8
 
 
  243 0082 9278     		ldrb	r2, [r2, #2]	@ zero_extendqisi2
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  281              		.cfi_def_cfa_offset 8
  282 00c2 BD46     		mov	sp, r7
  283              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 9
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 9
 
 
  284              		@ sp needed
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  198:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** *
  199:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** * Parameters:
  200:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** *  None.
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 10
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 10
 
 
  201:.\Generated_Source\PSoC5/EZI2C_1_PM.c **** *
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  338              		.size	EZI2C_1_Sleep, .-EZI2C_1_Sleep
  339              		.section	.text.EZI2C_1_Wakeup,"ax",%progbits
  340              		.align	2
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 11
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 11
 
 
  341              		.global	EZI2C_1_Wakeup
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  356              		.cfi_def_cfa_register 7
  270:.\Generated_Source\PSoC5/EZI2C_1_PM.c ****     EZI2C_1_RestoreConfig();
  357              		.loc 1 270 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 12
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 12
 
 
  358 0004 FFF7FEFF 		bl	EZI2C_1_RestoreConfig
@@ -707,7 +707,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  394 0025 02       		.uleb128 0x2
  395 0026 01       		.byte	0x1
  396 0027 06       		.byte	0x6
- 397 0028 1F020000 		.4byte	.LASF0
+ 397 0028 09020000 		.4byte	.LASF0
  398 002c 02       		.uleb128 0x2
  399 002d 01       		.byte	0x1
  400 002e 08       		.byte	0x8
@@ -715,10 +715,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  402 0033 02       		.uleb128 0x2
  403 0034 02       		.byte	0x2
  404 0035 05       		.byte	0x5
- 405 0036 DE010000 		.4byte	.LASF2
+ 405 0036 C8010000 		.4byte	.LASF2
  406 003a 02       		.uleb128 0x2
  407 003b 02       		.byte	0x2
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 13
 
 
  408 003c 07       		.byte	0x7
@@ -726,7 +726,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  410 0041 02       		.uleb128 0x2
  411 0042 04       		.byte	0x4
  412 0043 05       		.byte	0x5
- 413 0044 E8010000 		.4byte	.LASF4
+ 413 0044 D2010000 		.4byte	.LASF4
  414 0048 02       		.uleb128 0x2
  415 0049 04       		.byte	0x4
  416 004a 07       		.byte	0x7
@@ -734,7 +734,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  418 004f 02       		.uleb128 0x2
  419 0050 08       		.byte	0x8
  420 0051 05       		.byte	0x5
- 421 0052 A1010000 		.4byte	.LASF6
+ 421 0052 8B010000 		.4byte	.LASF6
  422 0056 02       		.uleb128 0x2
  423 0057 08       		.byte	0x8
  424 0058 07       		.byte	0x7
@@ -773,12 +773,12 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  457 009a 02       		.uleb128 0x2
  458 009b 01       		.byte	0x1
  459 009c 08       		.byte	0x8
- 460 009d AF010000 		.4byte	.LASF14
+ 460 009d 99010000 		.4byte	.LASF14
  461 00a1 05       		.uleb128 0x5
  462 00a2 2D000000 		.4byte	.LASF15
  463 00a6 02       		.byte	0x2
  464 00a7 6C01     		.2byte	0x16c
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 14
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 14
 
 
  465 00a9 AD000000 		.4byte	0xad
@@ -794,20 +794,20 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  475 00c3 02       		.uleb128 0x2
  476 00c4 04       		.byte	0x4
  477 00c5 07       		.byte	0x7
- 478 00c6 98010000 		.4byte	.LASF17
+ 478 00c6 82010000 		.4byte	.LASF17
  479 00ca 07       		.uleb128 0x7
  480 00cb 06       		.byte	0x6
  481 00cc 03       		.byte	0x3
  482 00cd 42       		.byte	0x42
  483 00ce 1B010000 		.4byte	0x11b
  484 00d2 08       		.uleb128 0x8
- 485 00d3 F1010000 		.4byte	.LASF18
+ 485 00d3 DB010000 		.4byte	.LASF18
  486 00d7 03       		.byte	0x3
  487 00d8 44       		.byte	0x44
  488 00d9 6B000000 		.4byte	0x6b
  489 00dd 00       		.byte	0
  490 00de 08       		.uleb128 0x8
- 491 00df B4010000 		.4byte	.LASF19
+ 491 00df 9E010000 		.4byte	.LASF19
  492 00e3 03       		.byte	0x3
  493 00e4 45       		.byte	0x45
  494 00e5 6B000000 		.4byte	0x6b
@@ -838,15 +838,15 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  519 0119 05       		.byte	0x5
  520 011a 00       		.byte	0
  521 011b 04       		.uleb128 0x4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 15
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 15
 
 
- 522 011c B9010000 		.4byte	.LASF22
+ 522 011c A3010000 		.4byte	.LASF22
  523 0120 03       		.byte	0x3
  524 0121 4B       		.byte	0x4b
  525 0122 CA000000 		.4byte	0xca
  526 0126 0A       		.uleb128 0xa
- 527 0127 0C020000 		.4byte	.LASF23
+ 527 0127 F6010000 		.4byte	.LASF23
  528 012b 01       		.byte	0x1
  529 012c 3C       		.byte	0x3c
  530 012d 00000000 		.4byte	.LFB0
@@ -864,7 +864,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  542 0148 77       		.sleb128 -9
  543 0149 00       		.byte	0
  544 014a 0A       		.uleb128 0xa
- 545 014b 82010000 		.4byte	.LASF24
+ 545 014b 15020000 		.4byte	.LASF24
  546 014f 01       		.byte	0x1
  547 0150 81       		.byte	0x81
  548 0151 00000000 		.4byte	.LFB1
@@ -890,7 +890,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  568 017d 01       		.uleb128 0x1
  569 017e 9C       		.byte	0x9c
  570 017f 0D       		.uleb128 0xd
- 571 0180 FD010000 		.4byte	.LASF28
+ 571 0180 E7010000 		.4byte	.LASF28
  572 0184 01       		.byte	0x1
  573 0185 0C01     		.2byte	0x10c
  574 0187 00000000 		.4byte	.LFB3
@@ -898,10 +898,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  576 018f 01       		.uleb128 0x1
  577 0190 9C       		.byte	0x9c
  578 0191 0E       		.uleb128 0xe
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 16
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 16
 
 
- 579 0192 CF010000 		.4byte	.LASF29
+ 579 0192 B9010000 		.4byte	.LASF29
  580 0196 01       		.byte	0x1
  581 0197 12       		.byte	0x12
  582 0198 1B010000 		.4byte	0x11b
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  633 0024 0B       		.uleb128 0xb
  634 0025 03       		.uleb128 0x3
  635 0026 08       		.uleb128 0x8
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 17
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 17
 
 
  636 0027 00       		.byte	0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  690 005d 0B       		.uleb128 0xb
  691 005e 3B       		.uleb128 0x3b
  692 005f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 18
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 18
 
 
  693 0060 49       		.uleb128 0x49
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  747 0097 0B       		.uleb128 0xb
  748 0098 49       		.uleb128 0x49
  749 0099 13       		.uleb128 0x13
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 19
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 19
 
 
  750 009a 02       		.uleb128 0x2
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  804 00d2 0E       		.uleb128 0xe
  805 00d3 3A       		.uleb128 0x3a
  806 00d4 0B       		.uleb128 0xb
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 20
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 20
 
 
  807 00d5 3B       		.uleb128 0x3b
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  854      7369676E 
  854      65642069 
  854      6E7400
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 21
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 21
 
 
  855              	.LASF12:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  878      333200
  879              	.LASF26:
  880 010a 696E7453 		.ascii	"intState\000"
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 22
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 22
 
 
  880      74617465 
@@ -1292,80 +1292,82 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 1
  891              	.LASF21:
  892 017a 636C6B44 		.ascii	"clkDiv2\000"
  892      69763200 
- 893              	.LASF24:
- 894 0182 455A4932 		.ascii	"EZI2C_1_RestoreConfig\000"
- 894      435F315F 
- 894      52657374 
- 894      6F726543 
- 894      6F6E6669 
- 895              	.LASF17:
- 896 0198 73697A65 		.ascii	"sizetype\000"
- 896      74797065 
- 896      00
- 897              	.LASF6:
- 898 01a1 6C6F6E67 		.ascii	"long long int\000"
- 898      206C6F6E 
- 898      6720696E 
- 898      7400
- 899              	.LASF14:
- 900 01af 63686172 		.ascii	"char\000"
+ 893              	.LASF17:
+ 894 0182 73697A65 		.ascii	"sizetype\000"
+ 894      74797065 
+ 894      00
+ 895              	.LASF6:
+ 896 018b 6C6F6E67 		.ascii	"long long int\000"
+ 896      206C6F6E 
+ 896      6720696E 
+ 896      7400
+ 897              	.LASF14:
+ 898 0199 63686172 		.ascii	"char\000"
+ 898      00
+ 899              	.LASF19:
+ 900 019e 78636667 		.ascii	"xcfg\000"
  900      00
- 901              	.LASF19:
- 902 01b4 78636667 		.ascii	"xcfg\000"
- 902      00
- 903              	.LASF22:
- 904 01b9 455A4932 		.ascii	"EZI2C_1_BACKUP_STRUCT\000"
+ 901              	.LASF22:
+ 902 01a3 455A4932 		.ascii	"EZI2C_1_BACKUP_STRUCT\000"
+ 902      435F315F 
+ 902      4241434B 
+ 902      55505F53 
+ 902      54525543 
+ 903              	.LASF29:
+ 904 01b9 455A4932 		.ascii	"EZI2C_1_backup\000"
  904      435F315F 
- 904      4241434B 
- 904      55505F53 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccP4mpFC.s 			page 23
+ 904      6261636B 
+ 904      757000
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc7Hcqod.s 			page 23
 
 
- 904      54525543 
- 905              	.LASF29:
- 906 01cf 455A4932 		.ascii	"EZI2C_1_backup\000"
- 906      435F315F 
- 906      6261636B 
- 906      757000
- 907              	.LASF2:
- 908 01de 73686F72 		.ascii	"short int\000"
- 908      7420696E 
- 908      7400
- 909              	.LASF4:
- 910 01e8 6C6F6E67 		.ascii	"long int\000"
- 910      20696E74 
- 910      00
- 911              	.LASF18:
- 912 01f1 656E6162 		.ascii	"enableState\000"
- 912      6C655374 
- 912      61746500 
- 913              	.LASF28:
- 914 01fd 455A4932 		.ascii	"EZI2C_1_Wakeup\000"
+ 905              	.LASF2:
+ 906 01c8 73686F72 		.ascii	"short int\000"
+ 906      7420696E 
+ 906      7400
+ 907              	.LASF4:
+ 908 01d2 6C6F6E67 		.ascii	"long int\000"
+ 908      20696E74 
+ 908      00
+ 909              	.LASF18:
+ 910 01db 656E6162 		.ascii	"enableState\000"
+ 910      6C655374 
+ 910      61746500 
+ 911              	.LASF28:
+ 912 01e7 455A4932 		.ascii	"EZI2C_1_Wakeup\000"
+ 912      435F315F 
+ 912      57616B65 
+ 912      757000
+ 913              	.LASF23:
+ 914 01f6 455A4932 		.ascii	"EZI2C_1_SaveConfig\000"
  914      435F315F 
- 914      57616B65 
- 914      757000
- 915              	.LASF23:
- 916 020c 455A4932 		.ascii	"EZI2C_1_SaveConfig\000"
- 916      435F315F 
- 916      53617665 
- 916      436F6E66 
- 916      696700
- 917              	.LASF0:
- 918 021f 7369676E 		.ascii	"signed char\000"
- 918      65642063 
- 918      68617200 
+ 914      53617665 
+ 914      436F6E66 
+ 914      696700
+ 915              	.LASF0:
+ 916 0209 7369676E 		.ascii	"signed char\000"
+ 916      65642063 
+ 916      68617200 
+ 917              	.LASF24:
+ 918 0215 455A4932 		.ascii	"EZI2C_1_RestoreConfig\000"
+ 918      435F315F 
+ 918      52657374 
+ 918      6F726543 
+ 918      6F6E6669 
  919              	.LASF33:
  920 022b 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\Virginia_Tech\\FSAE\\V"
  920      73657273 
  920      5C636861 
  920      726C5C44 
  920      6F63756D 
- 921 0258 544D2D44 		.ascii	"TM-DAQ\\VTM16 PSOC Current Sensor\\VTM16 Current Se"
- 921      41515C56 
- 921      544D3136 
- 921      2050534F 
- 921      43204375 
- 922 0289 6E736F72 		.ascii	"nsors.cydsn\000"
+ 921 0258 544D4441 		.ascii	"TMDAQ_EXPERIMENTAL\\VTM16 PSOC Current Sensor\\VTM1"
+ 921      515F4558 
+ 921      50455249 
+ 921      4D454E54 
+ 921      414C5C56 
+ 922 0289 36204375 		.ascii	"6 Current Sensors.cydsn\000"
+ 922      7272656E 
+ 922      74205365 
+ 922      6E736F72 
  922      732E6379 
- 922      64736E00 
  923              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
