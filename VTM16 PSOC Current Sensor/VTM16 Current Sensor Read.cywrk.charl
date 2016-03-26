@@ -74,6 +74,8 @@
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cycodeshareimport.scat</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Right\Front_Right.c</v>
+<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Right\Front_Right.h</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Front_Right\Front_Right_aliases.h</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Fuel_Injector</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\Fuel_Pump</v>
@@ -103,7 +105,6 @@
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cyfitteriar.inc</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cyfitterrv.inc</v>
 <v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\cymetadata.c</v>
-<v>VTM16 Current Sensor Read\VTM16 Current Sensors\Generated_Source\PSoC5\project.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="VTM16 Current Sensor Read">

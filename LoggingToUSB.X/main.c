@@ -63,7 +63,7 @@ static unsigned int analogIn2;
 BOOL analogRead;
 
 
-int PSOC_volts[10];
+int PSOC_volts[12];
 //FIXME
 BOOL PSOCConnected = TRUE; //Set to TRUE when PSOC is attached for testing, without the PSOC set to FALSE
 BOOL MotecMasterTimer = TRUE;  //Set to true if motec is the master timer, otherwise the Cerebot timer does the timing
@@ -162,7 +162,7 @@ BOOL checkForButton2(){
 }
 void writeMessageToUART1(CANRxMessageBuffer *message)
 {
-
+//Accel
 
     char string[20];
     int eidE = message->msgEID.IDE;
@@ -178,15 +178,6 @@ void writeMessageToUART1(CANRxMessageBuffer *message)
     for(i = 0; i < 4; i++){
         messageWord[i] = message->messageWord[i];
     }
-    //sprintf(string, "EID: %x %x", eidE, eidD);
-    //sendString(string);
-    //CAN_MSG_EID tempEid = message->msgEID;
-    //UARTSendDataByte(UART1, data[0]);
-    //UARTSendDataByte(UART1, data[1]);
-    //int output = (data[1] << 8) | data[0];
-    //UARTSendDataByte(UART1, '\n');
-    //sprintf(string, "eid: %x\n\r",eidEid);
-    //*string = "g12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678\n";
     if(eidEid == 0x2d30){
         int i;
         for(i = 0; i < 8; i++){
@@ -206,18 +197,6 @@ void writeMessageToUART1(CANRxMessageBuffer *message)
         }
         HRaccelerationSensorRec = TRUE;
     }
-    //sendString(string);
-
-
-    //sprintf(string, "EID: %x", eidEid);
-    //sendString(string);
-
-    //for(i = 0; i < 8; i++){
-    //    char temp[50];
-        //sprintf(temp, "data%d: %x ", i, data[i]);
-        //sendString(temp);
-    //}
-    //sendString("\n\r");
 }
 
 void writeCan2Msg(CANRxMessageBuffer *message){
@@ -317,7 +296,7 @@ void initI2CPSoC(){
 //Need to implement a check here so that it doesn't get stuck if the PSOC isn't attached
 void PSOC_Read(){
     //First 12 bytes are current sensor data, next 8 bytes are shock pots
-    BYTE PSOC_Data[20];
+    BYTE PSOC_Data[24];
     int i;
     i2cStart(I2C1);
     i2cSendByte(I2C1, (0x08 << 1) + 0) ;//send addresss and write
@@ -326,13 +305,13 @@ void PSOC_Read(){
 
   //  i2cStart(I2C1);
     i2cSendByte(I2C1, (0x08 << 1) + 1) ;//send addresss and read
-    for(i = 0 ; i < 19; i++){
+    for(i = 0 ; i < 23; i++){
         PSOC_Data[i] = i2cRecieveByte(I2C1, TRUE);
     }
-    PSOC_Data[19] = i2cRecieveByte(I2C1, FALSE);
+    PSOC_Data[23] = i2cRecieveByte(I2C1, FALSE);
     i2cStop(I2C1);//Stop the bus
     //Combine the bytes
-    for(i = 0; i<10; i++){
+    for(i = 0; i<12; i++){
     PSOC_volts[i] = (PSOC_Data[2*i+1] <<8  | PSOC_Data[2*i]);
     }
  }
@@ -353,6 +332,7 @@ if (state == log){
             char motec5String[40];
             char PSOCstring0[40];
             char PSOCstring1[40];
+            char PSOCstring2[40];
 
             if(angularRateInfoRec){
                 pitch = (((double)(angularRateInfo[1] << 8 | angularRateInfo[0])) /128) - 250;
@@ -438,11 +418,13 @@ if (state == log){
             if(PSOCConnected){ //This allows for the program to be tested without the PSOC connected.  PSOC read is a global variable defined at the top of the file
             PSOC_Read();
             sprintf(PSOCstring0,"%d,%d,%d,%d,%d,%d,",PSOC_volts[0],PSOC_volts[1],PSOC_volts[2],PSOC_volts[3],PSOC_volts[4],PSOC_volts[5]); //Current Sensors
-            sprintf(PSOCstring1,"%d,%d,%d,%d\n",PSOC_volts[6],PSOC_volts[7],PSOC_volts[8],PSOC_volts[9]); //Shock Pots
+            sprintf(PSOCstring1,"%d,%d,%d,%d,",PSOC_volts[6],PSOC_volts[7],PSOC_volts[8],PSOC_volts[9]); //Shock Pots
+            sprintf(PSOCstring2"%d,%d\n",PSOC_volts[10],PSOC_volts[11]); //Steering Angle And Brake temp
             }
             else{
                 sprintf(PSOCstring0," , , , , , , ");
-                sprintf(PSOCstring1," , , ,\n");
+                sprintf(PSOCstring1," , , , ,");
+                sprintf(PSOCstring2,",\n");
             }
             FSfwrite(angString,1, strlen(angString),myFile);
             FSfwrite(accString,1, strlen(accString),myFile);
@@ -455,6 +437,7 @@ if (state == log){
             FSfwrite(motec5String,1, strlen(motec5String),myFile);
             FSfwrite(PSOCstring0,1, strlen(PSOCstring0),myFile);
             FSfwrite(PSOCstring1,1, strlen(PSOCstring1),myFile);
+            FSfwrite(PSOCstring2,1, strlen(PSOCstring2),myFile);
         }
 }
 
@@ -638,7 +621,7 @@ int main(void)
                         sprintf(nameString, "test%d.csv", logNum);
                         myFile = FSfopen(nameString,"w");
                         char string[500];
-                        sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),ect(degF),lambda,fuel pres,egt(?),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed, lg speed,rd speed,rg speed,run time(second),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV)\n");
+                        sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),ect(degF),lambda,fuel pres,egt(?),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed, lg speed,rd speed,rg speed,run time(second),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV)\n");
                         FSfwrite(string,1, strlen(string),myFile);
                         state = log;
                     }

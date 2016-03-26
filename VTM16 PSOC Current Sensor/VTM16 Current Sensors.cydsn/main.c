@@ -28,9 +28,9 @@ void main()
 {
     /* Variable to store ADC result */
     int16 Output;
-    int32 data[10];
-    uint8 lowByte[10];
-    uint8 highByte[10];
+    int32 data[12];
+    uint8 lowByte[12];
+    uint8 highByte[12];
     /* Variable to store UART received character */
     uint8 Ch;
     /* Variable used to send emulated data */
@@ -112,7 +112,7 @@ void main()
             lowByte[i] = (data[i] & 0xFF);
             highByte[i] = (0xFF & (data[i] >> 8));            
             }
-            for(i = 6; i<10; i++)  //Shock Pots Read
+            for(i = 6; i<12; i++)  //Shock Pots Read
             {
             Output = ADC_SAR_Seq_2_GetResult16(i-6);
             data[i] = ADC_SAR_Seq_2_CountsTo_mVolts(Output);
@@ -126,8 +126,8 @@ void main()
             if((EZI2C_1_GetActivity() & EZI2C_1_STATUS_BUSY)== 0) //Use this to not interfere with cerebot while writing to buffer
             {
             //set data into i2c transmit buffer
-            //Results in 12 bytes in the transmit buffer
-                for(i = 0;i<10;i++)
+            //Results in 24 bytes in the transmit buffer
+                for(i = 0;i<24;i++)
                 {
                 i2cBuffer[2*i] = lowByte[i];  //First byte
                 i2cBuffer[2*i+1] = highByte[i]; //Second Byte
