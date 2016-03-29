@@ -63,7 +63,7 @@ static unsigned int analogIn2;
 BOOL analogRead;
 
 
-int PSOC_volts[12];
+int PSOC_volts[12]; //A place to store the voltage data from the PSOC
 //FIXME
 BOOL PSOCConnected = TRUE; //Set to TRUE when PSOC is attached for testing, without the PSOC set to FALSE
 BOOL MotecMasterTimer = TRUE;  //Set to true if motec is the master timer, otherwise the Cerebot timer does the timing
@@ -419,7 +419,7 @@ if (state == log){
             PSOC_Read();
             sprintf(PSOCstring0,"%d,%d,%d,%d,%d,%d,",PSOC_volts[0],PSOC_volts[1],PSOC_volts[2],PSOC_volts[3],PSOC_volts[4],PSOC_volts[5]); //Current Sensors
             sprintf(PSOCstring1,"%d,%d,%d,%d,",PSOC_volts[6],PSOC_volts[7],PSOC_volts[8],PSOC_volts[9]); //Shock Pots
-            sprintf(PSOCstring2"%d,%d\n",PSOC_volts[10],PSOC_volts[11]); //Steering Angle And Brake temp
+            sprintf(PSOCstring2,"%d,%d\n",PSOC_volts[10],PSOC_volts[11]); //Steering Angle And Brake temp
             }
             else{
                 sprintf(PSOCstring0," , , , , , , ");

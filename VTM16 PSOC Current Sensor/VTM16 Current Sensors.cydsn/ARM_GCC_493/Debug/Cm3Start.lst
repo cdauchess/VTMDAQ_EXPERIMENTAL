@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
    8:.\Generated_Source\PSoC5/Cm3Start.c **** ********************************************************************************
    9:.\Generated_Source\PSoC5/Cm3Start.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation. All rights reserved.
   10:.\Generated_Source\PSoC5/Cm3Start.c **** * You may use this file only in accordance with the license, terms, conditions,
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 2
 
 
   11:.\Generated_Source\PSoC5/Cm3Start.c **** * disclaimers, and limitations in the end user license agreement accompanying
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
   65:.\Generated_Source\PSoC5/Cm3Start.c **** 
   66:.\Generated_Source\PSoC5/Cm3Start.c **** 
   67:.\Generated_Source\PSoC5/Cm3Start.c **** /*******************************************************************************
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 3
 
 
   68:.\Generated_Source\PSoC5/Cm3Start.c **** * Default Ram Interrupt Vector table storage area. Must be 256-byte aligned.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
   51              		.loc 1 110 0 discriminator 1
   52 0004 FEE7     		b	.L2
   53              		.cfi_endproc
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 4
 
 
   54              	.LFE0:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  155:.\Generated_Source\PSoC5/Cm3Start.c ****         */
  156:.\Generated_Source\PSoC5/Cm3Start.c ****         *(reg32 *)(CYREG_PHUB_CFGMEM23_CFG1) = *(reg32 *)(CYREG_RESET_SR0);
  157:.\Generated_Source\PSoC5/Cm3Start.c **** 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 5
 
 
  158:.\Generated_Source\PSoC5/Cm3Start.c ****     #endif  /* (CYDEV_PROJ_TYPE != CYDEV_PROJ_TYPE_LOADABLE && CYDEV_PROJ_TYPE != CYDEV_PROJ_TYPE_L
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  212:.\Generated_Source\PSoC5/Cm3Start.c ****     __cy_byte_align8 *init; /* Initial contents of this region.  */
  213:.\Generated_Source\PSoC5/Cm3Start.c ****     __cy_byte_align8 *data; /* Start address of region.  */
  214:.\Generated_Source\PSoC5/Cm3Start.c ****     size_t init_size;       /* Size of initial data.  */
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 6
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 6
 
 
  215:.\Generated_Source\PSoC5/Cm3Start.c ****     size_t zero_size;       /* Additional size to be zeroed.  */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  250:.\Generated_Source\PSoC5/Cm3Start.c **** 
  251:.\Generated_Source\PSoC5/Cm3Start.c ****     }
   83              		.loc 1 251 0 discriminator 1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 7
 
 
   84 0012 FEE7     		b	.L4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  281:.\Generated_Source\PSoC5/Cm3Start.c ****     static void *heapPointer = (void *) &end;                 /* Previous end */
  282:.\Generated_Source\PSoC5/Cm3Start.c **** 
  283:.\Generated_Source\PSoC5/Cm3Start.c ****     if (((heapPointer + nbytes) - (void *) &end) <= CYDEV_HEAP_SIZE)
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 8
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 8
 
 
  109              		.loc 1 283 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  151              	.L10:
  152              		.align	2
  153              	.L9:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 9
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 9
 
 
  154 0048 00000000 		.word	heapPointer.4942
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  178 0004 024A     		ldr	r2, .L12
  179 0006 034B     		ldr	r3, .L12+4
  180 0008 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 10
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 10
 
 
  181 000a 1360     		str	r3, [r2]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  205              		.cfi_def_cfa_offset 8
  206              		.cfi_offset 7, -8
  207              		.cfi_offset 14, -4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 11
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 11
 
 
  208 0002 86B0     		sub	sp, sp, #24
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  247 0034 BB68     		ldr	r3, [r7, #8]
  248 0036 0433     		adds	r3, r3, #4
  249 0038 BB60     		str	r3, [r7, #8]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 12
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 12
 
 
  371:.\Generated_Source\PSoC5/Cm3Start.c ****             src++;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  380:.\Generated_Source\PSoC5/Cm3Start.c ****         rptr++;
  291              		.loc 1 380 0 is_stmt 1 discriminator 2
  292 0074 3B69     		ldr	r3, [r7, #16]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 13
 
 
  293 0076 1033     		adds	r3, r3, #16
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  335              		.type	initialize_psoc, %function
  336              	initialize_psoc:
  337              	.LFB5:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 14
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 14
 
 
  391:.\Generated_Source\PSoC5/Cm3Start.c **** }
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  445:.\Generated_Source\PSoC5/Cm3Start.c **** 
  446:.\Generated_Source\PSoC5/Cm3Start.c **** /*******************************************************************************
  447:.\Generated_Source\PSoC5/Cm3Start.c **** *
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 15
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 15
 
 
  448:.\Generated_Source\PSoC5/Cm3Start.c **** * Default Rom Interrupt Vector table.
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  342 0000 80B5     		push	{r7, lr}
  343              		.cfi_def_cfa_offset 8
  344              		.cfi_offset 7, -8
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 16
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 16
 
 
  345              		.cfi_offset 14, -4
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  383 0038 7B68     		ldr	r3, [r7, #4]
  384 003a 0133     		adds	r3, r3, #1
  385 003c 7B60     		str	r3, [r7, #4]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 17
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 17
 
 
  386              	.L25:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  415 0066 80BD     		pop	{r7, pc}
  416              	.L30:
  417              		.align	2
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 18
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 18
 
 
  418              	.L29:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  472 0036 3D020000 		.4byte	.LASF2
  473 003a 02       		.uleb128 0x2
  474 003b 02       		.byte	0x2
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 19
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 19
 
 
  475 003c 07       		.byte	0x7
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  529 00a3 6B000000 		.4byte	0x6b
  530 00a7 05       		.uleb128 0x5
  531 00a8 24000000 		.4byte	.LASF15
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 20
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 20
 
 
  532 00ac 02       		.byte	0x2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  586 011a CB000000 		.4byte	0xcb
  587 011e 08       		.byte	0x8
  588 011f 0C       		.uleb128 0xc
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 21
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 21
 
 
  589 0120 87000000 		.4byte	.LASF23
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  643 0191 656E6400 		.ascii	"end\000"
  644 0195 01       		.byte	0x1
  645 0196 1501     		.2byte	0x115
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 22
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 22
 
 
  646 0198 5D000000 		.4byte	0x5d
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  700 020d 17       		.uleb128 0x17
  701 020e 73726300 		.ascii	"src\000"
  702 0212 01       		.byte	0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 23
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 23
 
 
  703 0213 6A01     		.2byte	0x16a
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  757 027d 91       		.byte	0x91
  758 027e 74       		.sleb128 -12
  759 027f 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 24
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 24
 
 
  760 0280 18       		.uleb128 0x18
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  814 02f9 D6000000 		.4byte	0xd6
  815 02fd 03       		.byte	0x3
  816 02fe 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 25
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 25
 
 
  817 02ff 1E       		.uleb128 0x1e
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  871 0029 04       		.uleb128 0x4
  872 002a 16       		.uleb128 0x16
  873 002b 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 26
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 26
 
 
  874 002c 03       		.uleb128 0x3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  928 0062 26       		.uleb128 0x26
  929 0063 00       		.byte	0
  930 0064 49       		.uleb128 0x49
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 27
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 27
 
 
  931 0065 13       		.uleb128 0x13
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  985 009c 00       		.byte	0
  986 009d 00       		.byte	0
  987 009e 0E       		.uleb128 0xe
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 28
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 28
 
 
  988 009f 2E       		.uleb128 0x2e
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  1042 00d6 11       		.uleb128 0x11
  1043 00d7 01       		.uleb128 0x1
  1044 00d8 12       		.uleb128 0x12
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 29
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 29
 
 
  1045 00d9 06       		.uleb128 0x6
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  1099 0110 00       		.byte	0
  1100 0111 00       		.byte	0
  1101 0112 14       		.uleb128 0x14
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 30
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 30
 
 
  1102 0113 2E       		.uleb128 0x2e
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  1156 014b 00       		.byte	0
  1157 014c 00       		.byte	0
  1158 014d 17       		.uleb128 0x17
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 31
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 31
 
 
  1159 014e 34       		.uleb128 0x34
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  1213 0184 00       		.byte	0
  1214 0185 1B       		.uleb128 0x1b
  1215 0186 21       		.uleb128 0x21
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 32
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 32
 
 
  1216 0187 00       		.byte	0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  1270 000e 0000     		.2byte	0
  1271 0010 00000000 		.4byte	.LFB0
  1272 0014 06000000 		.4byte	.LFE0-.LFB0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 33
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 33
 
 
  1273 0018 00000000 		.4byte	.LFB1
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  1313      745F6300 
  1314              	.LASF35:
  1315 0046 636F756E 		.ascii	"count\000"
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 34
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 34
 
 
  1315      7400
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  1342              	.LASF37:
  1343 00d8 63795379 		.ascii	"cySysNoInitDataValid\000"
  1343      734E6F49 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 35
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 35
 
 
  1343      6E697444 
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  1367 01d0 6C6F6E67 		.ascii	"long long unsigned int\000"
  1367      206C6F6E 
  1367      6720756E 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 36
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 36
 
 
  1367      7369676E 
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 1
  1393      68617200 
  1394              	.LASF40:
  1395 026a 5F5F6379 		.ascii	"__cy_regions\000"
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccDPTi6a.s 			page 37
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccfV7shf.s 			page 37
 
 
  1395      5F726567 

@@ -26,7 +26,7 @@
 #include "ADC_SAR_Seq_1_FinalBuf_dma.h"
 #include "ADC_SAR_Seq_1_SAR.h"
 
-#define ADC_SAR_Seq_1_NUMBER_OF_CHANNELS    (6u)
+#define ADC_SAR_Seq_1_NUMBER_OF_CHANNELS    (11u)
 #define ADC_SAR_Seq_1_SAMPLE_MODE           (0u)
 #define ADC_SAR_Seq_1_CLOCK_SOURCE          (0u)
 

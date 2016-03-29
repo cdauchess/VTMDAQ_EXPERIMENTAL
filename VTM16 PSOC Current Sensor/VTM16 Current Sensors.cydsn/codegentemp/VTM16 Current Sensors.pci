@@ -1,5 +1,5 @@
 # VTM16 Current Sensors
-# 2016-03-23 17:38:30Z
+# 2016-03-28 19:24:58Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -22,5 +22,8 @@ set_io "Back_Left(0)" iocell 3 0
 set_io "Back_Right(0)" iocell 3 1
 set_io "Front_Left(0)" iocell 3 2
 set_io "Front_Right(0)" iocell 3 3
-set_location "\ADC_SAR_Seq_1:SAR:ADC_SAR\" sarcell -1 -1 0
-set_location "\ADC_SAR_Seq_2:SAR:ADC_SAR\" sarcell -1 -1 1
+set_io "Steering_Angle(0)" iocell 3 4
+set_io "Brake_Temp_Pos(0)" iocell 3 5
+set_io "Brake_Temp_Neg(0)" iocell 3 6
+set_location "\ADC_SAR_Seq_1:SAR:ADC_SAR\" sarcell -1 -1 1
+set_location "\ADC_SAR_Seq_2:SAR:ADC_SAR\" sarcell -1 -1 0

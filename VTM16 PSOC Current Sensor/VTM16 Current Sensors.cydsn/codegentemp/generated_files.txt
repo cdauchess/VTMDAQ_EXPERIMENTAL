@@ -74,6 +74,15 @@
   <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Front_Right_aliases.h" value="NONE;Front_Right" />
   <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Front_Right.c" value="ARM_C_FILE;Front_Right" />
   <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Front_Right.h" value="NONE;Front_Right" />
+  <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Steering_Angle_aliases.h" value="NONE;Steering_Angle" />
+  <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Steering_Angle.c" value="ARM_C_FILE;Steering_Angle" />
+  <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Steering_Angle.h" value="NONE;Steering_Angle" />
+  <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Brake_Temp_Pos_aliases.h" value="NONE;Brake_Temp_Pos" />
+  <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Brake_Temp_Pos.c" value="ARM_C_FILE;Brake_Temp_Pos" />
+  <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Brake_Temp_Pos.h" value="NONE;Brake_Temp_Pos" />
+  <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Brake_Temp_Neg_aliases.h" value="NONE;Brake_Temp_Neg" />
+  <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Brake_Temp_Neg.c" value="ARM_C_FILE;Brake_Temp_Neg" />
+  <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\Brake_Temp_Neg.h" value="NONE;Brake_Temp_Neg" />
   <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\UART_1_IntClock.c" value="ARM_C_FILE;UART_1_IntClock" />
   <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\UART_1_IntClock.h" value="NONE;UART_1_IntClock" />
   <file name="C:\Users\charl\Documents\Virginia_Tech\FSAE\VTMDAQ_EXPERIMENTAL\VTM16 PSOC Current Sensor\VTM16 Current Sensors.cydsn\codegentemp\ADC_SAR_Seq_1_SAR.c" value="ARM_C_FILE;ADC_SAR_Seq_1_SAR" />

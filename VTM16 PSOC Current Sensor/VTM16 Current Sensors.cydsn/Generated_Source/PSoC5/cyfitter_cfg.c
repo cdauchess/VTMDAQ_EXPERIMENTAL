@@ -122,7 +122,7 @@ static void CyClockStartupError(uint8 errorCode)
 }
 #endif
 
-#define CY_CFG_BASE_ADDR_COUNT 43u
+#define CY_CFG_BASE_ADDR_COUNT 42u
 CYPACKED typedef struct
 {
 	uint8 offset;
@@ -130,34 +130,34 @@ CYPACKED typedef struct
 } CYPACKED_ATTR cy_cfg_addrvalue_t;
 
 #define cy_cfg_addr_table ((const uint32 CYFAR *)0x48000000u)
-#define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)0x480000ACu)
+#define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)0x480000A8u)
 
 /* IOPORT_7 Address: CYDEV_PRTDSI_PRT12_BASE Size (bytes): 6 */
-#define BS_IOPORT_7_VAL ((const uint8 CYFAR *)0x48000B1Cu)
+#define BS_IOPORT_7_VAL ((const uint8 CYFAR *)0x48000B4Cu)
 
 /* UCFG_BCTL0 Address: CYREG_BCTL0_MDCLK_EN Size (bytes): 16 */
-#define BS_UCFG_BCTL0_VAL ((const uint8 CYFAR *)0x48000B24u)
+#define BS_UCFG_BCTL0_VAL ((const uint8 CYFAR *)0x48000B54u)
 
 /* IOPINS0_0 Address: CYREG_PRT0_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_0_VAL ((const uint8 CYFAR *)0x48000B34u)
+#define BS_IOPINS0_0_VAL ((const uint8 CYFAR *)0x48000B64u)
 
 /* IOPINS0_7 Address: CYREG_PRT12_DR Size (bytes): 10 */
-#define BS_IOPINS0_7_VAL ((const uint8 CYFAR *)0x48000B3Cu)
+#define BS_IOPINS0_7_VAL ((const uint8 CYFAR *)0x48000B6Cu)
 
 /* IOPINS0_2 Address: CYREG_PRT2_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x48000B48u)
+#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x48000B78u)
 
 /* IOPINS0_3 Address: CYREG_PRT3_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_3_VAL ((const uint8 CYFAR *)0x48000B50u)
+#define BS_IOPINS0_3_VAL ((const uint8 CYFAR *)0x48000B80u)
 
 /* PHUB_CFGMEM1 Address: CYREG_PHUB_CFGMEM1_CFG0 Size (bytes): 4 */
-#define BS_PHUB_CFGMEM1_VAL ((const uint8 CYFAR *)0x48000B58u)
+#define BS_PHUB_CFGMEM1_VAL ((const uint8 CYFAR *)0x48000B88u)
 
 /* PHUB_CFGMEM2 Address: CYREG_PHUB_CFGMEM2_CFG0 Size (bytes): 4 */
-#define BS_PHUB_CFGMEM2_VAL ((const uint8 CYFAR *)0x48000B5Cu)
+#define BS_PHUB_CFGMEM2_VAL ((const uint8 CYFAR *)0x48000B8Cu)
 
 /* PHUB_CFGMEM3 Address: CYREG_PHUB_CFGMEM3_CFG0 Size (bytes): 4 */
-#define BS_PHUB_CFGMEM3_VAL ((const uint8 CYFAR *)0x48000B60u)
+#define BS_PHUB_CFGMEM3_VAL ((const uint8 CYFAR *)0x48000B90u)
 
 
 /*******************************************************************************
@@ -289,16 +289,18 @@ static void AnalogSetDefault(void)
 	/* Disable PRES while setting up SAR voltage reference */
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_RESET_CR4), (cr4 | 0x03u));
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_RESET_CR5), (cr5 | 0x03u));
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_PRT0_AG, 0x3Fu);
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_PRT3_AG, 0x0Fu);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_PRT0_AMUX, 0x3Fu);
+	CY_SET_XTND_REG16((void CYFAR *)CYREG_PRT3_AMUX, 0x7906u);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_CSR1, 0x40u);
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_CSR3, 0x40u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_CSR3, 0x00u);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR1_CSR1, 0x40u);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR1_CSR3, 0x40u);
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_SW0, 0xF0u);
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_SW3, 0x20u);
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR1_SW0, 0xF0u);
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR1_SW3, 0x20u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_SW0, 0x20u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_SW4, 0x40u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR1_SW0, 0x90u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR1_SW3, 0x21u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_BUS_SW0, 0x60u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_BUS_SW3, 0x01u);
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_RESET_CR5), (cr5));
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_RESET_CR4), (cr4));
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_PUMP_CR0, 0x44u);

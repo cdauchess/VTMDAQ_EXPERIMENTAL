@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
   29:.\Generated_Source\PSoC5/Front_Right.c **** * Summary:
   30:.\Generated_Source\PSoC5/Front_Right.c **** *  Assign a new value to the digital port's data output register.  
   31:.\Generated_Source\PSoC5/Front_Right.c **** *
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/Front_Right.c **** * Parameters:  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
   69 0036 00BF     		.align	2
   70              	.L2:
   71 0038 30510040 		.word	1073762608
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 3
 
 
   72              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
   98 000a 0A4B     		ldr	r3, .L5
   99 000c 094A     		ldr	r2, .L5
  100 000e 1278     		ldrb	r2, [r2]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 4
 
 
  101 0010 D2B2     		uxtb	r2, r2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
   90:.\Generated_Source\PSoC5/Front_Right.c **** *  Macro Front_Right_ReadPS calls this function. 
   91:.\Generated_Source\PSoC5/Front_Right.c **** *  
   92:.\Generated_Source\PSoC5/Front_Right.c **** *******************************************************************************/
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 5
 
 
   93:.\Generated_Source\PSoC5/Front_Right.c **** uint8 Front_Right_Read(void) 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
  106:.\Generated_Source\PSoC5/Front_Right.c **** * Parameters:  
  107:.\Generated_Source\PSoC5/Front_Right.c **** *  None 
  108:.\Generated_Source\PSoC5/Front_Right.c **** *
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 6
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 6
 
 
  109:.\Generated_Source\PSoC5/Front_Right.c **** * Return: 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
  224 0015 A8010000 		.4byte	.LASF22
  225 0019 00000000 		.4byte	.Ldebug_ranges0+0
  226 001d 00000000 		.4byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 7
 
 
  227 0021 00000000 		.4byte	.Ldebug_line0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
  281 0084 02       		.uleb128 0x2
  282 0085 01       		.byte	0x1
  283 0086 08       		.byte	0x8
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 8
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 8
 
 
  284 0087 7E010000 		.4byte	.LASF11
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
  338 00f7 01       		.byte	0x1
  339 00f8 5D       		.byte	0x5d
  340 00f9 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 9
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 9
 
 
  341 00fd 00000000 		.4byte	.LFB2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
  395 0026 08       		.uleb128 0x8
  396 0027 00       		.byte	0
  397 0028 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 10
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 10
 
 
  398 0029 04       		.uleb128 0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
  452 0060 01       		.uleb128 0x1
  453 0061 13       		.uleb128 0x13
  454 0062 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 11
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 11
 
 
  455 0063 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
  509 009a 00       		.byte	0
  510 009b 00       		.byte	0
  511 009c 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 12
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 12
 
 
  512              		.section	.debug_aranges,"",%progbits
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
  551      31323230 
  552 0077 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
  552      66756E63 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 13
 
 
  552      74696F6E 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 1
  574      206C6F6E 
  574      6720756E 
  574      7369676E 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\ccWnGqoR.s 			page 14
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccqdo0L3.s 			page 14
 
 
  574      65642069 

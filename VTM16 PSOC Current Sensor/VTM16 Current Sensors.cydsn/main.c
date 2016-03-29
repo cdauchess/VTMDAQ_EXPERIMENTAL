@@ -18,7 +18,7 @@
 #define TRUE   1
 #define TRANSMIT_BUFFER_SIZE  16 //UART 
 /*I2C*/
-#define I2C_BUFFER_SIZE 0x14   
+#define I2C_BUFFER_SIZE 0x18   
 #define I2C_RW_AREA_SIZE 0x01 //needs to be 0x01 to have a place for the offset data pointer?
 
 
@@ -49,7 +49,8 @@ void main()
     int i;
     /* Start the components */
     ADC_SAR_Seq_1_Start(); //Current Sensors
-    ADC_SAR_Seq_2_Start(); //Shock Pots
+    ADC_SAR_Seq_2_Start(); //Shock Pots + Steering angle
+ //   ADC_DelSig_1_Start(); //Brake Temp   
     UART_1_Start();
     EZI2C_1_Start();
     EZI2C_1_SetBuffer1(I2C_BUFFER_SIZE, I2C_RW_AREA_SIZE, i2cBuffer); 
@@ -62,7 +63,9 @@ void main()
     
     /* Start the ADC conversion */
     ADC_SAR_Seq_1_StartConvert();
-    ADC_SAR_Seq_2_StartConvert();    
+    ADC_SAR_Seq_2_StartConvert();  
+//    ADC_DelSig_1_StartConvert(); 
+    
     
     /* Send message to verify COM port is connected properly */
     UART_1_PutString("COM Port Open");
@@ -104,7 +107,7 @@ void main()
         if(ADC_SAR_Seq_1_IsEndConversion(ADC_SAR_Seq_1_RETURN_STATUS))
         {
             i = 0;
-            for(i = 0;i<6;i++)  //Current Sensor Read
+            for(i = 0;i<11;i++)  //Current Sensor Read
             {
             Output = ADC_SAR_Seq_1_GetResult16(i);
             data[i] = ADC_SAR_Seq_1_CountsTo_mVolts(Output);
@@ -112,15 +115,14 @@ void main()
             lowByte[i] = (data[i] & 0xFF);
             highByte[i] = (0xFF & (data[i] >> 8));            
             }
-            for(i = 6; i<12; i++)  //Shock Pots Read
-            {
-            Output = ADC_SAR_Seq_2_GetResult16(i-6);
-            data[i] = ADC_SAR_Seq_2_CountsTo_mVolts(Output);
-            //Split the data so that each data point is two bytes so that it can be easily loaded into the transmit buffer            
-            lowByte[i] = (data[i] & 0xFF);
-            highByte[i] = (0xFF & (data[i] >> 8));              
-            }
+           while(!ADC_SAR_Seq_2_IsEndConversion(ADC_SAR_Seq_2_RETURN_STATUS)){} 
 
+            Output = ADC_SAR_Seq_2_GetResult16(0);
+            data[11] = ADC_SAR_Seq_2_CountsTo_mVolts(Output);
+            //Split the data so that each data point is two bytes so that it can be easily loaded into the transmit buffer            
+            lowByte[11] = (data[11] & 0xFF);
+            highByte[11] = (0xFF & (data[11] >> 8));              
+                   
  
             
             if((EZI2C_1_GetActivity() & EZI2C_1_STATUS_BUSY)== 0) //Use this to not interfere with cerebot while writing to buffer
