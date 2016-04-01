@@ -92,6 +92,8 @@ unsigned short fuel;
 unsigned short oilTemp;
 BOOL motec0Read, motec1Read, motec2Read, motec3Read, motec4Read, motec5Read;
 
+unsigned millisec;
+
 //enum used for the finite state machine implemented in this logger
 typedef enum{
     init, startLog, log, stopLog, wait
@@ -318,6 +320,7 @@ void PSOC_Read(){
 
 void WriteToUSB(){
 if (state == log){
+            unsigned millisec_USE = millisec;
             double pitch, roll, yaw;
             double latAcc, longAcc, vertAcc;
             double HRlatAcc, HRlongAcc, HRvertAcc;
@@ -419,12 +422,12 @@ if (state == log){
             PSOC_Read();
             sprintf(PSOCstring0,"%d,%d,%d,%d,%d,%d,",PSOC_volts[0],PSOC_volts[1],PSOC_volts[2],PSOC_volts[3],PSOC_volts[4],PSOC_volts[5]); //Current Sensors
             sprintf(PSOCstring1,"%d,%d,%d,%d,",PSOC_volts[6],PSOC_volts[7],PSOC_volts[8],PSOC_volts[9]); //Shock Pots
-            sprintf(PSOCstring2,"%d,%d\n",PSOC_volts[10],PSOC_volts[11]); //Steering Angle And Brake temp
+            sprintf(PSOCstring2,"%d,%d,%d\n",PSOC_volts[10],PSOC_volts[11],millisec_USE); //Steering Angle And Brake temp and millisec counter
             }
             else{
                 sprintf(PSOCstring0," , , , , , , ");
                 sprintf(PSOCstring1," , , , ,");
-                sprintf(PSOCstring2,",\n");
+                sprintf(PSOCstring2,", ,%d\n",millisec_USE);
             }
             FSfwrite(angString,1, strlen(angString),myFile);
             FSfwrite(accString,1, strlen(accString),myFile);
@@ -440,9 +443,6 @@ if (state == log){
             FSfwrite(PSOCstring2,1, strlen(PSOCstring2),myFile);
         }
 }
-
-
-
 
 //write a byte to eeprom
 void writeEEPROM(short address, BYTE data){
@@ -506,7 +506,7 @@ BOOL readMultiEEPROM(BYTE address, BYTE *data, int length){
 int main(void)
 {
     int  value;
-
+    millisec = 0;
     value = SYSTEMConfigWaitStatesAndPB( GetSystemClock() );
 
     // Enable the cache for the best performance
@@ -529,10 +529,16 @@ int main(void)
 
     //OpenTimer2(T2_ON | T2_IDLE_CON | T2_SOURCE_INT | T2_PS_1_256 | T2_GATE_OFF, 3125);//changed so its 100Hz
 
+   // Configure Timer 2 to request a real-time interrupt once per millisecond.
+   // The period of Timer 2 is (16 * 5000)/(80 MHz) = 1 ms.
+   OpenTimer2(T2_ON | T2_IDLE_CON | T2_SOURCE_INT | T2_PS_1_16 | T2_GATE_OFF, 5000);
+
+   // Configure the CPU to respond to Timer 2's interrupt requests.
     INTEnableSystemMultiVectoredInt();
-  //  INTSetVectorPriority(INT_TIMER_2_VECTOR, INT_PRIORITY_LEVEL_1);
-  //  INTClearFlag(INT_T2);
- //   INTEnable(INT_T2, INT_ENABLED);
+   INTSetVectorPriority(INT_TIMER_2_VECTOR, INT_PRIORITY_LEVEL_1);
+   INTClearFlag(INT_T2);
+   INTEnable(INT_T2, INT_ENABLED);
+
 
 
     value = OSCCON;
@@ -620,8 +626,8 @@ int main(void)
                         logNum = readEEPROM(addy);
                         sprintf(nameString, "test%d.csv", logNum);
                         myFile = FSfopen(nameString,"w");
-                        char string[500];
-                        sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),ect(degF),lambda,fuel pres,egt(?),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed, lg speed,rd speed,rg speed,run time(second),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV)\n");
+                        char string[550];
+                        sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),millisec counter(ms)\n");
                         FSfwrite(string,1, strlen(string),myFile);
                         state = log;
                     }
@@ -813,9 +819,18 @@ BOOL USB_ApplicationEventHandler( BYTE address, USB_EVENT event, void *data, DWO
 }
 
 
-//void __ISR(_TIMER_2_VECTOR, ipl1) Timer2_ISR(void) {
-//    if (INTGetFlag(INT_T2)){
-//        if (state == log){
+void __ISR(_TIMER_2_VECTOR, ipl1) Timer2_ISR(void) {
+    if (INTGetFlag(INT_T2)){
+        if (state == log){
+         millisec++;
+         INTClearFlag(INT_T2);   // Acknowledge the interrupt source by clearing its flag.
+        }
+        else{
+            millisec = 0;
+            INTClearFlag(INT_T2);
+        }
+
+    }
 //            double pitch, roll, yaw;
 //            double latAcc, longAcc, vertAcc;
 //            double HRlatAcc, HRlongAcc, HRvertAcc;
@@ -949,7 +964,7 @@ BOOL USB_ApplicationEventHandler( BYTE address, USB_EVENT event, void *data, DWO
 //        }
 //        INTClearFlag(INT_T2);
 //    }
-//}
+}
 
 //adding the following stopped the error
 //undefined reference to `_p32mxsk_putc

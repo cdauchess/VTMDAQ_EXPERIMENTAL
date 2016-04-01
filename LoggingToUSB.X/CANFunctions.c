@@ -205,7 +205,7 @@ void CAN2Init(void)
     * library. */
 
     INTSetVectorPriority(INT_CAN_2_VECTOR, INT_PRIORITY_LEVEL_4);
-    INTSetVectorSubPriority(INT_CAN_2_VECTOR, INT_SUB_PRIORITY_LEVEL_0);
+    INTSetVectorSubPriority(INT_CAN_2_VECTOR, INT_SUB_PRIORITY_LEVEL_0); //CHANGED from 0 to 1 to put MOTEC as highest CAN priority
     INTEnable(INT_CAN2, INT_ENABLED);
 
     /* Step 7: Switch the CAN mode
