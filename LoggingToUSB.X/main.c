@@ -44,6 +44,7 @@ int prevButton2;
 int counter = 0;
 
 int buttonCount = 0;
+int buttonCountLow = 0;
 
 FSFILE * myFile;
 BYTE myData[512];
@@ -122,25 +123,36 @@ void sendString(char* string){
 }
 
 //return true on rising edge of BTN1 for sending from can2 to can1
-BOOL checkForButton1(){
+int checkForButton1(){
+    //Return 0 if the button is a low
+    //Return 1 if the button is a high
+    //Return 2 if in an undefined "do nothing state"
+
     int countThreshold = 100; //Threshold for a "high" to be registered from the switch
     //look for rising edge in the switch
     if(buttonCount > 500){  //Reset count to 200 if it reaches 500, gives an upper bound to the count
         buttonCount  = 200;
     }
+    if(buttonCountLow > 500){  //Reset count to 200 if it reaches 500, gives an upper bound to the count
+        buttonCountLow  = 200;
+    }
     if(PORTD & 0x8000){
         buttonCount++;
+        buttonCountLow = 0;
     }
     else if(!(PORTD & 0x8000))
     {
         buttonCount = 0;
+        buttonCountLow ++;
     }
-    if(buttonCount < countThreshold){
-        return FALSE;
+    if(buttonCountLow >= countThreshold){
+        return 0;
     }
     else if (buttonCount >= countThreshold){
-        return TRUE;
+        return 1;
     }
+    else
+        return 2;
 }
 BOOL checkForButton2(){
     //look for rising edge in button1
@@ -598,6 +610,12 @@ int main(void)
     initI2CEEPROM();
     short addy = 0x0000;
     BYTE num = 0x00;
+    logNum = readEEPROM(addy);
+    if(logNum >= 0xEF)  //Address stored in EEPROM  if greater than 0xEF reset to zero, limited to a single byte with current code configuration
+    {
+        writeEEPROM(addy, 0x00);
+    }
+
 
     while(1)
     {
@@ -606,7 +624,7 @@ int main(void)
 
         switch(state){
             case init:
-                if(checkForButton1()){
+                if(checkForButton1() == 1){
                     state = startLog;
                 }
                 break;
@@ -642,7 +660,7 @@ int main(void)
                 else{
 
                 }
-                if(!checkForButton1()){
+                if(checkForButton1() == 0){
                     state = stopLog;
                 }
                 break;
@@ -657,7 +675,7 @@ int main(void)
                 break;
             case wait:
                 USBTasks();
-                if(checkForButton1()){
+                if(checkForButton1() == 1){
                     state = startLog;
                 }
                 break;
