@@ -36,6 +36,11 @@
 #define UART_BAUD 9600
 #define SYS_FREQ (80000000L)
 
+//Check Engine light thresholds
+int ECTThreshold = 240;
+int EGTThreshold = 1900;
+int OilTempThreshold = 300;
+
 // Global variables
 BYTE CAN1MessageFifoArea[2 * 8 * 16];
 BYTE CAN2MessageFifoArea[2 * 8 * 16];
@@ -65,9 +70,7 @@ BOOL analogRead;
 
 
 int PSOC_volts[12]; //A place to store the voltage data from the PSOC
-//FIXME
 BOOL PSOCConnected = TRUE; //Set to TRUE when PSOC is attached for testing, without the PSOC set to FALSE
-BOOL MotecMasterTimer = TRUE;  //Set to true if motec is the master timer, otherwise the Cerebot timer does the timing
 char nameString[20];
 
 unsigned short rpm;
@@ -93,7 +96,7 @@ unsigned short fuel;
 unsigned short oilTemp;
 BOOL motec0Read, motec1Read, motec2Read, motec3Read, motec4Read, motec5Read;
 
-unsigned millisec;
+unsigned int millisec;
 
 //enum used for the finite state machine implemented in this logger
 typedef enum{
@@ -423,8 +426,8 @@ if (state == log){
                 sprintf(motec4String, " , , , ,");
             }
             if(motec5Read){
-                double oilTempDegC = (double)oilTemp * .1;
-                sprintf(motec5String, "%.6f,", oilTempDegC);
+                double oilTempDegF = (double)oilTemp * .1;
+                sprintf(motec5String, "%.6f,", oilTempDegF);
                 motec5Read = FALSE;
             }else{
                 sprintf(motec5String, ",");
@@ -531,6 +534,15 @@ int main(void)
     LATGCLR = 0xF000;
     TRISDSET = 0x8000; //Set PortD bit associated with pin JE4
 
+    //Set up aeroprobe sync signal - JE1
+    TRISDCLR = 0x4000;
+    ODCDCLR = 0x4000;
+    LATDCLR = 0x4000;
+    //Setup output for check engine light -  JE2
+    TRISFSET = 0x80;
+    ODCFCLR = 0x80;
+    LATFCLR = 0x80;
+
     CAN1Init();//CAN1 is configured to accept all EIDs
     CAN2Init();
     DelayInit();
@@ -538,6 +550,7 @@ int main(void)
     initUART1();
     prevButton1 = 0;
     prevButton2 = 0;
+    millisec = 0;
 
     //OpenTimer2(T2_ON | T2_IDLE_CON | T2_SOURCE_INT | T2_PS_1_256 | T2_GATE_OFF, 3125);//changed so its 100Hz
 
@@ -546,7 +559,7 @@ int main(void)
    OpenTimer2(T2_ON | T2_IDLE_CON | T2_SOURCE_INT | T2_PS_1_16 | T2_GATE_OFF, 5000);
 
    // Configure the CPU to respond to Timer 2's interrupt requests.
-    INTEnableSystemMultiVectoredInt();
+   INTEnableSystemMultiVectoredInt();
    INTSetVectorPriority(INT_TIMER_2_VECTOR, INT_PRIORITY_LEVEL_1);
    INTClearFlag(INT_T2);
    INTEnable(INT_T2, INT_ENABLED);
@@ -647,13 +660,17 @@ int main(void)
                         char string[550];
                         sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),millisec counter(ms)\n");
                         FSfwrite(string,1, strlen(string),myFile);
-                        state = log;
+                        millisec = 0;
+                        LATDSET = 0x4000; //Send sync pulse
+                        while(millisec < 1000){ //Wait 1s then move to log, the aeroprobe ADC waits 1s.
+                        }
+                            state = log;
+                        
                     }
                 }
                 break;
             case log:
                 //This uses MOTEC as the master timer.  Data is only written to the USB after all the motec Data is received
-                //FIXME
                 if(motec0Read && motec1Read && motec2Read && motec3Read && motec4Read && motec5Read){
                     WriteToUSB();
                 }
@@ -662,6 +679,10 @@ int main(void)
                 }
                 if(checkForButton1() == 0){
                     state = stopLog;
+                }
+                if(millisec > 2000)
+                {
+                    LATDCLR = 0x4000; //After 2 seconds pass no need to keep output high
                 }
                 break;
             case stopLog:
@@ -675,6 +696,7 @@ int main(void)
                 break;
             case wait:
                 USBTasks();
+                millisec = 0;
                 if(checkForButton1() == 1){
                     state = startLog;
                 }
@@ -683,47 +705,17 @@ int main(void)
                 state = wait;
                 break;
         }
+//If statement for Check engine light
+        if(et*0.1 >= ECTThreshold || egt1 >= EGTThreshold || oilTemp *0.1 >= OilTempThreshold)
+        {
+            LATFCLR = 0x80;//Turn on light (Ground it)
+        }
+        else
+        {
+            LATFSET = 0x80;
+            //Turn off light (High Voltage level
+        }
 
-//        if(checkForButton1()){
-//            //if thumbdrive is plugged in
-//            if(USBHostMSDSCSIMediaDetect() && !shouldLog && shouldStop == FALSE)
-//            {
-//                deviceAttached = TRUE;
-//
-//                //now a device is attached
-//                //See if the device is attached and in the right format
-//                if(FSInit())
-//                {
-//                    //Opening a file in mode "w" will create the file if it doesn't
-//                    //  exist.  If the file does exist it will delete the old file
-//                    //  and create a new one that is blank.
-//                    myFile = FSfopen("test.csv","w");
-//                    char string[350];
-//                    sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),current sensor(V),rpm, tps(percent),lambda,fuel pres,egt(?),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed, lg speed,rd speed,rg speed,run time(second),fuel used\n");
-//                    FSfwrite(string,1, strlen(string),myFile);
-//
-//                    shouldLog = TRUE;
-//
-//                    //Just sit here until the device is removed.
-//                    //while(deviceAttached == TRUE)
-//                    //{
-//                    //    USBTasks();
-//                    //}
-//                }
-//            }
-//        }
-//        if (shouldStop && shouldLog){
-//            //Always make sure to close the file so that the data gets
-//            //  written to the drive.
-//            FSfwrite("endFile", 1, 7, myFile);
-//            FSfclose(myFile);
-//            shouldLog = FALSE;
-//            //Just sit here until the device is removed.
-//            while(deviceAttached == TRUE)
-//            {
-//                USBTasks();
-//            }
-//        }
         // Update LED 1 to show program is running
         if(PORTD & 0x8000){  // check Switch (JE4)
             LATGSET = 1 << 12; // LED1 on
@@ -732,16 +724,6 @@ int main(void)
             LATGCLR = 1 << 12; // LED1 off
         }
 
-        //If button 1 is pressed increment the counter and send the counter out of CAN2
-        //with the current configuration using EID this doesnt work (messages send are using SID)
-//        if(checkForButton1()){
-//            counter++;
-//            CAN2TxSendLEDMsg(counter);
-//        }
-//        if(checkForButton2()){
-//            //count = 150;
-//            shouldStop = TRUE;
-//        }
         CANRxMessageBuffer* CAN1RxMessage = CAN1RxMsgProcess();
         if(CAN1RxMessage){
             writeMessageToUART1(CAN1RxMessage);
@@ -839,149 +821,9 @@ BOOL USB_ApplicationEventHandler( BYTE address, USB_EVENT event, void *data, DWO
 
 void __ISR(_TIMER_2_VECTOR, ipl1) Timer2_ISR(void) {
     if (INTGetFlag(INT_T2)){
-        if (state == log){
          millisec++;
          INTClearFlag(INT_T2);   // Acknowledge the interrupt source by clearing its flag.
-        }
-        else{
-            millisec = 0;
-            INTClearFlag(INT_T2);
-        }
-
     }
-//            double pitch, roll, yaw;
-//            double latAcc, longAcc, vertAcc;
-//            double HRlatAcc, HRlongAcc, HRvertAcc;
-//            char angString[40];
-//            char accString[40];
-//            char HRaccString[40];
-//          //  char analogString[40];
-//            char motec0String[40];
-//            char motec1String[40];
-//            char motec2String[40];
-//            char motec3String[40];
-//            char motec4String[40];
-//            char motec5String[40];
-//            char PSOCstring[40];
-//            if(angularRateInfoRec){
-//                pitch = (((double)(angularRateInfo[1] << 8 | angularRateInfo[0])) /128) - 250;
-//                roll = (((double)(angularRateInfo[3] << 8 | angularRateInfo[2])) /128) - 250;
-//                yaw = (((double)(angularRateInfo[5] << 8 | angularRateInfo[4])) /128) - 250;
-//                angularRateInfoRec = FALSE;
-//                sprintf(angString, "%.6f,%.6f,%.6f,", pitch, roll, yaw);
-//            }else{
-//                sprintf(angString, " , , ,");
-//            }
-//            if(accelerationSensorRec){
-//                latAcc = (((double)(accelerationSensor[1] << 8 | accelerationSensor[0])) * .01) - 320;
-//                longAcc = (((double)(accelerationSensor[3] << 8 | accelerationSensor[2])) * .01) - 320;
-//                vertAcc = (((double)(accelerationSensor[5] << 8 | accelerationSensor[4])) * .01) - 320;
-//                accelerationSensorRec = FALSE;
-//                sprintf(accString, "%.6f,%.6f,%.6f,", latAcc, longAcc, vertAcc);
-//            }else{
-//                sprintf(accString, " , , ,");
-//            }
-//            if(HRaccelerationSensorRec){
-//                HRlatAcc = (((double)(HRaccelerationSensor[1] << 8 | HRaccelerationSensor[0])) * .000599) - 19.62;
-//                HRlongAcc = (((double)(HRaccelerationSensor[3] << 8 | HRaccelerationSensor[2])) * .000599) - 19.62;
-//                HRvertAcc = (((double)(HRaccelerationSensor[5] << 8 | HRaccelerationSensor[4])) * .000599) - 19.62;
-//                HRaccelerationSensorRec = FALSE;
-//                sprintf(HRaccString, "%.6f,%.6f,%.6f,", HRlatAcc, HRlongAcc, HRvertAcc);
-//            }else{
-//                sprintf(HRaccString, " , , ,");
-//            }
-//            //This is for the cerebot's ADC, not using for current sensors anymore
-////            if(analogRead){
-////                analogRead = FALSE;
-////                double temp = (double)analogIn2 * 3.3 / 1024;
-////                sprintf(analogString, "%.6f,", temp);
-////            }else{
-////                sprintf(analogString, ",");
-////            }
-//
-//            if(motec0Read){
-//                int t_rpm = rpm;
-//                double t_tps = (double) tp * .1;
-//                sprintf(motec0String, "%d, %.6f,", t_rpm, t_tps );
-//                motec0Read = FALSE;
-//            }else{
-//                sprintf(motec0String, " , ,");
-//            }
-//            if(motec1Read){
-//                double t_engineTemp = (double) et * .1;
-//                double t_lambda1 = (double) la1 * .001;
-//                int t_fuelPress = fp;
-//                sprintf(motec1String, "%.6f,%.6f,%d,", t_engineTemp, t_lambda1, t_fuelPress);
-//                motec1Read = FALSE;
-//            }else{
-//                sprintf(motec1String, " , , ,");
-//            }
-//            if(motec2Read){
-//                double t_egt1 = (double)egt1 *.1;
-//                int t_userLaunch = launch;//not sure scaling
-//                int t_userNtrl = ntrl;//not sure scaling
-//                int t_brakePres = bp;//not sure scaling
-//                sprintf(motec2String, "%.6f,%d,%d,%d,", t_egt1, t_userLaunch, t_userNtrl, t_brakePres);
-//                motec2Read = FALSE;
-//            }else{
-//                sprintf(motec2String, " , , , ,");
-//            }
-//            if(motec3Read){
-//                int t_brakePresFil = bpf1;//not sure scaling
-//                double t_batV = (double)batV * .01;
-//                double t_ldspd = (double)ldSpd * .1;
-//                double t_lgspd = (double)lgSpd * .1;
-//                sprintf(motec3String, "%d,%.6f,%.6f,%.6f,", t_brakePresFil, t_batV, t_ldspd, t_lgspd);
-//                motec3Read = FALSE;
-//            }else{
-//                sprintf(motec3String, " , , , ,");
-//            }
-//            if(motec4Read){
-//                double t_rdspd = (double)rdSpd * .1;
-//                double t_rgspd = (double)rgSpd * .1;
-//                float t_runTime = runTime * .1;//not sure scaling
-//                sprintf(motec4String, "%.6f,%.6f,%.6f, %d,", t_rdspd, t_rgspd, t_runTime, fuel);
-//                motec4Read = FALSE;
-//            }else{
-//                sprintf(motec4String, " , , , ,");
-//            }
-//            if(motec5Read){
-//                double oilTempDegC = (double)oilTemp * .1;
-//                sprintf(motec5String, "%.6f", oilTempDegC);
-//                motec5Read = FALSE;
-//            }else{
-//                sprintf(motec5String, ",");
-//            }
-//            //PSOC
-//            if(PSOCConnected){ //This allows for the program to be tested without the PSOC connected.  PSOC read is a global variable defined at the top of the file
-//            PSOC_Read();
-//            sprintf(PSOCstring,"%d,%d,%d,%d,%d,%d\n",PSOC_volts[0],PSOC_volts[1],PSOC_volts[2],PSOC_volts[3],PSOC_volts[4],PSOC_volts[5]);
-//            }
-//            else{
-//                sprintf(PSOCstring," , , , , , \n");
-//            }
-//            //myFile = FSfopen(nameString,FS_APPEND);
-//            FSfwrite(angString,1, strlen(angString),myFile);
-//            FSfwrite(accString,1, strlen(accString),myFile);
-//            FSfwrite(HRaccString,1, strlen(HRaccString),myFile);
-//           // FSfwrite(analogString,1, strlen(analogString),myFile); //Used for the cerebot onboard ADC
-//            FSfwrite(motec0String,1, strlen(motec0String),myFile);
-//            FSfwrite(motec1String,1, strlen(motec1String),myFile);
-//            FSfwrite(motec2String,1, strlen(motec2String),myFile);
-//            FSfwrite(motec3String,1, strlen(motec3String),myFile);
-//            FSfwrite(motec4String,1, strlen(motec4String),myFile);
-//            FSfwrite(motec5String,1, strlen(motec5String),myFile);
-//            FSfwrite(PSOCstring,1, strlen(PSOCstring),myFile);
-//            //sprintf(string, "%s%s%s", angString, accString, HRaccString);
-//            //sprintf(string, "test,%f,%f,%f,%f,%f,%f,%f,%f,%f\n", pitch, roll, yaw, latAcc, longAcc, vertAcc, HRlatAcc, HRlongAcc, HRvertAcc);
-//            //int a = sizeof(string) / sizeof(char);
-//            //int a = strlen(string);
-//            //FSfwrite(string,1, a,myFile);
-//            //count ++;
-//        //    FSfclose(myFile);
-//        }
-//        INTClearFlag(INT_T2);
-//    }
 }
 
 //adding the following stopped the error
