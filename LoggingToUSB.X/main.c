@@ -3,6 +3,9 @@
 #include "usb_host_msd_scsi.h"
 #include "FSIO.h"
 
+//Program info
+//Motec is on CAN2 - 1 mbps
+//PCS Accel on CAN1 500 kbps
 
 // *****************************************************************************
 // *****************************************************************************
@@ -40,6 +43,10 @@
 int ECTThreshold = 240;
 int EGTThreshold = 1900;
 int OilTempThreshold = 300;
+//RPM of Engine to begin logging
+int LogRPM = 2000;
+int stopDelayCounter = 0;
+int engineOff = 1;
 
 // Global variables
 BYTE CAN1MessageFifoArea[2 * 8 * 16];
@@ -125,12 +132,10 @@ void sendString(char* string){
     }
 }
 
-//return true on rising edge of BTN1 for sending from can2 to can1
-int checkForButton1(){
-    //Return 0 if the button is a low
-    //Return 1 if the button is a high
-    //Return 2 if in an undefined "do nothing state"
-
+//Return 0 For a "do nothing"
+//Return 1 For a transition from wait to log
+//Return 2 For a transition from log to wait
+int CheckLogStateChange(){
     int countThreshold = 100; //Threshold for a "high" to be registered from the switch
     //look for rising edge in the switch
     if(buttonCount > 500){  //Reset count to 200 if it reaches 500, gives an upper bound to the count
@@ -148,14 +153,26 @@ int checkForButton1(){
         buttonCount = 0;
         buttonCountLow ++;
     }
-    if(buttonCountLow >= countThreshold){
-        return 0;
-    }
-    else if (buttonCount >= countThreshold){
+    //Here begins the logic of figuring out what the next move in the state machine is
+    if((buttonCount >= countThreshold || rpm > LogRPM)&& state == wait){
+        if(rpm > LogRPM){
+        engineOff = 0; //Engine is currently on
+        }
         return 1;
     }
-    else
+    else if((buttonCount >= countThreshold ||rpm < LogRPM) && state == log){
+        //Start Delay of 5s
+        engineOff = 1; //Engine is now off
+        stopDelayCounter = 0;
+        return 0;
+    }
+    else if(engineOff == 1 && stopDelayCounter >= 5000 ){
+        stopDelayCounter = 0;
         return 2;
+    }
+    else{ //Catchall waiting state
+        return 0;
+    }
 }
 BOOL checkForButton2(){
     //look for rising edge in button1
@@ -177,7 +194,7 @@ BOOL checkForButton2(){
     }
     return FALSE;
 }
-void writeMessageToUART1(CANRxMessageBuffer *message)
+void WriteAccelData(CANRxMessageBuffer *message)
 {
 //Accel
 
@@ -217,15 +234,12 @@ void writeMessageToUART1(CANRxMessageBuffer *message)
 }
 
 void writeCan2Msg(CANRxMessageBuffer *message){
-
     BYTE data[8];
     int i;
     for(i = 0; i < 8; i++){
         data[i] = message->data[i];
     }
-
     unsigned int sid = message->msgSID.SID;
-
     if(sid == 0x6f0){
         rpm = data[0] << 8 | data[1];
         tp = data[2] << 8 | data[3];
@@ -564,8 +578,6 @@ int main(void)
    INTClearFlag(INT_T2);
    INTEnable(INT_T2, INT_ENABLED);
 
-
-
     value = OSCCON;
     while (!(value & 0x00000020))
     {
@@ -612,12 +624,10 @@ int main(void)
     //TRISBCLR = 5 << 7;//for adc this was also screwing up the adc making things be randomly 1ff
     //PORTBSET = 1 << 6; //this will make adc respoint with binary haha
 
-
     //initialize i2c for the psoc and send it an initializeation msg
     initI2CPSoC();
     
-
-    state = init;
+    state = wait;
     logNum = 0;
 
     initI2CEEPROM();
@@ -629,24 +639,30 @@ int main(void)
         writeEEPROM(addy, 0x00);
     }
 
-
     while(1)
     {
         //USB stack process function
         USBTasks();
 
         switch(state){
-            case init:
-                if(checkForButton1() == 1){
+            case wait:
+                USBTasks();
+                millisec = 0;
+                if(CheckLogStateChange() == 1){ //start the transition from wait to log
                     state = startLog;
                 }
                 break;
+                //Try to remove this state, just bounce between log and wait
+//            case init:
+//                if(CheckLogStateChange() == 1){
+//                    state = startLog;
+//                }
+//                break;
             case startLog:
                 //if thumbdrive is plugged in
                 if(USBHostMSDSCSIMediaDetect())
                 {
                     deviceAttached = TRUE;
-
                     //now a device is attached
                     //See if the device is attached and in the right format
                     if(FSInit())
@@ -657,15 +673,13 @@ int main(void)
                         logNum = readEEPROM(addy);
                         sprintf(nameString, "test%d.csv", logNum);
                         myFile = FSfopen(nameString,"w");
-                        char string[550];
+                        char string[550];//Header string
                         sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),millisec counter(ms)\n");
                         FSfwrite(string,1, strlen(string),myFile);
                         millisec = 0;
                         LATDSET = 0x4000; //Send sync pulse
-                        while(millisec < 1000){ //Wait 1s then move to log, the aeroprobe ADC waits 1s.
-                        }
-                            state = log;
-                        
+                        while(millisec < 1000){} //Wait 1s then move to log, the aeroprobe ADC waits 1s.
+                            state = log;   
                     }
                 }
                 break;
@@ -674,48 +688,36 @@ int main(void)
                 if(motec0Read && motec1Read && motec2Read && motec3Read && motec4Read && motec5Read){
                     WriteToUSB();
                 }
-                else{
-
-                }
-                if(checkForButton1() == 0){
+                else{}//Wait for motec data to write the next row
+                if(CheckLogStateChange() == 2){ //Start the transition from log to wait
                     state = stopLog;
                 }
-                if(millisec > 2000)
-                {
+                if(millisec > 2000){
                     LATDCLR = 0x4000; //After 2 seconds pass no need to keep output high
                 }
                 break;
             case stopLog:
-                //Always make sure to close the file so that the data gets
-                //  written to the drive.
+                //Always make sure to close the file so that the data gets written to the drive.
                 FSfwrite("endFile", 1, 7, myFile);
                 FSfclose(myFile);
                 state = wait;
                 logNum++;
                 writeEEPROM(addy, logNum);
                 break;
-            case wait:
-                USBTasks();
-                millisec = 0;
-                if(checkForButton1() == 1){
-                    state = startLog;
-                }
-                break;
             default:
                 state = wait;
                 break;
         }
-//If statement for Check engine light
+        //If statement for Check engine light
+        //Not Connected in VTM17C, moved to dash project
         if(et*0.1 >= ECTThreshold || egt1 >= EGTThreshold || oilTemp *0.1 >= OilTempThreshold)
         {
             LATFCLR = 0x80;//Turn on light (Ground it)
         }
         else
         {
-            LATFSET = 0x80;
-            //Turn off light (High Voltage level
+            LATFSET = 0x80; //Turn off light (High Voltage )
         }
-
         // Update LED 1 to show program is running
         if(PORTD & 0x8000){  // check Switch (JE4)
             LATGSET = 1 << 12; // LED1 on
@@ -723,16 +725,14 @@ int main(void)
         else{
             LATGCLR = 1 << 12; // LED1 off
         }
-
+        //CAN Handlers
         CANRxMessageBuffer* CAN1RxMessage = CAN1RxMsgProcess();
         if(CAN1RxMessage){
-            writeMessageToUART1(CAN1RxMessage);
-            //sprintf(string, "CAN1: The button has been pushed %d times\n\r", CAN1RxMessage->data[0]);
+            WriteAccelData(CAN1RxMessage); //Accel is on CAN 1
         }
         CANRxMessageBuffer* CAN2RxMessage = CAN2RxMsgProcess();
         if(CAN2RxMessage){
-            writeCan2Msg(CAN2RxMessage);
-            //sprintf(string, "CAN1: The button has been pushed %d times\n\r", CAN1RxMessage->data[0]);
+            writeCan2Msg(CAN2RxMessage); //Motec is on CAN 2
         }
     }
     return 0;
@@ -822,6 +822,7 @@ BOOL USB_ApplicationEventHandler( BYTE address, USB_EVENT event, void *data, DWO
 void __ISR(_TIMER_2_VECTOR, ipl1) Timer2_ISR(void) {
     if (INTGetFlag(INT_T2)){
          millisec++;
+         stopDelayCounter++;
          INTClearFlag(INT_T2);   // Acknowledge the interrupt source by clearing its flag.
     }
 }
