@@ -146,35 +146,40 @@ int CheckLogStateChange(){
     }
     if(PORTD & 0x8000){
         buttonCount++;
-        buttonCountLow = 0;
+        //buttonCountLow = 0;
     }
     else if(!(PORTD & 0x8000))
-    {
-        buttonCount = 0;
+    {     
         buttonCountLow ++;
     }
     //Here begins the logic of figuring out what the next move in the state machine is
-    if((buttonCount >= countThreshold || rpm > LogRPM)&& state == wait){
+    //FIXME  This may prevent the manual stop of a log while the engine is running
+    //Manual button only for track side test with engine off? maybe for zeroing sensors
+    if((buttonCount >= countThreshold || rpm > LogRPM)&& state == wait && buttonCountLow > countThreshold){ //Should prevent oscillations caused by holding down the button
         if(rpm > LogRPM){
         engineOff = 0; //Engine is currently on
         }
-        return 1;
+        buttonCount = 0;
+        buttonCountLow = 0;
+        return 1;//transition from wait to log
     }
-    else if((buttonCount >= countThreshold ||rpm < LogRPM) && state == log){
+    else if((buttonCount >= countThreshold ||rpm < LogRPM) && state == log && buttonCountLow > countThreshold){
         //Start Delay of 5s
         engineOff = 1; //Engine is now off
         stopDelayCounter = 0;
+        buttonCount = 0;
+        buttonCountLow = 0;
         return 0;
     }
-    else if(engineOff == 1 && stopDelayCounter >= 5000 ){
+    else if(engineOff == 1 && stopDelayCounter >= 5000 ){//switch to a wait state, 5 seconds have elapsed
         stopDelayCounter = 0;
-        return 2;
+        return 2; //transition from log to wait
     }
     else{ //Catchall waiting state
         return 0;
     }
 }
-BOOL checkForButton2(){
+BOOL checkForButton2(){ //Probably can get rid of this, I don't think it is used anymore
     //look for rising edge in button1
   //  if((PORTG & 0x80) != 0x80){
     if((PORTG & 0x8000) == 0x8000){
@@ -197,7 +202,6 @@ BOOL checkForButton2(){
 void WriteAccelData(CANRxMessageBuffer *message)
 {
 //Accel
-
     char string[20];
     int eidE = message->msgEID.IDE;
     int eidD = message->msgEID.DLC;
@@ -396,7 +400,9 @@ if (state == log){
             if(motec0Read){
                 int t_rpm = rpm;
                 double t_tps = (double) tp * .1;
-                sprintf(motec0String, "%d, %.6f,", t_rpm, t_tps );
+                double t_map = (double) map *0.1;
+                double t_at = (double) at*0.1;
+                sprintf(motec0String, "%d,%.6f,%.6f,%.6f,", t_rpm, t_tps );
                 motec0Read = FALSE;
             }else{
                 sprintf(motec0String, " , ,");
@@ -674,7 +680,7 @@ int main(void)
                         sprintf(nameString, "test%d.csv", logNum);
                         myFile = FSfopen(nameString,"w");
                         char string[550];//Header string
-                        sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),millisec counter(ms)\n");
+                        sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),MAP(kpa),AT(degF),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),millisec counter(ms)\n");
                         FSfwrite(string,1, strlen(string),myFile);
                         millisec = 0;
                         LATDSET = 0x4000; //Send sync pulse
