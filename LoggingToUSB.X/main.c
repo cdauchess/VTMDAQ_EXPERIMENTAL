@@ -55,6 +55,7 @@ int prevButton1;
 int prevButton2;
 int counter = 0;
 
+int stillPressed = 0;
 int buttonCount = 0;
 int buttonCountLow = 0;
 
@@ -144,36 +145,47 @@ int CheckLogStateChange(){
     if(buttonCountLow > 500){  //Reset count to 200 if it reaches 500, gives an upper bound to the count
         buttonCountLow  = 200;
     }
-    if(PORTD & 0x8000){
+    if(PORTF & 0x20){
         buttonCount++;
-        //buttonCountLow = 0;
+        buttonCountLow = 0;
+
     }
-    else if(!(PORTD & 0x8000))
+    else if(!(PORTF & 0x20))
     {     
         buttonCountLow ++;
+        stillPressed = 0;
+        buttonCount = 0;
     }
     //Here begins the logic of figuring out what the next move in the state machine is
     //FIXME  This may prevent the manual stop of a log while the engine is running
     //Manual button only for track side test with engine off? maybe for zeroing sensors
-    if((buttonCount >= countThreshold || rpm > LogRPM)&& state == wait && buttonCountLow > countThreshold){ //Should prevent oscillations caused by holding down the button
+    if((buttonCount >= countThreshold || rpm > LogRPM)&& state == wait && stillPressed == 0){ //Should prevent oscillations caused by holding down the button
         if(rpm > LogRPM){
         engineOff = 0; //Engine is currently on
         }
         buttonCount = 0;
         buttonCountLow = 0;
+        stillPressed = 1;
         return 1;//transition from wait to log
     }
-    else if((buttonCount >= countThreshold ||rpm < LogRPM) && state == log && buttonCountLow > countThreshold){
-        //Start Delay of 5s
-        engineOff = 1; //Engine is now off
-        stopDelayCounter = 0;
+//    else if((buttonCount >= countThreshold ||rpm < LogRPM) && state == log && buttonCountLow > countThreshold){
+//        //Start Delay of 5s
+//        engineOff = 1; //Engine is now off
+//        stopDelayCounter = 0;
+//        buttonCount = 0;
+//        buttonCountLow = 0;
+//        return 0;
+//    }
+//    else if(engineOff == 1 && stopDelayCounter >= 5000 ){//switch to a wait state, 5 seconds have elapsed
+//        stopDelayCounter = 0;
+//        return 2; //transition from log to wait
+//    }
+    else if(buttonCount >= countThreshold && stillPressed == 0 && state == log)
+    {
         buttonCount = 0;
         buttonCountLow = 0;
-        return 0;
-    }
-    else if(engineOff == 1 && stopDelayCounter >= 5000 ){//switch to a wait state, 5 seconds have elapsed
-        stopDelayCounter = 0;
-        return 2; //transition from log to wait
+        stillPressed = 1;
+        return 2;
     }
     else{ //Catchall waiting state
         return 0;
@@ -322,11 +334,6 @@ void initI2CEEPROM(){
 }
 void initI2CPSoC(){
     initI2CBus(I2C1, 80000000, 100000); //100kbs
-     //Send data pointer
-//    i2cStart(I2C1);
-//    i2cSendByte(I2C1, (0x08 << 1) + 0) ;//send addresss and write
-//    i2cSendByte(I2C1, 0x00);//send data pointer
-//    i2cStop(I2C1);
 }
 //Need to implement a check here so that it doesn't get stuck if the PSOC isn't attached
 void PSOC_Read(){
@@ -547,32 +554,51 @@ int main(void)
     // Enable the cache for the best performance
     CheKseg0CacheOn();
 
-    // Initialize GPIO for BTN1 and LED1
-    TRISGCLR = 0xF000;   // Clear PortG bit associated with LED1
-    ODCGCLR  = 0xF000;   // Normal output for LED1 (not open drain)
-    TRISGSET = 0x40;     // Set PortG bit associated with BTN1
-    LATGCLR = 0xF000;
-    TRISDSET = 0x8000; //Set PortD bit associated with pin JE4
+//    // Initialize GPIO for BTN1 and LED1
+//    TRISGCLR = 0xF000;   // Clear PortG bit associated with LED1
+//    ODCGCLR  = 0xF000;   // Normal output for LED1 (not open drain)
+//    TRISGSET = 0x40;     // Set PortG bit associated with BTN1
+//    LATGCLR = 0xF000;
+//    TRISDSET = 0x8000; //Set PortD bit associated with pin JE4
+//
+//    //Set up aeroprobe sync signal - JE1
+//    TRISDCLR = 0x4000;
+//    ODCDCLR = 0x4000;
+//    LATDCLR = 0x4000;
+//    //Setup output for check engine light -  JE2
+//    TRISFSET = 0x80;
+//    ODCFCLR = 0x80;
+//    LATFCLR = 0x80;
 
-    //Set up aeroprobe sync signal - JE1
-    TRISDCLR = 0x4000;
-    ODCDCLR = 0x4000;
-    LATDCLR = 0x4000;
-    //Setup output for check engine light -  JE2
-    TRISFSET = 0x80;
-    ODCFCLR = 0x80;
-    LATFCLR = 0x80;
+////Setup input for interface button - JE2 (F100)
+//    TRISFSET = 0x100;
+////Setupt output for Red LED on interface board - JE3 - F4
+//    TRISFCLR = 0x4;
+//    ODCFCLR = 0x4;
+//    LATFSET = 0x4;
+////Setupt output for Green LED on interface board - JE4 (D8000)
+//    TRISDCLR = 0x8000;
+//    ODCDCLR = 0x8000;
+//    LATDSET = 0x8000;
+    //Setupt input for inteface button JF2 (RF05) (0x20)
+    TRISFSET = 0x20;
+    //RED LED - JF3 (RF04)  (0x10)
+    TRISFCLR = 0x10;
+    ODCFCLR = 0x10;
+    LATFSET = 0x10;
+    //Green LED -JF7 (RE9)  (0x200)
+    TRISECLR = 0x200;
+    ODCECLR = 0x200;
+    LATESET = 0x200;
 
-    CAN1Init();//CAN1 is configured to accept all EIDs
-    CAN2Init();
+    CAN1Init();//CAN1 ACCL 500kbs
+    CAN2Init();//Motec 1mbs
     DelayInit();
 
     initUART1();
     prevButton1 = 0;
     prevButton2 = 0;
     millisec = 0;
-
-    //OpenTimer2(T2_ON | T2_IDLE_CON | T2_SOURCE_INT | T2_PS_1_256 | T2_GATE_OFF, 3125);//changed so its 100Hz
 
    // Configure Timer 2 to request a real-time interrupt once per millisecond.
    // The period of Timer 2 is (16 * 5000)/(80 MHz) = 1 ms.
@@ -630,7 +656,7 @@ int main(void)
     //TRISBCLR = 5 << 7;//for adc this was also screwing up the adc making things be randomly 1ff
     //PORTBSET = 1 << 6; //this will make adc respoint with binary haha
 
-    //initialize i2c for the psoc and send it an initializeation msg
+    //initialize i2c for the psoc
     initI2CPSoC();
     
     state = wait;
@@ -645,6 +671,8 @@ int main(void)
         writeEEPROM(addy, 0x00);
     }
 
+    LATFCLR = 0x10; //Turn on Red LED
+    LATECLR = 0x200;
     while(1)
     {
         //USB stack process function
@@ -683,9 +711,11 @@ int main(void)
                         sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),MAP(kpa),AT(degF),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),millisec counter(ms)\n");
                         FSfwrite(string,1, strlen(string),myFile);
                         millisec = 0;
-                        LATDSET = 0x4000; //Send sync pulse
+                        //LATDSET = 0x4000; //Send sync pulse (aeroprobe)
                         while(millisec < 1000){} //Wait 1s then move to log, the aeroprobe ADC waits 1s.
-                            state = log;   
+                            state = log;
+                        LATECLR = 0x200; //Turn on Green
+                        LATFSET = 0x10; //Turn off Red
                     }
                 }
                 break;
@@ -709,21 +739,14 @@ int main(void)
                 state = wait;
                 logNum++;
                 writeEEPROM(addy, logNum);
+                LATFCLR = 0x10; //Turn on Red
+                LATESET = 0x200; //Turn off Green
                 break;
             default:
                 state = wait;
                 break;
         }
-        //If statement for Check engine light
-        //Not Connected in VTM17C, moved to dash project
-        if(et*0.1 >= ECTThreshold || egt1 >= EGTThreshold || oilTemp *0.1 >= OilTempThreshold)
-        {
-            LATFCLR = 0x80;//Turn on light (Ground it)
-        }
-        else
-        {
-            LATFSET = 0x80; //Turn off light (High Voltage )
-        }
+
         // Update LED 1 to show program is running
         if(PORTD & 0x8000){  // check Switch (JE4)
             LATGSET = 1 << 12; // LED1 on
@@ -743,7 +766,6 @@ int main(void)
     }
     return 0;
 }
-
 
 /****************************************************************************
   Function:
