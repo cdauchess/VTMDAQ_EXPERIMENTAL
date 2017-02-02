@@ -78,7 +78,7 @@ BOOL analogRead;
 
 
 int PSOC_volts[12]; //A place to store the voltage data from the PSOC
-BOOL PSOCConnected = TRUE; //Set to TRUE when PSOC is attached for testing, without the PSOC set to FALSE
+BOOL PSOCConnected = FALSE; //Set to TRUE when PSOC is attached for testing, without the PSOC set to FALSE
 char nameString[20];
 
 unsigned short rpm;
@@ -159,7 +159,7 @@ int CheckLogStateChange(){
     //Here begins the logic of figuring out what the next move in the state machine is
     //FIXME  This may prevent the manual stop of a log while the engine is running
     //Manual button only for track side test with engine off? maybe for zeroing sensors
-    if((buttonCount >= countThreshold || rpm > LogRPM)&& state == wait && stillPressed == 0){ //Should prevent oscillations caused by holding down the button
+    if((buttonCount >= countThreshold)&& state == wait && stillPressed == 0){ //Should prevent oscillations caused by holding down the button
         if(rpm > LogRPM){
         engineOff = 0; //Engine is currently on
         }
@@ -409,7 +409,7 @@ if (state == log){
                 double t_tps = (double) tp * .1;
                 double t_map = (double) map *0.1;
                 double t_at = (double) at*0.1;
-                sprintf(motec0String, "%d,%.6f,%.6f,%.6f,", t_rpm, t_tps );
+                sprintf(motec0String, "%d,%.6f,%.6f,%.6f,", t_rpm, t_tps, t_map, t_at );
                 motec0Read = FALSE;
             }else{
                 sprintf(motec0String, " , ,");
@@ -672,7 +672,7 @@ int main(void)
     }
 
     LATFCLR = 0x10; //Turn on Red LED
-    LATECLR = 0x200;
+   // LATECLR = 0x200;
     while(1)
     {
         //USB stack process function
@@ -712,7 +712,7 @@ int main(void)
                         FSfwrite(string,1, strlen(string),myFile);
                         millisec = 0;
                         //LATDSET = 0x4000; //Send sync pulse (aeroprobe)
-                        while(millisec < 1000){} //Wait 1s then move to log, the aeroprobe ADC waits 1s.
+                       // while(millisec < 1000){} //Wait 1s then move to log, the aeroprobe ADC waits 1s.
                             state = log;
                         LATECLR = 0x200; //Turn on Green
                         LATFSET = 0x10; //Turn off Red
