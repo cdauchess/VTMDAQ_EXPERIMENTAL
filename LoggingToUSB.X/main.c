@@ -102,9 +102,11 @@ unsigned short rgSpd;
 unsigned short runTime;
 unsigned short fuel;
 unsigned short oilTemp;
+unsigned short ignTime;
 BOOL motec0Read, motec1Read, motec2Read, motec3Read, motec4Read, motec5Read;
 
 unsigned int millisec;
+BIT dataFlag = 0;
 
 //enum used for the finite state machine implemented in this logger
 typedef enum{
@@ -289,6 +291,7 @@ void writeCan2Msg(CANRxMessageBuffer *message){
     }
         else if(sid == 0x6f5){
         oilTemp = data[0] << 8 | data[1];
+        ignTime = data[2] << 8 | data[3];
         motec5Read = TRUE;
     }
 
@@ -376,6 +379,7 @@ if (state == log){
             char PSOCstring0[40];
             char PSOCstring1[40];
             char PSOCstring2[40];
+            char dataFlagString[40];
 
             if(angularRateInfoRec){
                 pitch = (((double)(angularRateInfo[1] << 8 | angularRateInfo[0])) /128) - 250;
@@ -454,23 +458,27 @@ if (state == log){
             }
             if(motec5Read){
                 double oilTempDegF = (double)oilTemp * .1;
-                sprintf(motec5String, "%.6f,", oilTempDegF);
+                double ignTimeL = (double)ignTime * 0.1;
+                sprintf(motec5String, "%.6f, %.6f,", oilTempDegF, ignTimeL);
                 motec5Read = FALSE;
             }else{
-                sprintf(motec5String, ",");
+                sprintf(motec5String, ", ,");
             }
             //PSOC
             if(PSOCConnected){ //This allows for the program to be tested without the PSOC connected.  PSOC read is a global variable defined at the top of the file
             PSOC_Read();
             sprintf(PSOCstring0,"%d,%d,%d,%d,%d,%d,",PSOC_volts[0],PSOC_volts[1],PSOC_volts[2],PSOC_volts[3],PSOC_volts[4],PSOC_volts[5]); //Current Sensors
             sprintf(PSOCstring1,"%d,%d,%d,%d,",PSOC_volts[6],PSOC_volts[7],PSOC_volts[8],PSOC_volts[9]); //Shock Pots
-            sprintf(PSOCstring2,"%d,%d,%d\n",PSOC_volts[10],PSOC_volts[11],millisec_USE); //Steering Angle And Brake temp and millisec counter
+            sprintf(PSOCstring2,"%d,%d,%d,",PSOC_volts[10],PSOC_volts[11],millisec_USE); //Steering Angle And Brake temp and millisec counter
             }
             else{
                 sprintf(PSOCstring0," , , , , , , ");
                 sprintf(PSOCstring1," , , , ,");
-                sprintf(PSOCstring2,", ,%d\n",millisec_USE);
+                sprintf(PSOCstring2,", ,%d,",millisec_USE);
             }
+            //dataFlag
+            sprintf(dataFlagString,"%d\n",dataFlag);
+            //Write all strings to the CSV file
             FSfwrite(angString,1, strlen(angString),myFile);
             FSfwrite(accString,1, strlen(accString),myFile);
             FSfwrite(HRaccString,1, strlen(HRaccString),myFile);
@@ -483,6 +491,7 @@ if (state == log){
             FSfwrite(PSOCstring0,1, strlen(PSOCstring0),myFile);
             FSfwrite(PSOCstring1,1, strlen(PSOCstring1),myFile);
             FSfwrite(PSOCstring2,1, strlen(PSOCstring2),myFile);
+            FSfwrite(dataFlagString,1,strlen(dataFlagString),myFile);
         }
 }
 
@@ -554,32 +563,6 @@ int main(void)
     // Enable the cache for the best performance
     CheKseg0CacheOn();
 
-//    // Initialize GPIO for BTN1 and LED1
-//    TRISGCLR = 0xF000;   // Clear PortG bit associated with LED1
-//    ODCGCLR  = 0xF000;   // Normal output for LED1 (not open drain)
-//    TRISGSET = 0x40;     // Set PortG bit associated with BTN1
-//    LATGCLR = 0xF000;
-//    TRISDSET = 0x8000; //Set PortD bit associated with pin JE4
-//
-//    //Set up aeroprobe sync signal - JE1
-//    TRISDCLR = 0x4000;
-//    ODCDCLR = 0x4000;
-//    LATDCLR = 0x4000;
-//    //Setup output for check engine light -  JE2
-//    TRISFSET = 0x80;
-//    ODCFCLR = 0x80;
-//    LATFCLR = 0x80;
-
-////Setup input for interface button - JE2 (F100)
-//    TRISFSET = 0x100;
-////Setupt output for Red LED on interface board - JE3 - F4
-//    TRISFCLR = 0x4;
-//    ODCFCLR = 0x4;
-//    LATFSET = 0x4;
-////Setupt output for Green LED on interface board - JE4 (D8000)
-//    TRISDCLR = 0x8000;
-//    ODCDCLR = 0x8000;
-//    LATDSET = 0x8000;
     //Setupt input for inteface button JF2 (RF05) (0x20)
     TRISFSET = 0x20;
     //RED LED - JF3 (RF04)  (0x10)
@@ -590,6 +573,8 @@ int main(void)
     TRISECLR = 0x200;
     ODCECLR = 0x200;
     LATESET = 0x200;
+    //Setupt Input for DataFlag Button - JF8 - RA1
+    TRISASET = 0x1;
 
     CAN1Init();//CAN1 ACCL 500kbs
     CAN2Init();//Motec 1mbs
@@ -708,7 +693,7 @@ int main(void)
                         sprintf(nameString, "test%d.csv", logNum);
                         myFile = FSfopen(nameString,"w");
                         char string[550];//Header string
-                        sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),MAP(kpa),AT(degF),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),millisec counter(ms)\n");
+                        sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),MAP(kpa),AT(degF),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F), Ignition Adv (degBTDC),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),millisec counter(ms),Data Flag\n");
                         FSfwrite(string,1, strlen(string),myFile);
                         millisec = 0;
                         //LATDSET = 0x4000; //Send sync pulse (aeroprobe)
@@ -731,6 +716,7 @@ int main(void)
                 if(millisec > 2000){
                     LATDCLR = 0x4000; //After 2 seconds pass no need to keep output high
                 }
+                //Add a function to check for a flag button and set a variable
                 break;
             case stopLog:
                 //Always make sure to close the file so that the data gets written to the drive.
