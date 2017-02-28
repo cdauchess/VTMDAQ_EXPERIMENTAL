@@ -579,8 +579,8 @@ section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
 .dbg_data               0xa0000000          0x200         512  Memory reserved for debugger exec 
 .eh_frame               0xa0000200           0x30          48   
-.sdata                  0xa0000230           0x38          56  Small init data 
-.sbss                   0xa0000268          0x14c         332  Small uninit data 
+.sdata                  0xa0000230           0x3c          60  Small init data 
+.sbss                   0xa000026c          0x148         328  Small uninit data 
 .bss                    0xa00003b4          0x9b4        2484  Uninitialized data 
 .bss                    0xa0000d68           0x80         128  Uninitialized data 
 .bss                    0xa0000de8           0x10          16  Uninitialized data 
@@ -1379,49 +1379,49 @@ END GROUP
  *(.got)
                 0xa0000230                . = ALIGN (0x4)
 
-.sdata          0xa0000230       0x38
+.sdata          0xa0000230       0x3c
                 0xa0000230                _sdata_begin = .
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0xa0000230       0x14 build/default/debug/main.o
+ .sdata         0xa0000230       0x18 build/default/debug/main.o
                 0xa0000230                ECTThreshold
                 0xa0000234                EGTThreshold
                 0xa0000238                OilTempThreshold
                 0xa000023c                LogRPM
                 0xa0000240                engineOff
- .sdata         0xa0000244        0x8 build/default/debug/usb_config.o
-                0xa0000244                usbTPL
- .sdata         0xa000024c        0xc PIC32_USK_USB_Device_Host_Simple_DEMO_wo_MAL.a(FSIO.o)
-                0xa000024c                gLastFATSectorRead
-                0xa0000250                gLastDataSectorRead
-                0xa0000254                cwdptr
- .sdata         0xa0000258        0x4 PIC32_USK_USB_Device_Host_Simple_DEMO_wo_MAL.a(usb_host_msd.o)
- .sdata         0xa000025c        0x8 c:/program files (x86)/microchip/xc32/v1.31/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(CANConfiguration.o)
-                0xa000025c                canModules
- .sdata         0xa0000264        0x4 c:/program files (x86)/microchip/xc32/v1.31/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(_iob.o)
-                0xa0000264                _Files
-                0xa0000268                . = ALIGN (0x4)
-                0xa0000268                _sdata_end = .
+                0xa0000244                PSOCConnected
+ .sdata         0xa0000248        0x8 build/default/debug/usb_config.o
+                0xa0000248                usbTPL
+ .sdata         0xa0000250        0xc PIC32_USK_USB_Device_Host_Simple_DEMO_wo_MAL.a(FSIO.o)
+                0xa0000250                gLastFATSectorRead
+                0xa0000254                gLastDataSectorRead
+                0xa0000258                cwdptr
+ .sdata         0xa000025c        0x4 PIC32_USK_USB_Device_Host_Simple_DEMO_wo_MAL.a(usb_host_msd.o)
+ .sdata         0xa0000260        0x8 c:/program files (x86)/microchip/xc32/v1.31/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(CANConfiguration.o)
+                0xa0000260                canModules
+ .sdata         0xa0000268        0x4 c:/program files (x86)/microchip/xc32/v1.31/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(_iob.o)
+                0xa0000268                _Files
+                0xa000026c                . = ALIGN (0x4)
+                0xa000026c                _sdata_end = .
 
 .lit8
  *(.lit8)
 
 .lit4
  *(.lit4)
-                0xa0000268                . = ALIGN (0x4)
-                0xa0000268                _data_end = .
-                0xa0000268                _bss_begin = .
+                0xa000026c                . = ALIGN (0x4)
+                0xa000026c                _data_end = .
+                0xa000026c                _bss_begin = .
 
-.sbss           0xa0000268      0x14c
-                0xa0000268                _sbss_begin = .
+.sbss           0xa000026c      0x148
+                0xa000026c                _sbss_begin = .
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0xa0000268       0x24 build/default/debug/main.o
-                0xa0000268                stopDelayCounter
-                0xa000026c                counter
-                0xa0000270                stillPressed
-                0xa0000274                buttonCount
-                0xa0000278                buttonCountLow
-                0xa0000284                PSOCConnected
+ .sbss          0xa000026c       0x20 build/default/debug/main.o
+                0xa000026c                stopDelayCounter
+                0xa0000270                counter
+                0xa0000274                stillPressed
+                0xa0000278                buttonCount
+                0xa000027c                buttonCountLow
                 0xa0000288                dataFlag
  .sbss          0xa000028c        0x8 build/default/debug/CANFunctions.o
  .sbss          0xa0000294        0xc PIC32_USK_USB_Device_Host_Simple_DEMO_wo_MAL.a(FSIO.o)

@@ -78,7 +78,7 @@ BOOL analogRead;
 
 
 int PSOC_volts[12]; //A place to store the voltage data from the PSOC
-BOOL PSOCConnected = FALSE; //Set to TRUE when PSOC is attached for testing, without the PSOC set to FALSE
+BOOL PSOCConnected = TRUE; //Set to TRUE when PSOC is attached for testing, without the PSOC set to FALSE
 char nameString[20];
 
 unsigned short rpm;
@@ -380,7 +380,9 @@ if (state == log){
             char PSOCstring1[40];
             char PSOCstring2[40];
             char dataFlagString[40];
+            char timeString[40];
 
+            sprintf(timeString,"%d,", millisec_USE);
             if(angularRateInfoRec){
                 pitch = (((double)(angularRateInfo[1] << 8 | angularRateInfo[0])) /128) - 250;
                 roll = (((double)(angularRateInfo[3] << 8 | angularRateInfo[2])) /128) - 250;
@@ -469,16 +471,17 @@ if (state == log){
             PSOC_Read();
             sprintf(PSOCstring0,"%d,%d,%d,%d,%d,%d,",PSOC_volts[0],PSOC_volts[1],PSOC_volts[2],PSOC_volts[3],PSOC_volts[4],PSOC_volts[5]); //Current Sensors
             sprintf(PSOCstring1,"%d,%d,%d,%d,",PSOC_volts[6],PSOC_volts[7],PSOC_volts[8],PSOC_volts[9]); //Shock Pots
-            sprintf(PSOCstring2,"%d,%d,%d,",PSOC_volts[10],PSOC_volts[11],millisec_USE); //Steering Angle And Brake temp and millisec counter
+            sprintf(PSOCstring2,"%d,%d,",PSOC_volts[10],PSOC_volts[11]); //Steering Angle And Brake temp and millisec counter
             }
             else{
                 sprintf(PSOCstring0," , , , , , , ");
                 sprintf(PSOCstring1," , , , ,");
-                sprintf(PSOCstring2,", ,%d,",millisec_USE);
+                sprintf(PSOCstring2,", ,");
             }
             //dataFlag
             sprintf(dataFlagString,"%d\n",dataFlag);
             //Write all strings to the CSV file
+            FSfwrite(timeString,1,strlen(timeString),myFile);
             FSfwrite(angString,1, strlen(angString),myFile);
             FSfwrite(accString,1, strlen(accString),myFile);
             FSfwrite(HRaccString,1, strlen(HRaccString),myFile);
@@ -656,6 +659,14 @@ int main(void)
         writeEEPROM(addy, 0x00);
     }
 
+    char ParamString[550];//Paramater Names (line3)
+    char GroupString[550];//Group Names (Line1)
+    char UnitString[550];//Units (line2)
+    sprintf(GroupString,"Time,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Engine,Engine,Engine,Engine,Engine,Engine,Engine,Engine,Engine,Engine,Drivetrain,Drivetrain,Electrical,Drivetrain,Drivetrain,Drivetrain,Drivetrain,Engine,Engine,Engine,Engine,Electrical,Electrical,Electrical,Electrical,Electrical,Electrical,Suspension,Suspension,Suspension,Suspension,Suspension,Drivetrain,Driver\n");
+    sprintf(UnitString,"ms,deg/s,deg/s,deg,s,m/s^2,m/s^2,m/s^2,m/s^2,m/s^2,m/s^2,rpm,%,kpa,degF,degF,lambda,psi,degF,na,na,psi,psi,V,mph,mph,mph,mph,s,gal,degF,degBTDC,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,\n");
+    sprintf(ParamString, "Millisec,pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm,tps(percent),MAP(kpa),AT(degF),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F), Ignition Adv (degBTDC),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),Data Flag\n");
+
+
     LATFCLR = 0x10; //Turn on Red LED
    // LATECLR = 0x200;
     while(1)
@@ -692,9 +703,9 @@ int main(void)
                         logNum = readEEPROM(addy);
                         sprintf(nameString, "test%d.csv", logNum);
                         myFile = FSfopen(nameString,"w");
-                        char string[550];//Header string
-                        sprintf(string, "pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm, tps(percent),MAP(kpa),AT(degF),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F), Ignition Adv (degBTDC),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),millisec counter(ms),Data Flag\n");
-                        FSfwrite(string,1, strlen(string),myFile);
+                        FSfwrite(GroupString,1,strlen(GroupString),myFile);
+                        FSfwrite(UnitString,1,strlen(UnitString),myFile);
+                        FSfwrite(ParamString,1, strlen(ParamString),myFile);
                         millisec = 0;
                         //LATDSET = 0x4000; //Send sync pulse (aeroprobe)
                        // while(millisec < 1000){} //Wait 1s then move to log, the aeroprobe ADC waits 1s.
