@@ -39,6 +39,21 @@
 #define UART_BAUD 9600
 #define SYS_FREQ (80000000L)
 
+//Defines for GPS command strings
+#define PMTK_SET_NMEA_OUTPUT_RMCONLY "$PMTK314,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*29" //Only output GPRMC from GPS module
+#define PMTK_SET_NMEA_UPDATE_1HZ  "$PMTK220,1000*1F" //GPS update rate
+#define PMTK_SET_NMEA_UPDATE_5HZ  "$PMTK220,200*2C"
+#define PMTK_SET_NMEA_UPDATE_10HZ "$PMTK220,100*2F"
+#define PMTK_SET_BAUD_57600 "$PMTK251,57600*2C" //Baud rate adjustment
+#define PMTK_SET_BAUD_9600 "$PMTK251,9600*17"
+//GPS Variables
+BYTE GPSData[500];
+BYTE GPSLogData[500];
+int CommaCount = 0;
+int GPSIndex = 0;
+int currentLine = 1;
+int newData = 0;
+
 //Check Engine light thresholds
 int ECTThreshold = 240;
 int EGTThreshold = 1900;
@@ -124,6 +139,15 @@ void initUART1(){
     UARTSetDataRate(UART1, getPBusClock(), UART_BAUD);//data rate 9600 baud and pbus 10MHz
     UARTEnable(UART1, UART_PERIPHERAL | UART_RX | UART_TX | UART_ENABLE); //enable the uart for tx rx
     while(!UARTTransmitterIsReady(UART1));
+}
+
+void initUART2(){
+    UARTConfigure(UART2, UART_ENABLE_PINS_TX_RX_ONLY);//configure uart for rx and tx
+    //UARTSetFifoMode(UART2, UART_INTERRUPT_ON_TX_NOT_FULL | UART_INTERRUPT_ON_RX_NOT_EMPTY);//configure for interrupts
+    UARTSetLineControl(UART2,  UART_DATA_SIZE_8_BITS | UART_PARITY_NONE | UART_STOP_BITS_1);//set uart line options
+    UARTSetDataRate(UART2, getPBusClock(), UART_BAUD);//data rate 9600 baud and pbus 10MHz
+    UARTEnable(UART2, UART_PERIPHERAL | UART_RX | UART_TX | UART_ENABLE); //enable the uart for tx rx
+    while(!UARTTransmitterIsReady(UART2));
 }
 
 void sendString(char* string){
@@ -557,6 +581,35 @@ BOOL readMultiEEPROM(BYTE address, BYTE *data, int length){
     return keepReading;
 }
 
+BYTE UARTReceiveByte(UART_MODULE uart)
+{
+      return UARTGetDataByte(uart); //This function is only called when receive data is ready, therefore no check is needed
+}
+
+void GPSData(){
+    BYTE receive;
+    if(UARTReceivedDataIsAvailable(UART2))
+    {
+    receive = UARTReceiveByte(UART2);
+    GPSIndex++;
+    newData = 1;
+    }
+    if(newData == 1){
+        if(!(receive=='.'||receive=='0'||receive=='1'||receive=='2'||receive=='3'||receive=='4'||receive=='5'||receive=='6'||receive=='7'||receive=='8'||receive=='9'||receive==','||receive==0x0A||receive==0x0D))
+           receive = '3'; //Make all characters that are not important a 3
+       // UARTSendByte(UART1,receive);
+        newData = 0;
+        GPSData[GPSIndex] = receive;
+        GPSIndex++;
+        if(receive == 0xA){
+            strncpy(GPSLogData, GPSData, strlen(GPSData));
+            GPSIndex = 0;
+            //LineDone = 1;
+           // UARTSendByte(UART1,0xA);
+        }
+    }
+}
+
 int main(void)
 {
     int  value;
@@ -584,6 +637,8 @@ int main(void)
     DelayInit();
 
     initUART1();
+    //FIXME - Uncomment When GPS Is connected
+//    initUART2();
     prevButton1 = 0;
     prevButton2 = 0;
     millisec = 0;
