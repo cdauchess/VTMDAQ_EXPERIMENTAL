@@ -503,7 +503,7 @@ if (state == log){
                 sprintf(PSOCstring2,", ,");
             }
             //dataFlag
-            sprintf(dataFlagString,"%d\n",dataFlag);
+            sprintf(dataFlagString,"%d,",dataFlag);
             //Write all strings to the CSV file
             FSfwrite(timeString,1,strlen(timeString),myFile);
             FSfwrite(angString,1, strlen(angString),myFile);
@@ -519,6 +519,7 @@ if (state == log){
             FSfwrite(PSOCstring1,1, strlen(PSOCstring1),myFile);
             FSfwrite(PSOCstring2,1, strlen(PSOCstring2),myFile);
             FSfwrite(dataFlagString,1,strlen(dataFlagString),myFile);
+            FSfwrite(GPSLogData,1,strlen(GPSLogData),myFile); //The NMEA sentence had a \n character at the end, no need to manually include it
         }
 }
 
@@ -619,26 +620,30 @@ int main(void)
     // Enable the cache for the best performance
     CheKseg0CacheOn();
 
-    //Setupt input for inteface button JF2 (RF05) (0x20)
-    TRISFSET = 0x20;
-    //RED LED - JF3 (RF04)  (0x10)
-    TRISFCLR = 0x10;
-    ODCFCLR = 0x10;
-    LATFSET = 0x10;
+    //Setupt input for inteface button JF8 (RA01) (0x02)
+    TRISASET = 0x02;
+    //RED LED - JF9 (RA04)  (0x10)
+    TRISACLR = 0x10;
+    ODCACLR = 0x10;
+    LATASET = 0x10;
     //Green LED -JF7 (RE9)  (0x200)
     TRISECLR = 0x200;
     ODCECLR = 0x200;
     LATESET = 0x200;
-    //Setupt Input for DataFlag Button - JF8 - RA1
-    TRISASET = 0x1;
+    //Setupt Input for DataFlag Button - JF10 - RA5 0x20
+    TRISASET = 0x20;
+    //Setup Output for Clutch Hold (Launch) JE1 RD14 0x4000
+    //This function is active low, driving the FET on the PDU
+    TRISDCLR = 0x4000;
+    ODCDCLR = 0x4000;
+    LATDSET = 0x4000; //Default state is high (off)
 
     CAN1Init();//CAN1 ACCL 500kbs
     CAN2Init();//Motec 1mbs
     DelayInit();
 
     initUART1();
-    //FIXME - Uncomment When GPS Is connected
-//    initUART2();
+    initUART2(); // GPS UART
     prevButton1 = 0;
     prevButton2 = 0;
     millisec = 0;
@@ -722,10 +727,13 @@ int main(void)
     sprintf(ParamString, "Millisec,pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm,tps(percent),MAP(kpa),AT(degF),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F), Ignition Adv (degBTDC),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),Data Flag\n");
 
 
-    LATFCLR = 0x10; //Turn on Red LED
+    LATACLR = 0x10; //Turn on Red LED
    // LATECLR = 0x200;
     while(1)
     {
+        //GPS Handler
+        //FIXME -  need to figure out if a few lines need to be removed from the RX buffer before log begins.
+        GPSData();
         //USB stack process function
         USBTasks();
 
@@ -766,7 +774,7 @@ int main(void)
                        // while(millisec < 1000){} //Wait 1s then move to log, the aeroprobe ADC waits 1s.
                             state = log;
                         LATECLR = 0x200; //Turn on Green
-                        LATFSET = 0x10; //Turn off Red
+                        LATASET = 0x10; //Turn off Red
                     }
                 }
                 break;
@@ -791,7 +799,7 @@ int main(void)
                 state = wait;
                 logNum++;
                 writeEEPROM(addy, logNum);
-                LATFCLR = 0x10; //Turn on Red
+                LATACLR = 0x10; //Turn on Red
                 LATESET = 0x200; //Turn off Green
                 break;
             default:
@@ -799,13 +807,7 @@ int main(void)
                 break;
         }
 
-        // Update LED 1 to show program is running
-        if(PORTD & 0x8000){  // check Switch (JE4)
-            LATGSET = 1 << 12; // LED1 on
-        }
-        else{
-            LATGCLR = 1 << 12; // LED1 off
-        }
+
         //CAN Handlers
         CANRxMessageBuffer* CAN1RxMessage = CAN1RxMsgProcess();
         if(CAN1RxMessage){
