@@ -611,6 +611,22 @@ void GPSData(){
     }
 }
 
+void ClutchHold(){
+    double lgspeeduse = (double)lgSpd * .1;
+    if(rpm > 6000 && lgspeeduse < 5){
+        LATDCLR = 0x4000; //Vent clutch through flow regulator
+    }
+    else
+        LATDSET = 0x4000; //Vent clutch to atmosphere
+}
+
+void DataFlagFunc(){
+    if(PORTA & 0x20)
+        dataFlag = 1;
+    else
+        dataFlag = 0;
+}
+
 int main(void)
 {
     int  value;
@@ -734,6 +750,8 @@ int main(void)
         //GPS Handler
         //FIXME -  need to figure out if a few lines need to be removed from the RX buffer before log begins.
         GPSData();
+        ClutchHold(); //This function handles the venting direction of the clutch actuator
+        DataFlagFunc(); //This function handles the updates of the data flag variable
         //USB stack process function
         USBTasks();
 
