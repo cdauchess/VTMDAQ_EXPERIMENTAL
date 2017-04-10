@@ -46,9 +46,10 @@
 #define PMTK_SET_NMEA_UPDATE_10HZ "$PMTK220,100*2F"
 #define PMTK_SET_BAUD_57600 "$PMTK251,57600*2C" //Baud rate adjustment
 #define PMTK_SET_BAUD_9600 "$PMTK251,9600*17"
+#define PMTK_HOT_RESTART "$PMTK101*32\r\n"   //Hot Restart
 //GPS Variables
-BYTE GPSData[500];
-BYTE GPSLogData[500];
+char GPSData[500];
+char GPSLogData[500] = "1,2,3,4,5,6\n";
 int CommaCount = 0;
 int GPSIndex = 0;
 int currentLine = 1;
@@ -159,6 +160,19 @@ void sendString(char* string){
     }
 }
 
+void UARTSendString(UART_MODULE uart, const char *string)
+{
+    while(*string)
+    {
+        if (UARTTransmitterIsReady(uart))//Case where it doesn't matter whether if or while because location is only incremented when the byte is sent
+        {
+            UARTSendDataByte(uart, *string);
+            while(!UARTTransmissionHasCompleted(uart)){}
+            string++; //increment through the string
+        }
+    }
+}
+
 //Return 0 For a "do nothing"
 //Return 1 For a transition from wait to log
 //Return 2 For a transition from log to wait
@@ -171,12 +185,12 @@ int CheckLogStateChange(){
     if(buttonCountLow > 500){  //Reset count to 200 if it reaches 500, gives an upper bound to the count
         buttonCountLow  = 200;
     }
-    if(PORTF & 0x20){
+    if(PORTA & 0x02){
         buttonCount++;
         buttonCountLow = 0;
 
     }
-    else if(!(PORTF & 0x20))
+    else if(!(PORTA & 0x02))
     {     
         buttonCountLow ++;
         stillPressed = 0;
@@ -520,6 +534,7 @@ if (state == log){
             FSfwrite(PSOCstring2,1, strlen(PSOCstring2),myFile);
             FSfwrite(dataFlagString,1,strlen(dataFlagString),myFile);
             FSfwrite(GPSLogData,1,strlen(GPSLogData),myFile); //The NMEA sentence had a \n character at the end, no need to manually include it
+            //FSfwrite(",123\n",1,5,myFile);
         }
 }
 
@@ -587,7 +602,7 @@ BYTE UARTReceiveByte(UART_MODULE uart)
       return UARTGetDataByte(uart); //This function is only called when receive data is ready, therefore no check is needed
 }
 
-void GPSData(){
+void GPSDataRead(){
     BYTE receive;
     if(UARTReceivedDataIsAvailable(UART2))
     {
@@ -603,12 +618,13 @@ void GPSData(){
         GPSData[GPSIndex] = receive;
         GPSIndex++;
         if(receive == 0xA){
-            strncpy(GPSLogData, GPSData, strlen(GPSData));
+           strncpy(GPSLogData, GPSData, strlen(GPSData));
             GPSIndex = 0;
-            //LineDone = 1;
+          //  LineDone = 1;
            // UARTSendByte(UART1,0xA);
         }
     }
+    return 0;
 }
 
 void ClutchHold(){
@@ -630,6 +646,7 @@ void DataFlagFunc(){
 int main(void)
 {
     int  value;
+    int junk;
     millisec = 0;
     value = SYSTEMConfigWaitStatesAndPB( GetSystemClock() );
 
@@ -734,24 +751,38 @@ int main(void)
     {
         writeEEPROM(addy, 0x00);
     }
-
-    char ParamString[550];//Paramater Names (line3)
     char GroupString[550];//Group Names (Line1)
     char UnitString[550];//Units (line2)
+    char ParamString[650];//Paramater Names (line3)
     sprintf(GroupString,"Time,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Accelerometer,Engine,Engine,Engine,Engine,Engine,Engine,Engine,Engine,Engine,Engine,Drivetrain,Drivetrain,Electrical,Drivetrain,Drivetrain,Drivetrain,Drivetrain,Engine,Engine,Engine,Engine,Electrical,Electrical,Electrical,Electrical,Electrical,Electrical,Suspension,Suspension,Suspension,Suspension,Suspension,Drivetrain,Driver\n");
-    sprintf(UnitString,"ms,deg/s,deg/s,deg,s,m/s^2,m/s^2,m/s^2,m/s^2,m/s^2,m/s^2,rpm,%,kpa,degF,degF,lambda,psi,degF,na,na,psi,psi,V,mph,mph,mph,mph,s,gal,degF,degBTDC,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,\n");
-    sprintf(ParamString, "Millisec,pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm,tps(percent),MAP(kpa),AT(degF),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F), Ignition Adv (degBTDC),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),Data Flag\n");
+    sprintf(UnitString,"ms,deg/s,deg/s,deg/s,m/s^2,m/s^2,m/s^2,m/s^2,m/s^2,m/s^2,rpm,%,kpa,degF,degF,lambda,psi,degF,na,na,psi,psi,V,mph,mph,mph,mph,s,gal,degF,degBTDC,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,\n");
+    sprintf(ParamString, "Millisec,pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm,tps(percent),MAP(kpa),AT(degF),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F), Ignition Adv (degBTDC),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),Data Flag,GPRMC,Time,Valid,Lat,N/S,Long,E/W,Speed,Course,Date,Variation,E/W\n");
 
 
     LATACLR = 0x10; //Turn on Red LED
    // LATECLR = 0x200;
+
+    UARTSendString(UART2,PMTK_HOT_RESTART);
+    int i = 0;
+    while(!UARTTransmissionHasCompleted(UART2)){
+        i++;
+    }
+
+//    char test;
+//    while(test != 0xA){
+//           if(UARTReceivedDataIsAvailable(UART2))
+//        {
+//        test = UARTReceiveByte(UART2);
+//        }
+//    }
+
     while(1)
     {
         //GPS Handler
         //FIXME -  need to figure out if a few lines need to be removed from the RX buffer before log begins.
-        GPSData();
-        ClutchHold(); //This function handles the venting direction of the clutch actuator
-        DataFlagFunc(); //This function handles the updates of the data flag variable
+        GPSDataRead();
+      //  ClutchHold(); //This function handles the venting direction of the clutch actuator
+       // DataFlagFunc(); //This function handles the updates of the data flag variable
         //USB stack process function
         USBTasks();
 
