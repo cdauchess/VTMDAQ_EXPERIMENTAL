@@ -2,6 +2,8 @@
 #include "usb_host_msd.h"
 #include "usb_host_msd_scsi.h"
 #include "FSIO.h"
+#include <xc.h>
+#include <sys/attribs.h>
 
 //Program info
 //Motec is on CAN2 - 1 mbps
@@ -48,8 +50,8 @@
 #define PMTK_SET_BAUD_9600 "$PMTK251,9600*17"
 #define PMTK_HOT_RESTART "$PMTK101*32\r\n"   //Hot Restart
 //GPS Variables
-char GPSData[500];
-char GPSLogData[500] = "1,2,3,4,5,6\n";
+char GPSData[100];
+char GPSLogData[100] = "1,2,3,4,5,6\n";
 int CommaCount = 0;
 int GPSIndex = 0;
 int currentLine = 1;
@@ -144,7 +146,7 @@ void initUART1(){
 
 void initUART2(){
     UARTConfigure(UART2, UART_ENABLE_PINS_TX_RX_ONLY);//configure uart for rx and tx
-    //UARTSetFifoMode(UART2, UART_INTERRUPT_ON_TX_NOT_FULL | UART_INTERRUPT_ON_RX_NOT_EMPTY);//configure for interrupts
+    UARTSetFifoMode(UART2, UART_INTERRUPT_ON_RX_NOT_EMPTY);//configure for interrupts
     UARTSetLineControl(UART2,  UART_DATA_SIZE_8_BITS | UART_PARITY_NONE | UART_STOP_BITS_1);//set uart line options
     UARTSetDataRate(UART2, getPBusClock(), UART_BAUD);//data rate 9600 baud and pbus 10MHz
     UARTEnable(UART2, UART_PERIPHERAL | UART_RX | UART_TX | UART_ENABLE); //enable the uart for tx rx
@@ -534,7 +536,7 @@ if (state == log){
             FSfwrite(PSOCstring2,1, strlen(PSOCstring2),myFile);
             FSfwrite(dataFlagString,1,strlen(dataFlagString),myFile);
             FSfwrite(GPSLogData,1,strlen(GPSLogData),myFile); //The NMEA sentence had a \n character at the end, no need to manually include it
-            //FSfwrite(",123\n",1,5,myFile);
+            FSfwrite("\n",1,1,myFile);
         }
 }
 
@@ -604,22 +606,28 @@ BYTE UARTReceiveByte(UART_MODULE uart)
 
 void GPSDataRead(){
     BYTE receive;
-    if(UARTReceivedDataIsAvailable(UART2))
-    {
-    receive = UARTReceiveByte(UART2);
-    GPSIndex++;
-    newData = 1;
-    }
+    int i;
+//    if(UARTReceivedDataIsAvailable(UART2))
+//    {
+//    receive = UARTReceiveByte(UART2);
+//    GPSIndex++;
+//    newData = 1;
+//    }
     if(newData == 1){
-        if(!(receive=='.'||receive=='0'||receive=='1'||receive=='2'||receive=='3'||receive=='4'||receive=='5'||receive=='6'||receive=='7'||receive=='8'||receive=='9'||receive==','||receive==0x0A||receive==0x0D))
-           receive = '3'; //Make all characters that are not important a 3
-       // UARTSendByte(UART1,receive);
+        receive = GPSData[GPSIndex-1];
+//        if(!(receive=='.'||receive=='0'||receive=='1'||receive=='2'||receive=='3'||receive=='4'||receive=='5'||receive=='6'||receive=='7'||receive=='8'||receive=='9'||receive==','||receive==0x0A||receive==0x0D))
+//           GPSData[GPSIndex-1] = '3'; //Make all characters that are not important a 3
+//       // UARTSendByte(UART1,receive);
         newData = 0;
-        GPSData[GPSIndex] = receive;
-        GPSIndex++;
+//      //  GPSData[GPSIndex] = receive;
+//     //   GPSIndex++;
         if(receive == 0xA){
-           strncpy(GPSLogData, GPSData, strlen(GPSData));
+            if(GPSIndex < 100)
+                strncpy(GPSLogData,GPSData,GPSIndex-6);
             GPSIndex = 0;
+          for(i = 0;i<99;i++){
+              GPSData[i] = 0;
+          }  
           //  LineDone = 1;
            // UARTSendByte(UART1,0xA);
         }
@@ -675,7 +683,7 @@ int main(void)
     CAN2Init();//Motec 1mbs
     DelayInit();
 
-    initUART1();
+    //initUART1();
     initUART2(); // GPS UART
     prevButton1 = 0;
     prevButton2 = 0;
@@ -687,9 +695,15 @@ int main(void)
 
    // Configure the CPU to respond to Timer 2's interrupt requests.
    INTEnableSystemMultiVectoredInt();
-   INTSetVectorPriority(INT_TIMER_2_VECTOR, INT_PRIORITY_LEVEL_1);
+   INTSetVectorPriority(INT_TIMER_2_VECTOR, INT_PRIORITY_LEVEL_2);
    INTClearFlag(INT_T2);
    INTEnable(INT_T2, INT_ENABLED);
+
+   //UART GPS Interrupts
+   INTSetVectorPriority(INT_UART_2_VECTOR ,INT_PRIORITY_LEVEL_1); //Make sure UART interrupt is top priority
+   INTClearFlag(INT_U2RX);
+   INTEnable(INT_U2RX, INT_ENABLED);
+
 
     value = OSCCON;
     while (!(value & 0x00000020))
@@ -708,13 +722,13 @@ int main(void)
     angularRateInfoRec = FALSE;
     accelerationSensorRec = FALSE;
     HRaccelerationSensorRec = FALSE;
-    analogRead = FALSE;
-    analogIn1 = 0;
-    analogIn2 = 0;
+//    analogRead = FALSE;
+//    analogIn1 = 0;
+//    analogIn2 = 0;
 
-    INTSetVectorPriority(INT_ADC_VECTOR, INT_PRIORITY_LEVEL_1);
-    INTEnable(INT_AD1, INT_ENABLED);
-    INTClearFlag(INT_AD1);  //clear flag to avoid spurious interrupt
+//    INTSetVectorPriority(INT_ADC_VECTOR, INT_PRIORITY_LEVEL_1);
+//    INTEnable(INT_AD1, INT_ENABLED);
+//    INTClearFlag(INT_AD1);  //clear flag to avoid spurious interrupt
 
     //current statys of ADC is that sampling 0-3.3V from JA-03 and JA-04 with some weird things happing in the data, it could just be a bad joystick or weird data things happing
 
@@ -722,17 +736,17 @@ int main(void)
     OpenTimer3(T3_ON|T3_PS_1_256|T3_SOURCE_INT, 1562);
 
     //set ADC to sample analog pin2
-    SetChanADC10( ADC_CH0_NEG_SAMPLEA_NVREF | ADC_CH0_POS_SAMPLEA_AN4 | ADC_CH0_NEG_SAMPLEB_NVREF | ADC_CH0_POS_SAMPLEB_AN6);
+    //SetChanADC10( ADC_CH0_NEG_SAMPLEA_NVREF | ADC_CH0_POS_SAMPLEA_AN4 | ADC_CH0_NEG_SAMPLEB_NVREF | ADC_CH0_POS_SAMPLEB_AN6);
 
     //open ADC to give unsigned integers and start conversions on timer3
     //use 0v and 3.3V take one sample per interrupt, use analog pin2
-    OpenADC10(ADC_MODULE_ON|ADC_FORMAT_INTG32|ADC_CLK_TMR|ADC_AUTO_SAMPLING_ON ,
-        ADC_VREF_AVDD_AVSS |ADC_SAMPLES_PER_INT_2 | ADC_ALT_INPUT_ON,
-        ADC_CONV_CLK_PB|ADC_CONV_CLK_Tcy,
-        ENABLE_AN4_ANA | ENABLE_AN6_ANA,
-        SKIP_SCAN_AN0 | SKIP_SCAN_AN1 | SKIP_SCAN_AN2 | SKIP_SCAN_AN3 | SKIP_SCAN_AN5 | SKIP_SCAN_AN7 | SKIP_SCAN_AN8 | SKIP_SCAN_AN9 | SKIP_SCAN_AN10 | SKIP_SCAN_AN11 | SKIP_SCAN_AN12 | SKIP_SCAN_AN13 | SKIP_SCAN_AN14 | SKIP_SCAN_AN15);
-
-    EnableADC10();
+//    OpenADC10(ADC_MODULE_ON|ADC_FORMAT_INTG32|ADC_CLK_TMR|ADC_AUTO_SAMPLING_ON ,
+//        ADC_VREF_AVDD_AVSS |ADC_SAMPLES_PER_INT_2 | ADC_ALT_INPUT_ON,
+//        ADC_CONV_CLK_PB|ADC_CONV_CLK_Tcy,
+//        ENABLE_AN4_ANA | ENABLE_AN6_ANA,
+//        SKIP_SCAN_AN0 | SKIP_SCAN_AN1 | SKIP_SCAN_AN2 | SKIP_SCAN_AN3 | SKIP_SCAN_AN5 | SKIP_SCAN_AN7 | SKIP_SCAN_AN8 | SKIP_SCAN_AN9 | SKIP_SCAN_AN10 | SKIP_SCAN_AN11 | SKIP_SCAN_AN12 | SKIP_SCAN_AN13 | SKIP_SCAN_AN14 | SKIP_SCAN_AN15);
+//
+//    EnableADC10();
     //AD1CON1SET = 0x4;
     //TRISBCLR = 5 << 7;//for adc this was also screwing up the adc making things be randomly 1ff
     //PORTBSET = 1 << 6; //this will make adc respoint with binary haha
@@ -950,11 +964,20 @@ BOOL USB_ApplicationEventHandler( BYTE address, USB_EVENT event, void *data, DWO
 }
 
 
-void __ISR(_TIMER_2_VECTOR, ipl1) Timer2_ISR(void) {
+void __ISR(_TIMER_2_VECTOR, ipl2) Timer2_ISR(void) {
     if (INTGetFlag(INT_T2)){
          millisec++;
          stopDelayCounter++;
          INTClearFlag(INT_T2);   // Acknowledge the interrupt source by clearing its flag.
+    }
+}
+
+void __ISR(_UART_2_VECTOR, ipl1) UART2_ISR(void){
+    if(INTGetFlag(INT_U2RX)){
+        GPSData[GPSIndex] = UARTReceiveByte(UART2);
+        GPSIndex++;
+        newData = 1;
+        INTClearFlag(INT_U2RX);
     }
 }
 
