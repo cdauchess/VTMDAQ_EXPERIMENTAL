@@ -52,10 +52,13 @@
 //GPS Variables
 char GPSData[100];
 char GPSLogData[100] = "1,2,3,4,5,6\n";
+char GPSWriteData[100];
 int CommaCount = 0;
 int GPSIndex = 0;
 int currentLine = 1;
 int newData = 0;
+int newSentence = 0;
+int sentenceLength = 0;
 
 //Check Engine light thresholds
 int ECTThreshold = 240;
@@ -535,7 +538,7 @@ if (state == log){
             FSfwrite(PSOCstring1,1, strlen(PSOCstring1),myFile);
             FSfwrite(PSOCstring2,1, strlen(PSOCstring2),myFile);
             FSfwrite(dataFlagString,1,strlen(dataFlagString),myFile);
-            FSfwrite(GPSLogData,1,strlen(GPSLogData),myFile); //The NMEA sentence had a \n character at the end, no need to manually include it
+            FSfwrite(GPSWriteData,1,sentenceLength,myFile); //The NMEA sentence had a \n character at the end, no need to manually include it
             FSfwrite("\n",1,1,myFile);
         }
 }
@@ -624,15 +627,38 @@ void GPSDataRead(){
         if(receive == 0xA){
             if(GPSIndex < 100)
                 strncpy(GPSLogData,GPSData,GPSIndex-6);
+            sentenceLength = GPSIndex-6;
+            newSentence = 1;
             GPSIndex = 0;
-          for(i = 0;i<99;i++){
-              GPSData[i] = 0;
-          }  
+//          for(i = 0;i<99;i++){
+//              GPSData[i] = 0;
+//          }
           //  LineDone = 1;
            // UARTSendByte(UART1,0xA);
         }
     }
     return 0;
+}
+
+void GPSSentenceParse(){
+    if(newSentence == 1){
+        int i;
+          for(i = 0;i<99;i++){
+              GPSWriteData[i] = 0;
+          }        
+        char receive;
+        for(i = 0; i<sentenceLength;i++){
+            receive = GPSLogData[i];
+            if(!(receive=='.'||receive=='0'||receive=='1'||receive=='2'||receive=='3'||receive=='4'||receive=='5'||receive=='6'||receive=='7'||receive=='8'||receive=='9'||receive==','||receive==0x0A||receive==0x0D))
+                    GPSWriteData[i] = '3'; //Make all characters that are not important a 3
+            else
+                GPSWriteData[i] = receive;
+        }
+          for(i = 0;i<99;i++){
+              GPSLogData[i] = 0;
+          }
+        newSentence = 0;
+    }
 }
 
 void ClutchHold(){
@@ -795,6 +821,7 @@ int main(void)
         //GPS Handler
         //FIXME -  need to figure out if a few lines need to be removed from the RX buffer before log begins.
         GPSDataRead();
+        GPSSentenceParse();
       //  ClutchHold(); //This function handles the venting direction of the clutch actuator
        // DataFlagFunc(); //This function handles the updates of the data flag variable
         //USB stack process function
