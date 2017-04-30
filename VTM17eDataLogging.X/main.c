@@ -596,6 +596,12 @@ int main(void)
     short addy = 0x000;
     BYTE num = 0x00;
 
+    logNum = readEEPROM(addy);
+    if(logNum >= 0xEF)  //Address stored in EEPROM  if greater than 0xEF reset to zero, limited to a single byte with current code configuration
+    {
+        writeEEPROM(addy, 0x00);
+    }
+
     LATFCLR = 0x10; //Turn on Red LED
 
     int b = 0x01;
