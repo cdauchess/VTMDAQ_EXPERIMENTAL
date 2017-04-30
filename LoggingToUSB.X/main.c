@@ -610,12 +610,6 @@ BYTE UARTReceiveByte(UART_MODULE uart)
 void GPSDataRead(){
     BYTE receive;
     int i;
-//    if(UARTReceivedDataIsAvailable(UART2))
-//    {
-//    receive = UARTReceiveByte(UART2);
-//    GPSIndex++;
-//    newData = 1;
-//    }
     if(newData == 1){
         receive = GPSData[GPSIndex-1];
 //        if(!(receive=='.'||receive=='0'||receive=='1'||receive=='2'||receive=='3'||receive=='4'||receive=='5'||receive=='6'||receive=='7'||receive=='8'||receive=='9'||receive==','||receive==0x0A||receive==0x0D))
@@ -666,6 +660,8 @@ void ClutchHold(){
     if(rpm > 6000 && lgspeeduse < 5){
         LATDCLR = 0x4000; //Vent clutch through flow regulator
     }
+    else if(PORTA & 0x02)
+        LATDCLR = 0x4000;
     else
         LATDSET = 0x4000; //Vent clutch to atmosphere
 }
@@ -748,34 +744,9 @@ int main(void)
     angularRateInfoRec = FALSE;
     accelerationSensorRec = FALSE;
     HRaccelerationSensorRec = FALSE;
-//    analogRead = FALSE;
-//    analogIn1 = 0;
-//    analogIn2 = 0;
 
-//    INTSetVectorPriority(INT_ADC_VECTOR, INT_PRIORITY_LEVEL_1);
-//    INTEnable(INT_AD1, INT_ENABLED);
-//    INTClearFlag(INT_AD1);  //clear flag to avoid spurious interrupt
-
-    //current statys of ADC is that sampling 0-3.3V from JA-03 and JA-04 with some weird things happing in the data, it could just be a bad joystick or weird data things happing
-
-    //init tim er 3 to convert adc at 100hz
+       //init tim er 3 to convert adc at 100hz
     OpenTimer3(T3_ON|T3_PS_1_256|T3_SOURCE_INT, 1562);
-
-    //set ADC to sample analog pin2
-    //SetChanADC10( ADC_CH0_NEG_SAMPLEA_NVREF | ADC_CH0_POS_SAMPLEA_AN4 | ADC_CH0_NEG_SAMPLEB_NVREF | ADC_CH0_POS_SAMPLEB_AN6);
-
-    //open ADC to give unsigned integers and start conversions on timer3
-    //use 0v and 3.3V take one sample per interrupt, use analog pin2
-//    OpenADC10(ADC_MODULE_ON|ADC_FORMAT_INTG32|ADC_CLK_TMR|ADC_AUTO_SAMPLING_ON ,
-//        ADC_VREF_AVDD_AVSS |ADC_SAMPLES_PER_INT_2 | ADC_ALT_INPUT_ON,
-//        ADC_CONV_CLK_PB|ADC_CONV_CLK_Tcy,
-//        ENABLE_AN4_ANA | ENABLE_AN6_ANA,
-//        SKIP_SCAN_AN0 | SKIP_SCAN_AN1 | SKIP_SCAN_AN2 | SKIP_SCAN_AN3 | SKIP_SCAN_AN5 | SKIP_SCAN_AN7 | SKIP_SCAN_AN8 | SKIP_SCAN_AN9 | SKIP_SCAN_AN10 | SKIP_SCAN_AN11 | SKIP_SCAN_AN12 | SKIP_SCAN_AN13 | SKIP_SCAN_AN14 | SKIP_SCAN_AN15);
-//
-//    EnableADC10();
-    //AD1CON1SET = 0x4;
-    //TRISBCLR = 5 << 7;//for adc this was also screwing up the adc making things be randomly 1ff
-    //PORTBSET = 1 << 6; //this will make adc respoint with binary haha
 
     //initialize i2c for the psoc
     initI2CPSoC();
@@ -798,7 +769,6 @@ int main(void)
     sprintf(UnitString,"ms,deg/s,deg/s,deg/s,m/s^2,m/s^2,m/s^2,m/s^2,m/s^2,m/s^2,rpm,%,kpa,degF,degF,lambda,psi,degF,na,na,psi,psi,V,mph,mph,mph,mph,s,gal,degF,degBTDC,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,mV,\n");
     sprintf(ParamString, "Millisec,pitch(deg/sec),roll(deg/sec),yaw(deg/sec),lat(m/s^2),long(m/s^2),vert(m/s^2),latHR(m/s^2),longHR(m/s^2),vertHR(m/s^2),rpm,tps(percent),MAP(kpa),AT(degF),ect(degF),lambda,fuel pres,egt(degF),launch,neutral,brake pres,brake pres filtered,BattVolt(V),ld speed(mph), lg speed(mph),rd speed(mph),rg speed(mph),run time(s),fuel used,Oil Temp (deg F), Ignition Adv (degBTDC),Overall Consumption(mV),Overall Production(mV),Fuel Pump(mV),Fuel Injector(mV),Ignition(mV),Vref(mV),Back Left(mV),Back Right(mV),Front Left(mV),Front Right(mV),Steering Angle(mV),Brake Temp(mV),Data Flag,GPRMC,Time,Valid,Lat,N/S,Long,E/W,Speed,Course,Date,Variation,E/W\n");
 
-
     LATACLR = 0x10; //Turn on Red LED
    // LATECLR = 0x200;
 
@@ -808,21 +778,13 @@ int main(void)
         i++;
     }
 
-//    char test;
-//    while(test != 0xA){
-//           if(UARTReceivedDataIsAvailable(UART2))
-//        {
-//        test = UARTReceiveByte(UART2);
-//        }
-//    }
-
     while(1)
     {
         //GPS Handler
         //FIXME -  need to figure out if a few lines need to be removed from the RX buffer before log begins.
         GPSDataRead();
         GPSSentenceParse();
-      //  ClutchHold(); //This function handles the venting direction of the clutch actuator
+        ClutchHold(); //This function handles the venting direction of the clutch actuator
        // DataFlagFunc(); //This function handles the updates of the data flag variable
         //USB stack process function
         USBTasks();
@@ -835,12 +797,6 @@ int main(void)
                     state = startLog;
                 }
                 break;
-                //Try to remove this state, just bounce between log and wait
-//            case init:
-//                if(CheckLogStateChange() == 1){
-//                    state = startLog;
-//                }
-//                break;
             case startLog:
                 //if thumbdrive is plugged in
                 if(USBHostMSDSCSIMediaDetect())

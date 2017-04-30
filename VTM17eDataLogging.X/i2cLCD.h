@@ -1,0 +1,324 @@
+/* 
+ * File:   i2cLCD.h
+ * Author: Stephen
+ *
+ * Created on February 15, 2015, 5:52 PM
+ */
+
+#ifndef I2CLCD_H
+#define	I2CLCD_H
+
+#ifdef	__cplusplus
+extern "C" {
+#endif
+
+
+// Colors (RGB565)
+#define RA8875_BLACK            0x0000
+#define RA8875_BLUE             0x001F
+#define RA8875_RED              0xF800
+#define RA8875_GREEN            0x07E0
+#define RA8875_CYAN             0x07FF
+#define RA8875_MAGENTA          0xF81F
+#define RA8875_YELLOW           0xFFE0
+#define RA8875_WHITE            0xFFFF
+
+// Command/Data pins for SPI
+#define RA8875_DATAWRITE        0x00
+#define RA8875_DATAREAD         0x40
+#define RA8875_CMDWRITE         0x80
+#define RA8875_CMDREAD          0xC0
+
+// Registers & bits
+#define RA8875_PWRR             0x01
+#define RA8875_PWRR_DISPON      0x80
+#define RA8875_PWRR_DISPOFF     0x00
+#define RA8875_PWRR_SLEEP       0x02
+#define RA8875_PWRR_NORMAL      0x00
+#define RA8875_PWRR_SOFTRESET   0x01
+
+#define RA8875_MRWC             0x02
+
+#define RA8875_GPIOX            0xC7
+
+#define RA8875_PLLC1            0x88
+#define RA8875_PLLC1_PLLDIV2    0x80
+#define RA8875_PLLC1_PLLDIV1    0x00
+
+#define RA8875_PLLC2            0x89
+#define RA8875_PLLC2_DIV1       0x00
+#define RA8875_PLLC2_DIV2       0x01
+#define RA8875_PLLC2_DIV4       0x02
+#define RA8875_PLLC2_DIV8       0x03
+#define RA8875_PLLC2_DIV16      0x04
+#define RA8875_PLLC2_DIV32      0x05
+#define RA8875_PLLC2_DIV64      0x06
+#define RA8875_PLLC2_DIV128     0x07
+
+#define RA8875_SYSR             0x10
+#define RA8875_SYSR_8BPP        0x00
+#define RA8875_SYSR_16BPP       0x0C
+#define RA8875_SYSR_MCU8        0x00
+#define RA8875_SYSR_MCU16       0x03
+
+#define RA8875_PCSR             0x04
+#define RA8875_PCSR_PDATR       0x00
+#define RA8875_PCSR_PDATL       0x80
+#define RA8875_PCSR_CLK         0x00
+#define RA8875_PCSR_2CLK        0x01
+#define RA8875_PCSR_4CLK        0x02
+#define RA8875_PCSR_8CLK        0x03
+
+#define RA8875_HDWR             0x14
+
+#define RA8875_HNDFTR           0x15
+#define RA8875_HNDFTR_DE_HIGH   0x00
+#define RA8875_HNDFTR_DE_LOW    0x80
+
+#define RA8875_HNDR             0x16
+#define RA8875_HSTR             0x17
+#define RA8875_HPWR             0x18
+#define RA8875_HPWR_LOW         0x00
+#define RA8875_HPWR_HIGH        0x80
+
+#define RA8875_VDHR0            0x19
+#define RA8875_VDHR1            0x1A
+#define RA8875_VNDR0            0x1B
+#define RA8875_VNDR1            0x1C
+#define RA8875_VSTR0            0x1D
+#define RA8875_VSTR1            0x1E
+#define RA8875_VPWR             0x1F
+#define RA8875_VPWR_LOW         0x00
+#define RA8875_VPWR_HIGH        0x80
+
+#define RA8875_HSAW0            0x30
+#define RA8875_HSAW1            0x31
+#define RA8875_VSAW0            0x32
+#define RA8875_VSAW1            0x33
+
+#define RA8875_HEAW0            0x34
+#define RA8875_HEAW1            0x35
+#define RA8875_VEAW0            0x36
+#define RA8875_VEAW1            0x37
+
+#define RA8875_MCLR             0x8E
+#define RA8875_MCLR_START       0x80
+#define RA8875_MCLR_STOP        0x00
+#define RA8875_MCLR_READSTATUS  0x80
+#define RA8875_MCLR_FULL        0x00
+#define RA8875_MCLR_ACTIVE      0x40
+
+#define RA8875_DCR                    0x90
+#define RA8875_DCR_LINESQUTRI_START   0x80
+#define RA8875_DCR_LINESQUTRI_STOP    0x00
+#define RA8875_DCR_LINESQUTRI_STATUS  0x80
+#define RA8875_DCR_CIRCLE_START       0x40
+#define RA8875_DCR_CIRCLE_STATUS      0x40
+#define RA8875_DCR_CIRCLE_STOP        0x00
+#define RA8875_DCR_FILL               0x20
+#define RA8875_DCR_NOFILL             0x00
+#define RA8875_DCR_DRAWLINE           0x00
+#define RA8875_DCR_DRAWTRIANGLE       0x01
+#define RA8875_DCR_DRAWSQUARE         0x10
+
+
+#define RA8875_ELLIPSE                0xA0
+#define RA8875_ELLIPSE_STATUS         0x80
+
+#define RA8875_MWCR0            0x40
+#define RA8875_MWCR0_GFXMODE    0x00
+#define RA8875_MWCR0_TXTMODE    0x80
+
+#define RA8875_CURH0            0x46
+#define RA8875_CURH1            0x47
+#define RA8875_CURV0            0x48
+#define RA8875_CURV1            0x49
+
+
+
+#define RA8875_P1CR             0x8A
+#define RA8875_P1CR_ENABLE      0x80
+#define RA8875_P1CR_DISABLE     0x00
+#define RA8875_P1CR_CLKOUT      0x10
+#define RA8875_P1CR_PWMOUT      0x00
+
+#define RA8875_P1DCR            0x8B
+
+#define RA8875_P2CR             0x8C
+#define RA8875_P2CR_ENABLE      0x80
+#define RA8875_P2CR_DISABLE     0x00
+#define RA8875_P2CR_CLKOUT      0x10
+#define RA8875_P2CR_PWMOUT      0x00
+
+#define RA8875_P2DCR            0x8D
+
+#define RA8875_PWM_CLK_DIV1     0x00
+#define RA8875_PWM_CLK_DIV2     0x01
+#define RA8875_PWM_CLK_DIV4     0x02
+#define RA8875_PWM_CLK_DIV8     0x03
+#define RA8875_PWM_CLK_DIV16    0x04
+#define RA8875_PWM_CLK_DIV32    0x05
+#define RA8875_PWM_CLK_DIV64    0x06
+#define RA8875_PWM_CLK_DIV128   0x07
+#define RA8875_PWM_CLK_DIV256   0x08
+#define RA8875_PWM_CLK_DIV512   0x09
+#define RA8875_PWM_CLK_DIV1024  0x0A
+#define RA8875_PWM_CLK_DIV2048  0x0B
+#define RA8875_PWM_CLK_DIV4096  0x0C
+#define RA8875_PWM_CLK_DIV8192  0x0D
+#define RA8875_PWM_CLK_DIV16384 0x0E
+#define RA8875_PWM_CLK_DIV32768 0x0F
+
+#define RA8875_TPCR0                  0x70
+#define RA8875_TPCR0_ENABLE           0x80
+#define RA8875_TPCR0_DISABLE          0x00
+#define RA8875_TPCR0_WAIT_512CLK      0x00
+#define RA8875_TPCR0_WAIT_1024CLK     0x10
+#define RA8875_TPCR0_WAIT_2048CLK     0x20
+#define RA8875_TPCR0_WAIT_4096CLK     0x30
+#define RA8875_TPCR0_WAIT_8192CLK     0x40
+#define RA8875_TPCR0_WAIT_16384CLK    0x50
+#define RA8875_TPCR0_WAIT_32768CLK    0x60
+#define RA8875_TPCR0_WAIT_65536CLK    0x70
+#define RA8875_TPCR0_WAKEENABLE       0x08
+#define RA8875_TPCR0_WAKEDISABLE      0x00
+#define RA8875_TPCR0_ADCCLK_DIV1      0x00
+#define RA8875_TPCR0_ADCCLK_DIV2      0x01
+#define RA8875_TPCR0_ADCCLK_DIV4      0x02
+#define RA8875_TPCR0_ADCCLK_DIV8      0x03
+#define RA8875_TPCR0_ADCCLK_DIV16     0x04
+#define RA8875_TPCR0_ADCCLK_DIV32     0x05
+#define RA8875_TPCR0_ADCCLK_DIV64     0x06
+#define RA8875_TPCR0_ADCCLK_DIV128    0x07
+
+#define RA8875_TPCR1            0x71
+#define RA8875_TPCR1_AUTO       0x00
+#define RA8875_TPCR1_MANUAL     0x40
+#define RA8875_TPCR1_VREFINT    0x00
+#define RA8875_TPCR1_VREFEXT    0x20
+#define RA8875_TPCR1_DEBOUNCE   0x04
+#define RA8875_TPCR1_NODEBOUNCE 0x00
+#define RA8875_TPCR1_IDLE       0x00
+#define RA8875_TPCR1_WAIT       0x01
+#define RA8875_TPCR1_LATCHX     0x02
+#define RA8875_TPCR1_LATCHY     0x03
+
+#define RA8875_TPXH             0x72
+#define RA8875_TPYH             0x73
+#define RA8875_TPXYL            0x74
+
+#define RA8875_INTC1            0xF0
+#define RA8875_INTC1_KEY        0x10
+#define RA8875_INTC1_DMA        0x08
+#define RA8875_INTC1_TP         0x04
+#define RA8875_INTC1_BTE        0x02
+
+#define RA8875_INTC2            0xF1
+#define RA8875_INTC2_KEY        0x10
+#define RA8875_INTC2_DMA        0x08
+#define RA8875_INTC2_TP         0x04
+#define RA8875_INTC2_BTE        0x02
+
+
+//those below are defined by stephen
+#define RA8875_FCURXL 0x2A
+#define RA8875_FCURXH 0x2B
+#define RA8875_FCURYL 0x2C
+#define RA8875_FCURYH 0x2D
+#define RA8875_BGCR0 0x60
+#define RA8875_BGCR1 0x61
+#define RA8875_BGCR2 0x62
+#define RA8875_FGCR0 0x63
+#define RA8875_FGCR1 0x64
+#define RA8875_FGCR2 0x65
+#define RA8875_DLHSR0 0x91
+#define RA8875_DLHSR1 0x92
+#define RA8875_DLVSR0 0x93
+#define RA8875_DLVSR1 0x94
+#define RA8875_DLHER0 0x95
+#define RA8875_DLHER1 0x96
+#define RA8875_DLVER0 0x97
+#define RA8875_DLVER1 0x98
+
+
+
+//Decleration of LCD configureation variables
+//#define LCD_DEVICE_ID 0b000011 //last 2 bits of device id are configurable and may not be correct
+//RS and WR bits defines in Table 6-4 on page 69 of RA8875 Datasheet and table 5-1
+#define DATA_WRITE 0b00
+#define DATA_READ 0b01
+#define CMD_WRITE 0b10
+#define STATUS_READ 0b11
+
+
+
+static int LCD_DEVICE_ID = 0x03;
+
+static int i2cBus = I2C1;
+
+void setI2CBus(I2C_MODULE bus);
+
+I2C_MODULE getI2CBus();
+
+
+    
+    /*
+     * BEFORE IMPLEMINTING THIS STUFF YOU SHOULD JUST PULL THE INFO OFF THE THING
+     * READ THE STATUS REGISTER AND ALL THE OTHER REGISTERS CUZ THEIR R/W
+     * USE THIS INFO TO FIGURE OUT WHAT THEY ALL MEAN AND WHATS DEFAULT
+     *
+     * EVEN RIGHT NOW YOU COULD WRITE A PROGRAM THAT READS THEM ALL
+     * SPITS THEM OUT TO UART SO YOU CAN TAKE A SCREEN CAP ON YOUR LAPTOP AND
+     * LEARN ALL THE STUFF BY ANALYZING THE NUMBERS ITLL MAKE DEBUGGING SOOOO MUCH EASIER
+     *
+     * STOP HARDCODING STUFF AND ALLOW THE PROGRAMMER TO USE #DEFINES TO MAKE COMMANDS EASILY
+     *
+     * YOU CAN HARDCODE YOUR FAVS THO
+     
+     */
+
+/*
+
+//Sent 2Byte message to LCD
+//Byte 1: LCD_DEVICE_ID + 2bitOperator (DATA_WRITE or CMD_WRITE
+//Byte 2: register number or data
+//Example1: sendByteToLCD(I2C1, CMD_WRITE, 0x0000)
+//Example2: sendByteToLCD(I2C1, DATA_WRITE, 0x0000)
+//for commmand write and data write
+void sendByteToLCD(I2C_MODULE id, BYTE twoBitOperator, BYTE data);
+
+//for data read and status read
+BYTE readByteToLCD(I2C_MODULE id, BYTE twoBitOperator);
+
+//sends a command write with the destined register then a data read so you can read off register
+BYTE getByteFromRegister(I2C_MODULE id, BYTE reg);
+
+BYTE* getDataFromRegistersInRange(I2C_MODULE id, BYTE regMin, BYTE regMax);
+
+void sendPowerAndDisplayControl(I2C_MODULE id, BOOL displayOn, BOOL sleepModeOn, BOOL softwareReset);
+
+//position is a 10 bit number
+void setFontWriteCursorPositionX(I2C_MODULE id, unsigned int position);
+
+//position is a 9 bit number
+void setFontWriteCursorPositionY(I2C_MODULE id, unsigned int position);
+
+//sizeSetting 0b00 for full size and 0x00 for fontToWidthSetting for no spacebetween chars and 0x3F for max space between chars
+//sizeSetting is 2 bit number and fontToWidthSetting is 6 bit number refer to p22 of RA8875 manual
+void setFontWriteTypeSetting(I2C_MODULE id, BYTE sizeSetting, BYTE fontToWidthSetting);
+
+//see table on page 23 in RA6675 manual for more info
+//for normal operation see if the following works
+//GT = 0b200 largest font?
+//coding = 0b100 ASCII
+//font = 0b00 Normal for ascii or greek characters
+void setSerialFontROMSetting(I2C_MODULE id, BYTE GT, BYTE coding, BYTE font);
+
+*/
+
+#ifdef	__cplusplus
+}
+#endif
+
+#endif	/* I2CLCD_H */
+
