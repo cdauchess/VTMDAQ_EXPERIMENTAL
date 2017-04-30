@@ -46,6 +46,9 @@
 BYTE CAN1MessageFifoArea[2 * 8 * 16];
 BYTE CAN2MessageFifoArea[2 * 8 * 16];
 
+int millisec = 0;
+int millisecUse = 0;
+
 // Parameters received off CAN bus and corresponding Node IDs
 signed int motorSpeed;
 int nodeStatus, rmsMotorCurrent; // Node ID 0x187 Variables (from Inverter)
@@ -445,6 +448,74 @@ void sendMsgRecUART1(){
     sendString(uartArray);
 }
 
+void WriteToUSB(){
+            char dataRead187String[50];
+            char dataRead201String[50];
+            char dataRead205String[50];
+            char dataRead287String[50];
+            char dataRead305String[50];
+            char dataRead183String[50];
+            char dataRead100String[50];
+            char Time[15];
+
+            
+
+            if(dataRead187){
+                sprintf(dataRead187String, "%d,%d,%d,%d,%.2f,",millisecUse, motorSpeed, nodeStatus, rmsMotorCurrent, nodeDCVoltage );
+                dataRead187 = FALSE;
+            }else{
+                sprintf(dataRead187String, " , , , ,");
+            }
+            if(dataRead201){
+                sprintf(dataRead201String, "%d,%d,%d,%d,", commandWord, commandCurrent, accelCurrentLimit, decelCurrentLimit );
+                dataRead201 = FALSE;
+            }else{
+                sprintf(dataRead201String, " , , , ,");
+            }
+            if(dataRead205){
+                sprintf(dataRead205String, "%d,%d,%d,%d,", vmc30State, steeringFiltered, throttleFiltered, errorBits );
+                dataRead205 = FALSE;
+            }else{
+                sprintf(dataRead205String, " , , , ,");
+            }
+            if(dataRead287){
+                sprintf(dataRead287String, "%d,%d,%d,%d,", heatSinkTemp, motorTemp, dcCurrent, voltageAngle );
+                dataRead287 = FALSE;
+            }else{
+                sprintf(dataRead287String, " , , , ,");
+            }
+            if(dataRead305){
+                if( inRegen1 ) { sprintf(dataRead305String, "1,"); }
+                else { sprintf(dataRead305String, "0,"); }
+                dataRead305 = FALSE;
+            }
+            else{
+                sprintf(dataRead305String, " ,");
+            }
+            if(dataRead183){
+                sprintf(dataRead183String, "%d,%d,%d,%d,", bmsCCL, bmsDCL, bmsHighTemp, bmsPackCurrent );
+                dataRead183 = FALSE;
+            }else{
+                sprintf(dataRead183String, " , , , ,");
+            }
+            if(dataRead100){
+                sprintf(dataRead100String, "%d,%d,%d,%d\n", cellid, instVoltage, openVoltage, checkSum );
+                dataRead100 = FALSE;
+            }else{
+                sprintf(dataRead100String, " , , , \n");
+            }
+           // sprintf(Time,'%d,',millisecUse);
+
+            //FSfwrite(Time,1,strlen(Time),myFile);
+            FSfwrite(dataRead187String,1, strlen(dataRead187String),myFile);
+            FSfwrite(dataRead201String,1, strlen(dataRead201String),myFile);
+            FSfwrite(dataRead205String,1, strlen(dataRead205String),myFile);
+            FSfwrite(dataRead287String,1, strlen(dataRead287String),myFile);
+            FSfwrite(dataRead305String,1, strlen(dataRead305String),myFile);
+            FSfwrite(dataRead183String,1, strlen(dataRead183String),myFile);
+            FSfwrite(dataRead100String,1, strlen(dataRead100String),myFile);
+}
+
 int main(void)
 {
     int value;
@@ -488,7 +559,8 @@ int main(void)
     initUART1();
     // Timer for Logging Frequency
     // Formula for timer period: PR = (1/loggingFrequency)*80MHz/Pre-scale
-    OpenTimer2(T2_ON | T2_IDLE_CON | T2_SOURCE_INT | T2_PS_1_256 | T2_GATE_OFF, 1525);
+    //1ms Timer
+       OpenTimer2(T2_ON | T2_IDLE_CON | T2_SOURCE_INT | T2_PS_1_16 | T2_GATE_OFF, 5000);
     // Interrupts
     INTConfigureSystem(INT_SYSTEM_CONFIG_MULT_VECTOR);
     INTEnableSystemMultiVectoredInt();
@@ -557,15 +629,23 @@ int main(void)
                         sprintf(nameString, "vtm17e%d.csv", logNum);
                         myFile = FSfopen(nameString,"w");
                         char string[350];
-                        sprintf(string, "MotorSpeed(RPM),NodeStatus,MotorCurrent,DCBusVoltage,TRACT1_CommandWord,MotorCommandCurrent(A-rms),AccelerationCL,DecelerationCL,VMC30State,SteeringFiltered,ThrottleFiltered,ErrorBits,HeatSinkTemp(C),MotorTemp(C),DcBusCurrent,VoltageAngle,Regen,CCL,DCL,HighTemp,PackCurrent,CellID,InstVoltage,OpenCVoltage,CheckSum\n");
+                        sprintf(string, "Time,MotorSpeed(RPM),NodeStatus,MotorCurrent,DCBusVoltage,TRACT1_CommandWord,MotorCommandCurrent(A-rms),AccelerationCL,DecelerationCL,VMC30State,SteeringFiltered,ThrottleFiltered,ErrorBits,HeatSinkTemp(C),MotorTemp(C),DcBusCurrent,VoltageAngle,Regen,CCL,DCL,HighTemp,PackCurrent,CellID,InstVoltage,OpenCVoltage,CheckSum\n");
                         FSfwrite(string,1, strlen(string),myFile);
                         LATECLR = 0x200; //Turn on Green
                         LATFSET = 0x10; //Turn off Red
                         state = log;
+                        millisec = 0;
                     }
                 }
                 break;
             case log:
+                if(dataRead187 && dataRead205 && dataRead287 && dataRead305 )
+                {
+                    millisecUse = millisec;
+                    WriteToUSB();
+
+                }
+                
                 if( CheckLogStateChange() == 2 ) {
                     state = stopLog;
                 }
@@ -744,67 +824,7 @@ void __ISR(_TIMER_2_VECTOR, ipl1) Timer2_ISR(void) {
 
     if (INTGetFlag(INT_T2))
     {
-        if (state == log)
-        {
-            char dataRead187String[50];
-            char dataRead201String[50];
-            char dataRead205String[50];
-            char dataRead287String[50];
-            char dataRead305String[50];
-            char dataRead183String[50];
-            char dataRead100String[50];
-            if(dataRead187){
-                sprintf(dataRead187String, "%d,%d,%d,%.2f,", motorSpeed, nodeStatus, rmsMotorCurrent, nodeDCVoltage );
-                dataRead187 = FALSE;
-            }else{
-                sprintf(dataRead187String, " , , , ,");
-            }
-            if(dataRead201){
-                sprintf(dataRead201String, "%d,%d,%d,%d,", commandWord, commandCurrent, accelCurrentLimit, decelCurrentLimit );
-                dataRead201 = FALSE;
-            }else{
-                sprintf(dataRead201String, " , , , ,");
-            }
-            if(dataRead205){
-                sprintf(dataRead205String, "%d,%d,%d,%d,", vmc30State, steeringFiltered, throttleFiltered, errorBits );
-                dataRead205 = FALSE;
-            }else{
-                sprintf(dataRead205String, " , , , ,");
-            }
-            if(dataRead287){
-                sprintf(dataRead287String, "%d,%d,%d,%d,", heatSinkTemp, motorTemp, dcCurrent, voltageAngle );
-                dataRead287 = FALSE;
-            }else{
-                sprintf(dataRead287String, " , , , ,");
-            }
-            if(dataRead305){
-                if( inRegen1 ) { sprintf(dataRead305String, "1,"); }
-                else { sprintf(dataRead305String, "0,"); }
-                dataRead305 = FALSE;
-            }
-            else{
-                sprintf(dataRead305String, " ,");
-            }
-            if(dataRead183){
-                sprintf(dataRead183String, "%d,%d,%d,%d,", bmsCCL, bmsDCL, bmsHighTemp, bmsPackCurrent );
-                dataRead183 = FALSE;
-            }else{
-                sprintf(dataRead183String, " , , , ,");
-            }
-            if(dataRead100){
-                sprintf(dataRead100String, "%d,%d,%d,%d\n", cellid, instVoltage, openVoltage, checkSum );
-                dataRead100 = FALSE;
-            }else{
-                sprintf(dataRead100String, " , , , \n");
-            }
-            FSfwrite(dataRead187String,1, strlen(dataRead187String),myFile);
-            FSfwrite(dataRead201String,1, strlen(dataRead201String),myFile);
-            FSfwrite(dataRead205String,1, strlen(dataRead205String),myFile);
-            FSfwrite(dataRead287String,1, strlen(dataRead287String),myFile);
-            FSfwrite(dataRead305String,1, strlen(dataRead305String),myFile);
-            FSfwrite(dataRead183String,1, strlen(dataRead183String),myFile);
-            FSfwrite(dataRead100String,1, strlen(dataRead100String),myFile);
-        }
+        millisec++;
     INTClearFlag(INT_T2);
     }
 }
