@@ -65,8 +65,9 @@ int ECTThreshold = 240;
 int EGTThreshold = 1900;
 int OilTempThreshold = 300;
 //RPM of Engine to begin logging
-int LogRPM = 2000;
+int LogRPM = 1500;
 int stopDelayCounter = 0;
+int startDelayCounter = 0;
 int engineOff = 1;
 
 // Global variables
@@ -135,6 +136,11 @@ typedef enum{
 
 }STATE;
 
+typedef enum{
+    Off, preStart, Run, softOff
+}CheckEngine;
+
+CheckEngine checkEngine;
 int logNum;
 STATE state;
 
@@ -182,37 +188,98 @@ void UARTSendString(UART_MODULE uart, const char *string)
 //Return 1 For a transition from wait to log
 //Return 2 For a transition from log to wait
 int CheckLogStateChange(){
-    int countThreshold = 100; //Threshold for a "high" to be registered from the switch
+ //   int countThreshold = 100; //Threshold for a "high" to be registered from the switch
     //look for rising edge in the switch
-    if(buttonCount > 500){  //Reset count to 200 if it reaches 500, gives an upper bound to the count
-        buttonCount  = 200;
-    }
-    if(buttonCountLow > 500){  //Reset count to 200 if it reaches 500, gives an upper bound to the count
-        buttonCountLow  = 200;
-    }
-    if(PORTA & 0x02){
-        buttonCount++;
-        buttonCountLow = 0;
-
-    }
-    else if(!(PORTA & 0x02))
-    {     
-        buttonCountLow ++;
-        stillPressed = 0;
-        buttonCount = 0;
-    }
+//    if(buttonCount > 500){  //Reset count to 200 if it reaches 500, gives an upper bound to the count
+//        buttonCount  = 200;
+//    }
+//    if(buttonCountLow > 500){  //Reset count to 200 if it reaches 500, gives an upper bound to the count
+//        buttonCountLow  = 200;
+//    }
+//    if(PORTA & 0x02){
+//        buttonCount++;
+//        buttonCountLow = 0;
+//
+//    }
+//    else if(!(PORTA & 0x02))
+//    {
+//        buttonCountLow ++;
+//        stillPressed = 0;
+//        buttonCount = 0;
+//    }
     //Here begins the logic of figuring out what the next move in the state machine is
     //FIXME  This may prevent the manual stop of a log while the engine is running
     //Manual button only for track side test with engine off? maybe for zeroing sensors
-    if((buttonCount >= countThreshold)&& state == wait && stillPressed == 0){ //Should prevent oscillations caused by holding down the button
-        if(rpm > LogRPM){
-        engineOff = 0; //Engine is currently on
-        }
-        buttonCount = 0;
-        buttonCountLow = 0;
-        stillPressed = 1;
-        return 1;//transition from wait to log
+
+    switch(checkEngine){
+        case Off:
+            if(rpm > LogRPM && state == wait)
+            {
+                startDelayCounter = 0;
+                checkEngine = preStart;
+            }
+            break;
+        case preStart:
+            if(rpm < LogRPM)
+            {
+                checkEngine = Off;
+            }
+            if(startDelayCounter > 1000 && state == wait)
+            {
+
+                checkEngine = Run;
+                return 1;
+            }
+           break;
+        case Run:
+            if(rpm < LogRPM && state == log)
+            {
+                stopDelayCounter = 0;
+                checkEngine = softOff;
+            }
+            break;
+        case softOff:
+            if(rpm > LogRPM && state == log)
+            {
+                checkEngine = Run;
+            }
+            if(stopDelayCounter > 5000 && state == log)
+            {
+                //state = wait;
+                checkEngine = Off;
+                return 2;
+            }
+            break;
     }
+
+    return 0;
+
+//    if(rpm > LogRPM && state == wait)
+//    {
+//        startDelayCounter = 0;
+//        engineOff = 0; // engine is "on"
+//
+//        return 0; //Do nothing
+//    }
+//    else if(engineOff == 0 && startDelayCounter > 1000 && state == wait)
+//    {
+//        return 1; //Transition to log
+//    }
+//    else if(rpm < LogRPM && state == log)
+//    {
+//        engineOff = 1; //Engine is off
+//      stopDelayCounter = 0;
+//      return 0;
+//    }
+//    if((buttonCount >= countThreshold)&& state == wait && stillPressed == 0){ //Should prevent oscillations caused by holding down the button
+//        if(rpm > LogRPM){
+//        engineOff = 0; //Engine is currently on
+//        }
+//        buttonCount = 0;
+//        buttonCountLow = 0;
+//        stillPressed = 1;
+//        return 1;//transition from wait to log
+//    }
 //    else if((buttonCount >= countThreshold ||rpm < LogRPM) && state == log && buttonCountLow > countThreshold){
 //        //Start Delay of 5s
 //        engineOff = 1; //Engine is now off
@@ -221,20 +288,20 @@ int CheckLogStateChange(){
 //        buttonCountLow = 0;
 //        return 0;
 //    }
-//    else if(engineOff == 1 && stopDelayCounter >= 5000 ){//switch to a wait state, 5 seconds have elapsed
+//    else if(engineOff == 1 && stopDelayCounter >= 5000 && state == log ){//switch to a wait state, 5 seconds have elapsed
 //        stopDelayCounter = 0;
 //        return 2; //transition from log to wait
 //    }
-    else if(buttonCount >= countThreshold && stillPressed == 0 && state == log)
-    {
-        buttonCount = 0;
-        buttonCountLow = 0;
-        stillPressed = 1;
-        return 2;
-    }
-    else{ //Catchall waiting state
-        return 0;
-    }
+//    else if(buttonCount >= countThreshold && stillPressed == 0 && state == log)
+//    {
+//        buttonCount = 0;
+//        buttonCountLow = 0;
+//        stillPressed = 1;
+//        return 2;
+//    }
+//    else{ //Catchall waiting state
+//        return 0;
+//    }
 }
 BOOL checkForButton2(){ //Probably can get rid of this, I don't think it is used anymore
     //look for rising edge in button1
@@ -631,7 +698,7 @@ void GPSDataRead(){
            // UARTSendByte(UART1,0xA);
         }
     }
-    return 0;
+//    return 0;
 }
 
 void GPSSentenceParse(){
@@ -643,9 +710,9 @@ void GPSSentenceParse(){
         char receive;
         for(i = 0; i<sentenceLength;i++){
             receive = GPSLogData[i];
-            if(!(receive=='.'||receive=='0'||receive=='1'||receive=='2'||receive=='3'||receive=='4'||receive=='5'||receive=='6'||receive=='7'||receive=='8'||receive=='9'||receive==','||receive==0x0A||receive==0x0D))
-                    GPSWriteData[i] = '3'; //Make all characters that are not important a 3
-            else
+//            if(!(receive=='.'||receive=='0'||receive=='1'||receive=='2'||receive=='3'||receive=='4'||receive=='5'||receive=='6'||receive=='7'||receive=='8'||receive=='9'||receive==','||receive==0x0A||receive==0x0D))
+//                    GPSWriteData[i] = '3'; //Make all characters that are not important a 3
+//            else
                 GPSWriteData[i] = receive;
         }
           for(i = 0;i<99;i++){
@@ -951,6 +1018,7 @@ void __ISR(_TIMER_2_VECTOR, ipl2) Timer2_ISR(void) {
     if (INTGetFlag(INT_T2)){
          millisec++;
          stopDelayCounter++;
+         startDelayCounter++;
          INTClearFlag(INT_T2);   // Acknowledge the interrupt source by clearing its flag.
     }
 }
