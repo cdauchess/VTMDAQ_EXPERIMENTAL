@@ -188,29 +188,6 @@ void UARTSendString(UART_MODULE uart, const char *string)
 //Return 1 For a transition from wait to log
 //Return 2 For a transition from log to wait
 int CheckLogStateChange(){
- //   int countThreshold = 100; //Threshold for a "high" to be registered from the switch
-    //look for rising edge in the switch
-//    if(buttonCount > 500){  //Reset count to 200 if it reaches 500, gives an upper bound to the count
-//        buttonCount  = 200;
-//    }
-//    if(buttonCountLow > 500){  //Reset count to 200 if it reaches 500, gives an upper bound to the count
-//        buttonCountLow  = 200;
-//    }
-//    if(PORTA & 0x02){
-//        buttonCount++;
-//        buttonCountLow = 0;
-//
-//    }
-//    else if(!(PORTA & 0x02))
-//    {
-//        buttonCountLow ++;
-//        stillPressed = 0;
-//        buttonCount = 0;
-//    }
-    //Here begins the logic of figuring out what the next move in the state machine is
-    //FIXME  This may prevent the manual stop of a log while the engine is running
-    //Manual button only for track side test with engine off? maybe for zeroing sensors
-
     switch(checkEngine){
         case Off:
             if(rpm > LogRPM && state == wait)
@@ -251,78 +228,9 @@ int CheckLogStateChange(){
             }
             break;
     }
-
     return 0;
+}
 
-//    if(rpm > LogRPM && state == wait)
-//    {
-//        startDelayCounter = 0;
-//        engineOff = 0; // engine is "on"
-//
-//        return 0; //Do nothing
-//    }
-//    else if(engineOff == 0 && startDelayCounter > 1000 && state == wait)
-//    {
-//        return 1; //Transition to log
-//    }
-//    else if(rpm < LogRPM && state == log)
-//    {
-//        engineOff = 1; //Engine is off
-//      stopDelayCounter = 0;
-//      return 0;
-//    }
-//    if((buttonCount >= countThreshold)&& state == wait && stillPressed == 0){ //Should prevent oscillations caused by holding down the button
-//        if(rpm > LogRPM){
-//        engineOff = 0; //Engine is currently on
-//        }
-//        buttonCount = 0;
-//        buttonCountLow = 0;
-//        stillPressed = 1;
-//        return 1;//transition from wait to log
-//    }
-//    else if((buttonCount >= countThreshold ||rpm < LogRPM) && state == log && buttonCountLow > countThreshold){
-//        //Start Delay of 5s
-//        engineOff = 1; //Engine is now off
-//        stopDelayCounter = 0;
-//        buttonCount = 0;
-//        buttonCountLow = 0;
-//        return 0;
-//    }
-//    else if(engineOff == 1 && stopDelayCounter >= 5000 && state == log ){//switch to a wait state, 5 seconds have elapsed
-//        stopDelayCounter = 0;
-//        return 2; //transition from log to wait
-//    }
-//    else if(buttonCount >= countThreshold && stillPressed == 0 && state == log)
-//    {
-//        buttonCount = 0;
-//        buttonCountLow = 0;
-//        stillPressed = 1;
-//        return 2;
-//    }
-//    else{ //Catchall waiting state
-//        return 0;
-//    }
-}
-BOOL checkForButton2(){ //Probably can get rid of this, I don't think it is used anymore
-    //look for rising edge in button1
-  //  if((PORTG & 0x80) != 0x80){
-    if((PORTG & 0x8000) == 0x8000){
-        prevButton2 = 0;
-        return FALSE;
-    }else if( prevButton2 == 0){
-        DelayMs(20);
-  //      if(PORTG & 0x80){
-        if((PORTG & 0x8000) != 0x800){
-            prevButton2 = 1;
-            return TRUE;
-        }
-        return FALSE;
-    }else{
-        prevButton2 = 1;
-        return FALSE;
-    }
-    return FALSE;
-}
 void WriteAccelData(CANRxMessageBuffer *message)
 {
 //Accel
@@ -679,26 +587,15 @@ void GPSDataRead(){
     int i;
     if(newData == 1){
         receive = GPSData[GPSIndex-1];
-//        if(!(receive=='.'||receive=='0'||receive=='1'||receive=='2'||receive=='3'||receive=='4'||receive=='5'||receive=='6'||receive=='7'||receive=='8'||receive=='9'||receive==','||receive==0x0A||receive==0x0D))
-//           GPSData[GPSIndex-1] = '3'; //Make all characters that are not important a 3
-//       // UARTSendByte(UART1,receive);
         newData = 0;
-//      //  GPSData[GPSIndex] = receive;
-//     //   GPSIndex++;
         if(receive == 0xA){
             if(GPSIndex < 100)
                 strncpy(GPSLogData,GPSData,GPSIndex-6);
             sentenceLength = GPSIndex-6;
             newSentence = 1;
             GPSIndex = 0;
-//          for(i = 0;i<99;i++){
-//              GPSData[i] = 0;
-//          }
-          //  LineDone = 1;
-           // UARTSendByte(UART1,0xA);
         }
     }
-//    return 0;
 }
 
 void GPSSentenceParse(){
@@ -710,9 +607,6 @@ void GPSSentenceParse(){
         char receive;
         for(i = 0; i<sentenceLength;i++){
             receive = GPSLogData[i];
-//            if(!(receive=='.'||receive=='0'||receive=='1'||receive=='2'||receive=='3'||receive=='4'||receive=='5'||receive=='6'||receive=='7'||receive=='8'||receive=='9'||receive==','||receive==0x0A||receive==0x0D))
-//                    GPSWriteData[i] = '3'; //Make all characters that are not important a 3
-//            else
                 GPSWriteData[i] = receive;
         }
           for(i = 0;i<99;i++){
@@ -772,7 +666,6 @@ int main(void)
     CAN2Init();//Motec 1mbs
     DelayInit();
 
-    //initUART1();
     initUART2(); // GPS UART
     prevButton1 = 0;
     prevButton2 = 0;
@@ -847,12 +740,10 @@ int main(void)
 
     while(1)
     {
-        //GPS Handler
-        //FIXME -  need to figure out if a few lines need to be removed from the RX buffer before log begins.
         GPSDataRead();
         GPSSentenceParse();
         ClutchHold(); //This function handles the venting direction of the clutch actuator
-       // DataFlagFunc(); //This function handles the updates of the data flag variable
+        DataFlagFunc(); //This function handles the updates of the data flag variable
         //USB stack process function
         USBTasks();
 
